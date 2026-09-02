@@ -1,0 +1,42 @@
+llm:
+  model: deepseek-v4-flash
+  temperature: 0.0
+
+embedding:
+  model: BAAI/bge-small-zh-v1.5
+  device: cpu
+  normalize: true
+
+retrieval:
+  equipment:
+    bm25_k: 8
+    vector_k: 8
+    bm25_weight: 0.5
+    vector_weight: 0.5
+    ensemble_n_results: 60
+  item:
+    bm25_k: 8
+    vector_k: 8
+    bm25_weight: 0.5
+    vector_weight: 0.5
+    ensemble_n_results: 60
+  monster:
+    bm25_k: 8
+    vector_k: 8
+    bm25_weight: 0.5
+    vector_weight: 0.5
+    ensemble_n_results: 60
+
+paths:
+  equipment_data: data/Equipment_Crafting_Table.json
+  item_data: data/ItemData.json
+  monster_data: data/MonsterData.json
+  persist_base: ./chroma_db/
+
+graph:
+  max_iterations: 5
+
+logging:
+  level: INFO
+  format: json
+  file: logs/agent.log

@@ -1,0 +1,33 @@
+# ===== 秘密/密钥：绝对不能提交 =====
+# .env 里有你的 API Key，提交了就会被写进历史记录，推到 GitHub 就泄露了
+.env
+
+# ===== Python 生成物 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ===== 虚拟环境（很大，别人可以自己重建）=====
+.venv/
+venv/
+env/
+
+# ===== 向量数据库（体积大，可重新生成）=====
+mh_equipmentcrafting_chroma_db/
+mh_item_chroma_db/
+mh_monster_chroma_db/
+chroma_db/
+
+# ===== 日志 =====
+logs/
+*.log
+
+# ===== 本地编辑器/工具配置 =====
+.claude/
+.vscode/
+.idea/
+
+# ===== 操作系统临时文件 =====
+.DS_Store
+Thumbs.db
