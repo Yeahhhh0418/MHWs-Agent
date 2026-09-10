@@ -12,6 +12,7 @@ import sys
 import json
 from datetime import datetime, timezone
 from typing import Optional
+import colorlog
 
 
 class JSONFormatter(logging.Formatter):
@@ -54,23 +55,38 @@ def setup_logging(
     root.handlers.clear()
 
     console_handler = logging.StreamHandler(sys.stderr)
-    if fmt == "json":
-        console_handler.setFormatter(JSONFormatter())
-    else:
-        console_handler.setFormatter(logging.Formatter(
-            "%(asctime)s [%(levelname)-5s] %(name)s: %(message)s",
-            datefmt="%Y-%m-%d %H:%M:%S",
+    if colorlog:
+        # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
+        log_colors = {
+            'DEBUG': 'cyan',
+            'INFO': 'green',
+            'WARNING': 'yellow',
+            'ERROR': 'red',
+            'CRITICAL': 'bold_red',
+        }
+        formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s: %(message)s"
+        console_handler.setFormatter(colorlog.ColoredFormatter(
+            formatter_str,
+            datefmt="%H:%M:%S",
+            log_colors=log_colors,
+            reset=True,
+            style='%'
         ))
+    else:
+        # 没装 colorlog 就用普通的
+        console_handler.setFormatter(logging.Formatter(
+            "[%(asctime)s] %(levelname)-8s %(name)s: %(message)s",
+            datefmt="%H:%M:%S",
+        ))
+    
     root.addHandler(console_handler)
 
     if log_file:
         from pathlib import Path
         Path(log_file).parent.mkdir(parents=True, exist_ok=True)
         file_handler = logging.FileHandler(log_file, encoding="utf-8")
-        file_handler.setFormatter(logging.Formatter(
-            "%(asctime)s [%(levelname)-5s] %(name)s: %(message)s",
-            datefmt="%Y-%m-%d %H:%M:%S",
-        ))
+        # 文件里依然保持 JSON 格式，方便以后机器读取
+        file_handler.setFormatter(JSONFormatter()) 
         root.addHandler(file_handler)
 
 

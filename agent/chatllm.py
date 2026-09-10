@@ -12,11 +12,7 @@ from agent.logger import setup_logging, get_logger
 load_dotenv()
 
 # 初始化结构化日志（整个程序只在这里调用一次）
-setup_logging(
-    level=get_config()["logging"]["level"],
-    fmt=get_config()["logging"]["format"],
-    log_file=get_config()["logging"]["file"],
-)
+setup_logging(level="INFO", log_file="logs/agent.log")
 
 logger = get_logger("chatllm")
 
