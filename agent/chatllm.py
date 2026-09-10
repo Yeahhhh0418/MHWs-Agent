@@ -1,14 +1,25 @@
-import os
+"""
+agent/chatllm.py —— 全局 LLM 实例
+模型名从 config.yaml 读取，不再硬编码。
+"""
+
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 
-# 加载环境变量（把你的 API Key 放在 .env 文件里）
-load_dotenv()
-print("正在加载模型！")
-# 初始化大模型（这里以通义千问为例，你也可以换成 gpt-4o、claude-3.5-sonnet 等）
-llm = init_chat_model(model="deepseek-v4-flash")
-print("模型成功加载！")
+from agent.config import get_config
+from agent.logger import setup_logging, get_logger
 
-if __name__ == "__main__":
-    response = llm.invoke("你好请问你是？")
-    print(response.content)
+load_dotenv()
+
+# 初始化结构化日志（整个程序只在这里调用一次）
+setup_logging(
+    level=get_config()["logging"]["level"],
+    fmt=get_config()["logging"]["format"],
+    log_file=get_config()["logging"]["file"],
+)
+
+logger = get_logger("chatllm")
+
+# 从 config.yaml 读取模型名，初始化大模型
+llm = init_chat_model(model=get_config()["llm"]["model"])
+logger.info("LLM 加载完成", extra={"model": get_config()["llm"]["model"]})

@@ -3,7 +3,7 @@ llm:
   temperature: 0.0
 
 embedding:
-  model: BAAI/bge-small-zh-v1.5
+  model: C:/Users/Yeh Hu/.cache/huggingface/hub/models--BAAI--bge-small-zh-v1.5/snapshots/7999e1d3359715c523056ef9478215996d62a620
   device: cpu
   normalize: true
 
@@ -31,7 +31,9 @@ paths:
   equipment_data: data/Equipment_Crafting_Table.json
   item_data: data/ItemData.json
   monster_data: data/MonsterData.json
-  persist_base: ./chroma_db/
+  equipment_persist: ./mh_equipmentcrafting_chroma_db
+  item_persist: ./mh_item_chroma_db
+  monster_persist: ./mh_monster_chroma_db
 
 graph:
   max_iterations: 5
