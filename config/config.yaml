@@ -28,12 +28,14 @@ retrieval:
     ensemble_n_results: 60
 
 paths:
-  equipment_data: data/Equipment_Crafting_Table.json
-  item_data: data/ItemData.json
-  monster_data: data/MonsterData.json
-  equipment_persist: ./mh_equipmentcrafting_chroma_db
-  item_persist: ./mh_item_chroma_db
-  monster_persist: ./mh_monster_chroma_db
+  equipment_data: data/Equipment_Crafting_Table.jsonl
+  material_data: data/Material_info_Table.jsonl
+  monster_data: data/Monster_info_Table.jsonl
+  weapon_data: data/Weapon_Crafting_Table.jsonl
+  equipment_persist: storage/mh_equipment_chroma_db
+  material_persist: storage/mh_material_chroma_db
+  monster_persist: storage/mh_monster_chroma_db
+  weapon_persist: storage/mh_weapon_chroma_db
 
 graph:
   max_iterations: 5

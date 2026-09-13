@@ -148,7 +148,7 @@ class BaseRAG(ABC):
         return self.query(question)
 
     def retrieve(self, question: str) -> list:
-        """只检索、不生成。返回命中的 Document 列表（Phase 3 调参用）。"""
+        """只检索、不生成。返回命中的 Document 列表。"""
         if not self.is_ready:
             raise RuntimeError(f"{self.__class__.__name__} 尚未初始化，请先调用 .setup()")
         question = self._expand_query(question)

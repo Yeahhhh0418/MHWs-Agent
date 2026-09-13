@@ -6,8 +6,8 @@ agent/chatllm.py —— 全局 LLM 实例
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 
-from agent.config import get_config
-from agent.logger import setup_logging, get_logger
+from mhwi_agent.config import get_config
+from mhwi_agent.logger import setup_logging, get_logger
 
 load_dotenv()
 

@@ -2,7 +2,8 @@ import yaml
 from pathlib import Path
 from functools import lru_cache
 
-_CONFIG_PATH = Path(__file__).parent.parent / "config.yaml"
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
+_CONFIG_PATH = _PROJECT_ROOT / "config" / "config.yaml"
 
 @lru_cache(maxsize=1)
 def get_config() -> dict:
