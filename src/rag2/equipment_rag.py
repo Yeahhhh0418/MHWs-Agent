@@ -80,3 +80,8 @@ class EquipmentCraftingRAG(BaseRAG):
 
         self._docs = documents
         logger.info("装备数据加载完成", extra={"count": len(documents)})
+
+
+
+
+

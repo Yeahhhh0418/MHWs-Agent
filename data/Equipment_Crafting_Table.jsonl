@@ -1,693 +1,693 @@
-{"series_id": "希望", "parts_type": "HELM", "name": "希望面具", "key_enemy": "", "materials": []}
-{"series_id": "希望", "parts_type": "BODY", "name": "希望铠甲", "key_enemy": "", "materials": []}
-{"series_id": "希望", "parts_type": "ARM", "name": "希望腕甲", "key_enemy": "", "materials": []}
-{"series_id": "希望", "parts_type": "WAIST", "name": "希望腰甲", "key_enemy": "", "materials": []}
-{"series_id": "希望", "parts_type": "LEG", "name": "希望护腿", "key_enemy": "", "materials": []}
-{"series_id": "皮制", "parts_type": "HELM", "name": "皮制头饰", "key_enemy": "", "materials": []}
-{"series_id": "皮制", "parts_type": "BODY", "name": "皮制服饰", "key_enemy": "", "materials": []}
-{"series_id": "皮制", "parts_type": "ARM", "name": "皮制手套", "key_enemy": "", "materials": []}
-{"series_id": "皮制", "parts_type": "WAIST", "name": "皮制腰带", "key_enemy": "", "materials": []}
-{"series_id": "皮制", "parts_type": "LEG", "name": "皮制长裤", "key_enemy": "", "materials": []}
-{"series_id": "锁甲", "parts_type": "HELM", "name": "锁甲头饰", "key_enemy": "", "materials": []}
-{"series_id": "锁甲", "parts_type": "BODY", "name": "锁甲服饰", "key_enemy": "", "materials": []}
-{"series_id": "锁甲", "parts_type": "ARM", "name": "锁甲手套", "key_enemy": "", "materials": []}
-{"series_id": "锁甲", "parts_type": "WAIST", "name": "锁甲腰带", "key_enemy": "", "materials": []}
-{"series_id": "锁甲", "parts_type": "LEG", "name": "锁甲长裤", "key_enemy": "", "materials": []}
-{"series_id": "骨制", "parts_type": "HELM", "name": "骨制头盔", "key_enemy": "", "materials": ["谜之骨 x1"]}
-{"series_id": "骨制", "parts_type": "BODY", "name": "骨制铠甲", "key_enemy": "", "materials": ["谜之骨 x1"]}
-{"series_id": "骨制", "parts_type": "ARM", "name": "骨制腕甲", "key_enemy": "", "materials": ["谜之骨 x1"]}
-{"series_id": "骨制", "parts_type": "WAIST", "name": "骨制腰甲", "key_enemy": "", "materials": ["谜之骨 x1"]}
-{"series_id": "骨制", "parts_type": "LEG", "name": "骨制护腿", "key_enemy": "", "materials": ["谜之骨 x1"]}
-{"series_id": "血盗虫", "parts_type": "HELM", "name": "血盗虫眼镜", "key_enemy": "血盗虫", "materials": ["血盗虫的甲壳 x2"]}
-{"series_id": "钳速龙", "parts_type": "ARM", "name": "钳速龙腕甲", "key_enemy": "钳速龙", "materials": ["钳速龙的鳞 x1", "尖牙 x1"]}
-{"series_id": "缠蛙", "parts_type": "HELM", "name": "缠蛙头盔", "key_enemy": "缠蛙", "materials": ["缠蛙的鳞 x2", "缠蛙的颚 x1"]}
-{"series_id": "缠蛙", "parts_type": "BODY", "name": "缠蛙铠甲", "key_enemy": "缠蛙", "materials": ["缠蛙的鳞 x2", "缠蛙的皮 x2", "缠蛙的缠甲 x1"]}
-{"series_id": "缠蛙", "parts_type": "ARM", "name": "缠蛙腕甲", "key_enemy": "缠蛙", "materials": ["缠蛙的皮 x2", "缠蛙的缠甲 x1"]}
-{"series_id": "缠蛙", "parts_type": "WAIST", "name": "缠蛙腰甲", "key_enemy": "缠蛙", "materials": ["缠蛙狩猎证 x1", "缠蛙的鳞 x2", "缠蛙的颚 x1", "尖牙 x1"]}
-{"series_id": "缠蛙", "parts_type": "LEG", "name": "缠蛙护腿", "key_enemy": "缠蛙", "materials": ["缠蛙的颚 x1", "缠蛙的缠甲 x1", "谜之骨 x1"]}
-{"series_id": "炎尾龙", "parts_type": "HELM", "name": "炎尾龙头盔", "key_enemy": "炎尾龙", "materials": ["炎尾龙狩猎证 x1", "炎尾龙的尾巴 x1", "炎尾龙的引火液 x1", "铁矿石 x1"]}
-{"series_id": "炎尾龙", "parts_type": "BODY", "name": "炎尾龙铠甲", "key_enemy": "炎尾龙", "materials": ["炎尾龙的引火液 x1", "炎尾龙的头冠 x1", "炎尾龙的尾巴 x1"]}
-{"series_id": "炎尾龙", "parts_type": "ARM", "name": "炎尾龙腕甲", "key_enemy": "炎尾龙", "materials": ["炎尾龙的鳞 x2", "炎尾龙的引火液 x1"]}
-{"series_id": "炎尾龙", "parts_type": "WAIST", "name": "炎尾龙腰甲", "key_enemy": "炎尾龙", "materials": ["炎尾龙的皮 x2", "炎尾龙的头冠 x1"]}
-{"series_id": "炎尾龙", "parts_type": "LEG", "name": "炎尾龙护腿", "key_enemy": "炎尾龙", "materials": ["炎尾龙的鳞 x2", "炎尾龙的皮 x2", "炎尾龙的头冠 x1"]}
-{"series_id": "合金", "parts_type": "HELM", "name": "合金头盔", "key_enemy": "", "materials": ["燕雀石 x1", "铁矿石 x1"]}
-{"series_id": "合金", "parts_type": "BODY", "name": "合金铠甲", "key_enemy": "", "materials": ["燕雀石 x1", "铁矿石 x1"]}
-{"series_id": "合金", "parts_type": "ARM", "name": "合金腕甲", "key_enemy": "", "materials": ["燕雀石 x1", "铁矿石 x1"]}
-{"series_id": "合金", "parts_type": "WAIST", "name": "合金腰甲", "key_enemy": "", "materials": ["燕雀石 x1", "大地结晶 x1"]}
-{"series_id": "合金", "parts_type": "LEG", "name": "合金护腿", "key_enemy": "", "materials": ["燕雀石 x1", "大地结晶 x1"]}
-{"series_id": "锯带龙", "parts_type": "LEG", "name": "锯带龙护腿", "key_enemy": "锯带龙", "materials": ["锯带龙的鳍 x1", "燕雀石 x1"]}
-{"series_id": "巨蜂", "parts_type": "HELM", "name": "巨蜂头盔", "key_enemy": "巨蜂", "materials": ["巨蜂的甲壳 x1", "谜之骨 x1"]}
-{"series_id": "巨蜂", "parts_type": "BODY", "name": "巨蜂铠甲", "key_enemy": "巨蜂", "materials": ["巨蜂的甲壳 x1", "谜之骨 x1"]}
-{"series_id": "巨蜂", "parts_type": "ARM", "name": "巨蜂腕甲", "key_enemy": "巨蜂", "materials": ["巨蜂的甲壳 x1", "巨蜂的翅膀 x1"]}
-{"series_id": "巨蜂", "parts_type": "WAIST", "name": "巨蜂腰甲", "key_enemy": "巨蜂", "materials": ["巨蜂的甲壳 x1", "怪物体液 x1"]}
-{"series_id": "巨蜂", "parts_type": "LEG", "name": "巨蜂护腿", "key_enemy": "巨蜂", "materials": ["巨蜂的甲壳 x1", "巨蜂的翅膀 x1"]}
-{"series_id": "咬鱼", "parts_type": "LEG", "name": "咬鱼靴", "key_enemy": "", "materials": ["咬鱼的皮 x1"]}
-{"series_id": "刺花蜘蛛", "parts_type": "HELM", "name": "刺花蜘蛛头盔", "key_enemy": "刺花蜘蛛", "materials": ["刺花蜘蛛的绒毛 x2", "刺花蜘蛛的粘液 x1"]}
-{"series_id": "刺花蜘蛛", "parts_type": "BODY", "name": "刺花蜘蛛铠甲", "key_enemy": "刺花蜘蛛", "materials": ["刺花蜘蛛的绒毛 x2", "刺花蜘蛛的甲壳 x2", "刺花蜘蛛的尾棘 x1"]}
-{"series_id": "刺花蜘蛛", "parts_type": "ARM", "name": "刺花蜘蛛腕甲", "key_enemy": "刺花蜘蛛", "materials": ["刺花蜘蛛的甲壳 x2", "刺花蜘蛛的爪 x1"]}
-{"series_id": "刺花蜘蛛", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲", "key_enemy": "刺花蜘蛛", "materials": ["刺花蜘蛛的粘液 x1", "刺花蜘蛛的爪 x1", "刺花蜘蛛的尾棘 x1"]}
-{"series_id": "刺花蜘蛛", "parts_type": "LEG", "name": "刺花蜘蛛护腿", "key_enemy": "刺花蜘蛛", "materials": ["刺花蜘蛛狩猎证 x1", "刺花蜘蛛的绒毛 x2", "刺花蜘蛛的粘液 x1", "怪物体液 x1"]}
-{"series_id": "桃毛兽王", "parts_type": "HELM", "name": "桃毛兽王头盔", "key_enemy": "桃毛兽王", "materials": ["桃毛兽王的爪 x2", "极彩色的毛 x1"]}
-{"series_id": "桃毛兽王", "parts_type": "BODY", "name": "桃毛兽王铠甲", "key_enemy": "桃毛兽王", "materials": ["桃毛兽王的毛 x2", "桃毛兽王的爪 x1", "极彩色的毛 x1"]}
-{"series_id": "桃毛兽王", "parts_type": "ARM", "name": "桃毛兽王腕甲", "key_enemy": "桃毛兽王", "materials": ["桃毛兽王的牙 x1", "极彩色的毛 x1", "燕雀石 x1"]}
-{"series_id": "桃毛兽王", "parts_type": "WAIST", "name": "桃毛兽王腰甲", "key_enemy": "桃毛兽王", "materials": ["桃毛兽王的毛 x2", "桃毛兽王的牙 x1"]}
-{"series_id": "桃毛兽王", "parts_type": "LEG", "name": "桃毛兽王护腿", "key_enemy": "桃毛兽王", "materials": ["桃毛兽王狩猎证 x1", "桃毛兽王的毛 x1", "桃毛兽王的牙 x1", "桃毛兽的毛 x1"]}
-{"series_id": "沙海龙", "parts_type": "HELM", "name": "沙海龙头盔", "key_enemy": "沙海龙", "materials": ["沙海龙的鳞 x2", "沙海龙的头壳 x1"]}
-{"series_id": "沙海龙", "parts_type": "BODY", "name": "沙海龙铠甲", "key_enemy": "沙海龙", "materials": ["沙海龙的鳞 x2", "沙海龙的甲壳 x1", "沙海龙的尾巴 x1"]}
-{"series_id": "沙海龙", "parts_type": "ARM", "name": "沙海龙腕甲", "key_enemy": "沙海龙", "materials": ["沙海龙的头壳 x1", "沙海龙的尾巴 x1", "水袋 x1"]}
-{"series_id": "沙海龙", "parts_type": "WAIST", "name": "沙海龙腰甲", "key_enemy": "沙海龙", "materials": ["沙海龙狩猎证 x1", "沙海龙的鳞 x2", "沙海龙的甲壳 x1", "沙海龙的黑珍珠 x1"]}
-{"series_id": "沙海龙", "parts_type": "LEG", "name": "沙海龙护腿", "key_enemy": "沙海龙", "materials": ["沙海龙的甲壳 x2", "沙海龙的头壳 x1"]}
-{"series_id": "辟兽", "parts_type": "HELM", "name": "辟兽头盔", "key_enemy": "辟兽", "materials": ["辟兽的毛 x2", "辟兽的皮 x2", "辟兽的牙 x1", "草食种的甲壳 x1"]}
-{"series_id": "辟兽", "parts_type": "BODY", "name": "辟兽铠甲", "key_enemy": "辟兽", "materials": ["辟兽的毛 x2", "辟兽的爪 x1"]}
-{"series_id": "辟兽", "parts_type": "ARM", "name": "辟兽腕甲", "key_enemy": "辟兽", "materials": ["辟兽的皮 x2", "辟兽的牙 x1"]}
-{"series_id": "辟兽", "parts_type": "WAIST", "name": "辟兽腰甲", "key_enemy": "辟兽", "materials": ["辟兽的爪 x1", "辟兽的牙 x2", "硬质骨头 x1"]}
-{"series_id": "辟兽", "parts_type": "LEG", "name": "辟兽护腿", "key_enemy": "辟兽", "materials": ["辟兽狩猎证 x1", "辟兽的毛 x2", "辟兽的爪 x1", "兽骨 x1"]}
-{"series_id": "铸铁", "parts_type": "HELM", "name": "铸铁头盔", "key_enemy": "", "materials": ["辉龙石 x1", "燕雀石 x1"]}
-{"series_id": "铸铁", "parts_type": "BODY", "name": "铸铁铠甲", "key_enemy": "", "materials": ["辉龙石 x1", "大地结晶 x1"]}
-{"series_id": "铸铁", "parts_type": "ARM", "name": "铸铁腕甲", "key_enemy": "", "materials": ["辉龙石 x1", "燕雀石 x1"]}
-{"series_id": "铸铁", "parts_type": "WAIST", "name": "铸铁腰甲", "key_enemy": "", "materials": ["辉龙石 x1", "大地结晶 x1"]}
-{"series_id": "铸铁", "parts_type": "LEG", "name": "铸铁护腿", "key_enemy": "", "materials": ["辉龙石 x1", "红莲石 x1"]}
-{"series_id": "盔速龙", "parts_type": "BODY", "name": "盔速龙铠甲", "key_enemy": "盔速龙", "materials": ["盔速龙的头壳 x1", "漆黑的油骨 x1"]}
-{"series_id": "沼喷龙", "parts_type": "HELM", "name": "沼喷龙头盔", "key_enemy": "沼喷龙", "materials": ["沼喷龙的皮 x2", "沼喷龙的爪 x1", "沼喷龙的喙 x1"]}
-{"series_id": "沼喷龙", "parts_type": "BODY", "name": "沼喷龙铠甲", "key_enemy": "沼喷龙", "materials": ["沼喷龙的皮 x2", "斑斓的毒皮 x1"]}
-{"series_id": "沼喷龙", "parts_type": "ARM", "name": "沼喷龙腕甲", "key_enemy": "沼喷龙", "materials": ["斑斓的毒皮 x1", "沼喷龙的喙 x1", "毒袋 x1"]}
-{"series_id": "沼喷龙", "parts_type": "WAIST", "name": "沼喷龙腰甲", "key_enemy": "沼喷龙", "materials": ["沼喷龙狩猎证 x1", "沼喷龙的皮 x2", "斑斓的毒皮 x1", "辉龙石 x1"]}
-{"series_id": "沼喷龙", "parts_type": "LEG", "name": "沼喷龙护腿", "key_enemy": "沼喷龙", "materials": ["沼喷龙的爪 x2", "沼喷龙的喙 x1"]}
-{"series_id": "血眠虫", "parts_type": "HELM", "name": "血眠虫头饰", "key_enemy": "血眠虫", "materials": ["血眠虫的甲壳 x2"]}
-{"series_id": "影蜘蛛", "parts_type": "HELM", "name": "影蜘蛛头盔", "key_enemy": "影蜘蛛", "materials": ["影蜘蛛狩猎证 x1", "橡胶质的皮 x1", "影蜘蛛的钳角 x1", "睡眠袋 x1"]}
-{"series_id": "影蜘蛛", "parts_type": "BODY", "name": "影蜘蛛铠甲", "key_enemy": "影蜘蛛", "materials": ["影蜘蛛的爪 x2", "影蜘蛛的棘 x1"]}
-{"series_id": "影蜘蛛", "parts_type": "ARM", "name": "影蜘蛛腕甲", "key_enemy": "影蜘蛛", "materials": ["影蜘蛛的甲壳 x2", "影蜘蛛的爪 x1", "影蜘蛛的棘 x1"]}
-{"series_id": "影蜘蛛", "parts_type": "WAIST", "name": "影蜘蛛腰甲", "key_enemy": "影蜘蛛", "materials": ["影蜘蛛的钳角 x1", "影蜘蛛的棘 x1", "橡胶质的皮 x1"]}
-{"series_id": "影蜘蛛", "parts_type": "LEG", "name": "影蜘蛛护腿", "key_enemy": "影蜘蛛", "materials": ["影蜘蛛的甲壳 x2", "影蜘蛛的钳角 x1"]}
-{"series_id": "风铗龙", "parts_type": "HELM", "name": "风铗龙头盔", "key_enemy": "风铗龙", "materials": ["风铗龙的飞膜 x1", "风铗龙的尾爪 x1", "冰结袋 x1"]}
-{"series_id": "风铗龙", "parts_type": "BODY", "name": "风铗龙铠甲", "key_enemy": "风铗龙", "materials": ["风铗龙的皮 x2", "风铗龙的尾爪 x1"]}
-{"series_id": "风铗龙", "parts_type": "ARM", "name": "风铗龙腕甲", "key_enemy": "风铗龙", "materials": ["风铗龙的鳞 x2", "风铗龙的飞膜 x1"]}
-{"series_id": "风铗龙", "parts_type": "WAIST", "name": "风铗龙腰甲", "key_enemy": "风铗龙", "materials": ["风铗龙的鳞 x2", "风铗龙的皮 x1", "风铗龙的尾爪 x1"]}
-{"series_id": "风铗龙", "parts_type": "LEG", "name": "风铗龙护腿", "key_enemy": "风铗龙", "materials": ["风铗龙狩猎证 x1", "风铗龙的鳞 x2", "风铗龙的飞膜 x1", "结冻冰骨 x1"]}
-{"series_id": "赫猿兽", "parts_type": "HELM", "name": "赫猿兽头盔", "key_enemy": "赫猿兽", "materials": ["赫猿兽狩猎证 x1", "赫猿兽的尾巴 x1", "赫炎结晶 x1", "赫猿兽的骨髓 x1"]}
-{"series_id": "赫猿兽", "parts_type": "BODY", "name": "赫猿兽铠甲", "key_enemy": "赫猿兽", "materials": ["赫猿兽的鳞 x2", "赫炎结晶 x1"]}
-{"series_id": "赫猿兽", "parts_type": "ARM", "name": "赫猿兽腕甲", "key_enemy": "赫猿兽", "materials": ["赫猿兽的鳞 x2", "赫猿兽的甲壳 x2", "赫猿兽的背甲 x1"]}
-{"series_id": "赫猿兽", "parts_type": "WAIST", "name": "赫猿兽腰甲", "key_enemy": "赫猿兽", "materials": ["赫猿兽的甲壳 x2", "赫猿兽的背甲 x1"]}
-{"series_id": "赫猿兽", "parts_type": "LEG", "name": "赫猿兽护腿", "key_enemy": "赫猿兽", "materials": ["赫炎结晶 x1", "赫猿兽的背甲 x1", "赫猿兽的尾巴 x1"]}
-{"series_id": "护鹭鹰龙", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲", "key_enemy": "", "materials": ["护鹭鹰龙的羽毛 x2", "粗壮护骨 x1"]}
-{"series_id": "波衣龙", "parts_type": "HELM", "name": "波衣龙头盔", "key_enemy": "", "materials": ["波衣龙狩猎证 x1", "波衣龙的鳞 x2", "波衣龙的逆鳞 x1", "护龙的血 x1"]}
-{"series_id": "波衣龙", "parts_type": "BODY", "name": "波衣龙铠甲", "key_enemy": "", "materials": ["波衣龙的纤毛 x1", "波衣龙的触手 x1", "波衣龙的爪 x2", "护龙的鳞 x1"]}
-{"series_id": "波衣龙", "parts_type": "ARM", "name": "波衣龙腕甲", "key_enemy": "", "materials": ["波衣龙的皮 x2", "波衣龙的触手 x1", "护龙的毛皮 x1"]}
-{"series_id": "波衣龙", "parts_type": "WAIST", "name": "波衣龙腰甲", "key_enemy": "", "materials": ["波衣龙的鳞 x2", "波衣龙的纤毛 x1"]}
-{"series_id": "波衣龙", "parts_type": "LEG", "name": "波衣龙护腿", "key_enemy": "", "materials": ["波衣龙的鳞 x2", "波衣龙的皮 x2", "波衣龙的爪 x1"]}
-{"series_id": "煌雷龙", "parts_type": "HELM", "name": "煌雷龙头盔", "key_enemy": "煌雷龙", "materials": ["煌雷龙的鳞 x2", "煌雷龙的甲壳 x2", "煌雷龙的电角 x1"]}
-{"series_id": "煌雷龙", "parts_type": "BODY", "name": "煌雷龙铠甲", "key_enemy": "煌雷龙", "materials": ["煌雷龙的鳞 x2", "煌雷龙的雷晶爪 x1"]}
-{"series_id": "煌雷龙", "parts_type": "ARM", "name": "煌雷龙腕甲", "key_enemy": "", "materials": ["煌雷龙的雷晶爪 x1", "煌雷龙的电角 x1", "煌雷龙的尾巴 x1", "护龙的鳞 x1"]}
-{"series_id": "煌雷龙", "parts_type": "WAIST", "name": "煌雷龙腰甲", "key_enemy": "", "materials": ["煌雷龙的甲壳 x2", "煌雷龙的电角 x1", "护龙的毛皮 x1", "翼龙的皮 x1"]}
-{"series_id": "煌雷龙", "parts_type": "LEG", "name": "煌雷龙护腿", "key_enemy": "", "materials": ["煌雷龙狩猎证 x1", "煌雷龙的尾巴 x1", "煌雷龙的逆鳞 x1", "护龙的血 x1"]}
-{"series_id": "狱焰蛸", "parts_type": "HELM", "name": "狱焰蛸头盔", "key_enemy": "狱焰蛸", "materials": ["狱焰蛸的皮 x2", "狱焰蛸的棘 x1", "狱焰蛸的角 x1"]}
-{"series_id": "狱焰蛸", "parts_type": "BODY", "name": "狱焰蛸铠甲", "key_enemy": "", "materials": ["狱焰蛸狩猎证 x1", "狱焰蛸的皮 x2", "狱焰蛸的髓液 x1", "护龙的血 x1"]}
-{"series_id": "狱焰蛸", "parts_type": "ARM", "name": "狱焰蛸腕甲", "key_enemy": "狱焰蛸", "materials": ["狱焰蛸的皮 x2", "狱焰蛸的油膜 x1"]}
-{"series_id": "狱焰蛸", "parts_type": "WAIST", "name": "狱焰蛸腰甲", "key_enemy": "", "materials": ["狱焰蛸的油膜 x1", "狱焰蛸的触手 x1", "狱焰蛸的角 x1", "护龙的鳞 x1"]}
-{"series_id": "狱焰蛸", "parts_type": "LEG", "name": "狱焰蛸护腿", "key_enemy": "", "materials": ["狱焰蛸的棘 x2", "狱焰蛸的触手 x1", "护龙的毛皮 x1", "漆黑的油骨 x1"]}
-{"series_id": "护辟兽", "parts_type": "HELM", "name": "护辟兽头盔", "key_enemy": "", "materials": ["护辟兽的毛 x2", "护辟兽的皮 x2", "护辟兽的牙 x1"]}
-{"series_id": "护辟兽", "parts_type": "BODY", "name": "护辟兽铠甲", "key_enemy": "", "materials": ["护辟兽的毛 x2", "护辟兽的爪 x1"]}
-{"series_id": "护辟兽", "parts_type": "ARM", "name": "护辟兽腕甲", "key_enemy": "", "materials": ["护辟兽的皮 x2", "护辟兽的牙 x1"]}
-{"series_id": "护辟兽", "parts_type": "WAIST", "name": "护辟兽腰甲", "key_enemy": "", "materials": ["护辟兽狩猎证 x1", "护辟兽的毛 x2", "护辟兽的爪 x1", "护龙的血 x1"]}
-{"series_id": "护辟兽", "parts_type": "LEG", "name": "护辟兽护腿", "key_enemy": "", "materials": ["护辟兽的爪 x1", "护辟兽的牙 x1", "护龙的毛皮 x1"]}
-{"series_id": "护火龙", "parts_type": "HELM", "name": "护火龙头盔", "key_enemy": "", "materials": ["护火龙狩猎证 x1", "护火龙的鳞 x2", "护火龙的甲壳 x1", "护火龙的逆鳞 x1"]}
-{"series_id": "护火龙", "parts_type": "BODY", "name": "护火龙铠甲", "key_enemy": "", "materials": ["护火龙的甲壳 x2", "护火龙的翼膜 x1"]}
-{"series_id": "护火龙", "parts_type": "ARM", "name": "护火龙腕甲", "key_enemy": "", "materials": ["护火龙的鳞 x2", "护火龙的甲壳 x2", "护火龙的尾巴 x1"]}
-{"series_id": "护火龙", "parts_type": "WAIST", "name": "护火龙腰甲", "key_enemy": "", "materials": ["护火龙的鳞 x2", "护火龙的翼膜 x1"]}
-{"series_id": "护火龙", "parts_type": "LEG", "name": "护火龙护腿", "key_enemy": "", "materials": ["护火龙的翼膜 x1", "护火龙的尾巴 x1", "护龙的鳞 x1"]}
-{"series_id": "护凶爪龙", "parts_type": "HELM", "name": "护凶爪龙头盔", "key_enemy": "护凶爪龙", "materials": ["护凶爪龙的爪 x1", "护凶爪龙的牙 x1", "护凶爪龙的尾巴 x1"]}
-{"series_id": "护凶爪龙", "parts_type": "BODY", "name": "护凶爪龙铠甲", "key_enemy": "护凶爪龙", "materials": ["护凶爪龙的硬肌 x2", "护凶爪龙的牙 x1"]}
-{"series_id": "护凶爪龙", "parts_type": "ARM", "name": "护凶爪龙腕甲", "key_enemy": "护凶爪龙", "materials": ["护凶爪龙的鳞 x2", "护凶爪龙的硬肌 x2", "护凶爪龙的牙 x1"]}
-{"series_id": "护凶爪龙", "parts_type": "WAIST", "name": "护凶爪龙腰甲", "key_enemy": "护凶爪龙", "materials": ["护凶爪龙狩猎证 x1", "护凶爪龙的尾巴 x1", "护凶爪龙的爪 x1", "护凶爪龙的逆鳞 x1"]}
-{"series_id": "护凶爪龙", "parts_type": "LEG", "name": "护凶爪龙护腿", "key_enemy": "护凶爪龙", "materials": ["护凶爪龙的鳞 x2", "护凶爪龙的爪 x1"]}
-{"series_id": "暗器蛸", "parts_type": "HELM", "name": "暗器蛸头盔", "key_enemy": "暗器蛸", "materials": ["暗器蛸的皮 x2", "金色角质 x2", "暗器蛸的牙 x1", "粗壮护骨 x1"]}
-{"series_id": "暗器蛸", "parts_type": "BODY", "name": "暗器蛸铠甲", "key_enemy": "暗器蛸", "materials": ["金色角质 x2", "暗器蛸的触手 x1"]}
-{"series_id": "暗器蛸", "parts_type": "ARM", "name": "暗器蛸腕甲", "key_enemy": "暗器蛸", "materials": ["暗器蛸的皮 x2", "暗器蛸的爪 x1"]}
-{"series_id": "暗器蛸", "parts_type": "WAIST", "name": "暗器蛸腰甲", "key_enemy": "暗器蛸", "materials": ["暗器蛸狩猎证 x1", "暗器蛸的皮 x2", "暗器蛸的爪 x1", "暗器蛸的髓液 x1"]}
-{"series_id": "暗器蛸", "parts_type": "LEG", "name": "暗器蛸护腿", "key_enemy": "暗器蛸", "materials": ["暗器蛸的爪 x1", "暗器蛸的触手 x1", "暗器蛸的牙 x1"]}
-{"series_id": "护锁刃龙", "parts_type": "HELM", "name": "护锁刃龙头盔", "key_enemy": "护锁刃龙", "materials": ["护龙的血 x1", "护火龙的翼膜 x2", "护龙的鳞 x1"]}
-{"series_id": "护锁刃龙", "parts_type": "BODY", "name": "护锁刃龙铠甲", "key_enemy": "护锁刃龙", "materials": ["护龙的血 x1", "护凶爪龙的爪 x2", "粗壮护骨 x3"]}
-{"series_id": "护锁刃龙", "parts_type": "ARM", "name": "护锁刃龙腕甲", "key_enemy": "护锁刃龙", "materials": ["护龙的血 x1", "护龙的鳞 x2", "护鹭鹰龙的羽毛 x2"]}
-{"series_id": "护锁刃龙", "parts_type": "WAIST", "name": "护锁刃龙腰甲", "key_enemy": "护锁刃龙", "materials": ["护龙的血 x1", "护辟兽的爪 x2", "护龙的毛皮 x1"]}
-{"series_id": "护锁刃龙", "parts_type": "LEG", "name": "护锁刃龙护腿", "key_enemy": "护锁刃龙", "materials": ["护龙的血 x1", "护龙的毛皮 x2"]}
-{"series_id": "希望α", "parts_type": "HELM", "name": "希望面具α", "key_enemy": "", "materials": ["硬质骨头 x2", "铁矿石 x1"]}
-{"series_id": "希望α", "parts_type": "BODY", "name": "希望铠甲α", "key_enemy": "", "materials": ["硬质骨头 x1", "大地结晶 x1"]}
-{"series_id": "希望α", "parts_type": "ARM", "name": "希望腕甲α", "key_enemy": "", "materials": ["硬质骨头 x2", "大地结晶 x1"]}
-{"series_id": "希望α", "parts_type": "WAIST", "name": "希望腰甲α", "key_enemy": "", "materials": ["硬质骨头 x1", "铁矿石 x1"]}
-{"series_id": "希望α", "parts_type": "LEG", "name": "希望护腿α", "key_enemy": "", "materials": ["硬质骨头 x3"]}
-{"series_id": "皮制α", "parts_type": "HELM", "name": "皮制头饰α", "key_enemy": "", "materials": ["护龙的毛皮 x1"]}
-{"series_id": "皮制α", "parts_type": "BODY", "name": "皮制服饰α", "key_enemy": "", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
-{"series_id": "皮制α", "parts_type": "ARM", "name": "皮制手套α", "key_enemy": "", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
-{"series_id": "皮制α", "parts_type": "WAIST", "name": "皮制腰带α", "key_enemy": "", "materials": ["护龙的毛皮 x1"]}
-{"series_id": "皮制α", "parts_type": "LEG", "name": "皮制长裤α", "key_enemy": "", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
-{"series_id": "锁甲α", "parts_type": "HELM", "name": "锁甲头饰α", "key_enemy": "", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
-{"series_id": "锁甲α", "parts_type": "BODY", "name": "锁甲服饰α", "key_enemy": "", "materials": ["护龙的鳞 x1"]}
-{"series_id": "锁甲α", "parts_type": "ARM", "name": "锁甲手套α", "key_enemy": "", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
-{"series_id": "锁甲α", "parts_type": "WAIST", "name": "锁甲腰带α", "key_enemy": "", "materials": ["护龙的鳞 x1"]}
-{"series_id": "锁甲α", "parts_type": "LEG", "name": "锁甲长裤α", "key_enemy": "", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
-{"series_id": "骨制α", "parts_type": "HELM", "name": "骨制头盔α", "key_enemy": "", "materials": ["良质硬骨 x1", "结冻冰骨 x1"]}
-{"series_id": "骨制α", "parts_type": "BODY", "name": "骨制铠甲α", "key_enemy": "", "materials": ["良质硬骨 x1", "漆黑的油骨 x1"]}
-{"series_id": "骨制α", "parts_type": "ARM", "name": "骨制腕甲α", "key_enemy": "", "materials": ["良质硬骨 x1", "结冻冰骨 x1"]}
-{"series_id": "骨制α", "parts_type": "WAIST", "name": "骨制腰甲α", "key_enemy": "", "materials": ["良质硬骨 x1", "粗壮护骨 x1"]}
-{"series_id": "骨制α", "parts_type": "LEG", "name": "骨制护腿α", "key_enemy": "", "materials": ["良质硬骨 x1", "漆黑的油骨 x1"]}
-{"series_id": "合金α", "parts_type": "HELM", "name": "合金头盔α", "key_enemy": "", "materials": ["灵鹤石 x1", "辉龙石 x3"]}
-{"series_id": "合金α", "parts_type": "BODY", "name": "合金铠甲α", "key_enemy": "", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
-{"series_id": "合金α", "parts_type": "ARM", "name": "合金腕甲α", "key_enemy": "", "materials": ["灵鹤石 x1", "辉龙石 x3"]}
-{"series_id": "合金α", "parts_type": "WAIST", "name": "合金腰甲α", "key_enemy": "", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
-{"series_id": "合金α", "parts_type": "LEG", "name": "合金护腿α", "key_enemy": "", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
-{"series_id": "血盗虫α", "parts_type": "HELM", "name": "血盗虫眼镜α", "key_enemy": "", "materials": ["血盗虫的坚壳 x5"]}
-{"series_id": "血盗虫β", "parts_type": "HELM", "name": "血盗虫眼镜β", "key_enemy": "", "materials": ["血盗虫的坚壳 x5"]}
-{"series_id": "钳速龙α", "parts_type": "ARM", "name": "钳速龙腕甲α", "key_enemy": "", "materials": ["钳速龙的上等鳞 x3", "锐利的牙 x2"]}
-{"series_id": "钳速龙β", "parts_type": "ARM", "name": "钳速龙腕甲β", "key_enemy": "", "materials": ["钳速龙的上等鳞 x3", "锐利的牙 x2"]}
-{"series_id": "锯带龙α", "parts_type": "LEG", "name": "锯带龙护腿α", "key_enemy": "", "materials": ["锯带龙的上等鳍 x3", "灵鹤石 x2"]}
-{"series_id": "锯带龙β", "parts_type": "LEG", "name": "锯带龙护腿β", "key_enemy": "", "materials": ["锯带龙的上等鳍 x3", "灵鹤石 x2"]}
-{"series_id": "巨蜂α", "parts_type": "HELM", "name": "巨蜂头盔α", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "怪物浓液 x3"]}
-{"series_id": "巨蜂α", "parts_type": "BODY", "name": "巨蜂铠甲α", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x2"]}
-{"series_id": "巨蜂α", "parts_type": "ARM", "name": "巨蜂腕甲α", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x3"]}
-{"series_id": "巨蜂α", "parts_type": "WAIST", "name": "巨蜂腰甲α", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x2"]}
-{"series_id": "巨蜂α", "parts_type": "LEG", "name": "巨蜂护腿α", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x1"]}
-{"series_id": "巨蜂β", "parts_type": "HELM", "name": "巨蜂头盔β", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "怪物浓液 x3"]}
-{"series_id": "巨蜂β", "parts_type": "BODY", "name": "巨蜂铠甲β", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x2"]}
-{"series_id": "巨蜂β", "parts_type": "ARM", "name": "巨蜂腕甲β", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x3"]}
-{"series_id": "巨蜂β", "parts_type": "WAIST", "name": "巨蜂腰甲β", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x2"]}
-{"series_id": "巨蜂β", "parts_type": "LEG", "name": "巨蜂护腿β", "key_enemy": "", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x1"]}
-{"series_id": "盔速龙α", "parts_type": "BODY", "name": "盔速龙铠甲α", "key_enemy": "", "materials": ["盔速龙的坚头壳 x4", "狱炎石 x2"]}
-{"series_id": "盔速龙β", "parts_type": "BODY", "name": "盔速龙铠甲β", "key_enemy": "", "materials": ["盔速龙的坚头壳 x4", "狱炎石 x2"]}
-{"series_id": "血眠虫α", "parts_type": "HELM", "name": "血眠虫头饰α", "key_enemy": "", "materials": ["血眠虫的坚壳 x5"]}
-{"series_id": "血眠虫β", "parts_type": "HELM", "name": "血眠虫头饰β", "key_enemy": "", "materials": ["血眠虫的坚壳 x5"]}
-{"series_id": "怪鸟α", "parts_type": "HELM", "name": "怪鸟头盔α", "key_enemy": "怪鸟", "materials": ["怪鸟的上等鳞 x2", "怪鸟的翼 x2", "尖龙骨 x1"]}
-{"series_id": "怪鸟α", "parts_type": "BODY", "name": "怪鸟铠甲α", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "怪鸟的上等鳞 x2", "怪鸟的翼 x1", "狱炎石 x1"]}
-{"series_id": "怪鸟α", "parts_type": "ARM", "name": "怪鸟腕甲α", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "怪鸟的坚壳 x3", "巨大的喙 x1"]}
-{"series_id": "怪鸟α", "parts_type": "WAIST", "name": "怪鸟腰甲α", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "巨大的喙 x3", "怪鸟的耳 x1", "爆炎袋 x1"]}
-{"series_id": "怪鸟α", "parts_type": "LEG", "name": "怪鸟护腿α", "key_enemy": "怪鸟", "materials": ["怪鸟的上等鳞 x2", "怪鸟的坚壳 x2", "怪鸟的翼 x1", "怪鸟的耳 x1"]}
-{"series_id": "怪鸟β", "parts_type": "HELM", "name": "怪鸟头盔β", "key_enemy": "怪鸟", "materials": ["怪鸟的上等鳞 x2", "怪鸟的翼 x2", "尖龙骨 x1"]}
-{"series_id": "怪鸟β", "parts_type": "BODY", "name": "怪鸟铠甲β", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "怪鸟的上等鳞 x2", "怪鸟的翼 x1", "狱炎石 x1"]}
-{"series_id": "怪鸟β", "parts_type": "ARM", "name": "怪鸟腕甲β", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "怪鸟的坚壳 x3", "巨大的喙 x1"]}
-{"series_id": "怪鸟β", "parts_type": "WAIST", "name": "怪鸟腰甲β", "key_enemy": "怪鸟", "materials": ["怪鸟狩猎证 S x1", "巨大的喙 x3", "怪鸟的耳 x1", "爆炎袋 x1"]}
-{"series_id": "怪鸟β", "parts_type": "LEG", "name": "怪鸟护腿β", "key_enemy": "怪鸟", "materials": ["怪鸟的上等鳞 x2", "怪鸟的坚壳 x2", "怪鸟的翼 x1", "怪鸟的耳 x1"]}
-{"series_id": "缠蛙α", "parts_type": "HELM", "name": "缠蛙头盔α", "key_enemy": "", "materials": ["缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "坚固的骨 x1"]}
-{"series_id": "缠蛙α", "parts_type": "BODY", "name": "缠蛙铠甲α", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的坚缠甲 x2", "良质硬骨 x1"]}
-{"series_id": "缠蛙α", "parts_type": "ARM", "name": "缠蛙腕甲α", "key_enemy": "", "materials": ["缠蛙的上等鳞 x2", "缠蛙的上等皮 x2", "缠蛙的大颚 x1", "缠蛙的坚缠甲 x1"]}
-{"series_id": "缠蛙α", "parts_type": "WAIST", "name": "缠蛙腰甲α", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等皮 x3", "缠蛙的坚缠甲 x1"]}
-{"series_id": "缠蛙α", "parts_type": "LEG", "name": "缠蛙护腿α", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "翼龙的上等皮 x1"]}
-{"series_id": "缠蛙β", "parts_type": "HELM", "name": "缠蛙头盔β", "key_enemy": "", "materials": ["缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "坚固的骨 x1"]}
-{"series_id": "缠蛙β", "parts_type": "BODY", "name": "缠蛙铠甲β", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的坚缠甲 x2", "良质硬骨 x1"]}
-{"series_id": "缠蛙β", "parts_type": "ARM", "name": "缠蛙腕甲β", "key_enemy": "", "materials": ["缠蛙的上等鳞 x2", "缠蛙的上等皮 x2", "缠蛙的大颚 x1", "缠蛙的坚缠甲 x1"]}
-{"series_id": "缠蛙β", "parts_type": "WAIST", "name": "缠蛙腰甲β", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等皮 x3", "缠蛙的坚缠甲 x1"]}
-{"series_id": "缠蛙β", "parts_type": "LEG", "name": "缠蛙护腿β", "key_enemy": "", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "翼龙的上等皮 x1"]}
-{"series_id": "炎尾龙α", "parts_type": "HELM", "name": "炎尾龙头盔α", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的浓引火液 x2", "炎尾龙的上等皮 x2", "良质硬骨 x1"]}
-{"series_id": "炎尾龙α", "parts_type": "BODY", "name": "炎尾龙铠甲α", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的大头冠 x1", "炎尾龙的尾巴 x1", "红莲石 x1"]}
-{"series_id": "炎尾龙α", "parts_type": "ARM", "name": "炎尾龙腕甲α", "key_enemy": "", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的上等皮 x3", "炎尾龙的浓引火液 x1", "炎尾龙的大头冠 x1"]}
-{"series_id": "炎尾龙α", "parts_type": "WAIST", "name": "炎尾龙腰甲α", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的上等皮 x2", "炎尾龙的大头冠 x1"]}
-{"series_id": "炎尾龙α", "parts_type": "LEG", "name": "炎尾龙护腿α", "key_enemy": "", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的浓引火液 x1", "尖龙骨 x1"]}
-{"series_id": "炎尾龙β", "parts_type": "HELM", "name": "炎尾龙头盔β", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的浓引火液 x2", "炎尾龙的上等皮 x2", "良质硬骨 x1"]}
-{"series_id": "炎尾龙β", "parts_type": "BODY", "name": "炎尾龙铠甲β", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的大头冠 x1", "炎尾龙的尾巴 x1", "红莲石 x1"]}
-{"series_id": "炎尾龙β", "parts_type": "ARM", "name": "炎尾龙腕甲β", "key_enemy": "", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的上等皮 x3", "炎尾龙的浓引火液 x1", "炎尾龙的大头冠 x1"]}
-{"series_id": "炎尾龙β", "parts_type": "WAIST", "name": "炎尾龙腰甲β", "key_enemy": "", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的上等皮 x2", "炎尾龙的大头冠 x1"]}
-{"series_id": "炎尾龙β", "parts_type": "LEG", "name": "炎尾龙护腿β", "key_enemy": "", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的浓引火液 x1", "尖龙骨 x1"]}
-{"series_id": "刺花蜘蛛α", "parts_type": "HELM", "name": "刺花蜘蛛头盔α", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的坚壳 x3", "刺花蜘蛛的锐爪 x2"]}
-{"series_id": "刺花蜘蛛α", "parts_type": "BODY", "name": "刺花蜘蛛铠甲α", "key_enemy": "", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的坚壳 x2", "刺花蜘蛛的浓粘液 x1", "刺花蜘蛛的上等尾棘 x1"]}
-{"series_id": "刺花蜘蛛α", "parts_type": "ARM", "name": "刺花蜘蛛腕甲α", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的锐爪 x1", "刺花蜘蛛的上等尾棘 x1", "怪物浓液 x1"]}
-{"series_id": "刺花蜘蛛α", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲α", "key_enemy": "", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x2", "灵鹤石 x2"]}
-{"series_id": "刺花蜘蛛α", "parts_type": "LEG", "name": "刺花蜘蛛护腿α", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x1", "璀璨水晶 x1"]}
-{"series_id": "刺花蜘蛛β", "parts_type": "HELM", "name": "刺花蜘蛛头盔β", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的坚壳 x3", "刺花蜘蛛的锐爪 x2"]}
-{"series_id": "刺花蜘蛛β", "parts_type": "BODY", "name": "刺花蜘蛛铠甲β", "key_enemy": "", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的坚壳 x2", "刺花蜘蛛的浓粘液 x1", "刺花蜘蛛的上等尾棘 x1"]}
-{"series_id": "刺花蜘蛛β", "parts_type": "ARM", "name": "刺花蜘蛛腕甲β", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的锐爪 x1", "刺花蜘蛛的上等尾棘 x1", "怪物浓液 x1"]}
-{"series_id": "刺花蜘蛛β", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲β", "key_enemy": "", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x2", "灵鹤石 x2"]}
-{"series_id": "刺花蜘蛛β", "parts_type": "LEG", "name": "刺花蜘蛛护腿β", "key_enemy": "", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x1", "璀璨水晶 x1"]}
-{"series_id": "桃毛兽王α", "parts_type": "HELM", "name": "桃毛兽王头盔α", "key_enemy": "", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "坚固的骨 x1"]}
-{"series_id": "桃毛兽王α", "parts_type": "BODY", "name": "桃毛兽王铠甲α", "key_enemy": "", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的尖爪 x2", "桃毛兽王的锐牙 x1", "极彩色的刚毛 x1"]}
-{"series_id": "桃毛兽王α", "parts_type": "ARM", "name": "桃毛兽王腕甲α", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "极彩色的刚毛 x1", "桃毛兽的刚毛 x2"]}
-{"series_id": "桃毛兽王α", "parts_type": "WAIST", "name": "桃毛兽王腰甲α", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的尖爪 x3", "极彩色的刚毛 x1"]}
-{"series_id": "桃毛兽王α", "parts_type": "LEG", "name": "桃毛兽王护腿α", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "锐利的牙 x1"]}
-{"series_id": "桃毛兽王β", "parts_type": "HELM", "name": "桃毛兽王头盔β", "key_enemy": "", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "坚固的骨 x1"]}
-{"series_id": "桃毛兽王β", "parts_type": "BODY", "name": "桃毛兽王铠甲β", "key_enemy": "", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的尖爪 x2", "桃毛兽王的锐牙 x1", "极彩色的刚毛 x1"]}
-{"series_id": "桃毛兽王β", "parts_type": "ARM", "name": "桃毛兽王腕甲β", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "极彩色的刚毛 x1", "桃毛兽的刚毛 x2"]}
-{"series_id": "桃毛兽王β", "parts_type": "WAIST", "name": "桃毛兽王腰甲β", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的尖爪 x3", "极彩色的刚毛 x1"]}
-{"series_id": "桃毛兽王β", "parts_type": "LEG", "name": "桃毛兽王护腿β", "key_enemy": "", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "锐利的牙 x1"]}
-{"series_id": "沼喷龙α", "parts_type": "HELM", "name": "沼喷龙头盔α", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的锐爪 x3", "沼喷龙的大喙 x1"]}
-{"series_id": "沼喷龙α", "parts_type": "BODY", "name": "沼喷龙铠甲α", "key_enemy": "", "materials": ["沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "尖龙骨 x1"]}
-{"series_id": "沼喷龙α", "parts_type": "ARM", "name": "沼喷龙腕甲α", "key_enemy": "", "materials": ["沼喷龙的上等皮 x2", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x1", "沼喷龙的大喙 x1"]}
-{"series_id": "沼喷龙α", "parts_type": "WAIST", "name": "沼喷龙腰甲α", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "盔速龙的坚头壳 x1"]}
-{"series_id": "沼喷龙α", "parts_type": "LEG", "name": "沼喷龙护腿α", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的大喙 x2", "猛毒袋 x1"]}
-{"series_id": "沼喷龙β", "parts_type": "HELM", "name": "沼喷龙头盔β", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的锐爪 x3", "沼喷龙的大喙 x1"]}
-{"series_id": "沼喷龙β", "parts_type": "BODY", "name": "沼喷龙铠甲β", "key_enemy": "", "materials": ["沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "尖龙骨 x1"]}
-{"series_id": "沼喷龙β", "parts_type": "ARM", "name": "沼喷龙腕甲β", "key_enemy": "", "materials": ["沼喷龙的上等皮 x2", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x1", "沼喷龙的大喙 x1"]}
-{"series_id": "沼喷龙β", "parts_type": "WAIST", "name": "沼喷龙腰甲β", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "盔速龙的坚头壳 x1"]}
-{"series_id": "沼喷龙β", "parts_type": "LEG", "name": "沼喷龙护腿β", "key_enemy": "", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的大喙 x2", "猛毒袋 x1"]}
-{"series_id": "毒怪鸟α", "parts_type": "HELM", "name": "毒怪鸟头盔α", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的翼 x2", "毒怪鸟的头 x1"]}
-{"series_id": "毒怪鸟α", "parts_type": "BODY", "name": "毒怪鸟铠甲α", "key_enemy": "毒怪鸟", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的翼 x1", "毒怪鸟的尾巴 x1", "毒怪鸟的头 x1"]}
-{"series_id": "毒怪鸟α", "parts_type": "ARM", "name": "毒怪鸟腕甲α", "key_enemy": "毒怪鸟", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "尖龙骨 x1"]}
-{"series_id": "毒怪鸟α", "parts_type": "WAIST", "name": "毒怪鸟腰甲α", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "璀璨水晶 x1"]}
-{"series_id": "毒怪鸟α", "parts_type": "LEG", "name": "毒怪鸟护腿α", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的头 x1", "猛毒袋 x1"]}
-{"series_id": "毒怪鸟β", "parts_type": "HELM", "name": "毒怪鸟头盔β", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的翼 x2", "毒怪鸟的头 x1"]}
-{"series_id": "毒怪鸟β", "parts_type": "BODY", "name": "毒怪鸟铠甲β", "key_enemy": "毒怪鸟", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的翼 x1", "毒怪鸟的尾巴 x1", "毒怪鸟的头 x1"]}
-{"series_id": "毒怪鸟β", "parts_type": "ARM", "name": "毒怪鸟腕甲β", "key_enemy": "毒怪鸟", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "尖龙骨 x1"]}
-{"series_id": "毒怪鸟β", "parts_type": "WAIST", "name": "毒怪鸟腰甲β", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "璀璨水晶 x1"]}
-{"series_id": "毒怪鸟β", "parts_type": "LEG", "name": "毒怪鸟护腿β", "key_enemy": "毒怪鸟", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的头 x1", "猛毒袋 x1"]}
-{"series_id": "影蜘蛛α", "parts_type": "HELM", "name": "影蜘蛛头盔α", "key_enemy": "", "materials": ["影蜘蛛的坚壳 x2", "影蜘蛛的坚钳角 x1", "怪物浓液 x2"]}
-{"series_id": "影蜘蛛α", "parts_type": "BODY", "name": "影蜘蛛铠甲α", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的坚钳角 x1", "影蜘蛛的锐爪 x2", "鸟龙玉 x1"]}
-{"series_id": "影蜘蛛α", "parts_type": "ARM", "name": "影蜘蛛腕甲α", "key_enemy": "", "materials": ["影蜘蛛的坚壳 x3", "影蜘蛛的锐爪 x3", "影蜘蛛的坚钳角 x1", "影蜘蛛的上等棘 x1"]}
-{"series_id": "影蜘蛛α", "parts_type": "WAIST", "name": "影蜘蛛腰甲α", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的锐爪 x2", "影蜘蛛的上等棘 x2", "血眠虫的坚壳 x2"]}
-{"series_id": "影蜘蛛α", "parts_type": "LEG", "name": "影蜘蛛护腿α", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的上等棘 x1", "橡胶质的上等皮 x2", "昏睡袋 x1"]}
-{"series_id": "影蜘蛛β", "parts_type": "HELM", "name": "影蜘蛛头盔β", "key_enemy": "", "materials": ["影蜘蛛的坚壳 x2", "影蜘蛛的坚钳角 x1", "怪物浓液 x2"]}
-{"series_id": "影蜘蛛β", "parts_type": "BODY", "name": "影蜘蛛铠甲β", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的坚钳角 x1", "影蜘蛛的锐爪 x2", "鸟龙玉 x1"]}
-{"series_id": "影蜘蛛β", "parts_type": "ARM", "name": "影蜘蛛腕甲β", "key_enemy": "", "materials": ["影蜘蛛的坚壳 x3", "影蜘蛛的锐爪 x3", "影蜘蛛的坚钳角 x1", "影蜘蛛的上等棘 x1"]}
-{"series_id": "影蜘蛛β", "parts_type": "WAIST", "name": "影蜘蛛腰甲β", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的锐爪 x2", "影蜘蛛的上等棘 x2", "血眠虫的坚壳 x2"]}
-{"series_id": "影蜘蛛β", "parts_type": "LEG", "name": "影蜘蛛护腿β", "key_enemy": "", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的上等棘 x1", "橡胶质的上等皮 x2", "昏睡袋 x1"]}
-{"series_id": "沙海龙α", "parts_type": "HELM", "name": "沙海龙头盔α", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1"]}
-{"series_id": "沙海龙α", "parts_type": "BODY", "name": "沙海龙铠甲α", "key_enemy": "", "materials": ["沙海龙的上等鳞 x2", "沙海龙的尖头壳 x1", "尖龙骨 x1"]}
-{"series_id": "沙海龙α", "parts_type": "ARM", "name": "沙海龙腕甲α", "key_enemy": "", "materials": ["沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1", "沙海龙的尾巴 x1"]}
-{"series_id": "沙海龙α", "parts_type": "WAIST", "name": "沙海龙腰甲α", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的尖头壳 x1", "大水袋 x1"]}
-{"series_id": "沙海龙α", "parts_type": "LEG", "name": "沙海龙护腿α", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的黑珍珠 x1"]}
-{"series_id": "沙海龙β", "parts_type": "HELM", "name": "沙海龙头盔β", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1"]}
-{"series_id": "沙海龙β", "parts_type": "BODY", "name": "沙海龙铠甲β", "key_enemy": "", "materials": ["沙海龙的上等鳞 x2", "沙海龙的尖头壳 x1", "尖龙骨 x1"]}
-{"series_id": "沙海龙β", "parts_type": "ARM", "name": "沙海龙腕甲β", "key_enemy": "", "materials": ["沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1", "沙海龙的尾巴 x1"]}
-{"series_id": "沙海龙β", "parts_type": "WAIST", "name": "沙海龙腰甲β", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的尖头壳 x1", "大水袋 x1"]}
-{"series_id": "沙海龙β", "parts_type": "LEG", "name": "沙海龙护腿β", "key_enemy": "", "materials": ["沙海龙狩猎证 S x1", "沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的黑珍珠 x1"]}
-{"series_id": "风铗龙α", "parts_type": "HELM", "name": "风铗龙头盔α", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等皮 x3", "风铗龙的上等尾爪 x2"]}
-{"series_id": "风铗龙α", "parts_type": "BODY", "name": "风铗龙铠甲α", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等尾爪 x1", "冻结袋 x1"]}
-{"series_id": "风铗龙α", "parts_type": "ARM", "name": "风铗龙腕甲α", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "龙玉 x1"]}
-{"series_id": "风铗龙α", "parts_type": "WAIST", "name": "风铗龙腰甲α", "key_enemy": "", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "尖龙骨 x1"]}
-{"series_id": "风铗龙α", "parts_type": "LEG", "name": "风铗龙护腿α", "key_enemy": "", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等皮 x2", "风铗龙的上等飞膜 x2", "风铗龙的上等尾爪 x1"]}
-{"series_id": "风铗龙β", "parts_type": "HELM", "name": "风铗龙头盔β", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等皮 x3", "风铗龙的上等尾爪 x2"]}
-{"series_id": "风铗龙β", "parts_type": "BODY", "name": "风铗龙铠甲β", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等尾爪 x1", "冻结袋 x1"]}
-{"series_id": "风铗龙β", "parts_type": "ARM", "name": "风铗龙腕甲β", "key_enemy": "", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "龙玉 x1"]}
-{"series_id": "风铗龙β", "parts_type": "WAIST", "name": "风铗龙腰甲β", "key_enemy": "", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "尖龙骨 x1"]}
-{"series_id": "风铗龙β", "parts_type": "LEG", "name": "风铗龙护腿β", "key_enemy": "", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等皮 x2", "风铗龙的上等飞膜 x2", "风铗龙的上等尾爪 x1"]}
-{"series_id": "雌火龙α", "parts_type": "HELM", "name": "雌火龙头盔α", "key_enemy": "", "materials": ["雌火龙的上等鳞 x2", "雌火龙的翼膜 x2", "尖龙骨 x2"]}
-{"series_id": "雌火龙α", "parts_type": "BODY", "name": "雌火龙铠甲α", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的上等鳞 x2", "雌火龙的红玉 x1"]}
-{"series_id": "雌火龙α", "parts_type": "ARM", "name": "雌火龙腕甲α", "key_enemy": "", "materials": ["雌火龙的上等鳞 x3", "雌火龙的坚壳 x3", "雌火龙的上等棘 x2", "猛毒袋 x2"]}
-{"series_id": "雌火龙α", "parts_type": "WAIST", "name": "雌火龙腰甲α", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x1", "火龙的延髓 x1"]}
-{"series_id": "雌火龙α", "parts_type": "LEG", "name": "雌火龙护腿α", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x2", "雌火龙的翼膜 x2", "古老龙骨 x1"]}
-{"series_id": "雌火龙β", "parts_type": "HELM", "name": "雌火龙头盔β", "key_enemy": "", "materials": ["雌火龙的上等鳞 x2", "雌火龙的翼膜 x2", "尖龙骨 x2"]}
-{"series_id": "雌火龙β", "parts_type": "BODY", "name": "雌火龙铠甲β", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的上等鳞 x2", "雌火龙的红玉 x1"]}
-{"series_id": "雌火龙β", "parts_type": "ARM", "name": "雌火龙腕甲β", "key_enemy": "", "materials": ["雌火龙的上等鳞 x3", "雌火龙的坚壳 x3", "雌火龙的上等棘 x2", "猛毒袋 x2"]}
-{"series_id": "雌火龙β", "parts_type": "WAIST", "name": "雌火龙腰甲β", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x1", "火龙的延髓 x1"]}
-{"series_id": "雌火龙β", "parts_type": "LEG", "name": "雌火龙护腿β", "key_enemy": "", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x2", "雌火龙的翼膜 x2", "古老龙骨 x1"]}
-{"series_id": "铸铁α", "parts_type": "HELM", "name": "铸铁头盔α", "key_enemy": "", "materials": ["白鸠石 x1", "灵鹤石 x2", "狱炎石 x1"]}
-{"series_id": "铸铁α", "parts_type": "BODY", "name": "铸铁铠甲α", "key_enemy": "", "materials": ["白鸠石 x1", "灵鹤石 x1", "结冰金属 x4"]}
-{"series_id": "铸铁α", "parts_type": "ARM", "name": "铸铁腕甲α", "key_enemy": "", "materials": ["白鸠石 x1", "灵鹤石 x2", "光水晶 x2"]}
-{"series_id": "铸铁α", "parts_type": "WAIST", "name": "铸铁腰甲α", "key_enemy": "", "materials": ["白鸠石 x1", "灵鹤石 x3", "璀璨水晶 x1"]}
-{"series_id": "铸铁α", "parts_type": "LEG", "name": "铸铁护腿α", "key_enemy": "", "materials": ["白鸠石 x1", "灵鹤石 x1", "红莲石 x2"]}
-{"series_id": "护鹭鹰龙α", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲α", "key_enemy": "", "materials": ["护鹭鹰龙的上等羽毛 x4", "粗壮护骨 x4"]}
-{"series_id": "护鹭鹰龙β", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲β", "key_enemy": "", "materials": ["护鹭鹰龙的上等羽毛 x4", "粗壮护骨 x4"]}
-{"series_id": "咬鱼α", "parts_type": "LEG", "name": "咬鱼靴α", "key_enemy": "", "materials": ["咬鱼的皮 x3", "怪物浓液 x5"]}
-{"series_id": "护雷颚龙α", "parts_type": "HELM", "name": "护雷颚龙头盔α", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等毛皮 x5", "护雷颚龙的上等鼻骨 x4", "电击袋 x3"]}
-{"series_id": "护雷颚龙α", "parts_type": "BODY", "name": "护雷颚龙铠甲α", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x2", "护雷颚龙的上等鼻骨 x4", "护雷颚龙的锐牙 x4", "龙玉 x1"]}
-{"series_id": "护雷颚龙α", "parts_type": "ARM", "name": "护雷颚龙腕甲α", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙的上等鳞 x5", "护雷颚龙的锐牙 x3", "护龙的上等毛皮 x3"]}
-{"series_id": "护雷颚龙α", "parts_type": "WAIST", "name": "护雷颚龙腰甲α", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等鳞 x3", "护雷颚龙的锐牙 x2", "护雷颚龙的宝玉 x1"]}
-{"series_id": "护雷颚龙α", "parts_type": "LEG", "name": "护雷颚龙护腿α", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙的上等鳞 x6", "护雷颚龙的上等毛皮 x6", "护雷颚龙的尾巴 x2", "护龙的净血 x2"]}
-{"series_id": "护雷颚龙β", "parts_type": "HELM", "name": "护雷颚龙头盔β", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等毛皮 x5", "护雷颚龙的上等鼻骨 x4", "电击袋 x3"]}
-{"series_id": "护雷颚龙β", "parts_type": "BODY", "name": "护雷颚龙铠甲β", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x2", "护雷颚龙的上等鼻骨 x4", "护雷颚龙的锐牙 x4", "龙玉 x1"]}
-{"series_id": "护雷颚龙β", "parts_type": "ARM", "name": "护雷颚龙腕甲β", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙的上等鳞 x5", "护雷颚龙的锐牙 x3", "护龙的上等毛皮 x3"]}
-{"series_id": "护雷颚龙β", "parts_type": "WAIST", "name": "护雷颚龙腰甲β", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等鳞 x3", "护雷颚龙的锐牙 x2", "护雷颚龙的宝玉 x1"]}
-{"series_id": "护雷颚龙β", "parts_type": "LEG", "name": "护雷颚龙护腿β", "key_enemy": "护雷颚龙", "materials": ["护雷颚龙的上等鳞 x6", "护雷颚龙的上等毛皮 x6", "护雷颚龙的尾巴 x2", "护龙的净血 x2"]}
-{"series_id": "辟兽α", "parts_type": "HELM", "name": "辟兽头盔α", "key_enemy": "", "materials": ["辟兽狩猎证 S x2", "辟兽的锐牙 x3", "良质硬骨 x2"]}
-{"series_id": "辟兽α", "parts_type": "BODY", "name": "辟兽铠甲α", "key_enemy": "", "materials": ["辟兽狩猎证 S x1", "辟兽的上等皮 x5", "辟兽的锐牙 x2", "草食种的坚壳 x2"]}
-{"series_id": "辟兽α", "parts_type": "ARM", "name": "辟兽腕甲α", "key_enemy": "", "materials": ["辟兽的刚毛 x3", "辟兽的锐爪 x2", "辟兽的锐牙 x2", "坚固的巨骨 x3"]}
-{"series_id": "辟兽α", "parts_type": "WAIST", "name": "辟兽腰甲α", "key_enemy": "", "materials": ["辟兽狩猎证 S x1", "辟兽的刚毛 x5", "辟兽的锐爪 x3", "兽玉 x1"]}
-{"series_id": "辟兽α", "parts_type": "LEG", "name": "辟兽护腿α", "key_enemy": "", "materials": ["辟兽的刚毛 x3", "辟兽的上等皮 x4", "辟兽的锐爪 x2", "锐利的牙 x2"]}
-{"series_id": "辟兽β", "parts_type": "HELM", "name": "辟兽头盔β", "key_enemy": "", "materials": ["辟兽狩猎证 S x2", "辟兽的锐牙 x3", "良质硬骨 x2"]}
-{"series_id": "辟兽β", "parts_type": "BODY", "name": "辟兽铠甲β", "key_enemy": "", "materials": ["辟兽狩猎证 S x1", "辟兽的上等皮 x5", "辟兽的锐牙 x2", "草食种的坚壳 x2"]}
-{"series_id": "辟兽β", "parts_type": "ARM", "name": "辟兽腕甲β", "key_enemy": "", "materials": ["辟兽的刚毛 x3", "辟兽的锐爪 x2", "辟兽的锐牙 x2", "坚固的巨骨 x3"]}
-{"series_id": "辟兽β", "parts_type": "WAIST", "name": "辟兽腰甲β", "key_enemy": "", "materials": ["辟兽狩猎证 S x1", "辟兽的刚毛 x5", "辟兽的锐爪 x3", "兽玉 x1"]}
-{"series_id": "辟兽β", "parts_type": "LEG", "name": "辟兽护腿β", "key_enemy": "", "materials": ["辟兽的刚毛 x3", "辟兽的上等皮 x4", "辟兽的锐爪 x2", "锐利的牙 x2"]}
-{"series_id": "护辟兽α", "parts_type": "HELM", "name": "护辟兽头盔α", "key_enemy": "", "materials": ["护辟兽狩猎证 S x2", "护辟兽的锐爪 x2", "护辟兽的锐牙 x3", "护龙的净血 x2"]}
-{"series_id": "护辟兽α", "parts_type": "BODY", "name": "护辟兽铠甲α", "key_enemy": "", "materials": ["护辟兽的刚毛 x3", "护辟兽的锐爪 x2", "护龙的上等毛皮 x3"]}
-{"series_id": "护辟兽α", "parts_type": "ARM", "name": "护辟兽腕甲α", "key_enemy": "", "materials": ["护辟兽狩猎证 S x1", "护辟兽的刚毛 x5", "护辟兽的锐爪 x3", "兽玉 x1"]}
-{"series_id": "护辟兽α", "parts_type": "WAIST", "name": "护辟兽腰甲α", "key_enemy": "", "materials": ["护辟兽的刚毛 x3", "护辟兽的上等皮 x4", "护辟兽的锐牙 x2", "坚固的骨 x2"]}
-{"series_id": "护辟兽α", "parts_type": "LEG", "name": "护辟兽护腿α", "key_enemy": "", "materials": ["护辟兽狩猎证 S x1", "护辟兽的上等皮 x5", "护辟兽的锐牙 x2", "护鹭鹰龙的上等羽毛 x2"]}
-{"series_id": "护辟兽β", "parts_type": "HELM", "name": "护辟兽头盔β", "key_enemy": "", "materials": ["护辟兽狩猎证 S x2", "护辟兽的锐爪 x2", "护辟兽的锐牙 x3", "护龙的净血 x2"]}
-{"series_id": "护辟兽β", "parts_type": "BODY", "name": "护辟兽铠甲β", "key_enemy": "", "materials": ["护辟兽的刚毛 x3", "护辟兽的锐爪 x2", "护龙的上等毛皮 x3"]}
-{"series_id": "护辟兽β", "parts_type": "ARM", "name": "护辟兽腕甲β", "key_enemy": "", "materials": ["护辟兽狩猎证 S x1", "护辟兽的刚毛 x5", "护辟兽的锐爪 x3", "兽玉 x1"]}
-{"series_id": "护辟兽β", "parts_type": "WAIST", "name": "护辟兽腰甲β", "key_enemy": "", "materials": ["护辟兽的刚毛 x3", "护辟兽的上等皮 x4", "护辟兽的锐牙 x2", "坚固的骨 x2"]}
-{"series_id": "护辟兽β", "parts_type": "LEG", "name": "护辟兽护腿β", "key_enemy": "", "materials": ["护辟兽狩猎证 S x1", "护辟兽的上等皮 x5", "护辟兽的锐牙 x2", "护鹭鹰龙的上等羽毛 x2"]}
-{"series_id": "赫猿兽α", "parts_type": "HELM", "name": "赫猿兽头盔α", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x1", "赫猿兽的坚壳 x5", "赫猿兽的坚甲 x4", "漆黑的油骨 x2"]}
-{"series_id": "赫猿兽α", "parts_type": "BODY", "name": "赫猿兽铠甲α", "key_enemy": "", "materials": ["赫猿兽的上等鳞 x5", "大赫炎结晶 x3", "坚固的巨骨 x3"]}
-{"series_id": "赫猿兽α", "parts_type": "ARM", "name": "赫猿兽腕甲α", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x1", "大赫炎结晶 x2", "赫猿兽的上等鳞 x3", "赫猿兽的延髓 x1"]}
-{"series_id": "赫猿兽α", "parts_type": "WAIST", "name": "赫猿兽腰甲α", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x2", "赫猿兽的坚甲 x2", "赫猿兽的尾巴 x2", "赫猿兽的骨髓 x1"]}
-{"series_id": "赫猿兽α", "parts_type": "LEG", "name": "赫猿兽护腿α", "key_enemy": "", "materials": ["赫猿兽的上等鳞 x6", "赫猿兽的坚壳 x6", "大赫炎结晶 x4", "赫猿兽的坚甲 x3"]}
-{"series_id": "赫猿兽β", "parts_type": "HELM", "name": "赫猿兽头盔β", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x1", "赫猿兽的坚壳 x5", "赫猿兽的坚甲 x4", "漆黑的油骨 x2"]}
-{"series_id": "赫猿兽β", "parts_type": "BODY", "name": "赫猿兽铠甲β", "key_enemy": "", "materials": ["赫猿兽的上等鳞 x5", "大赫炎结晶 x3", "坚固的巨骨 x3"]}
-{"series_id": "赫猿兽β", "parts_type": "ARM", "name": "赫猿兽腕甲β", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x1", "大赫炎结晶 x2", "赫猿兽的上等鳞 x3", "赫猿兽的延髓 x1"]}
-{"series_id": "赫猿兽β", "parts_type": "WAIST", "name": "赫猿兽腰甲β", "key_enemy": "", "materials": ["赫猿兽狩猎证 S x2", "赫猿兽的坚甲 x2", "赫猿兽的尾巴 x2", "赫猿兽的骨髓 x1"]}
-{"series_id": "赫猿兽β", "parts_type": "LEG", "name": "赫猿兽护腿β", "key_enemy": "", "materials": ["赫猿兽的上等鳞 x6", "赫猿兽的坚壳 x6", "大赫炎结晶 x4", "赫猿兽的坚甲 x3"]}
-{"series_id": "护凶爪龙α", "parts_type": "HELM", "name": "护凶爪龙头盔α", "key_enemy": "", "materials": ["护凶爪龙的上等鳞 x6", "护凶爪龙的大硬肌 x6", "护凶爪龙的尖爪 x4", "护凶爪龙的锐牙 x3"]}
-{"series_id": "护凶爪龙α", "parts_type": "BODY", "name": "护凶爪龙铠甲α", "key_enemy": "", "materials": ["护凶爪龙的上等鳞 x5", "护凶爪龙的尖爪 x3", "护龙的上等鳞 x3"]}
-{"series_id": "护凶爪龙α", "parts_type": "ARM", "name": "护凶爪龙腕甲α", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的尖爪 x2", "护凶爪龙的上等鳞 x3", "护凶爪龙的宝玉 x1"]}
-{"series_id": "护凶爪龙α", "parts_type": "WAIST", "name": "护凶爪龙腰甲α", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x2", "护凶爪龙的锐牙 x2", "护凶爪龙的尾巴 x2", "护凶爪龙的逆鳞 x1"]}
-{"series_id": "护凶爪龙α", "parts_type": "LEG", "name": "护凶爪龙护腿α", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的大硬肌 x5", "护凶爪龙的锐牙 x4", "粗壮护骨 x2"]}
-{"series_id": "护凶爪龙β", "parts_type": "HELM", "name": "护凶爪龙头盔β", "key_enemy": "", "materials": ["护凶爪龙的上等鳞 x6", "护凶爪龙的大硬肌 x6", "护凶爪龙的尖爪 x4", "护凶爪龙的锐牙 x3"]}
-{"series_id": "护凶爪龙β", "parts_type": "BODY", "name": "护凶爪龙铠甲β", "key_enemy": "", "materials": ["护凶爪龙的上等鳞 x5", "护凶爪龙的尖爪 x3", "护龙的上等鳞 x3"]}
-{"series_id": "护凶爪龙β", "parts_type": "ARM", "name": "护凶爪龙腕甲β", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的尖爪 x2", "护凶爪龙的上等鳞 x3", "护凶爪龙的宝玉 x1"]}
-{"series_id": "护凶爪龙β", "parts_type": "WAIST", "name": "护凶爪龙腰甲β", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x2", "护凶爪龙的锐牙 x2", "护凶爪龙的尾巴 x2", "护凶爪龙的逆鳞 x1"]}
-{"series_id": "护凶爪龙β", "parts_type": "LEG", "name": "护凶爪龙护腿β", "key_enemy": "", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的大硬肌 x5", "护凶爪龙的锐牙 x4", "粗壮护骨 x2"]}
-{"series_id": "暗器蛸α", "parts_type": "HELM", "name": "暗器蛸头盔α", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x2", "暗器蛸的上等触手 x4", "暗器蛸的锐牙 x5", "暗器蛸的髓液 x1"]}
-{"series_id": "暗器蛸α", "parts_type": "BODY", "name": "暗器蛸铠甲α", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x1", "暗器蛸的上等皮 x4", "暗器蛸的尖爪 x4", "暗器蛸的暗玉 x1"]}
-{"series_id": "暗器蛸α", "parts_type": "ARM", "name": "暗器蛸腕甲α", "key_enemy": "", "materials": ["暗器蛸的上等皮 x6", "黄金硬角质 x6", "暗器蛸的尖爪 x3", "暗器蛸的锐牙 x3"]}
-{"series_id": "暗器蛸α", "parts_type": "WAIST", "name": "暗器蛸腰甲α", "key_enemy": "", "materials": ["暗器蛸的上等皮 x5", "暗器蛸的尖爪 x3", "护鹭鹰龙的上等羽毛 x2"]}
-{"series_id": "暗器蛸α", "parts_type": "LEG", "name": "暗器蛸护腿α", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x1", "黄金硬角质 x5", "暗器蛸的上等触手 x4", "大水袋 x2"]}
-{"series_id": "暗器蛸β", "parts_type": "HELM", "name": "暗器蛸头盔β", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x2", "暗器蛸的上等触手 x4", "暗器蛸的锐牙 x5", "暗器蛸的髓液 x1"]}
-{"series_id": "暗器蛸β", "parts_type": "BODY", "name": "暗器蛸铠甲β", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x1", "暗器蛸的上等皮 x4", "暗器蛸的尖爪 x4", "暗器蛸的暗玉 x1"]}
-{"series_id": "暗器蛸β", "parts_type": "ARM", "name": "暗器蛸腕甲β", "key_enemy": "", "materials": ["暗器蛸的上等皮 x6", "黄金硬角质 x6", "暗器蛸的尖爪 x3", "暗器蛸的锐牙 x3"]}
-{"series_id": "暗器蛸β", "parts_type": "WAIST", "name": "暗器蛸腰甲β", "key_enemy": "", "materials": ["暗器蛸的上等皮 x5", "暗器蛸的尖爪 x3", "护鹭鹰龙的上等羽毛 x2"]}
-{"series_id": "暗器蛸β", "parts_type": "LEG", "name": "暗器蛸护腿β", "key_enemy": "", "materials": ["暗器蛸狩猎证 S x1", "黄金硬角质 x5", "暗器蛸的上等触手 x4", "大水袋 x2"]}
-{"series_id": "火龙α", "parts_type": "HELM", "name": "火龙头盔α", "key_enemy": "火龙", "materials": ["火龙的上等鳞 x5", "火龙的翼 x3", "尖龙骨 x3"]}
-{"series_id": "火龙α", "parts_type": "BODY", "name": "火龙铠甲α", "key_enemy": "火龙", "materials": ["火龙的上等鳞 x6", "火龙的坚壳 x6", "火龙的尾巴 x2", "古老龙骨 x1"]}
-{"series_id": "火龙α", "parts_type": "ARM", "name": "火龙腕甲α", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x1", "火龙的上等鳞 x4", "火龙的红玉 x1", "爆炎袋 x3"]}
-{"series_id": "火龙α", "parts_type": "WAIST", "name": "火龙腰甲α", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x2", "火龙的坚壳 x3", "火龙的延髓 x1", "红莲石 x2"]}
-{"series_id": "火龙α", "parts_type": "LEG", "name": "火龙护腿α", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x1", "火龙的坚壳 x5", "火龙的翼 x4", "翼龙的上等皮 x2"]}
-{"series_id": "火龙β", "parts_type": "HELM", "name": "火龙头盔β", "key_enemy": "火龙", "materials": ["火龙的上等鳞 x5", "火龙的翼 x3", "尖龙骨 x3"]}
-{"series_id": "火龙β", "parts_type": "BODY", "name": "火龙铠甲β", "key_enemy": "火龙", "materials": ["火龙的上等鳞 x6", "火龙的坚壳 x6", "火龙的尾巴 x2", "古老龙骨 x1"]}
-{"series_id": "火龙β", "parts_type": "ARM", "name": "火龙腕甲β", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x1", "火龙的上等鳞 x4", "火龙的红玉 x1", "爆炎袋 x3"]}
-{"series_id": "火龙β", "parts_type": "WAIST", "name": "火龙腰甲β", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x2", "火龙的坚壳 x3", "火龙的延髓 x1", "红莲石 x2"]}
-{"series_id": "火龙β", "parts_type": "LEG", "name": "火龙护腿β", "key_enemy": "火龙", "materials": ["火龙狩猎证 S x1", "火龙的坚壳 x5", "火龙的翼 x4", "翼龙的上等皮 x2"]}
-{"series_id": "护火龙α", "parts_type": "HELM", "name": "护火龙头盔α", "key_enemy": "", "materials": ["护火龙狩猎证 S x1", "护火龙的坚壳 x5", "护火龙的翼 x2", "璀璨水晶 x1"]}
-{"series_id": "护火龙α", "parts_type": "BODY", "name": "护火龙铠甲α", "key_enemy": "", "materials": ["护火龙的上等鳞 x5", "护火龙的翼 x2", "护龙的上等鳞 x3"]}
-{"series_id": "护火龙α", "parts_type": "ARM", "name": "护火龙腕甲α", "key_enemy": "", "materials": ["护火龙狩猎证 S x1", "护火龙的上等鳞 x6", "护火龙的坚壳 x5", "护火龙的红玉 x1"]}
-{"series_id": "护火龙α", "parts_type": "WAIST", "name": "护火龙腰甲α", "key_enemy": "", "materials": ["护火龙的上等鳞 x6", "护火龙的坚壳 x6", "护火龙的翼 x2", "护火龙的尾巴 x2"]}
-{"series_id": "护火龙α", "parts_type": "LEG", "name": "护火龙护腿α", "key_enemy": "", "materials": ["护火龙狩猎证 S x2", "护火龙的翼 x2", "护火龙的逆鳞 x1", "爆炎袋 x5"]}
-{"series_id": "护火龙β", "parts_type": "HELM", "name": "护火龙头盔β", "key_enemy": "", "materials": ["护火龙狩猎证 S x1", "护火龙的坚壳 x5", "护火龙的翼 x2", "璀璨水晶 x1"]}
-{"series_id": "护火龙β", "parts_type": "BODY", "name": "护火龙铠甲β", "key_enemy": "", "materials": ["护火龙的上等鳞 x5", "护火龙的翼 x2", "护龙的上等鳞 x3"]}
-{"series_id": "护火龙β", "parts_type": "ARM", "name": "护火龙腕甲β", "key_enemy": "", "materials": ["护火龙狩猎证 S x1", "护火龙的上等鳞 x6", "护火龙的坚壳 x5", "护火龙的红玉 x1"]}
-{"series_id": "护火龙β", "parts_type": "WAIST", "name": "护火龙腰甲β", "key_enemy": "", "materials": ["护火龙的上等鳞 x6", "护火龙的坚壳 x6", "护火龙的翼 x2", "护火龙的尾巴 x2"]}
-{"series_id": "护火龙β", "parts_type": "LEG", "name": "护火龙护腿β", "key_enemy": "", "materials": ["护火龙狩猎证 S x2", "护火龙的翼 x2", "护火龙的逆鳞 x1", "爆炎袋 x5"]}
-{"series_id": "铠龙α", "parts_type": "HELM", "name": "铠龙头盔α", "key_enemy": "铠龙", "materials": ["铠龙的坚壳 x5", "铠龙的坚胸壳 x3", "尖龙骨 x3"]}
-{"series_id": "铠龙α", "parts_type": "BODY", "name": "铠龙铠甲α", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x3", "龙玉 x1", "红莲石 x2"]}
-{"series_id": "铠龙α", "parts_type": "ARM", "name": "铠龙腕甲α", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x2", "铠龙的坚壳 x4", "铠龙的延髓 x1", "狱炎石 x1"]}
-{"series_id": "铠龙α", "parts_type": "WAIST", "name": "铠龙腰甲α", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x5", "铠龙的坚胸壳 x4", "盔速龙的坚头壳 x2"]}
-{"series_id": "铠龙α", "parts_type": "LEG", "name": "铠龙护腿α", "key_enemy": "铠龙", "materials": ["铠龙的坚壳 x6", "铠龙的翼 x6", "铠龙的头壳 x2", "昏睡袋 x3"]}
-{"series_id": "铠龙β", "parts_type": "HELM", "name": "铠龙头盔β", "key_enemy": "铠龙", "materials": ["铠龙的坚壳 x5", "铠龙的坚胸壳 x3", "尖龙骨 x3"]}
-{"series_id": "铠龙β", "parts_type": "BODY", "name": "铠龙铠甲β", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x3", "龙玉 x1", "红莲石 x2"]}
-{"series_id": "铠龙β", "parts_type": "ARM", "name": "铠龙腕甲β", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x2", "铠龙的坚壳 x4", "铠龙的延髓 x1", "狱炎石 x1"]}
-{"series_id": "铠龙β", "parts_type": "WAIST", "name": "铠龙腰甲β", "key_enemy": "铠龙", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x5", "铠龙的坚胸壳 x4", "盔速龙的坚头壳 x2"]}
-{"series_id": "铠龙β", "parts_type": "LEG", "name": "铠龙护腿β", "key_enemy": "铠龙", "materials": ["铠龙的坚壳 x6", "铠龙的翼 x6", "铠龙的头壳 x2", "昏睡袋 x3"]}
-{"series_id": "雪狮子王α", "parts_type": "HELM", "name": "雪狮子王头盔α", "key_enemy": "雪狮子王", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的锐牙 x4", "雪狮子王的尾巴 x2", "粗兽骨 x2"]}
-{"series_id": "雪狮子王α", "parts_type": "BODY", "name": "雪狮子王铠甲α", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x2", "雪狮子王的胡须 x3", "雪狮子的刚毛 x2"]}
-{"series_id": "雪狮子王α", "parts_type": "ARM", "name": "雪狮子王腕甲α", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的刚毛 x5", "雪狮子王的尾巴 x3", "兽玉 x1"]}
-{"series_id": "雪狮子王α", "parts_type": "WAIST", "name": "雪狮子王腰甲α", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的锐牙 x5", "雪狮子王的胡须 x2", "冻结袋 x3"]}
-{"series_id": "雪狮子王α", "parts_type": "LEG", "name": "雪狮子王护腿α", "key_enemy": "雪狮子王", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的尾巴 x2", "雪狮子王的胡须 x2", "坚固的巨骨 x3"]}
-{"series_id": "雪狮子王β", "parts_type": "HELM", "name": "雪狮子王头盔β", "key_enemy": "雪狮子王", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的锐牙 x4", "雪狮子王的尾巴 x2", "粗兽骨 x2"]}
-{"series_id": "雪狮子王β", "parts_type": "BODY", "name": "雪狮子王铠甲β", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x2", "雪狮子王的胡须 x3", "雪狮子的刚毛 x2"]}
-{"series_id": "雪狮子王β", "parts_type": "ARM", "name": "雪狮子王腕甲β", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的刚毛 x5", "雪狮子王的尾巴 x3", "兽玉 x1"]}
-{"series_id": "雪狮子王β", "parts_type": "WAIST", "name": "雪狮子王腰甲β", "key_enemy": "雪狮子王", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的锐牙 x5", "雪狮子王的胡须 x2", "冻结袋 x3"]}
-{"series_id": "雪狮子王β", "parts_type": "LEG", "name": "雪狮子王护腿β", "key_enemy": "雪狮子王", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的尾巴 x2", "雪狮子王的胡须 x2", "坚固的巨骨 x3"]}
-{"series_id": "库纳法α", "parts_type": "HELM", "name": "库纳法头饰α", "key_enemy": "", "materials": ["盾突龙的毛织品 x1", "钳速龙的上等鳞 x2"]}
-{"series_id": "库纳法α", "parts_type": "BODY", "name": "库纳法披肩α", "key_enemy": "", "materials": ["盾突龙的毛织品 x1", "锐利的牙 x1"]}
-{"series_id": "库纳法α", "parts_type": "WAIST", "name": "库纳法腰带α", "key_enemy": "", "materials": ["盾突龙的毛织品 x1", "锐利的牙 x1"]}
-{"series_id": "库纳法α", "parts_type": "LEG", "name": "库纳法套裤α", "key_enemy": "", "materials": ["盾突龙的毛织品 x1", "钳速龙的上等鳞 x2"]}
-{"series_id": "阿孜兹α", "parts_type": "HELM", "name": "阿孜兹头饰α", "key_enemy": "", "materials": ["阿孜兹的鞣制皮革 x1", "漆黑的油骨 x2"]}
-{"series_id": "阿孜兹α", "parts_type": "BODY", "name": "阿孜兹围裙α", "key_enemy": "", "materials": ["阿孜兹的鞣制皮革 x1", "狱炎石 x1"]}
-{"series_id": "阿孜兹α", "parts_type": "LEG", "name": "阿孜兹长裤α", "key_enemy": "", "materials": ["阿孜兹的鞣制皮革 x1", "红莲石 x2"]}
-{"series_id": "酥加α", "parts_type": "WAIST", "name": "酥加腰带α", "key_enemy": "", "materials": ["酥加的布料 x3", "白鸠石 x5"]}
-{"series_id": "西尔德α", "parts_type": "HELM", "name": "西尔德头巾α", "key_enemy": "", "materials": ["西尔德棉布 x2", "护鹭鹰龙的上等羽毛 x3"]}
-{"series_id": "西尔德α", "parts_type": "BODY", "name": "西尔德大衣α", "key_enemy": "", "materials": ["西尔德棉布 x2", "护鹭鹰龙的上等羽毛 x3"]}
-{"series_id": "死神α", "parts_type": "HELM", "name": "死神首脑α", "key_enemy": "", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
-{"series_id": "死神α", "parts_type": "BODY", "name": "死神肌肉α", "key_enemy": "", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
-{"series_id": "死神α", "parts_type": "ARM", "name": "死神双手α", "key_enemy": "", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
-{"series_id": "死神α", "parts_type": "WAIST", "name": "死神脐带α", "key_enemy": "", "materials": ["不祥的布 x1", "草食种的坚壳 x1", "粗兽骨 x1"]}
-{"series_id": "死神α", "parts_type": "LEG", "name": "死神脚跟α", "key_enemy": "", "materials": ["不祥的布 x1", "草食种的坚壳 x1", "粗兽骨 x1"]}
-{"series_id": "燕尾蝶α", "parts_type": "HELM", "name": "燕尾蝶护头α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
-{"series_id": "燕尾蝶α", "parts_type": "BODY", "name": "燕尾蝶上身α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
-{"series_id": "燕尾蝶α", "parts_type": "ARM", "name": "燕尾蝶护袖α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
-{"series_id": "燕尾蝶α", "parts_type": "WAIST", "name": "燕尾蝶护腰具α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
-{"series_id": "燕尾蝶α", "parts_type": "LEG", "name": "燕尾蝶脚α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
-{"series_id": "独角仙α", "parts_type": "HELM", "name": "独角仙护头α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
-{"series_id": "独角仙α", "parts_type": "BODY", "name": "独角仙上身α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
-{"series_id": "独角仙α", "parts_type": "ARM", "name": "独角仙护袖α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
-{"series_id": "独角仙α", "parts_type": "WAIST", "name": "独角仙护腰具α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
-{"series_id": "独角仙α", "parts_type": "LEG", "name": "独角仙脚α", "key_enemy": "", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
-{"series_id": "矿石α", "parts_type": "HELM", "name": "矿石头盔α", "key_enemy": "", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
-{"series_id": "矿石α", "parts_type": "BODY", "name": "矿石铠甲α", "key_enemy": "", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
-{"series_id": "矿石α", "parts_type": "ARM", "name": "矿石腕甲α", "key_enemy": "", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "漆黑的油骨 x1"]}
-{"series_id": "矿石α", "parts_type": "WAIST", "name": "矿石腰甲α", "key_enemy": "", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "漆黑的油骨 x1"]}
-{"series_id": "矿石α", "parts_type": "LEG", "name": "矿石护腿α", "key_enemy": "", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
-{"series_id": "战斗α", "parts_type": "HELM", "name": "战斗头盔α", "key_enemy": "", "materials": ["带战伤的鳞 x1", "雪狮子的刚毛 x1", "结冻冰骨 x1"]}
-{"series_id": "战斗α", "parts_type": "BODY", "name": "战斗铠甲α", "key_enemy": "", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "结冻冰骨 x1"]}
-{"series_id": "战斗α", "parts_type": "ARM", "name": "战斗腕甲α", "key_enemy": "", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "结冻冰骨 x1"]}
-{"series_id": "战斗α", "parts_type": "WAIST", "name": "战斗腰甲α", "key_enemy": "", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "古老龙骨 x1"]}
-{"series_id": "战斗α", "parts_type": "LEG", "name": "战斗护腿α", "key_enemy": "", "materials": ["带战伤的鳞 x1", "雪狮子的刚毛 x1", "结冻冰骨 x1"]}
-{"series_id": "花瓣α", "parts_type": "HELM", "name": "花瓣绽放α", "key_enemy": "", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
-{"series_id": "花瓣α", "parts_type": "BODY", "name": "花瓣枝干α", "key_enemy": "", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
-{"series_id": "花瓣α", "parts_type": "ARM", "name": "花瓣枝叶α", "key_enemy": "", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
-{"series_id": "花瓣α", "parts_type": "WAIST", "name": "花瓣叶片α", "key_enemy": "", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
-{"series_id": "花瓣α", "parts_type": "LEG", "name": "花瓣扎根α", "key_enemy": "", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "璀璨水晶 x1"]}
-{"series_id": "机械α", "parts_type": "HELM", "name": "机械头盔α", "key_enemy": "", "materials": ["雪光金属 x5", "狂龙结晶 x1", "璀璨水晶 x1"]}
-{"series_id": "机械α", "parts_type": "BODY", "name": "机械铠甲α", "key_enemy": "", "materials": ["雪光金属 x5", "狂龙结晶碎片 x2", "大地结晶 x10"]}
-{"series_id": "机械α", "parts_type": "ARM", "name": "机械腕甲α", "key_enemy": "", "materials": ["雪光金属 x5", "狂龙结晶 x1", "古老龙骨 x1"]}
-{"series_id": "机械α", "parts_type": "WAIST", "name": "机械腰甲α", "key_enemy": "", "materials": ["雪光金属 x5", "狂龙结晶碎片 x2", "狱炎石 x1"]}
-{"series_id": "机械α", "parts_type": "LEG", "name": "机械护腿α", "key_enemy": "", "materials": ["雪光金属 x5", "狂龙结晶 x1", "护龙的净血 x3"]}
-{"series_id": "杜宾α", "parts_type": "HELM", "name": "杜宾头盔α", "key_enemy": "", "materials": ["坚龙骨 x3", "粗兽骨 x4", "漆黑的油骨 x3"]}
-{"series_id": "杜宾α", "parts_type": "BODY", "name": "杜宾铠甲α", "key_enemy": "", "materials": ["坚龙骨 x3", "粗兽骨 x4", "古老龙骨 x1"]}
-{"series_id": "杜宾α", "parts_type": "ARM", "name": "杜宾腕甲α", "key_enemy": "", "materials": ["坚龙骨 x4", "坚固的骨 x4", "粗壮护骨 x3", "火龙的延髓 x1"]}
-{"series_id": "杜宾α", "parts_type": "WAIST", "name": "杜宾腰甲α", "key_enemy": "", "materials": ["坚龙骨 x4", "尖龙骨 x4", "结冻冰骨 x3", "赫猿兽的延髓 x1"]}
-{"series_id": "杜宾α", "parts_type": "LEG", "name": "杜宾护腿α", "key_enemy": "", "materials": ["坚龙骨 x5", "坚固的巨骨 x4", "良质硬骨 x3", "铠龙的延髓 x1"]}
-{"series_id": "花纹钢α", "parts_type": "HELM", "name": "花纹钢头盔α", "key_enemy": "", "materials": ["白鸠石 x4", "护龙的上等毛皮 x3", "狂龙结晶碎片 x3", "鸟龙玉 x1"]}
-{"series_id": "花纹钢α", "parts_type": "BODY", "name": "花纹钢铠甲α", "key_enemy": "", "materials": ["白鸠石 x5", "护龙的净血 x2", "灵鹤石 x5", "龙玉 x1"]}
-{"series_id": "花纹钢α", "parts_type": "ARM", "name": "花纹钢腕甲α", "key_enemy": "", "materials": ["白鸠石 x4", "护龙的上等毛皮 x4", "雪光金属 x4", "兽玉 x1"]}
-{"series_id": "花纹钢α", "parts_type": "WAIST", "name": "花纹钢腰甲α", "key_enemy": "", "materials": ["白鸠石 x3", "护龙的上等鳞 x4", "璀璨水晶 x1"]}
-{"series_id": "花纹钢α", "parts_type": "LEG", "name": "花纹钢护腿α", "key_enemy": "", "materials": ["白鸠石 x3", "护龙的上等鳞 x3", "狱炎石 x1"]}
-{"series_id": "冻峰龙α", "parts_type": "HELM", "name": "冻峰龙头盔α", "key_enemy": "", "materials": ["冻峰龙狩猎证 S x2", "冻峰龙的上等鳞 x3", "冻峰龙的尖爪 x4", "龙玉 x1"]}
-{"series_id": "冻峰龙α", "parts_type": "BODY", "name": "冻峰龙铠甲α", "key_enemy": "", "materials": ["冻峰龙的上等鳞 x5", "冻峰龙的坚壳 x6", "冻峰龙的冻凝壳 x3", "坚龙骨 x3"]}
-{"series_id": "冻峰龙α", "parts_type": "ARM", "name": "冻峰龙腕甲α", "key_enemy": "", "materials": ["冻峰龙狩猎证 S x1", "冻峰龙的坚壳 x5", "冻峰龙的尖爪 x4", "雪光金属 x3"]}
-{"series_id": "冻峰龙α", "parts_type": "WAIST", "name": "冻峰龙腰甲α", "key_enemy": "", "materials": ["冻峰龙的冻凝壳 x2", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1", "冻结袋 x3"]}
-{"series_id": "冻峰龙α", "parts_type": "LEG", "name": "冻峰龙护腿α", "key_enemy": "", "materials": ["冻峰龙的上等鳞 x6", "冻峰龙的冻凝壳 x4", "冻峰龙的层角 x2", "血眠虫的坚壳 x2"]}
-{"series_id": "冻峰龙β", "parts_type": "HELM", "name": "冻峰龙头盔β", "key_enemy": "", "materials": ["冻峰龙狩猎证 S x2", "冻峰龙的上等鳞 x3", "冻峰龙的尖爪 x4", "龙玉 x1"]}
-{"series_id": "冻峰龙β", "parts_type": "BODY", "name": "冻峰龙铠甲β", "key_enemy": "", "materials": ["冻峰龙的上等鳞 x5", "冻峰龙的坚壳 x6", "冻峰龙的冻凝壳 x3", "坚龙骨 x3"]}
-{"series_id": "冻峰龙β", "parts_type": "ARM", "name": "冻峰龙腕甲β", "key_enemy": "", "materials": ["冻峰龙狩猎证 S x1", "冻峰龙的坚壳 x5", "冻峰龙的尖爪 x4", "雪光金属 x3"]}
-{"series_id": "冻峰龙β", "parts_type": "WAIST", "name": "冻峰龙腰甲β", "key_enemy": "", "materials": ["冻峰龙的冻凝壳 x2", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1", "冻结袋 x3"]}
-{"series_id": "冻峰龙β", "parts_type": "LEG", "name": "冻峰龙护腿β", "key_enemy": "", "materials": ["冻峰龙的上等鳞 x6", "冻峰龙的冻凝壳 x4", "冻峰龙的层角 x2", "血眠虫的坚壳 x2"]}
-{"series_id": "波衣龙α", "parts_type": "HELM", "name": "波衣龙头盔α", "key_enemy": "", "materials": ["波衣龙狩猎证 S x1", "波衣龙的上等鳞 x4", "波衣龙的上等纤毛 x4", "波衣龙的水玉 x1"]}
-{"series_id": "波衣龙α", "parts_type": "BODY", "name": "波衣龙铠甲α", "key_enemy": "", "materials": ["波衣龙的上等鳞 x6", "波衣龙的上等皮 x6", "波衣龙的上等纤毛 x3", "大水袋 x3"]}
-{"series_id": "波衣龙α", "parts_type": "ARM", "name": "波衣龙腕甲α", "key_enemy": "", "materials": ["波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "波衣龙的锐爪 x3", "坚龙骨 x2"]}
-{"series_id": "波衣龙α", "parts_type": "WAIST", "name": "波衣龙腰甲α", "key_enemy": "", "materials": ["波衣龙狩猎证 S x2", "波衣龙的艳触手 x4", "波衣龙的锐爪 x5", "波衣龙的逆鳞 x1"]}
-{"series_id": "波衣龙α", "parts_type": "LEG", "name": "波衣龙护腿α", "key_enemy": "", "materials": ["波衣龙狩猎证 S x2", "波衣龙的上等皮 x5", "波衣龙的艳触手 x4", "锯带龙的上等鳍 x2"]}
-{"series_id": "波衣龙β", "parts_type": "HELM", "name": "波衣龙头盔β", "key_enemy": "", "materials": ["波衣龙狩猎证 S x1", "波衣龙的上等鳞 x4", "波衣龙的上等纤毛 x4", "波衣龙的水玉 x1"]}
-{"series_id": "波衣龙β", "parts_type": "BODY", "name": "波衣龙铠甲β", "key_enemy": "", "materials": ["波衣龙的上等鳞 x6", "波衣龙的上等皮 x6", "波衣龙的上等纤毛 x3", "大水袋 x3"]}
-{"series_id": "波衣龙β", "parts_type": "ARM", "name": "波衣龙腕甲β", "key_enemy": "", "materials": ["波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "波衣龙的锐爪 x3", "坚龙骨 x2"]}
-{"series_id": "波衣龙β", "parts_type": "WAIST", "name": "波衣龙腰甲β", "key_enemy": "", "materials": ["波衣龙狩猎证 S x2", "波衣龙的艳触手 x4", "波衣龙的锐爪 x5", "波衣龙的逆鳞 x1"]}
-{"series_id": "波衣龙β", "parts_type": "LEG", "name": "波衣龙护腿β", "key_enemy": "", "materials": ["波衣龙狩猎证 S x2", "波衣龙的上等皮 x5", "波衣龙的艳触手 x4", "锯带龙的上等鳍 x2"]}
-{"series_id": "煌雷龙α", "parts_type": "HELM", "name": "煌雷龙头盔α", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的坚壳 x5", "煌雷龙的雷电角 x4", "血盗虫的坚壳 x2"]}
-{"series_id": "煌雷龙α", "parts_type": "BODY", "name": "煌雷龙铠甲α", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "煌雷龙的逆鳞 x1"]}
-{"series_id": "煌雷龙α", "parts_type": "ARM", "name": "煌雷龙腕甲α", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x1", "煌雷龙的苍雷晶爪 x2", "煌雷龙的上等鳞 x3", "煌雷龙的雷玉 x1"]}
-{"series_id": "煌雷龙α", "parts_type": "WAIST", "name": "煌雷龙腰甲α", "key_enemy": "", "materials": ["煌雷龙的上等鳞 x5", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "坚龙骨 x3"]}
-{"series_id": "煌雷龙α", "parts_type": "LEG", "name": "煌雷龙护腿α", "key_enemy": "", "materials": ["煌雷龙的上等鳞 x6", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷电角 x3", "光水晶 x3"]}
-{"series_id": "煌雷龙β", "parts_type": "HELM", "name": "煌雷龙头盔β", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的坚壳 x5", "煌雷龙的雷电角 x4", "血盗虫的坚壳 x2"]}
-{"series_id": "煌雷龙β", "parts_type": "BODY", "name": "煌雷龙铠甲β", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "煌雷龙的逆鳞 x1"]}
-{"series_id": "煌雷龙β", "parts_type": "ARM", "name": "煌雷龙腕甲β", "key_enemy": "", "materials": ["煌雷龙狩猎证 S x1", "煌雷龙的苍雷晶爪 x2", "煌雷龙的上等鳞 x3", "煌雷龙的雷玉 x1"]}
-{"series_id": "煌雷龙β", "parts_type": "WAIST", "name": "煌雷龙腰甲β", "key_enemy": "", "materials": ["煌雷龙的上等鳞 x5", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "坚龙骨 x3"]}
-{"series_id": "煌雷龙β", "parts_type": "LEG", "name": "煌雷龙护腿β", "key_enemy": "", "materials": ["煌雷龙的上等鳞 x6", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷电角 x3", "光水晶 x3"]}
-{"series_id": "狱焰蛸α", "parts_type": "HELM", "name": "狱焰蛸头盔α", "key_enemy": "", "materials": ["狱焰蛸的上等皮 x6", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x3", "古老龙骨 x1"]}
-{"series_id": "狱焰蛸α", "parts_type": "BODY", "name": "狱焰蛸铠甲α", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的暴触手 x4", "狱焰蛸的尖角 x5", "狱焰蛸的髓液 x1"]}
-{"series_id": "狱焰蛸α", "parts_type": "ARM", "name": "狱焰蛸腕甲α", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的上等棘 x5", "狱焰蛸的暴触手 x4", "盔速龙的坚头壳 x2"]}
-{"series_id": "狱焰蛸α", "parts_type": "WAIST", "name": "狱焰蛸腰甲α", "key_enemy": "", "materials": ["狱焰蛸的上等皮 x5", "狱焰蛸的浓油膜 x3", "狱焰蛸的尖角 x3", "爆炎袋 x2"]}
-{"series_id": "狱焰蛸α", "parts_type": "LEG", "name": "狱焰蛸护腿α", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x1", "狱焰蛸的上等皮 x4", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
-{"series_id": "狱焰蛸β", "parts_type": "HELM", "name": "狱焰蛸头盔β", "key_enemy": "", "materials": ["狱焰蛸的上等皮 x6", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x3", "古老龙骨 x1"]}
-{"series_id": "狱焰蛸β", "parts_type": "BODY", "name": "狱焰蛸铠甲β", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的暴触手 x4", "狱焰蛸的尖角 x5", "狱焰蛸的髓液 x1"]}
-{"series_id": "狱焰蛸β", "parts_type": "ARM", "name": "狱焰蛸腕甲β", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的上等棘 x5", "狱焰蛸的暴触手 x4", "盔速龙的坚头壳 x2"]}
-{"series_id": "狱焰蛸β", "parts_type": "WAIST", "name": "狱焰蛸腰甲β", "key_enemy": "", "materials": ["狱焰蛸的上等皮 x5", "狱焰蛸的浓油膜 x3", "狱焰蛸的尖角 x3", "爆炎袋 x2"]}
-{"series_id": "狱焰蛸β", "parts_type": "LEG", "name": "狱焰蛸护腿β", "key_enemy": "", "materials": ["狱焰蛸狩猎证 S x1", "狱焰蛸的上等皮 x4", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
-{"series_id": "黑蚀龙α", "parts_type": "HELM", "name": "黑蚀龙头盔α", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的尖触角 x2", "黑蚀龙的上等暗翼 x4", "龙玉 x1"]}
-{"series_id": "黑蚀龙α", "parts_type": "BODY", "name": "黑蚀龙铠甲α", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙的上等鳞 x6", "黑蚀龙的坚壳 x6", "黑蚀龙的锐惨爪 x2", "黑蚀龙的尾巴 x2"]}
-{"series_id": "黑蚀龙α", "parts_type": "ARM", "name": "黑蚀龙腕甲α", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的坚壳 x5", "黑蚀龙的尖触角 x2", "狂龙结晶 x2"]}
-{"series_id": "黑蚀龙α", "parts_type": "WAIST", "name": "黑蚀龙腰甲α", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙的上等鳞 x5", "黑蚀龙的锐惨爪 x3", "黑蚀龙的上等暗翼 x3", "狂龙结晶碎片 x2"]}
-{"series_id": "黑蚀龙α", "parts_type": "LEG", "name": "黑蚀龙护腿α", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x1", "黑蚀龙的上等鳞 x3", "黑蚀龙的上等暗翼 x4", "黑蚀龙的暗玉 x1"]}
-{"series_id": "黑蚀龙β", "parts_type": "HELM", "name": "黑蚀龙头盔β", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的尖触角 x2", "黑蚀龙的上等暗翼 x4", "龙玉 x1"]}
-{"series_id": "黑蚀龙β", "parts_type": "BODY", "name": "黑蚀龙铠甲β", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙的上等鳞 x6", "黑蚀龙的坚壳 x6", "黑蚀龙的锐惨爪 x2", "黑蚀龙的尾巴 x2"]}
-{"series_id": "黑蚀龙β", "parts_type": "ARM", "name": "黑蚀龙腕甲β", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的坚壳 x5", "黑蚀龙的尖触角 x2", "狂龙结晶 x2"]}
-{"series_id": "黑蚀龙β", "parts_type": "WAIST", "name": "黑蚀龙腰甲β", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙的上等鳞 x5", "黑蚀龙的锐惨爪 x3", "黑蚀龙的上等暗翼 x3", "狂龙结晶碎片 x2"]}
-{"series_id": "黑蚀龙β", "parts_type": "LEG", "name": "黑蚀龙护腿β", "key_enemy": "黑蚀龙", "materials": ["黑蚀龙狩猎证 S x1", "黑蚀龙的上等鳞 x3", "黑蚀龙的上等暗翼 x4", "黑蚀龙的暗玉 x1"]}
-{"series_id": "锁刃龙α", "parts_type": "HELM", "name": "锁刃龙头盔α", "key_enemy": "锁刃龙", "materials": ["锁刃龙的上等鳞 x5", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x2", "锁刃龙的尖角 x3"]}
-{"series_id": "锁刃龙α", "parts_type": "BODY", "name": "锁刃龙铠甲α", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x2", "锁刃龙的上等鳞 x3", "锁刃龙的坚铠壳 x4", "无情锁刃甲 x4"]}
-{"series_id": "锁刃龙α", "parts_type": "ARM", "name": "锁刃龙腕甲α", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x2", "无情锁刃甲 x3", "锁刃龙的尖角 x2", "龙玉 x1"]}
-{"series_id": "锁刃龙α", "parts_type": "WAIST", "name": "锁刃龙腰甲α", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x1", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1"]}
-{"series_id": "锁刃龙α", "parts_type": "LEG", "name": "锁刃龙护腿α", "key_enemy": "锁刃龙", "materials": ["锁刃龙的上等鳞 x6", "锁刃龙的坚铠壳 x5", "无情锁刃甲 x2", "锁刃龙的尾巴 x2"]}
-{"series_id": "锁刃龙β", "parts_type": "HELM", "name": "锁刃龙头盔β", "key_enemy": "锁刃龙", "materials": ["锁刃龙的上等鳞 x5", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x2", "锁刃龙的尖角 x3"]}
-{"series_id": "锁刃龙β", "parts_type": "BODY", "name": "锁刃龙铠甲β", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x2", "锁刃龙的上等鳞 x3", "锁刃龙的坚铠壳 x4", "无情锁刃甲 x4"]}
-{"series_id": "锁刃龙β", "parts_type": "ARM", "name": "锁刃龙腕甲β", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x2", "无情锁刃甲 x3", "锁刃龙的尖角 x2", "龙玉 x1"]}
-{"series_id": "锁刃龙β", "parts_type": "WAIST", "name": "锁刃龙腰甲β", "key_enemy": "锁刃龙", "materials": ["锁刃龙狩猎证 S x1", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1"]}
-{"series_id": "锁刃龙β", "parts_type": "LEG", "name": "锁刃龙护腿β", "key_enemy": "锁刃龙", "materials": ["锁刃龙的上等鳞 x6", "锁刃龙的坚铠壳 x5", "无情锁刃甲 x2", "锁刃龙的尾巴 x2"]}
-{"series_id": "护锁刃龙α", "parts_type": "HELM", "name": "护锁刃龙头盔α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x6", "护龙的上等毛皮 x5", "波衣龙的水玉 x1"]}
-{"series_id": "护锁刃龙α", "parts_type": "BODY", "name": "护锁刃龙铠甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1", "护龙的净血 x3"]}
-{"series_id": "护锁刃龙α", "parts_type": "ARM", "name": "护锁刃龙腕甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x6", "锁刃龙的白毛 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "护锁刃龙α", "parts_type": "WAIST", "name": "护锁刃龙腰甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x4", "无情锁刃甲 x4", "煌雷龙的雷玉 x1"]}
-{"series_id": "护锁刃龙α", "parts_type": "LEG", "name": "护锁刃龙护腿α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x4", "护龙的上等鳞 x5", "狱焰蛸的炎玉 x1"]}
-{"series_id": "护锁刃龙β", "parts_type": "HELM", "name": "护锁刃龙头盔β", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x6", "护龙的上等毛皮 x5", "波衣龙的水玉 x1"]}
-{"series_id": "护锁刃龙β", "parts_type": "BODY", "name": "护锁刃龙铠甲β", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1", "护龙的净血 x3"]}
-{"series_id": "护锁刃龙β", "parts_type": "ARM", "name": "护锁刃龙腕甲β", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x6", "锁刃龙的白毛 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "护锁刃龙β", "parts_type": "WAIST", "name": "护锁刃龙腰甲β", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x4", "无情锁刃甲 x4", "煌雷龙的雷玉 x1"]}
-{"series_id": "护锁刃龙β", "parts_type": "LEG", "name": "护锁刃龙护腿β", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x4", "护龙的上等鳞 x5", "狱焰蛸的炎玉 x1"]}
-{"series_id": "公会王牌α", "parts_type": "HELM", "name": "公会王牌耳环α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的上等毛皮 x3"]}
-{"series_id": "公会王牌α", "parts_type": "BODY", "name": "公会王牌铠甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的上等鳞 x3"]}
-{"series_id": "公会王牌α", "parts_type": "ARM", "name": "公会王牌腕甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "灵鹤石 x5"]}
-{"series_id": "公会王牌α", "parts_type": "WAIST", "name": "公会王牌腰甲α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "良质硬骨 x5"]}
-{"series_id": "公会王牌α", "parts_type": "LEG", "name": "公会王牌靴α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的净血 x3"]}
-{"series_id": "调查团α", "parts_type": "HELM", "name": "调查团头盔α", "key_enemy": "", "materials": ["调查团票 x1", "灵鹤石 x2", "缠蛙的上等鳞 x5"]}
-{"series_id": "调查团α", "parts_type": "BODY", "name": "调查团铠甲α", "key_enemy": "", "materials": ["调查团票 x1", "雪光金属 x2", "刺花蜘蛛的上等绒毛 x5"]}
-{"series_id": "调查团α", "parts_type": "ARM", "name": "调查团腕甲α", "key_enemy": "", "materials": ["调查团票 x1", "尖龙骨 x2", "沙海龙的上等鳞 x5"]}
-{"series_id": "调查团α", "parts_type": "WAIST", "name": "调查团腰甲α", "key_enemy": "", "materials": ["调查团票 x1", "坚固的骨 x2", "辟兽的刚毛 x5"]}
-{"series_id": "调查团α", "parts_type": "LEG", "name": "调查团护腿α", "key_enemy": "", "materials": ["调查团票 x1", "良质硬骨 x2", "炎尾龙的上等鳞 x5"]}
-{"series_id": "龙王的独眼α", "parts_type": "HELM", "name": "龙王的独眼α", "key_enemy": "锁刃龙", "materials": ["历战狩猎之证Ⅲ x3", "护龙的净血 x3", "龙玉 x1"]}
-{"series_id": "花妖猩α", "parts_type": "HELM", "name": "花妖猩α", "key_enemy": "", "materials": ["花妖猩票 x2", "怪鸟的上等鳞 x4", "桃毛兽王的刚毛 x2"]}
-{"series_id": "调查队耳饰α", "parts_type": "HELM", "name": "调查队耳饰α", "key_enemy": "", "materials": ["调查队耳饰票 x3", "雌火龙的上等鳞 x4", "尖龙骨 x2", "璀璨水晶 x1"]}
-{"series_id": "公会十字α", "parts_type": "HELM", "name": "公会十字头饰α", "key_enemy": "", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "影蜘蛛的坚壳 x2"]}
-{"series_id": "公会十字α", "parts_type": "BODY", "name": "公会十字战衣α", "key_enemy": "", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "桃毛兽王的刚毛 x2"]}
-{"series_id": "公会十字α", "parts_type": "ARM", "name": "公会十字腕甲α", "key_enemy": "", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "橡胶质的上等皮 x2"]}
-{"series_id": "公会十字α", "parts_type": "WAIST", "name": "公会十字腰甲α", "key_enemy": "", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "雌火龙的上等鳞 x2"]}
-{"series_id": "公会十字α", "parts_type": "LEG", "name": "公会十字靴α", "key_enemy": "", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "怪鸟的上等鳞 x2"]}
-{"series_id": "职员α", "parts_type": "HELM", "name": "职员遮阳帽α", "key_enemy": "", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "辟兽的上等皮 x2"]}
-{"series_id": "职员α", "parts_type": "BODY", "name": "职员服装α", "key_enemy": "", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "铠龙的坚壳 x2"]}
-{"series_id": "职员α", "parts_type": "ARM", "name": "职员腕甲α", "key_enemy": "", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "雪狮子王的刚毛 x2"]}
-{"series_id": "职员α", "parts_type": "WAIST", "name": "职员腰带α", "key_enemy": "", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "护雷颚龙的上等毛皮 x2"]}
-{"series_id": "职员α", "parts_type": "LEG", "name": "职员鞋α", "key_enemy": "", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "火龙的上等鳞 x2"]}
-{"series_id": "大胃王耳饰α", "parts_type": "HELM", "name": "大胃王耳饰α", "key_enemy": "", "materials": ["缠蛙硬币 x5", "斗技王硬币 x3", "灵鹤石 x4", "红莲石 x2"]}
-{"series_id": "奉献耳饰α", "parts_type": "HELM", "name": "奉献耳饰α", "key_enemy": "", "materials": ["雌火龙硬币 x5", "斗技王硬币 x3", "雪光金属 x3", "白鸠石 x3"]}
-{"series_id": "泡狐龙α", "parts_type": "HELM", "name": "泡狐龙头盔α", "key_enemy": "泡狐龙", "materials": ["泡狐龙的上等鳞 x5", "上等起泡滑液 x3", "锯带龙的上等鳍 x2"]}
-{"series_id": "泡狐龙α", "parts_type": "BODY", "name": "泡狐龙铠甲α", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x2", "泡狐龙的尖爪 x3", "泡狐龙的上等锦鳍 x5", "龙玉 x1"]}
-{"series_id": "泡狐龙α", "parts_type": "ARM", "name": "泡狐龙腕甲α", "key_enemy": "泡狐龙", "materials": ["泡狐龙的上等鳞 x6", "泡狐龙的上等紫毛 x6", "上等起泡滑液 x3", "泡狐龙的上等锦鳍 x3"]}
-{"series_id": "泡狐龙α", "parts_type": "WAIST", "name": "泡狐龙腰甲α", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等紫毛 x5", "泡狐龙的尖爪 x3", "大水袋 x2"]}
-{"series_id": "泡狐龙α", "parts_type": "LEG", "name": "泡狐龙护腿α", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等鳞 x4", "上等起泡滑液 x4", "泡狐龙的水玉 x1"]}
-{"series_id": "泡狐龙β", "parts_type": "HELM", "name": "泡狐龙头盔β", "key_enemy": "泡狐龙", "materials": ["泡狐龙的上等鳞 x5", "上等起泡滑液 x3", "锯带龙的上等鳍 x2"]}
-{"series_id": "泡狐龙β", "parts_type": "BODY", "name": "泡狐龙铠甲β", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x2", "泡狐龙的尖爪 x3", "泡狐龙的上等锦鳍 x5", "龙玉 x1"]}
-{"series_id": "泡狐龙β", "parts_type": "ARM", "name": "泡狐龙腕甲β", "key_enemy": "泡狐龙", "materials": ["泡狐龙的上等鳞 x6", "泡狐龙的上等紫毛 x6", "上等起泡滑液 x3", "泡狐龙的上等锦鳍 x3"]}
-{"series_id": "泡狐龙β", "parts_type": "WAIST", "name": "泡狐龙腰甲β", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等紫毛 x5", "泡狐龙的尖爪 x3", "大水袋 x2"]}
-{"series_id": "泡狐龙β", "parts_type": "LEG", "name": "泡狐龙护腿β", "key_enemy": "泡狐龙", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等鳞 x4", "上等起泡滑液 x4", "泡狐龙的水玉 x1"]}
-{"series_id": "纯洁龙α", "parts_type": "HELM", "name": "纯洁龙冠α", "key_enemy": "", "materials": ["白炽龙的结晶鳞 x6", "白炽龙的栅状爪 x2", "白炽龙的晶角 x2", "粗壮护骨 x5"]}
-{"series_id": "纯洁龙α", "parts_type": "BODY", "name": "纯洁龙铠α", "key_enemy": "", "materials": ["白炽龙狩猎证 S x1", "白炽龙的多层壳 x5", "黑炽瘤块 x3", "护龙的净血 x3"]}
-{"series_id": "纯洁龙α", "parts_type": "ARM", "name": "纯洁龙臂甲α", "key_enemy": "", "materials": ["白炽龙狩猎证 S x2", "白炽龙的结晶鳞 x5", "白炽龙的栅状爪 x3", "锁刃龙的宝玉 x1"]}
-{"series_id": "纯洁龙α", "parts_type": "WAIST", "name": "纯洁龙腰甲α", "key_enemy": "", "materials": ["白炽龙的多层壳 x6", "黑炽瘤块 x3", "白炽龙的晶角 x3", "白耀的造龙玉 x1"]}
-{"series_id": "纯洁龙α", "parts_type": "LEG", "name": "纯洁龙靴α", "key_enemy": "", "materials": ["白炽龙的结晶鳞 x3", "白炽龙的栅状爪 x4", "白炽龙的晶尾 x1", "黑蚀龙的暗玉 x1"]}
-{"series_id": "纯洁龙β", "parts_type": "HELM", "name": "纯洁龙冠β", "key_enemy": "", "materials": ["白炽龙的结晶鳞 x6", "白炽龙的栅状爪 x2", "白炽龙的晶角 x2", "粗壮护骨 x5"]}
-{"series_id": "纯洁龙β", "parts_type": "BODY", "name": "纯洁龙铠β", "key_enemy": "", "materials": ["白炽龙狩猎证 S x1", "白炽龙的多层壳 x5", "黑炽瘤块 x3", "护龙的净血 x3"]}
-{"series_id": "纯洁龙β", "parts_type": "ARM", "name": "纯洁龙臂甲β", "key_enemy": "", "materials": ["白炽龙狩猎证 S x2", "白炽龙的结晶鳞 x5", "白炽龙的栅状爪 x3", "锁刃龙的宝玉 x1"]}
-{"series_id": "纯洁龙β", "parts_type": "WAIST", "name": "纯洁龙腰甲β", "key_enemy": "", "materials": ["白炽龙的多层壳 x6", "黑炽瘤块 x3", "白炽龙的晶角 x3", "白耀的造龙玉 x1"]}
-{"series_id": "纯洁龙β", "parts_type": "LEG", "name": "纯洁龙靴β", "key_enemy": "", "materials": ["白炽龙的结晶鳞 x3", "白炽龙的栅状爪 x4", "白炽龙的晶尾 x1", "黑蚀龙的暗玉 x1"]}
-{"series_id": "海龙α", "parts_type": "HELM", "name": "海龙头盔α", "key_enemy": "海龙", "materials": ["海龙的上等皮 x5", "海龙的背电壳 x3", "海龙的尖角 x2", "光水晶 x2"]}
-{"series_id": "海龙α", "parts_type": "BODY", "name": "海龙铠甲α", "key_enemy": "海龙", "materials": ["海龙的上等皮 x6", "海龙的上等鳞 x6", "海龙的背电壳 x3", "海龙的尾巴 x1"]}
-{"series_id": "海龙α", "parts_type": "ARM", "name": "海龙腕甲α", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x1", "海龙的上等鳞 x5", "海龙的锐爪 x3", "海龙的苍玉 x1"]}
-{"series_id": "海龙α", "parts_type": "WAIST", "name": "海龙腰甲α", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x2", "海龙的锐爪 x4", "海龙的尖角 x3", "海龙的苍玉 x1"]}
-{"series_id": "海龙α", "parts_type": "LEG", "name": "海龙护腿α", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x1", "海龙的上等皮 x4", "海龙的背电壳 x4", "海龙的苍玉 x1"]}
-{"series_id": "海龙β", "parts_type": "HELM", "name": "海龙头盔β", "key_enemy": "海龙", "materials": ["海龙的上等皮 x5", "海龙的背电壳 x3", "海龙的尖角 x2", "光水晶 x2"]}
-{"series_id": "海龙β", "parts_type": "BODY", "name": "海龙铠甲β", "key_enemy": "海龙", "materials": ["海龙的上等皮 x6", "海龙的上等鳞 x6", "海龙的背电壳 x3", "海龙的尾巴 x1"]}
-{"series_id": "海龙β", "parts_type": "ARM", "name": "海龙腕甲β", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x1", "海龙的上等鳞 x5", "海龙的锐爪 x3", "海龙的苍玉 x1"]}
-{"series_id": "海龙β", "parts_type": "WAIST", "name": "海龙腰甲β", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x2", "海龙的锐爪 x4", "海龙的尖角 x3", "海龙的苍玉 x1"]}
-{"series_id": "海龙β", "parts_type": "LEG", "name": "海龙护腿β", "key_enemy": "海龙", "materials": ["海龙狩猎证 S x1", "海龙的上等皮 x4", "海龙的背电壳 x4", "海龙的苍玉 x1"]}
-{"series_id": "千刃龙α", "parts_type": "HELM", "name": "千刃龙头盔α", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x1", "千刃龙的飞刃 x5", "千刃龙的尖翼爪 x3", "古老龙骨 x1"]}
-{"series_id": "千刃龙α", "parts_type": "BODY", "name": "千刃龙铠甲α", "key_enemy": "千刃龙", "materials": ["千刃龙的锐刃鳞 x5", "千刃龙的刻爪 x3", "千刃龙的伐刀角 x2", "千刃龙的反逆鳞 x1"]}
-{"series_id": "千刃龙α", "parts_type": "ARM", "name": "千刃龙腕甲α", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x2", "千刃龙的尖翼爪 x3", "千刃龙的伐刀角 x3", "千刃龙的反逆鳞 x1"]}
-{"series_id": "千刃龙α", "parts_type": "WAIST", "name": "千刃龙腰甲α", "key_enemy": "千刃龙", "materials": ["千刃龙的锐刃鳞 x6", "千刃龙的飞刃 x6", "千刃龙的刻爪 x3", "千刃龙的枪尾 x1"]}
-{"series_id": "千刃龙α", "parts_type": "LEG", "name": "千刃龙护腿α", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x1", "千刃龙的锐刃鳞 x4", "千刃龙的刻爪 x4", "千刃龙的反逆鳞 x1"]}
-{"series_id": "千刃龙β", "parts_type": "HELM", "name": "千刃龙头盔β", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x1", "千刃龙的飞刃 x5", "千刃龙的尖翼爪 x3", "古老龙骨 x1"]}
-{"series_id": "千刃龙β", "parts_type": "BODY", "name": "千刃龙铠甲β", "key_enemy": "千刃龙", "materials": ["千刃龙的锐刃鳞 x5", "千刃龙的刻爪 x3", "千刃龙的伐刀角 x2", "千刃龙的反逆鳞 x1"]}
-{"series_id": "千刃龙β", "parts_type": "ARM", "name": "千刃龙腕甲β", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x2", "千刃龙的尖翼爪 x3", "千刃龙的伐刀角 x3", "千刃龙的反逆鳞 x1"]}
-{"series_id": "千刃龙β", "parts_type": "WAIST", "name": "千刃龙腰甲β", "key_enemy": "千刃龙", "materials": ["千刃龙的锐刃鳞 x6", "千刃龙的飞刃 x6", "千刃龙的刻爪 x3", "千刃龙的枪尾 x1"]}
-{"series_id": "千刃龙β", "parts_type": "LEG", "name": "千刃龙护腿β", "key_enemy": "千刃龙", "materials": ["千刃龙狩猎证 S x1", "千刃龙的锐刃鳞 x4", "千刃龙的刻爪 x4", "千刃龙的反逆鳞 x1"]}
-{"series_id": "巨戟龙α", "parts_type": "HELM", "name": "巨戟龙头盔α", "key_enemy": "巨戟龙", "materials": [" x1", " x7", " x3", " x1"]}
-{"series_id": "巨戟龙α", "parts_type": "BODY", "name": "巨戟龙铠甲α", "key_enemy": "巨戟龙", "materials": [" x1", " x6", " x4", " x5"]}
-{"series_id": "巨戟龙α", "parts_type": "ARM", "name": "巨戟龙腕甲α", "key_enemy": "巨戟龙", "materials": [" x1", " x2", " x2", " x1"]}
-{"series_id": "巨戟龙α", "parts_type": "WAIST", "name": "巨戟龙腰甲α", "key_enemy": "巨戟龙", "materials": [" x1", " x6", " x5", " x2"]}
-{"series_id": "巨戟龙α", "parts_type": "LEG", "name": "巨戟龙护腿α", "key_enemy": "巨戟龙", "materials": [" x1", " x5", " x4", " x3"]}
-{"series_id": "巨戟龙β", "parts_type": "HELM", "name": "巨戟龙头盔β", "key_enemy": "巨戟龙", "materials": [" x1", " x7", " x3", " x1"]}
-{"series_id": "巨戟龙β", "parts_type": "BODY", "name": "巨戟龙铠甲β", "key_enemy": "巨戟龙", "materials": [" x1", " x6", " x4", " x5"]}
-{"series_id": "巨戟龙β", "parts_type": "ARM", "name": "巨戟龙腕甲β", "key_enemy": "巨戟龙", "materials": [" x1", " x2", " x2", " x1"]}
-{"series_id": "巨戟龙β", "parts_type": "WAIST", "name": "巨戟龙腰甲β", "key_enemy": "巨戟龙", "materials": [" x1", " x6", " x5", " x2"]}
-{"series_id": "巨戟龙β", "parts_type": "LEG", "name": "巨戟龙护腿β", "key_enemy": "巨戟龙", "materials": [" x1", " x5", " x4", " x3"]}
-{"series_id": "煌雷龙γ", "parts_type": "HELM", "name": "煌雷龙头盔γ", "key_enemy": "", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x5", "煌雷龙的雷电角 x3", "龙玉 x2"]}
-{"series_id": "煌雷龙γ", "parts_type": "BODY", "name": "煌雷龙铠甲γ", "key_enemy": "", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "煌雷龙的逆鳞 x2"]}
-{"series_id": "煌雷龙γ", "parts_type": "ARM", "name": "煌雷龙腕甲γ", "key_enemy": "", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x3", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷玉 x1"]}
-{"series_id": "煌雷龙γ", "parts_type": "WAIST", "name": "煌雷龙腰甲γ", "key_enemy": "", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x6", "煌雷龙的坚壳 x5", "煌雷龙的苍雷晶爪 x2"]}
-{"series_id": "煌雷龙γ", "parts_type": "LEG", "name": "煌雷龙护腿γ", "key_enemy": "", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "璀璨水晶 x2"]}
-{"series_id": "波衣龙γ", "parts_type": "HELM", "name": "波衣龙头盔γ", "key_enemy": "", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "龙玉 x2"]}
-{"series_id": "波衣龙γ", "parts_type": "BODY", "name": "波衣龙铠甲γ", "key_enemy": "", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等皮 x6", "波衣龙的锐爪 x3", "波衣龙的逆鳞 x2"]}
-{"series_id": "波衣龙γ", "parts_type": "ARM", "name": "波衣龙腕甲γ", "key_enemy": "", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x6", "波衣龙的上等皮 x5", "波衣龙的锐爪 x2"]}
-{"series_id": "波衣龙γ", "parts_type": "WAIST", "name": "波衣龙腰甲γ", "key_enemy": "", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x3", "波衣龙的锐爪 x4", "波衣龙的水玉 x1"]}
-{"series_id": "波衣龙γ", "parts_type": "LEG", "name": "波衣龙护腿γ", "key_enemy": "", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等纤毛 x2", "波衣龙的艳触手 x2", "古老龙骨 x2"]}
-{"series_id": "狱焰蛸γ", "parts_type": "HELM", "name": "狱焰蛸头盔γ", "key_enemy": "", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的暴触手 x2", "狱焰蛸的尖角 x2", "狱炎石 x2"]}
-{"series_id": "狱焰蛸γ", "parts_type": "BODY", "name": "狱焰蛸铠甲γ", "key_enemy": "", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x5", "狱焰蛸的上等棘 x3", "兽玉 x2"]}
-{"series_id": "狱焰蛸γ", "parts_type": "ARM", "name": "狱焰蛸腕甲γ", "key_enemy": "", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x3", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
-{"series_id": "狱焰蛸γ", "parts_type": "WAIST", "name": "狱焰蛸腰甲γ", "key_enemy": "", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x5", "狱焰蛸的暴触手 x3", "狱焰蛸的炎玉 x1"]}
-{"series_id": "狱焰蛸γ", "parts_type": "LEG", "name": "狱焰蛸护腿γ", "key_enemy": "", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x4", "狱焰蛸的髓液 x2"]}
-{"series_id": "冻峰龙γ", "parts_type": "HELM", "name": "冻峰龙头盔γ", "key_enemy": "", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "冻峰龙γ", "parts_type": "BODY", "name": "冻峰龙铠甲γ", "key_enemy": "", "materials": [" x1", "冻峰龙的坚壳 x6", "冻峰龙的尖爪 x3", "冻峰龙的尾巴 x2"]}
-{"series_id": "冻峰龙γ", "parts_type": "ARM", "name": "冻峰龙腕甲γ", "key_enemy": "", "materials": [" x1", "冻峰龙的层角 x3", "冻峰龙的尾巴 x3", "雪光金属 x3"]}
-{"series_id": "冻峰龙γ", "parts_type": "WAIST", "name": "冻峰龙腰甲γ", "key_enemy": "", "materials": [" x1", "冻峰龙的尖爪 x4", "冻峰龙的冻凝壳 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "冻峰龙γ", "parts_type": "LEG", "name": "冻峰龙护腿γ", "key_enemy": "", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的坚壳 x4", "龙玉 x2"]}
-{"series_id": "落樱缤纷α", "parts_type": "HELM", "name": "落樱缤纷【武士头部】α", "key_enemy": "", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x3"]}
-{"series_id": "落樱缤纷α", "parts_type": "BODY", "name": "落樱缤纷【武士礼服】α", "key_enemy": "", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x1"]}
-{"series_id": "落樱缤纷α", "parts_type": "ARM", "name": "落樱缤纷【武士臂甲】α", "key_enemy": "", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x2"]}
-{"series_id": "落樱缤纷α", "parts_type": "WAIST", "name": "落樱缤纷【武士腰带】α", "key_enemy": "", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x1"]}
-{"series_id": "落樱缤纷α", "parts_type": "LEG", "name": "落樱缤纷【武士长袴】α", "key_enemy": "", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x2"]}
-{"series_id": "盛开α", "parts_type": "HELM", "name": "盛开头饰α", "key_enemy": "", "materials": ["盛开票券 x1", "刺花蜘蛛的浓粘液 x3", "血盗虫的坚壳 x4", "怪物浓液 x1"]}
-{"series_id": "盛开α", "parts_type": "BODY", "name": "盛开服饰α", "key_enemy": "", "materials": ["盛开票券 x1", "刺花蜘蛛的锐爪 x2", "巨蜂的薄羽 x3", "怪物浓液 x1"]}
-{"series_id": "盛开α", "parts_type": "ARM", "name": "盛开手套α", "key_enemy": "", "materials": ["盛开票券 x1", "刺花蜘蛛的坚壳 x3", "巨蜂的坚壳 x4", "怪物浓液 x1"]}
-{"series_id": "盛开α", "parts_type": "WAIST", "name": "盛开护腰α", "key_enemy": "", "materials": ["盛开票券 x1", "刺花蜘蛛的上等尾棘 x2", "大角凤蝶 x3", "怪物浓液 x1"]}
-{"series_id": "盛开α", "parts_type": "LEG", "name": "盛开靴α", "key_enemy": "", "materials": ["盛开票券 x1", "刺花蜘蛛的上等绒毛 x3", "血眠虫的坚壳 x4", "怪物浓液 x1"]}
-{"series_id": "踊火α", "parts_type": "HELM", "name": "踊火头饰α", "key_enemy": "", "materials": ["祭典票券【踊火】 x1", "红莲石 x1"]}
-{"series_id": "踊火α", "parts_type": "BODY", "name": "踊火上衣α", "key_enemy": "", "materials": ["祭典票券【踊火】 x1", "辉龙石 x4"]}
-{"series_id": "踊火α", "parts_type": "ARM", "name": "踊火护腕α", "key_enemy": "", "materials": ["祭典票券【踊火】 x1", "狱炎石 x1"]}
-{"series_id": "踊火α", "parts_type": "WAIST", "name": "踊火护腰α", "key_enemy": "", "materials": ["祭典票券【踊火】 x1", "辉龙石 x4"]}
-{"series_id": "踊火α", "parts_type": "LEG", "name": "踊火护腿α", "key_enemy": "", "materials": ["祭典票券【踊火】 x1", "红莲石 x1"]}
-{"series_id": "潜水员α", "parts_type": "HELM", "name": "潜水员面罩α", "key_enemy": "", "materials": ["潜水员票 x1", "毒怪鸟的头 x1", "沼喷龙的大喙 x3", "光水晶 x2"]}
-{"series_id": "潜水员α", "parts_type": "BODY", "name": "潜水员服装α", "key_enemy": "", "materials": ["潜水员票 x1", "橡胶质的上等皮 x3", "毒怪鸟的尾巴 x2", "沼喷龙的锐爪 x2"]}
-{"series_id": "潜水员α", "parts_type": "ARM", "name": "潜水员腕甲α", "key_enemy": "", "materials": ["潜水员票 x1", "毒怪鸟的翼 x3", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x2"]}
-{"series_id": "潜水员α", "parts_type": "WAIST", "name": "潜水员腰带α", "key_enemy": "", "materials": ["潜水员票 x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x2", "沼喷龙的上等皮 x4"]}
-{"series_id": "潜水员α", "parts_type": "LEG", "name": "潜水员靴α", "key_enemy": "", "materials": ["潜水员票 x1", "橡胶质的上等皮 x3", "沼喷龙的上等皮 x4", "斑斓的猛毒皮 x1"]}
-{"series_id": "哥特幽魂α", "parts_type": "HELM", "name": "哥特幽魂头盔α", "key_enemy": "", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
-{"series_id": "哥特幽魂α", "parts_type": "BODY", "name": "哥特幽魂铠甲α", "key_enemy": "", "materials": ["祭典票券【梦灯】 x1", "结冻冰骨 x2"]}
-{"series_id": "哥特幽魂α", "parts_type": "ARM", "name": "哥特幽魂腕甲α", "key_enemy": "", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
-{"series_id": "哥特幽魂α", "parts_type": "WAIST", "name": "哥特幽魂腰甲α", "key_enemy": "", "materials": ["祭典票券【梦灯】 x1", "结冻冰骨 x2"]}
-{"series_id": "哥特幽魂α", "parts_type": "LEG", "name": "哥特幽魂护腿α", "key_enemy": "", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
-{"series_id": "收获α", "parts_type": "HELM", "name": "收获头饰α", "key_enemy": "", "materials": ["收获票 x1", "风铗龙的上等鳞 x4", "风铗龙的上等尾爪 x2", "尖龙骨 x1"]}
-{"series_id": "收获α", "parts_type": "BODY", "name": "收获装甲α", "key_enemy": "", "materials": ["收获票 x1", "风铗龙的上等皮 x4", "风铗龙的上等飞膜 x2", "结冻冰骨 x1"]}
-{"series_id": "收获α", "parts_type": "ARM", "name": "收获手套α", "key_enemy": "", "materials": ["收获票 x1", "风铗龙的上等飞膜 x3", "怪物浓液 x2", "漆黑的油骨 x1"]}
-{"series_id": "收获α", "parts_type": "WAIST", "name": "收获护裙α", "key_enemy": "", "materials": ["收获票 x1", "风铗龙的上等鳞 x5", "风铗龙的上等皮 x5", "尖龙骨 x1"]}
-{"series_id": "收获α", "parts_type": "LEG", "name": "收获护腿α", "key_enemy": "", "materials": ["收获票 x1", "风铗龙的上等尾爪 x3", "大地结晶 x5", "古老龙骨 x1"]}
-{"series_id": "祭典α", "parts_type": "HELM", "name": "祭典头盔α", "key_enemy": "", "materials": [" x1", "璀璨水晶 x1"]}
-{"series_id": "祭典α", "parts_type": "BODY", "name": "祭典铠甲α", "key_enemy": "", "materials": [" x1", "白鸠石 x3"]}
-{"series_id": "祭典α", "parts_type": "ARM", "name": "祭典腕甲α", "key_enemy": "", "materials": [" x1", "光水晶 x1"]}
-{"series_id": "祭典α", "parts_type": "WAIST", "name": "祭典腰甲α", "key_enemy": "", "materials": [" x1", "白鸠石 x3"]}
-{"series_id": "祭典α", "parts_type": "LEG", "name": "祭典护腿α", "key_enemy": "", "materials": [" x1", "光水晶 x1"]}
-{"series_id": "猎户星α", "parts_type": "HELM", "name": "猎户星头饰α", "key_enemy": "", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x6", "兽玉 x1"]}
-{"series_id": "猎户星α", "parts_type": "BODY", "name": "猎户星服饰α", "key_enemy": "", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x9", "雪狮子王的锐牙 x4"]}
-{"series_id": "猎户星α", "parts_type": "ARM", "name": "猎户星腕甲α", "key_enemy": "", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x5", "兽玉 x1"]}
-{"series_id": "猎户星α", "parts_type": "WAIST", "name": "猎户星护腰α", "key_enemy": "", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x7", "雪狮子王的尾巴 x3"]}
-{"series_id": "猎户星α", "parts_type": "LEG", "name": "猎户星靴α", "key_enemy": "", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x8", "雪狮子王的胡须 x5"]}
-{"series_id": "豪鬼α", "parts_type": "HELM", "name": "鬼之念珠α", "key_enemy": "", "materials": ["SF6 票 x5", "赫猿兽的上等鳞 x3", "大赫炎结晶 x1"]}
-{"series_id": "豪鬼α", "parts_type": "BODY", "name": "鬼之外衣α", "key_enemy": "", "materials": []}
-{"series_id": "豪鬼α", "parts_type": "ARM", "name": "鬼之草绳α", "key_enemy": "", "materials": []}
-{"series_id": "豪鬼α", "parts_type": "WAIST", "name": "鬼之腰带α", "key_enemy": "", "materials": []}
-{"series_id": "豪鬼α", "parts_type": "LEG", "name": "鬼之下装α", "key_enemy": "", "materials": []}
-{"series_id": "凶恶套装α", "parts_type": "HELM", "name": "凶恶轻盔α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x6", "欧米茄的弹簧 x3", "欧米茄的机械腿 x3"]}
-{"series_id": "凶恶套装α", "parts_type": "BODY", "name": "凶恶胸甲α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x5", "欧米茄的机械腿 x3", "璀璨水晶 x2"]}
-{"series_id": "凶恶套装α", "parts_type": "ARM", "name": "凶恶手铠α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x4", "欧米茄的透镜 x3", "欧米茄的炽热核 x1"]}
-{"series_id": "凶恶套装α", "parts_type": "WAIST", "name": "凶恶重足铠α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x4", "欧米茄的转轴 x3", "欧米茄的炽热核 x1"]}
-{"series_id": "凶恶套装α", "parts_type": "LEG", "name": "凶恶锁甲靴α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x5", "欧米茄的透镜 x2", "欧米茄的转轴 x2"]}
-{"series_id": "欧米茄服装α", "parts_type": "HELM", "name": "欧米茄耳夹α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的机械腿 x3", "海龙的苍玉 x1"]}
-{"series_id": "欧米茄服装α", "parts_type": "BODY", "name": "欧米茄服α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x7", "欧米茄的炽热核 x1", "锁刃龙的宝玉 x1"]}
-{"series_id": "欧米茄服装α", "parts_type": "ARM", "name": "欧米茄护臂α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的透镜 x3", "白耀的造龙玉 x1"]}
-{"series_id": "欧米茄服装α", "parts_type": "WAIST", "name": "欧米茄饰品α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的转轴 x3", "泡狐龙的水玉 x1"]}
-{"series_id": "欧米茄服装α", "parts_type": "LEG", "name": "欧米茄腿α", "key_enemy": "游星欧米茄", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x7", "欧米茄的炽热核 x1", "千刃龙的反逆鳞 x1"]}
-{"series_id": "泡歌鸮α", "parts_type": "HELM", "name": "泡歌鸮α", "key_enemy": "", "materials": ["泡歌券 x3", "炎尾龙的大头冠 x3", "尖龙骨 x5"]}
-{"series_id": "封印的龙骸布α", "parts_type": "HELM", "name": "封印的龙骸布α", "key_enemy": "", "materials": ["封印的龙骸布 x3", "护雷颚龙的上等鼻骨 x3", "护龙的净血 x2", "粗壮护骨 x5"]}
-{"series_id": "知性眼镜α", "parts_type": "HELM", "name": "知性眼镜α", "key_enemy": "", "materials": ["璀璨水晶 x1", "光水晶 x2", "狱炎石 x1", "红莲石 x2"]}
-{"series_id": "方形眼镜α", "parts_type": "HELM", "name": "方形眼镜α", "key_enemy": "", "materials": ["璀璨水晶 x1", "光水晶 x2", "雪光金属 x2", "结冰金属 x4"]}
-{"series_id": "封印的眼罩α", "parts_type": "HELM", "name": "封印的眼罩α", "key_enemy": "", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "暗器蛸的上等皮 x5", "不祥的布 x2"]}
-{"series_id": "墨镜α", "parts_type": "HELM", "name": "墨镜α", "key_enemy": "", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "黄金硬角质 x4", "白鸠石 x4"]}
-{"series_id": "圆框眼镜α", "parts_type": "HELM", "name": "圆框眼镜α", "key_enemy": "", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "暗器蛸的尖爪 x3", "白鸠石 x4"]}
-{"series_id": "艾露猫头套α", "parts_type": "HELM", "name": "艾露猫头套α", "key_enemy": "", "materials": ["艾露猫票 x3", "炎尾龙的上等皮 x6", "炎尾龙的浓引火液 x4", "尖龙骨 x5"]}
-{"series_id": "单羽项链α", "parts_type": "BODY", "name": "单羽项链α", "key_enemy": "", "materials": ["首饰票券 x3", "狱焰蛸的上等皮 x5", "狱焰蛸的暴触手 x2", "狱焰蛸的浓油膜 x3"]}
-{"series_id": "启程的鹰之心α", "parts_type": "BODY", "name": "启程的鹰之心α", "key_enemy": "", "materials": ["血盗虫的坚壳 x1", "雌火龙硬币 x1", "缠蛙的上等鳞 x1", "锯带龙的上等鳍 x1"]}
-{"series_id": "下半框眼镜α", "parts_type": "HELM", "name": "下半框眼镜α", "key_enemy": "", "materials": ["踊火样册 x2", "历战狩猎之证Ⅰ x2", "雌火龙的坚壳 x4", "灵鹤石 x4"]}
-{"series_id": "心形眼镜α", "parts_type": "HELM", "name": "心形眼镜α", "key_enemy": "", "materials": ["踊火样册 x2", "历战狩猎之证Ⅰ x2", "桃毛兽王的刚毛 x4", "灵鹤石 x4"]}
-{"series_id": "辟兽头套α", "parts_type": "HELM", "name": "辟兽头套α", "key_enemy": "", "materials": ["辟兽素描 x3", "辟兽的刚毛 x5", "辟兽的上等皮 x5", "辟兽的锐牙 x4"]}
-{"series_id": "肉垫手套α", "parts_type": "ARM", "name": "肉垫手套α", "key_enemy": "", "materials": ["肉垫票券 x3", "历战狩猎之证Ⅱ x3", "护凶爪龙的尖爪 x3", "护龙的上等毛皮 x4"]}
-{"series_id": "胶鲵α", "parts_type": "HELM", "name": "胶鲵头套α", "key_enemy": "", "materials": ["梦灯样册 x1", "历战狩猎之证Ⅲ x1", "橡胶质的上等皮 x5", "尖龙骨 x3"]}
-{"series_id": "胶鲵α", "parts_type": "BODY", "name": "胶鲵背包α", "key_enemy": "", "materials": ["梦灯样册 x1", "历战狩猎之证Ⅲ x1", "毒怪鸟的尾巴 x3", "尖龙骨 x3"]}
-{"series_id": "泪滴墨镜α", "parts_type": "HELM", "name": "泪滴墨镜α", "key_enemy": "", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的头 x2", "璀璨水晶 x1"]}
-{"series_id": "猫眼眼镜α", "parts_type": "HELM", "name": "猫眼眼镜α", "key_enemy": "", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的翼 x4", "鸟龙玉 x1"]}
-{"series_id": "骷髅面罩α", "parts_type": "HELM", "name": "骷髅面罩α", "key_enemy": "", "materials": ["骷髅票 x3", "毒怪鸟的头 x2", "影蜘蛛的坚壳 x5", "狂龙结晶碎片 x5"]}
-{"series_id": "祝福腰饰α", "parts_type": "WAIST", "name": "祝福腰饰α", "key_enemy": "", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的翼 x3", "火龙的翼 x3"]}
-{"series_id": "分析之眼α", "parts_type": "HELM", "name": "分析之眼α", "key_enemy": "", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的上等鳞 x5", "护火龙的红玉 x1"]}
-{"series_id": "炫光护目镜α", "parts_type": "HELM", "name": "炫光护目镜α", "key_enemy": "", "materials": [" x2", "历战狩猎之证Ⅲ x2", "火龙的上等鳞 x5", "火龙的红玉 x1"]}
-{"series_id": "精力充沛森狸人α", "parts_type": "HELM", "name": "精力充沛森狸人α", "key_enemy": "", "materials": [" x3", "历战狩猎之证Ⅲ x3", "泡狐龙的水玉 x1", "沙海龙的黑珍珠 x2"]}
+{"series_id": "希望", "parts_type": "HELM", "name": "希望面具", "materials": ["初始装备无需素材"]}
+{"series_id": "希望", "parts_type": "BODY", "name": "希望铠甲", "materials": ["初始装备无需素材"]}
+{"series_id": "希望", "parts_type": "ARM", "name": "希望腕甲", "materials": ["初始装备无需素材"]}
+{"series_id": "希望", "parts_type": "WAIST", "name": "希望腰甲", "materials": ["初始装备无需素材"]}
+{"series_id": "希望", "parts_type": "LEG", "name": "希望护腿", "materials": ["初始装备无需素材"]}
+{"series_id": "皮制", "parts_type": "HELM", "name": "皮制头饰", "materials": ["初始装备无需素材"]}
+{"series_id": "皮制", "parts_type": "BODY", "name": "皮制服饰", "materials": ["初始装备无需素材"]}
+{"series_id": "皮制", "parts_type": "ARM", "name": "皮制手套", "materials": ["初始装备无需素材"]}
+{"series_id": "皮制", "parts_type": "WAIST", "name": "皮制腰带", "materials": ["初始装备无需素材"]}
+{"series_id": "皮制", "parts_type": "LEG", "name": "皮制长裤", "materials": ["初始装备无需素材"]}
+{"series_id": "锁甲", "parts_type": "HELM", "name": "锁甲头饰", "materials": ["初始装备无需素材"]}
+{"series_id": "锁甲", "parts_type": "BODY", "name": "锁甲服饰", "materials": ["初始装备无需素材"]}
+{"series_id": "锁甲", "parts_type": "ARM", "name": "锁甲手套", "materials": ["初始装备无需素材"]}
+{"series_id": "锁甲", "parts_type": "WAIST", "name": "锁甲腰带", "materials": ["初始装备无需素材"]}
+{"series_id": "锁甲", "parts_type": "LEG", "name": "锁甲长裤", "materials": ["初始装备无需素材"]}
+{"series_id": "骨制", "parts_type": "HELM", "name": "骨制头盔", "materials": ["谜之骨 x1"]}
+{"series_id": "骨制", "parts_type": "BODY", "name": "骨制铠甲", "materials": ["谜之骨 x1"]}
+{"series_id": "骨制", "parts_type": "ARM", "name": "骨制腕甲", "materials": ["谜之骨 x1"]}
+{"series_id": "骨制", "parts_type": "WAIST", "name": "骨制腰甲", "materials": ["谜之骨 x1"]}
+{"series_id": "骨制", "parts_type": "LEG", "name": "骨制护腿", "materials": ["谜之骨 x1"]}
+{"series_id": "血盗虫", "parts_type": "HELM", "name": "血盗虫眼镜", "materials": ["血盗虫的甲壳 x2"]}
+{"series_id": "钳速龙", "parts_type": "ARM", "name": "钳速龙腕甲", "materials": ["钳速龙的鳞 x1", "尖牙 x1"]}
+{"series_id": "缠蛙", "parts_type": "HELM", "name": "缠蛙头盔", "materials": ["缠蛙的鳞 x2", "缠蛙的颚 x1"]}
+{"series_id": "缠蛙", "parts_type": "BODY", "name": "缠蛙铠甲", "materials": ["缠蛙的鳞 x2", "缠蛙的皮 x2", "缠蛙的缠甲 x1"]}
+{"series_id": "缠蛙", "parts_type": "ARM", "name": "缠蛙腕甲", "materials": ["缠蛙的皮 x2", "缠蛙的缠甲 x1"]}
+{"series_id": "缠蛙", "parts_type": "WAIST", "name": "缠蛙腰甲", "materials": ["缠蛙狩猎证 x1", "缠蛙的鳞 x2", "缠蛙的颚 x1", "尖牙 x1"]}
+{"series_id": "缠蛙", "parts_type": "LEG", "name": "缠蛙护腿", "materials": ["缠蛙的颚 x1", "缠蛙的缠甲 x1", "谜之骨 x1"]}
+{"series_id": "炎尾龙", "parts_type": "HELM", "name": "炎尾龙头盔", "materials": ["炎尾龙狩猎证 x1", "炎尾龙的尾巴 x1", "炎尾龙的引火液 x1", "铁矿石 x1"]}
+{"series_id": "炎尾龙", "parts_type": "BODY", "name": "炎尾龙铠甲", "materials": ["炎尾龙的引火液 x1", "炎尾龙的头冠 x1", "炎尾龙的尾巴 x1"]}
+{"series_id": "炎尾龙", "parts_type": "ARM", "name": "炎尾龙腕甲", "materials": ["炎尾龙的鳞 x2", "炎尾龙的引火液 x1"]}
+{"series_id": "炎尾龙", "parts_type": "WAIST", "name": "炎尾龙腰甲", "materials": ["炎尾龙的皮 x2", "炎尾龙的头冠 x1"]}
+{"series_id": "炎尾龙", "parts_type": "LEG", "name": "炎尾龙护腿", "materials": ["炎尾龙的鳞 x2", "炎尾龙的皮 x2", "炎尾龙的头冠 x1"]}
+{"series_id": "合金", "parts_type": "HELM", "name": "合金头盔", "materials": ["燕雀石 x1", "铁矿石 x1"]}
+{"series_id": "合金", "parts_type": "BODY", "name": "合金铠甲", "materials": ["燕雀石 x1", "铁矿石 x1"]}
+{"series_id": "合金", "parts_type": "ARM", "name": "合金腕甲", "materials": ["燕雀石 x1", "铁矿石 x1"]}
+{"series_id": "合金", "parts_type": "WAIST", "name": "合金腰甲", "materials": ["燕雀石 x1", "大地结晶 x1"]}
+{"series_id": "合金", "parts_type": "LEG", "name": "合金护腿", "materials": ["燕雀石 x1", "大地结晶 x1"]}
+{"series_id": "锯带龙", "parts_type": "LEG", "name": "锯带龙护腿", "materials": ["锯带龙的鳍 x1", "燕雀石 x1"]}
+{"series_id": "巨蜂", "parts_type": "HELM", "name": "巨蜂头盔", "materials": ["巨蜂的甲壳 x1", "谜之骨 x1"]}
+{"series_id": "巨蜂", "parts_type": "BODY", "name": "巨蜂铠甲", "materials": ["巨蜂的甲壳 x1", "谜之骨 x1"]}
+{"series_id": "巨蜂", "parts_type": "ARM", "name": "巨蜂腕甲", "materials": ["巨蜂的甲壳 x1", "巨蜂的翅膀 x1"]}
+{"series_id": "巨蜂", "parts_type": "WAIST", "name": "巨蜂腰甲", "materials": ["巨蜂的甲壳 x1", "怪物体液 x1"]}
+{"series_id": "巨蜂", "parts_type": "LEG", "name": "巨蜂护腿", "materials": ["巨蜂的甲壳 x1", "巨蜂的翅膀 x1"]}
+{"series_id": "咬鱼", "parts_type": "LEG", "name": "咬鱼靴", "materials": ["咬鱼的皮 x1"]}
+{"series_id": "刺花蜘蛛", "parts_type": "HELM", "name": "刺花蜘蛛头盔", "materials": ["刺花蜘蛛的绒毛 x2", "刺花蜘蛛的粘液 x1"]}
+{"series_id": "刺花蜘蛛", "parts_type": "BODY", "name": "刺花蜘蛛铠甲", "materials": ["刺花蜘蛛的绒毛 x2", "刺花蜘蛛的甲壳 x2", "刺花蜘蛛的尾棘 x1"]}
+{"series_id": "刺花蜘蛛", "parts_type": "ARM", "name": "刺花蜘蛛腕甲", "materials": ["刺花蜘蛛的甲壳 x2", "刺花蜘蛛的爪 x1"]}
+{"series_id": "刺花蜘蛛", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲", "materials": ["刺花蜘蛛的粘液 x1", "刺花蜘蛛的爪 x1", "刺花蜘蛛的尾棘 x1"]}
+{"series_id": "刺花蜘蛛", "parts_type": "LEG", "name": "刺花蜘蛛护腿", "materials": ["刺花蜘蛛狩猎证 x1", "刺花蜘蛛的绒毛 x2", "刺花蜘蛛的粘液 x1", "怪物体液 x1"]}
+{"series_id": "桃毛兽王", "parts_type": "HELM", "name": "桃毛兽王头盔", "materials": ["桃毛兽王的爪 x2", "极彩色的毛 x1"]}
+{"series_id": "桃毛兽王", "parts_type": "BODY", "name": "桃毛兽王铠甲", "materials": ["桃毛兽王的毛 x2", "桃毛兽王的爪 x1", "极彩色的毛 x1"]}
+{"series_id": "桃毛兽王", "parts_type": "ARM", "name": "桃毛兽王腕甲", "materials": ["桃毛兽王的牙 x1", "极彩色的毛 x1", "燕雀石 x1"]}
+{"series_id": "桃毛兽王", "parts_type": "WAIST", "name": "桃毛兽王腰甲", "materials": ["桃毛兽王的毛 x2", "桃毛兽王的牙 x1"]}
+{"series_id": "桃毛兽王", "parts_type": "LEG", "name": "桃毛兽王护腿", "materials": ["桃毛兽王狩猎证 x1", "桃毛兽王的毛 x1", "桃毛兽王的牙 x1", "桃毛兽的毛 x1"]}
+{"series_id": "沙海龙", "parts_type": "HELM", "name": "沙海龙头盔", "materials": ["沙海龙的鳞 x2", "沙海龙的头壳 x1"]}
+{"series_id": "沙海龙", "parts_type": "BODY", "name": "沙海龙铠甲", "materials": ["沙海龙的鳞 x2", "沙海龙的甲壳 x1", "沙海龙的尾巴 x1"]}
+{"series_id": "沙海龙", "parts_type": "ARM", "name": "沙海龙腕甲", "materials": ["沙海龙的头壳 x1", "沙海龙的尾巴 x1", "水袋 x1"]}
+{"series_id": "沙海龙", "parts_type": "WAIST", "name": "沙海龙腰甲", "materials": ["沙海龙狩猎证 x1", "沙海龙的鳞 x2", "沙海龙的甲壳 x1", "沙海龙的黑珍珠 x1"]}
+{"series_id": "沙海龙", "parts_type": "LEG", "name": "沙海龙护腿", "materials": ["沙海龙的甲壳 x2", "沙海龙的头壳 x1"]}
+{"series_id": "辟兽", "parts_type": "HELM", "name": "辟兽头盔", "materials": ["辟兽的毛 x2", "辟兽的皮 x2", "辟兽的牙 x1", "草食种的甲壳 x1"]}
+{"series_id": "辟兽", "parts_type": "BODY", "name": "辟兽铠甲", "materials": ["辟兽的毛 x2", "辟兽的爪 x1"]}
+{"series_id": "辟兽", "parts_type": "ARM", "name": "辟兽腕甲", "materials": ["辟兽的皮 x2", "辟兽的牙 x1"]}
+{"series_id": "辟兽", "parts_type": "WAIST", "name": "辟兽腰甲", "materials": ["辟兽的爪 x1", "辟兽的牙 x2", "硬质骨头 x1"]}
+{"series_id": "辟兽", "parts_type": "LEG", "name": "辟兽护腿", "materials": ["辟兽狩猎证 x1", "辟兽的毛 x2", "辟兽的爪 x1", "兽骨 x1"]}
+{"series_id": "铸铁", "parts_type": "HELM", "name": "铸铁头盔", "materials": ["辉龙石 x1", "燕雀石 x1"]}
+{"series_id": "铸铁", "parts_type": "BODY", "name": "铸铁铠甲", "materials": ["辉龙石 x1", "大地结晶 x1"]}
+{"series_id": "铸铁", "parts_type": "ARM", "name": "铸铁腕甲", "materials": ["辉龙石 x1", "燕雀石 x1"]}
+{"series_id": "铸铁", "parts_type": "WAIST", "name": "铸铁腰甲", "materials": ["辉龙石 x1", "大地结晶 x1"]}
+{"series_id": "铸铁", "parts_type": "LEG", "name": "铸铁护腿", "materials": ["辉龙石 x1", "红莲石 x1"]}
+{"series_id": "盔速龙", "parts_type": "BODY", "name": "盔速龙铠甲", "materials": ["盔速龙的头壳 x1", "漆黑的油骨 x1"]}
+{"series_id": "沼喷龙", "parts_type": "HELM", "name": "沼喷龙头盔", "materials": ["沼喷龙的皮 x2", "沼喷龙的爪 x1", "沼喷龙的喙 x1"]}
+{"series_id": "沼喷龙", "parts_type": "BODY", "name": "沼喷龙铠甲", "materials": ["沼喷龙的皮 x2", "斑斓的毒皮 x1"]}
+{"series_id": "沼喷龙", "parts_type": "ARM", "name": "沼喷龙腕甲", "materials": ["斑斓的毒皮 x1", "沼喷龙的喙 x1", "毒袋 x1"]}
+{"series_id": "沼喷龙", "parts_type": "WAIST", "name": "沼喷龙腰甲", "materials": ["沼喷龙狩猎证 x1", "沼喷龙的皮 x2", "斑斓的毒皮 x1", "辉龙石 x1"]}
+{"series_id": "沼喷龙", "parts_type": "LEG", "name": "沼喷龙护腿", "materials": ["沼喷龙的爪 x2", "沼喷龙的喙 x1"]}
+{"series_id": "血眠虫", "parts_type": "HELM", "name": "血眠虫头饰", "materials": ["血眠虫的甲壳 x2"]}
+{"series_id": "影蜘蛛", "parts_type": "HELM", "name": "影蜘蛛头盔", "materials": ["影蜘蛛狩猎证 x1", "橡胶质的皮 x1", "影蜘蛛的钳角 x1", "睡眠袋 x1"]}
+{"series_id": "影蜘蛛", "parts_type": "BODY", "name": "影蜘蛛铠甲", "materials": ["影蜘蛛的爪 x2", "影蜘蛛的棘 x1"]}
+{"series_id": "影蜘蛛", "parts_type": "ARM", "name": "影蜘蛛腕甲", "materials": ["影蜘蛛的甲壳 x2", "影蜘蛛的爪 x1", "影蜘蛛的棘 x1"]}
+{"series_id": "影蜘蛛", "parts_type": "WAIST", "name": "影蜘蛛腰甲", "materials": ["影蜘蛛的钳角 x1", "影蜘蛛的棘 x1", "橡胶质的皮 x1"]}
+{"series_id": "影蜘蛛", "parts_type": "LEG", "name": "影蜘蛛护腿", "materials": ["影蜘蛛的甲壳 x2", "影蜘蛛的钳角 x1"]}
+{"series_id": "风铗龙", "parts_type": "HELM", "name": "风铗龙头盔", "materials": ["风铗龙的飞膜 x1", "风铗龙的尾爪 x1", "冰结袋 x1"]}
+{"series_id": "风铗龙", "parts_type": "BODY", "name": "风铗龙铠甲", "materials": ["风铗龙的皮 x2", "风铗龙的尾爪 x1"]}
+{"series_id": "风铗龙", "parts_type": "ARM", "name": "风铗龙腕甲", "materials": ["风铗龙的鳞 x2", "风铗龙的飞膜 x1"]}
+{"series_id": "风铗龙", "parts_type": "WAIST", "name": "风铗龙腰甲", "materials": ["风铗龙的鳞 x2", "风铗龙的皮 x1", "风铗龙的尾爪 x1"]}
+{"series_id": "风铗龙", "parts_type": "LEG", "name": "风铗龙护腿", "materials": ["风铗龙狩猎证 x1", "风铗龙的鳞 x2", "风铗龙的飞膜 x1", "结冻冰骨 x1"]}
+{"series_id": "赫猿兽", "parts_type": "HELM", "name": "赫猿兽头盔", "materials": ["赫猿兽狩猎证 x1", "赫猿兽的尾巴 x1", "赫炎结晶 x1", "赫猿兽的骨髓 x1"]}
+{"series_id": "赫猿兽", "parts_type": "BODY", "name": "赫猿兽铠甲", "materials": ["赫猿兽的鳞 x2", "赫炎结晶 x1"]}
+{"series_id": "赫猿兽", "parts_type": "ARM", "name": "赫猿兽腕甲", "materials": ["赫猿兽的鳞 x2", "赫猿兽的甲壳 x2", "赫猿兽的背甲 x1"]}
+{"series_id": "赫猿兽", "parts_type": "WAIST", "name": "赫猿兽腰甲", "materials": ["赫猿兽的甲壳 x2", "赫猿兽的背甲 x1"]}
+{"series_id": "赫猿兽", "parts_type": "LEG", "name": "赫猿兽护腿", "materials": ["赫炎结晶 x1", "赫猿兽的背甲 x1", "赫猿兽的尾巴 x1"]}
+{"series_id": "护鹭鹰龙", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲", "materials": ["护鹭鹰龙的羽毛 x2", "粗壮护骨 x1"]}
+{"series_id": "波衣龙", "parts_type": "HELM", "name": "波衣龙头盔", "materials": ["波衣龙狩猎证 x1", "波衣龙的鳞 x2", "波衣龙的逆鳞 x1", "护龙的血 x1"]}
+{"series_id": "波衣龙", "parts_type": "BODY", "name": "波衣龙铠甲", "materials": ["波衣龙的纤毛 x1", "波衣龙的触手 x1", "波衣龙的爪 x2", "护龙的鳞 x1"]}
+{"series_id": "波衣龙", "parts_type": "ARM", "name": "波衣龙腕甲", "materials": ["波衣龙的皮 x2", "波衣龙的触手 x1", "护龙的毛皮 x1"]}
+{"series_id": "波衣龙", "parts_type": "WAIST", "name": "波衣龙腰甲", "materials": ["波衣龙的鳞 x2", "波衣龙的纤毛 x1"]}
+{"series_id": "波衣龙", "parts_type": "LEG", "name": "波衣龙护腿", "materials": ["波衣龙的鳞 x2", "波衣龙的皮 x2", "波衣龙的爪 x1"]}
+{"series_id": "煌雷龙", "parts_type": "HELM", "name": "煌雷龙头盔", "materials": ["煌雷龙的鳞 x2", "煌雷龙的甲壳 x2", "煌雷龙的电角 x1"]}
+{"series_id": "煌雷龙", "parts_type": "BODY", "name": "煌雷龙铠甲", "materials": ["煌雷龙的鳞 x2", "煌雷龙的雷晶爪 x1"]}
+{"series_id": "煌雷龙", "parts_type": "ARM", "name": "煌雷龙腕甲", "materials": ["煌雷龙的雷晶爪 x1", "煌雷龙的电角 x1", "煌雷龙的尾巴 x1", "护龙的鳞 x1"]}
+{"series_id": "煌雷龙", "parts_type": "WAIST", "name": "煌雷龙腰甲", "materials": ["煌雷龙的甲壳 x2", "煌雷龙的电角 x1", "护龙的毛皮 x1", "翼龙的皮 x1"]}
+{"series_id": "煌雷龙", "parts_type": "LEG", "name": "煌雷龙护腿", "materials": ["煌雷龙狩猎证 x1", "煌雷龙的尾巴 x1", "煌雷龙的逆鳞 x1", "护龙的血 x1"]}
+{"series_id": "狱焰蛸", "parts_type": "HELM", "name": "狱焰蛸头盔", "materials": ["狱焰蛸的皮 x2", "狱焰蛸的棘 x1", "狱焰蛸的角 x1"]}
+{"series_id": "狱焰蛸", "parts_type": "BODY", "name": "狱焰蛸铠甲", "materials": ["狱焰蛸狩猎证 x1", "狱焰蛸的皮 x2", "狱焰蛸的髓液 x1", "护龙的血 x1"]}
+{"series_id": "狱焰蛸", "parts_type": "ARM", "name": "狱焰蛸腕甲", "materials": ["狱焰蛸的皮 x2", "狱焰蛸的油膜 x1"]}
+{"series_id": "狱焰蛸", "parts_type": "WAIST", "name": "狱焰蛸腰甲", "materials": ["狱焰蛸的油膜 x1", "狱焰蛸的触手 x1", "狱焰蛸的角 x1", "护龙的鳞 x1"]}
+{"series_id": "狱焰蛸", "parts_type": "LEG", "name": "狱焰蛸护腿", "materials": ["狱焰蛸的棘 x2", "狱焰蛸的触手 x1", "护龙的毛皮 x1", "漆黑的油骨 x1"]}
+{"series_id": "护辟兽", "parts_type": "HELM", "name": "护辟兽头盔", "materials": ["护辟兽的毛 x2", "护辟兽的皮 x2", "护辟兽的牙 x1"]}
+{"series_id": "护辟兽", "parts_type": "BODY", "name": "护辟兽铠甲", "materials": ["护辟兽的毛 x2", "护辟兽的爪 x1"]}
+{"series_id": "护辟兽", "parts_type": "ARM", "name": "护辟兽腕甲", "materials": ["护辟兽的皮 x2", "护辟兽的牙 x1"]}
+{"series_id": "护辟兽", "parts_type": "WAIST", "name": "护辟兽腰甲", "materials": ["护辟兽狩猎证 x1", "护辟兽的毛 x2", "护辟兽的爪 x1", "护龙的血 x1"]}
+{"series_id": "护辟兽", "parts_type": "LEG", "name": "护辟兽护腿", "materials": ["护辟兽的爪 x1", "护辟兽的牙 x1", "护龙的毛皮 x1"]}
+{"series_id": "护火龙", "parts_type": "HELM", "name": "护火龙头盔", "materials": ["护火龙狩猎证 x1", "护火龙的鳞 x2", "护火龙的甲壳 x1", "护火龙的逆鳞 x1"]}
+{"series_id": "护火龙", "parts_type": "BODY", "name": "护火龙铠甲", "materials": ["护火龙的甲壳 x2", "护火龙的翼膜 x1"]}
+{"series_id": "护火龙", "parts_type": "ARM", "name": "护火龙腕甲", "materials": ["护火龙的鳞 x2", "护火龙的甲壳 x2", "护火龙的尾巴 x1"]}
+{"series_id": "护火龙", "parts_type": "WAIST", "name": "护火龙腰甲", "materials": ["护火龙的鳞 x2", "护火龙的翼膜 x1"]}
+{"series_id": "护火龙", "parts_type": "LEG", "name": "护火龙护腿", "materials": ["护火龙的翼膜 x1", "护火龙的尾巴 x1", "护龙的鳞 x1"]}
+{"series_id": "护凶爪龙", "parts_type": "HELM", "name": "护凶爪龙头盔", "materials": ["护凶爪龙的爪 x1", "护凶爪龙的牙 x1", "护凶爪龙的尾巴 x1"]}
+{"series_id": "护凶爪龙", "parts_type": "BODY", "name": "护凶爪龙铠甲", "materials": ["护凶爪龙的硬肌 x2", "护凶爪龙的牙 x1"]}
+{"series_id": "护凶爪龙", "parts_type": "ARM", "name": "护凶爪龙腕甲", "materials": ["护凶爪龙的鳞 x2", "护凶爪龙的硬肌 x2", "护凶爪龙的牙 x1"]}
+{"series_id": "护凶爪龙", "parts_type": "WAIST", "name": "护凶爪龙腰甲", "materials": ["护凶爪龙狩猎证 x1", "护凶爪龙的尾巴 x1", "护凶爪龙的爪 x1", "护凶爪龙的逆鳞 x1"]}
+{"series_id": "护凶爪龙", "parts_type": "LEG", "name": "护凶爪龙护腿", "materials": ["护凶爪龙的鳞 x2", "护凶爪龙的爪 x1"]}
+{"series_id": "暗器蛸", "parts_type": "HELM", "name": "暗器蛸头盔", "materials": ["暗器蛸的皮 x2", "金色角质 x2", "暗器蛸的牙 x1", "粗壮护骨 x1"]}
+{"series_id": "暗器蛸", "parts_type": "BODY", "name": "暗器蛸铠甲", "materials": ["金色角质 x2", "暗器蛸的触手 x1"]}
+{"series_id": "暗器蛸", "parts_type": "ARM", "name": "暗器蛸腕甲", "materials": ["暗器蛸的皮 x2", "暗器蛸的爪 x1"]}
+{"series_id": "暗器蛸", "parts_type": "WAIST", "name": "暗器蛸腰甲", "materials": ["暗器蛸狩猎证 x1", "暗器蛸的皮 x2", "暗器蛸的爪 x1", "暗器蛸的髓液 x1"]}
+{"series_id": "暗器蛸", "parts_type": "LEG", "name": "暗器蛸护腿", "materials": ["暗器蛸的爪 x1", "暗器蛸的触手 x1", "暗器蛸的牙 x1"]}
+{"series_id": "护锁刃龙", "parts_type": "HELM", "name": "护锁刃龙头盔", "materials": ["护龙的血 x1", "护火龙的翼膜 x2", "护龙的鳞 x1"]}
+{"series_id": "护锁刃龙", "parts_type": "BODY", "name": "护锁刃龙铠甲", "materials": ["护龙的血 x1", "护凶爪龙的爪 x2", "粗壮护骨 x3"]}
+{"series_id": "护锁刃龙", "parts_type": "ARM", "name": "护锁刃龙腕甲", "materials": ["护龙的血 x1", "护龙的鳞 x2", "护鹭鹰龙的羽毛 x2"]}
+{"series_id": "护锁刃龙", "parts_type": "WAIST", "name": "护锁刃龙腰甲", "materials": ["护龙的血 x1", "护辟兽的爪 x2", "护龙的毛皮 x1"]}
+{"series_id": "护锁刃龙", "parts_type": "LEG", "name": "护锁刃龙护腿", "materials": ["护龙的血 x1", "护龙的毛皮 x2"]}
+{"series_id": "希望α", "parts_type": "HELM", "name": "希望面具α", "materials": ["硬质骨头 x2", "铁矿石 x1"]}
+{"series_id": "希望α", "parts_type": "BODY", "name": "希望铠甲α", "materials": ["硬质骨头 x1", "大地结晶 x1"]}
+{"series_id": "希望α", "parts_type": "ARM", "name": "希望腕甲α", "materials": ["硬质骨头 x2", "大地结晶 x1"]}
+{"series_id": "希望α", "parts_type": "WAIST", "name": "希望腰甲α", "materials": ["硬质骨头 x1", "铁矿石 x1"]}
+{"series_id": "希望α", "parts_type": "LEG", "name": "希望护腿α", "materials": ["硬质骨头 x3"]}
+{"series_id": "皮制α", "parts_type": "HELM", "name": "皮制头饰α", "materials": ["护龙的毛皮 x1"]}
+{"series_id": "皮制α", "parts_type": "BODY", "name": "皮制服饰α", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
+{"series_id": "皮制α", "parts_type": "ARM", "name": "皮制手套α", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
+{"series_id": "皮制α", "parts_type": "WAIST", "name": "皮制腰带α", "materials": ["护龙的毛皮 x1"]}
+{"series_id": "皮制α", "parts_type": "LEG", "name": "皮制长裤α", "materials": ["护龙的毛皮 x1", "燕雀石 x1"]}
+{"series_id": "锁甲α", "parts_type": "HELM", "name": "锁甲头饰α", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
+{"series_id": "锁甲α", "parts_type": "BODY", "name": "锁甲服饰α", "materials": ["护龙的鳞 x1"]}
+{"series_id": "锁甲α", "parts_type": "ARM", "name": "锁甲手套α", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
+{"series_id": "锁甲α", "parts_type": "WAIST", "name": "锁甲腰带α", "materials": ["护龙的鳞 x1"]}
+{"series_id": "锁甲α", "parts_type": "LEG", "name": "锁甲长裤α", "materials": ["护龙的鳞 x1", "结冰金属 x1"]}
+{"series_id": "骨制α", "parts_type": "HELM", "name": "骨制头盔α", "materials": ["良质硬骨 x1", "结冻冰骨 x1"]}
+{"series_id": "骨制α", "parts_type": "BODY", "name": "骨制铠甲α", "materials": ["良质硬骨 x1", "漆黑的油骨 x1"]}
+{"series_id": "骨制α", "parts_type": "ARM", "name": "骨制腕甲α", "materials": ["良质硬骨 x1", "结冻冰骨 x1"]}
+{"series_id": "骨制α", "parts_type": "WAIST", "name": "骨制腰甲α", "materials": ["良质硬骨 x1", "粗壮护骨 x1"]}
+{"series_id": "骨制α", "parts_type": "LEG", "name": "骨制护腿α", "materials": ["良质硬骨 x1", "漆黑的油骨 x1"]}
+{"series_id": "合金α", "parts_type": "HELM", "name": "合金头盔α", "materials": ["灵鹤石 x1", "辉龙石 x3"]}
+{"series_id": "合金α", "parts_type": "BODY", "name": "合金铠甲α", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
+{"series_id": "合金α", "parts_type": "ARM", "name": "合金腕甲α", "materials": ["灵鹤石 x1", "辉龙石 x3"]}
+{"series_id": "合金α", "parts_type": "WAIST", "name": "合金腰甲α", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
+{"series_id": "合金α", "parts_type": "LEG", "name": "合金护腿α", "materials": ["灵鹤石 x1", "辉龙石 x2"]}
+{"series_id": "血盗虫α", "parts_type": "HELM", "name": "血盗虫眼镜α", "materials": ["血盗虫的坚壳 x5"]}
+{"series_id": "血盗虫β", "parts_type": "HELM", "name": "血盗虫眼镜β", "materials": ["血盗虫的坚壳 x5"]}
+{"series_id": "钳速龙α", "parts_type": "ARM", "name": "钳速龙腕甲α", "materials": ["钳速龙的上等鳞 x3", "锐利的牙 x2"]}
+{"series_id": "钳速龙β", "parts_type": "ARM", "name": "钳速龙腕甲β", "materials": ["钳速龙的上等鳞 x3", "锐利的牙 x2"]}
+{"series_id": "锯带龙α", "parts_type": "LEG", "name": "锯带龙护腿α", "materials": ["锯带龙的上等鳍 x3", "灵鹤石 x2"]}
+{"series_id": "锯带龙β", "parts_type": "LEG", "name": "锯带龙护腿β", "materials": ["锯带龙的上等鳍 x3", "灵鹤石 x2"]}
+{"series_id": "巨蜂α", "parts_type": "HELM", "name": "巨蜂头盔α", "materials": ["巨蜂的坚壳 x2", "怪物浓液 x3"]}
+{"series_id": "巨蜂α", "parts_type": "BODY", "name": "巨蜂铠甲α", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x2"]}
+{"series_id": "巨蜂α", "parts_type": "ARM", "name": "巨蜂腕甲α", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x3"]}
+{"series_id": "巨蜂α", "parts_type": "WAIST", "name": "巨蜂腰甲α", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x2"]}
+{"series_id": "巨蜂α", "parts_type": "LEG", "name": "巨蜂护腿α", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x1"]}
+{"series_id": "巨蜂β", "parts_type": "HELM", "name": "巨蜂头盔β", "materials": ["巨蜂的坚壳 x2", "怪物浓液 x3"]}
+{"series_id": "巨蜂β", "parts_type": "BODY", "name": "巨蜂铠甲β", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x2"]}
+{"series_id": "巨蜂β", "parts_type": "ARM", "name": "巨蜂腕甲β", "materials": ["巨蜂的坚壳 x2", "巨蜂的薄羽 x3"]}
+{"series_id": "巨蜂β", "parts_type": "WAIST", "name": "巨蜂腰甲β", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x2"]}
+{"series_id": "巨蜂β", "parts_type": "LEG", "name": "巨蜂护腿β", "materials": ["巨蜂的坚壳 x2", "良质硬骨 x1"]}
+{"series_id": "盔速龙α", "parts_type": "BODY", "name": "盔速龙铠甲α", "materials": ["盔速龙的坚头壳 x4", "狱炎石 x2"]}
+{"series_id": "盔速龙β", "parts_type": "BODY", "name": "盔速龙铠甲β", "materials": ["盔速龙的坚头壳 x4", "狱炎石 x2"]}
+{"series_id": "血眠虫α", "parts_type": "HELM", "name": "血眠虫头饰α", "materials": ["血眠虫的坚壳 x5"]}
+{"series_id": "血眠虫β", "parts_type": "HELM", "name": "血眠虫头饰β", "materials": ["血眠虫的坚壳 x5"]}
+{"series_id": "怪鸟α", "parts_type": "HELM", "name": "怪鸟头盔α", "materials": ["怪鸟的上等鳞 x2", "怪鸟的翼 x2", "尖龙骨 x1"]}
+{"series_id": "怪鸟α", "parts_type": "BODY", "name": "怪鸟铠甲α", "materials": ["怪鸟狩猎证 S x1", "怪鸟的上等鳞 x2", "怪鸟的翼 x1", "狱炎石 x1"]}
+{"series_id": "怪鸟α", "parts_type": "ARM", "name": "怪鸟腕甲α", "materials": ["怪鸟狩猎证 S x1", "怪鸟的坚壳 x3", "巨大的喙 x1"]}
+{"series_id": "怪鸟α", "parts_type": "WAIST", "name": "怪鸟腰甲α", "materials": ["怪鸟狩猎证 S x1", "巨大的喙 x3", "怪鸟的耳 x1", "爆炎袋 x1"]}
+{"series_id": "怪鸟α", "parts_type": "LEG", "name": "怪鸟护腿α", "materials": ["怪鸟的上等鳞 x2", "怪鸟的坚壳 x2", "怪鸟的翼 x1", "怪鸟的耳 x1"]}
+{"series_id": "怪鸟β", "parts_type": "HELM", "name": "怪鸟头盔β", "materials": ["怪鸟的上等鳞 x2", "怪鸟的翼 x2", "尖龙骨 x1"]}
+{"series_id": "怪鸟β", "parts_type": "BODY", "name": "怪鸟铠甲β", "materials": ["怪鸟狩猎证 S x1", "怪鸟的上等鳞 x2", "怪鸟的翼 x1", "狱炎石 x1"]}
+{"series_id": "怪鸟β", "parts_type": "ARM", "name": "怪鸟腕甲β", "materials": ["怪鸟狩猎证 S x1", "怪鸟的坚壳 x3", "巨大的喙 x1"]}
+{"series_id": "怪鸟β", "parts_type": "WAIST", "name": "怪鸟腰甲β", "materials": ["怪鸟狩猎证 S x1", "巨大的喙 x3", "怪鸟的耳 x1", "爆炎袋 x1"]}
+{"series_id": "怪鸟β", "parts_type": "LEG", "name": "怪鸟护腿β", "materials": ["怪鸟的上等鳞 x2", "怪鸟的坚壳 x2", "怪鸟的翼 x1", "怪鸟的耳 x1"]}
+{"series_id": "缠蛙α", "parts_type": "HELM", "name": "缠蛙头盔α", "materials": ["缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "坚固的骨 x1"]}
+{"series_id": "缠蛙α", "parts_type": "BODY", "name": "缠蛙铠甲α", "materials": ["缠蛙狩猎证 S x1", "缠蛙的坚缠甲 x2", "良质硬骨 x1"]}
+{"series_id": "缠蛙α", "parts_type": "ARM", "name": "缠蛙腕甲α", "materials": ["缠蛙的上等鳞 x2", "缠蛙的上等皮 x2", "缠蛙的大颚 x1", "缠蛙的坚缠甲 x1"]}
+{"series_id": "缠蛙α", "parts_type": "WAIST", "name": "缠蛙腰甲α", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等皮 x3", "缠蛙的坚缠甲 x1"]}
+{"series_id": "缠蛙α", "parts_type": "LEG", "name": "缠蛙护腿α", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "翼龙的上等皮 x1"]}
+{"series_id": "缠蛙β", "parts_type": "HELM", "name": "缠蛙头盔β", "materials": ["缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "坚固的骨 x1"]}
+{"series_id": "缠蛙β", "parts_type": "BODY", "name": "缠蛙铠甲β", "materials": ["缠蛙狩猎证 S x1", "缠蛙的坚缠甲 x2", "良质硬骨 x1"]}
+{"series_id": "缠蛙β", "parts_type": "ARM", "name": "缠蛙腕甲β", "materials": ["缠蛙的上等鳞 x2", "缠蛙的上等皮 x2", "缠蛙的大颚 x1", "缠蛙的坚缠甲 x1"]}
+{"series_id": "缠蛙β", "parts_type": "WAIST", "name": "缠蛙腰甲β", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等皮 x3", "缠蛙的坚缠甲 x1"]}
+{"series_id": "缠蛙β", "parts_type": "LEG", "name": "缠蛙护腿β", "materials": ["缠蛙狩猎证 S x1", "缠蛙的上等鳞 x2", "缠蛙的大颚 x1", "翼龙的上等皮 x1"]}
+{"series_id": "炎尾龙α", "parts_type": "HELM", "name": "炎尾龙头盔α", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的浓引火液 x2", "炎尾龙的上等皮 x2", "良质硬骨 x1"]}
+{"series_id": "炎尾龙α", "parts_type": "BODY", "name": "炎尾龙铠甲α", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的大头冠 x1", "炎尾龙的尾巴 x1", "红莲石 x1"]}
+{"series_id": "炎尾龙α", "parts_type": "ARM", "name": "炎尾龙腕甲α", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的上等皮 x3", "炎尾龙的浓引火液 x1", "炎尾龙的大头冠 x1"]}
+{"series_id": "炎尾龙α", "parts_type": "WAIST", "name": "炎尾龙腰甲α", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的上等皮 x2", "炎尾龙的大头冠 x1"]}
+{"series_id": "炎尾龙α", "parts_type": "LEG", "name": "炎尾龙护腿α", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的浓引火液 x1", "尖龙骨 x1"]}
+{"series_id": "炎尾龙β", "parts_type": "HELM", "name": "炎尾龙头盔β", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的浓引火液 x2", "炎尾龙的上等皮 x2", "良质硬骨 x1"]}
+{"series_id": "炎尾龙β", "parts_type": "BODY", "name": "炎尾龙铠甲β", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的大头冠 x1", "炎尾龙的尾巴 x1", "红莲石 x1"]}
+{"series_id": "炎尾龙β", "parts_type": "ARM", "name": "炎尾龙腕甲β", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的上等皮 x3", "炎尾龙的浓引火液 x1", "炎尾龙的大头冠 x1"]}
+{"series_id": "炎尾龙β", "parts_type": "WAIST", "name": "炎尾龙腰甲β", "materials": ["炎尾龙狩猎证 S x1", "炎尾龙的上等皮 x2", "炎尾龙的大头冠 x1"]}
+{"series_id": "炎尾龙β", "parts_type": "LEG", "name": "炎尾龙护腿β", "materials": ["炎尾龙的上等鳞 x3", "炎尾龙的浓引火液 x1", "尖龙骨 x1"]}
+{"series_id": "刺花蜘蛛α", "parts_type": "HELM", "name": "刺花蜘蛛头盔α", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的坚壳 x3", "刺花蜘蛛的锐爪 x2"]}
+{"series_id": "刺花蜘蛛α", "parts_type": "BODY", "name": "刺花蜘蛛铠甲α", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的坚壳 x2", "刺花蜘蛛的浓粘液 x1", "刺花蜘蛛的上等尾棘 x1"]}
+{"series_id": "刺花蜘蛛α", "parts_type": "ARM", "name": "刺花蜘蛛腕甲α", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的锐爪 x1", "刺花蜘蛛的上等尾棘 x1", "怪物浓液 x1"]}
+{"series_id": "刺花蜘蛛α", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲α", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x2", "灵鹤石 x2"]}
+{"series_id": "刺花蜘蛛α", "parts_type": "LEG", "name": "刺花蜘蛛护腿α", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x1", "璀璨水晶 x1"]}
+{"series_id": "刺花蜘蛛β", "parts_type": "HELM", "name": "刺花蜘蛛头盔β", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的坚壳 x3", "刺花蜘蛛的锐爪 x2"]}
+{"series_id": "刺花蜘蛛β", "parts_type": "BODY", "name": "刺花蜘蛛铠甲β", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的坚壳 x2", "刺花蜘蛛的浓粘液 x1", "刺花蜘蛛的上等尾棘 x1"]}
+{"series_id": "刺花蜘蛛β", "parts_type": "ARM", "name": "刺花蜘蛛腕甲β", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的锐爪 x1", "刺花蜘蛛的上等尾棘 x1", "怪物浓液 x1"]}
+{"series_id": "刺花蜘蛛β", "parts_type": "WAIST", "name": "刺花蜘蛛腰甲β", "materials": ["刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x2", "灵鹤石 x2"]}
+{"series_id": "刺花蜘蛛β", "parts_type": "LEG", "name": "刺花蜘蛛护腿β", "materials": ["刺花蜘蛛狩猎证 S x1", "刺花蜘蛛的上等绒毛 x2", "刺花蜘蛛的浓粘液 x1", "璀璨水晶 x1"]}
+{"series_id": "桃毛兽王α", "parts_type": "HELM", "name": "桃毛兽王头盔α", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "坚固的骨 x1"]}
+{"series_id": "桃毛兽王α", "parts_type": "BODY", "name": "桃毛兽王铠甲α", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的尖爪 x2", "桃毛兽王的锐牙 x1", "极彩色的刚毛 x1"]}
+{"series_id": "桃毛兽王α", "parts_type": "ARM", "name": "桃毛兽王腕甲α", "materials": ["桃毛兽王狩猎证 S x1", "极彩色的刚毛 x1", "桃毛兽的刚毛 x2"]}
+{"series_id": "桃毛兽王α", "parts_type": "WAIST", "name": "桃毛兽王腰甲α", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的尖爪 x3", "极彩色的刚毛 x1"]}
+{"series_id": "桃毛兽王α", "parts_type": "LEG", "name": "桃毛兽王护腿α", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "锐利的牙 x1"]}
+{"series_id": "桃毛兽王β", "parts_type": "HELM", "name": "桃毛兽王头盔β", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "坚固的骨 x1"]}
+{"series_id": "桃毛兽王β", "parts_type": "BODY", "name": "桃毛兽王铠甲β", "materials": ["桃毛兽王的刚毛 x2", "桃毛兽王的尖爪 x2", "桃毛兽王的锐牙 x1", "极彩色的刚毛 x1"]}
+{"series_id": "桃毛兽王β", "parts_type": "ARM", "name": "桃毛兽王腕甲β", "materials": ["桃毛兽王狩猎证 S x1", "极彩色的刚毛 x1", "桃毛兽的刚毛 x2"]}
+{"series_id": "桃毛兽王β", "parts_type": "WAIST", "name": "桃毛兽王腰甲β", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的尖爪 x3", "极彩色的刚毛 x1"]}
+{"series_id": "桃毛兽王β", "parts_type": "LEG", "name": "桃毛兽王护腿β", "materials": ["桃毛兽王狩猎证 S x1", "桃毛兽王的刚毛 x2", "桃毛兽王的锐牙 x1", "锐利的牙 x1"]}
+{"series_id": "沼喷龙α", "parts_type": "HELM", "name": "沼喷龙头盔α", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的锐爪 x3", "沼喷龙的大喙 x1"]}
+{"series_id": "沼喷龙α", "parts_type": "BODY", "name": "沼喷龙铠甲α", "materials": ["沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "尖龙骨 x1"]}
+{"series_id": "沼喷龙α", "parts_type": "ARM", "name": "沼喷龙腕甲α", "materials": ["沼喷龙的上等皮 x2", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x1", "沼喷龙的大喙 x1"]}
+{"series_id": "沼喷龙α", "parts_type": "WAIST", "name": "沼喷龙腰甲α", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "盔速龙的坚头壳 x1"]}
+{"series_id": "沼喷龙α", "parts_type": "LEG", "name": "沼喷龙护腿α", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的大喙 x2", "猛毒袋 x1"]}
+{"series_id": "沼喷龙β", "parts_type": "HELM", "name": "沼喷龙头盔β", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的锐爪 x3", "沼喷龙的大喙 x1"]}
+{"series_id": "沼喷龙β", "parts_type": "BODY", "name": "沼喷龙铠甲β", "materials": ["沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "尖龙骨 x1"]}
+{"series_id": "沼喷龙β", "parts_type": "ARM", "name": "沼喷龙腕甲β", "materials": ["沼喷龙的上等皮 x2", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x1", "沼喷龙的大喙 x1"]}
+{"series_id": "沼喷龙β", "parts_type": "WAIST", "name": "沼喷龙腰甲β", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的上等皮 x2", "斑斓的猛毒皮 x2", "盔速龙的坚头壳 x1"]}
+{"series_id": "沼喷龙β", "parts_type": "LEG", "name": "沼喷龙护腿β", "materials": ["沼喷龙狩猎证 S x1", "沼喷龙的大喙 x2", "猛毒袋 x1"]}
+{"series_id": "毒怪鸟α", "parts_type": "HELM", "name": "毒怪鸟头盔α", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的翼 x2", "毒怪鸟的头 x1"]}
+{"series_id": "毒怪鸟α", "parts_type": "BODY", "name": "毒怪鸟铠甲α", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的翼 x1", "毒怪鸟的尾巴 x1", "毒怪鸟的头 x1"]}
+{"series_id": "毒怪鸟α", "parts_type": "ARM", "name": "毒怪鸟腕甲α", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "尖龙骨 x1"]}
+{"series_id": "毒怪鸟α", "parts_type": "WAIST", "name": "毒怪鸟腰甲α", "materials": ["毒怪鸟狩猎证 S x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "璀璨水晶 x1"]}
+{"series_id": "毒怪鸟α", "parts_type": "LEG", "name": "毒怪鸟护腿α", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的头 x1", "猛毒袋 x1"]}
+{"series_id": "毒怪鸟β", "parts_type": "HELM", "name": "毒怪鸟头盔β", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的翼 x2", "毒怪鸟的头 x1"]}
+{"series_id": "毒怪鸟β", "parts_type": "BODY", "name": "毒怪鸟铠甲β", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的翼 x1", "毒怪鸟的尾巴 x1", "毒怪鸟的头 x1"]}
+{"series_id": "毒怪鸟β", "parts_type": "ARM", "name": "毒怪鸟腕甲β", "materials": ["橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "尖龙骨 x1"]}
+{"series_id": "毒怪鸟β", "parts_type": "WAIST", "name": "毒怪鸟腰甲β", "materials": ["毒怪鸟狩猎证 S x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x1", "璀璨水晶 x1"]}
+{"series_id": "毒怪鸟β", "parts_type": "LEG", "name": "毒怪鸟护腿β", "materials": ["毒怪鸟狩猎证 S x1", "毒怪鸟的头 x1", "猛毒袋 x1"]}
+{"series_id": "影蜘蛛α", "parts_type": "HELM", "name": "影蜘蛛头盔α", "materials": ["影蜘蛛的坚壳 x2", "影蜘蛛的坚钳角 x1", "怪物浓液 x2"]}
+{"series_id": "影蜘蛛α", "parts_type": "BODY", "name": "影蜘蛛铠甲α", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的坚钳角 x1", "影蜘蛛的锐爪 x2", "鸟龙玉 x1"]}
+{"series_id": "影蜘蛛α", "parts_type": "ARM", "name": "影蜘蛛腕甲α", "materials": ["影蜘蛛的坚壳 x3", "影蜘蛛的锐爪 x3", "影蜘蛛的坚钳角 x1", "影蜘蛛的上等棘 x1"]}
+{"series_id": "影蜘蛛α", "parts_type": "WAIST", "name": "影蜘蛛腰甲α", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的锐爪 x2", "影蜘蛛的上等棘 x2", "血眠虫的坚壳 x2"]}
+{"series_id": "影蜘蛛α", "parts_type": "LEG", "name": "影蜘蛛护腿α", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的上等棘 x1", "橡胶质的上等皮 x2", "昏睡袋 x1"]}
+{"series_id": "影蜘蛛β", "parts_type": "HELM", "name": "影蜘蛛头盔β", "materials": ["影蜘蛛的坚壳 x2", "影蜘蛛的坚钳角 x1", "怪物浓液 x2"]}
+{"series_id": "影蜘蛛β", "parts_type": "BODY", "name": "影蜘蛛铠甲β", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的坚钳角 x1", "影蜘蛛的锐爪 x2", "鸟龙玉 x1"]}
+{"series_id": "影蜘蛛β", "parts_type": "ARM", "name": "影蜘蛛腕甲β", "materials": ["影蜘蛛的坚壳 x3", "影蜘蛛的锐爪 x3", "影蜘蛛的坚钳角 x1", "影蜘蛛的上等棘 x1"]}
+{"series_id": "影蜘蛛β", "parts_type": "WAIST", "name": "影蜘蛛腰甲β", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的锐爪 x2", "影蜘蛛的上等棘 x2", "血眠虫的坚壳 x2"]}
+{"series_id": "影蜘蛛β", "parts_type": "LEG", "name": "影蜘蛛护腿β", "materials": ["影蜘蛛狩猎证 S x1", "影蜘蛛的上等棘 x1", "橡胶质的上等皮 x2", "昏睡袋 x1"]}
+{"series_id": "沙海龙α", "parts_type": "HELM", "name": "沙海龙头盔α", "materials": ["沙海龙狩猎证 S x1", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1"]}
+{"series_id": "沙海龙α", "parts_type": "BODY", "name": "沙海龙铠甲α", "materials": ["沙海龙的上等鳞 x2", "沙海龙的尖头壳 x1", "尖龙骨 x1"]}
+{"series_id": "沙海龙α", "parts_type": "ARM", "name": "沙海龙腕甲α", "materials": ["沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1", "沙海龙的尾巴 x1"]}
+{"series_id": "沙海龙α", "parts_type": "WAIST", "name": "沙海龙腰甲α", "materials": ["沙海龙狩猎证 S x1", "沙海龙的尖头壳 x1", "大水袋 x1"]}
+{"series_id": "沙海龙α", "parts_type": "LEG", "name": "沙海龙护腿α", "materials": ["沙海龙狩猎证 S x1", "沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的黑珍珠 x1"]}
+{"series_id": "沙海龙β", "parts_type": "HELM", "name": "沙海龙头盔β", "materials": ["沙海龙狩猎证 S x1", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1"]}
+{"series_id": "沙海龙β", "parts_type": "BODY", "name": "沙海龙铠甲β", "materials": ["沙海龙的上等鳞 x2", "沙海龙的尖头壳 x1", "尖龙骨 x1"]}
+{"series_id": "沙海龙β", "parts_type": "ARM", "name": "沙海龙腕甲β", "materials": ["沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的尖头壳 x1", "沙海龙的尾巴 x1"]}
+{"series_id": "沙海龙β", "parts_type": "WAIST", "name": "沙海龙腰甲β", "materials": ["沙海龙狩猎证 S x1", "沙海龙的尖头壳 x1", "大水袋 x1"]}
+{"series_id": "沙海龙β", "parts_type": "LEG", "name": "沙海龙护腿β", "materials": ["沙海龙狩猎证 S x1", "沙海龙的上等鳞 x2", "沙海龙的坚壳 x2", "沙海龙的黑珍珠 x1"]}
+{"series_id": "风铗龙α", "parts_type": "HELM", "name": "风铗龙头盔α", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等皮 x3", "风铗龙的上等尾爪 x2"]}
+{"series_id": "风铗龙α", "parts_type": "BODY", "name": "风铗龙铠甲α", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等尾爪 x1", "冻结袋 x1"]}
+{"series_id": "风铗龙α", "parts_type": "ARM", "name": "风铗龙腕甲α", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "龙玉 x1"]}
+{"series_id": "风铗龙α", "parts_type": "WAIST", "name": "风铗龙腰甲α", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "尖龙骨 x1"]}
+{"series_id": "风铗龙α", "parts_type": "LEG", "name": "风铗龙护腿α", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等皮 x2", "风铗龙的上等飞膜 x2", "风铗龙的上等尾爪 x1"]}
+{"series_id": "风铗龙β", "parts_type": "HELM", "name": "风铗龙头盔β", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等皮 x3", "风铗龙的上等尾爪 x2"]}
+{"series_id": "风铗龙β", "parts_type": "BODY", "name": "风铗龙铠甲β", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等尾爪 x1", "冻结袋 x1"]}
+{"series_id": "风铗龙β", "parts_type": "ARM", "name": "风铗龙腕甲β", "materials": ["风铗龙狩猎证 S x1", "风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "龙玉 x1"]}
+{"series_id": "风铗龙β", "parts_type": "WAIST", "name": "风铗龙腰甲β", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等飞膜 x1", "尖龙骨 x1"]}
+{"series_id": "风铗龙β", "parts_type": "LEG", "name": "风铗龙护腿β", "materials": ["风铗龙的上等鳞 x2", "风铗龙的上等皮 x2", "风铗龙的上等飞膜 x2", "风铗龙的上等尾爪 x1"]}
+{"series_id": "雌火龙α", "parts_type": "HELM", "name": "雌火龙头盔α", "materials": ["雌火龙的上等鳞 x2", "雌火龙的翼膜 x2", "尖龙骨 x2"]}
+{"series_id": "雌火龙α", "parts_type": "BODY", "name": "雌火龙铠甲α", "materials": ["雌火龙狩猎证 S x1", "雌火龙的上等鳞 x2", "雌火龙的红玉 x1"]}
+{"series_id": "雌火龙α", "parts_type": "ARM", "name": "雌火龙腕甲α", "materials": ["雌火龙的上等鳞 x3", "雌火龙的坚壳 x3", "雌火龙的上等棘 x2", "猛毒袋 x2"]}
+{"series_id": "雌火龙α", "parts_type": "WAIST", "name": "雌火龙腰甲α", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x1", "火龙的延髓 x1"]}
+{"series_id": "雌火龙α", "parts_type": "LEG", "name": "雌火龙护腿α", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x2", "雌火龙的翼膜 x2", "古老龙骨 x1"]}
+{"series_id": "雌火龙β", "parts_type": "HELM", "name": "雌火龙头盔β", "materials": ["雌火龙的上等鳞 x2", "雌火龙的翼膜 x2", "尖龙骨 x2"]}
+{"series_id": "雌火龙β", "parts_type": "BODY", "name": "雌火龙铠甲β", "materials": ["雌火龙狩猎证 S x1", "雌火龙的上等鳞 x2", "雌火龙的红玉 x1"]}
+{"series_id": "雌火龙β", "parts_type": "ARM", "name": "雌火龙腕甲β", "materials": ["雌火龙的上等鳞 x3", "雌火龙的坚壳 x3", "雌火龙的上等棘 x2", "猛毒袋 x2"]}
+{"series_id": "雌火龙β", "parts_type": "WAIST", "name": "雌火龙腰甲β", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x1", "火龙的延髓 x1"]}
+{"series_id": "雌火龙β", "parts_type": "LEG", "name": "雌火龙护腿β", "materials": ["雌火龙狩猎证 S x1", "雌火龙的坚壳 x2", "雌火龙的翼膜 x2", "古老龙骨 x1"]}
+{"series_id": "铸铁α", "parts_type": "HELM", "name": "铸铁头盔α", "materials": ["白鸠石 x1", "灵鹤石 x2", "狱炎石 x1"]}
+{"series_id": "铸铁α", "parts_type": "BODY", "name": "铸铁铠甲α", "materials": ["白鸠石 x1", "灵鹤石 x1", "结冰金属 x4"]}
+{"series_id": "铸铁α", "parts_type": "ARM", "name": "铸铁腕甲α", "materials": ["白鸠石 x1", "灵鹤石 x2", "光水晶 x2"]}
+{"series_id": "铸铁α", "parts_type": "WAIST", "name": "铸铁腰甲α", "materials": ["白鸠石 x1", "灵鹤石 x3", "璀璨水晶 x1"]}
+{"series_id": "铸铁α", "parts_type": "LEG", "name": "铸铁护腿α", "materials": ["白鸠石 x1", "灵鹤石 x1", "红莲石 x2"]}
+{"series_id": "护鹭鹰龙α", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲α", "materials": ["护鹭鹰龙的上等羽毛 x4", "粗壮护骨 x4"]}
+{"series_id": "护鹭鹰龙β", "parts_type": "WAIST", "name": "护鹭鹰龙腰甲β", "materials": ["护鹭鹰龙的上等羽毛 x4", "粗壮护骨 x4"]}
+{"series_id": "咬鱼α", "parts_type": "LEG", "name": "咬鱼靴α", "materials": ["咬鱼的皮 x3", "怪物浓液 x5"]}
+{"series_id": "护雷颚龙α", "parts_type": "HELM", "name": "护雷颚龙头盔α", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等毛皮 x5", "护雷颚龙的上等鼻骨 x4", "电击袋 x3"]}
+{"series_id": "护雷颚龙α", "parts_type": "BODY", "name": "护雷颚龙铠甲α", "materials": ["护雷颚龙狩猎证 S x2", "护雷颚龙的上等鼻骨 x4", "护雷颚龙的锐牙 x4", "龙玉 x1"]}
+{"series_id": "护雷颚龙α", "parts_type": "ARM", "name": "护雷颚龙腕甲α", "materials": ["护雷颚龙的上等鳞 x5", "护雷颚龙的锐牙 x3", "护龙的上等毛皮 x3"]}
+{"series_id": "护雷颚龙α", "parts_type": "WAIST", "name": "护雷颚龙腰甲α", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等鳞 x3", "护雷颚龙的锐牙 x2", "护雷颚龙的宝玉 x1"]}
+{"series_id": "护雷颚龙α", "parts_type": "LEG", "name": "护雷颚龙护腿α", "materials": ["护雷颚龙的上等鳞 x6", "护雷颚龙的上等毛皮 x6", "护雷颚龙的尾巴 x2", "护龙的净血 x2"]}
+{"series_id": "护雷颚龙β", "parts_type": "HELM", "name": "护雷颚龙头盔β", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等毛皮 x5", "护雷颚龙的上等鼻骨 x4", "电击袋 x3"]}
+{"series_id": "护雷颚龙β", "parts_type": "BODY", "name": "护雷颚龙铠甲β", "materials": ["护雷颚龙狩猎证 S x2", "护雷颚龙的上等鼻骨 x4", "护雷颚龙的锐牙 x4", "龙玉 x1"]}
+{"series_id": "护雷颚龙β", "parts_type": "ARM", "name": "护雷颚龙腕甲β", "materials": ["护雷颚龙的上等鳞 x5", "护雷颚龙的锐牙 x3", "护龙的上等毛皮 x3"]}
+{"series_id": "护雷颚龙β", "parts_type": "WAIST", "name": "护雷颚龙腰甲β", "materials": ["护雷颚龙狩猎证 S x1", "护雷颚龙的上等鳞 x3", "护雷颚龙的锐牙 x2", "护雷颚龙的宝玉 x1"]}
+{"series_id": "护雷颚龙β", "parts_type": "LEG", "name": "护雷颚龙护腿β", "materials": ["护雷颚龙的上等鳞 x6", "护雷颚龙的上等毛皮 x6", "护雷颚龙的尾巴 x2", "护龙的净血 x2"]}
+{"series_id": "辟兽α", "parts_type": "HELM", "name": "辟兽头盔α", "materials": ["辟兽狩猎证 S x2", "辟兽的锐牙 x3", "良质硬骨 x2"]}
+{"series_id": "辟兽α", "parts_type": "BODY", "name": "辟兽铠甲α", "materials": ["辟兽狩猎证 S x1", "辟兽的上等皮 x5", "辟兽的锐牙 x2", "草食种的坚壳 x2"]}
+{"series_id": "辟兽α", "parts_type": "ARM", "name": "辟兽腕甲α", "materials": ["辟兽的刚毛 x3", "辟兽的锐爪 x2", "辟兽的锐牙 x2", "坚固的巨骨 x3"]}
+{"series_id": "辟兽α", "parts_type": "WAIST", "name": "辟兽腰甲α", "materials": ["辟兽狩猎证 S x1", "辟兽的刚毛 x5", "辟兽的锐爪 x3", "兽玉 x1"]}
+{"series_id": "辟兽α", "parts_type": "LEG", "name": "辟兽护腿α", "materials": ["辟兽的刚毛 x3", "辟兽的上等皮 x4", "辟兽的锐爪 x2", "锐利的牙 x2"]}
+{"series_id": "辟兽β", "parts_type": "HELM", "name": "辟兽头盔β", "materials": ["辟兽狩猎证 S x2", "辟兽的锐牙 x3", "良质硬骨 x2"]}
+{"series_id": "辟兽β", "parts_type": "BODY", "name": "辟兽铠甲β", "materials": ["辟兽狩猎证 S x1", "辟兽的上等皮 x5", "辟兽的锐牙 x2", "草食种的坚壳 x2"]}
+{"series_id": "辟兽β", "parts_type": "ARM", "name": "辟兽腕甲β", "materials": ["辟兽的刚毛 x3", "辟兽的锐爪 x2", "辟兽的锐牙 x2", "坚固的巨骨 x3"]}
+{"series_id": "辟兽β", "parts_type": "WAIST", "name": "辟兽腰甲β", "materials": ["辟兽狩猎证 S x1", "辟兽的刚毛 x5", "辟兽的锐爪 x3", "兽玉 x1"]}
+{"series_id": "辟兽β", "parts_type": "LEG", "name": "辟兽护腿β", "materials": ["辟兽的刚毛 x3", "辟兽的上等皮 x4", "辟兽的锐爪 x2", "锐利的牙 x2"]}
+{"series_id": "护辟兽α", "parts_type": "HELM", "name": "护辟兽头盔α", "materials": ["护辟兽狩猎证 S x2", "护辟兽的锐爪 x2", "护辟兽的锐牙 x3", "护龙的净血 x2"]}
+{"series_id": "护辟兽α", "parts_type": "BODY", "name": "护辟兽铠甲α", "materials": ["护辟兽的刚毛 x3", "护辟兽的锐爪 x2", "护龙的上等毛皮 x3"]}
+{"series_id": "护辟兽α", "parts_type": "ARM", "name": "护辟兽腕甲α", "materials": ["护辟兽狩猎证 S x1", "护辟兽的刚毛 x5", "护辟兽的锐爪 x3", "兽玉 x1"]}
+{"series_id": "护辟兽α", "parts_type": "WAIST", "name": "护辟兽腰甲α", "materials": ["护辟兽的刚毛 x3", "护辟兽的上等皮 x4", "护辟兽的锐牙 x2", "坚固的骨 x2"]}
+{"series_id": "护辟兽α", "parts_type": "LEG", "name": "护辟兽护腿α", "materials": ["护辟兽狩猎证 S x1", "护辟兽的上等皮 x5", "护辟兽的锐牙 x2", "护鹭鹰龙的上等羽毛 x2"]}
+{"series_id": "护辟兽β", "parts_type": "HELM", "name": "护辟兽头盔β", "materials": ["护辟兽狩猎证 S x2", "护辟兽的锐爪 x2", "护辟兽的锐牙 x3", "护龙的净血 x2"]}
+{"series_id": "护辟兽β", "parts_type": "BODY", "name": "护辟兽铠甲β", "materials": ["护辟兽的刚毛 x3", "护辟兽的锐爪 x2", "护龙的上等毛皮 x3"]}
+{"series_id": "护辟兽β", "parts_type": "ARM", "name": "护辟兽腕甲β", "materials": ["护辟兽狩猎证 S x1", "护辟兽的刚毛 x5", "护辟兽的锐爪 x3", "兽玉 x1"]}
+{"series_id": "护辟兽β", "parts_type": "WAIST", "name": "护辟兽腰甲β", "materials": ["护辟兽的刚毛 x3", "护辟兽的上等皮 x4", "护辟兽的锐牙 x2", "坚固的骨 x2"]}
+{"series_id": "护辟兽β", "parts_type": "LEG", "name": "护辟兽护腿β", "materials": ["护辟兽狩猎证 S x1", "护辟兽的上等皮 x5", "护辟兽的锐牙 x2", "护鹭鹰龙的上等羽毛 x2"]}
+{"series_id": "赫猿兽α", "parts_type": "HELM", "name": "赫猿兽头盔α", "materials": ["赫猿兽狩猎证 S x1", "赫猿兽的坚壳 x5", "赫猿兽的坚甲 x4", "漆黑的油骨 x2"]}
+{"series_id": "赫猿兽α", "parts_type": "BODY", "name": "赫猿兽铠甲α", "materials": ["赫猿兽的上等鳞 x5", "大赫炎结晶 x3", "坚固的巨骨 x3"]}
+{"series_id": "赫猿兽α", "parts_type": "ARM", "name": "赫猿兽腕甲α", "materials": ["赫猿兽狩猎证 S x1", "大赫炎结晶 x2", "赫猿兽的上等鳞 x3", "赫猿兽的延髓 x1"]}
+{"series_id": "赫猿兽α", "parts_type": "WAIST", "name": "赫猿兽腰甲α", "materials": ["赫猿兽狩猎证 S x2", "赫猿兽的坚甲 x2", "赫猿兽的尾巴 x2", "赫猿兽的骨髓 x1"]}
+{"series_id": "赫猿兽α", "parts_type": "LEG", "name": "赫猿兽护腿α", "materials": ["赫猿兽的上等鳞 x6", "赫猿兽的坚壳 x6", "大赫炎结晶 x4", "赫猿兽的坚甲 x3"]}
+{"series_id": "赫猿兽β", "parts_type": "HELM", "name": "赫猿兽头盔β", "materials": ["赫猿兽狩猎证 S x1", "赫猿兽的坚壳 x5", "赫猿兽的坚甲 x4", "漆黑的油骨 x2"]}
+{"series_id": "赫猿兽β", "parts_type": "BODY", "name": "赫猿兽铠甲β", "materials": ["赫猿兽的上等鳞 x5", "大赫炎结晶 x3", "坚固的巨骨 x3"]}
+{"series_id": "赫猿兽β", "parts_type": "ARM", "name": "赫猿兽腕甲β", "materials": ["赫猿兽狩猎证 S x1", "大赫炎结晶 x2", "赫猿兽的上等鳞 x3", "赫猿兽的延髓 x1"]}
+{"series_id": "赫猿兽β", "parts_type": "WAIST", "name": "赫猿兽腰甲β", "materials": ["赫猿兽狩猎证 S x2", "赫猿兽的坚甲 x2", "赫猿兽的尾巴 x2", "赫猿兽的骨髓 x1"]}
+{"series_id": "赫猿兽β", "parts_type": "LEG", "name": "赫猿兽护腿β", "materials": ["赫猿兽的上等鳞 x6", "赫猿兽的坚壳 x6", "大赫炎结晶 x4", "赫猿兽的坚甲 x3"]}
+{"series_id": "护凶爪龙α", "parts_type": "HELM", "name": "护凶爪龙头盔α", "materials": ["护凶爪龙的上等鳞 x6", "护凶爪龙的大硬肌 x6", "护凶爪龙的尖爪 x4", "护凶爪龙的锐牙 x3"]}
+{"series_id": "护凶爪龙α", "parts_type": "BODY", "name": "护凶爪龙铠甲α", "materials": ["护凶爪龙的上等鳞 x5", "护凶爪龙的尖爪 x3", "护龙的上等鳞 x3"]}
+{"series_id": "护凶爪龙α", "parts_type": "ARM", "name": "护凶爪龙腕甲α", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的尖爪 x2", "护凶爪龙的上等鳞 x3", "护凶爪龙的宝玉 x1"]}
+{"series_id": "护凶爪龙α", "parts_type": "WAIST", "name": "护凶爪龙腰甲α", "materials": ["护凶爪龙狩猎证 S x2", "护凶爪龙的锐牙 x2", "护凶爪龙的尾巴 x2", "护凶爪龙的逆鳞 x1"]}
+{"series_id": "护凶爪龙α", "parts_type": "LEG", "name": "护凶爪龙护腿α", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的大硬肌 x5", "护凶爪龙的锐牙 x4", "粗壮护骨 x2"]}
+{"series_id": "护凶爪龙β", "parts_type": "HELM", "name": "护凶爪龙头盔β", "materials": ["护凶爪龙的上等鳞 x6", "护凶爪龙的大硬肌 x6", "护凶爪龙的尖爪 x4", "护凶爪龙的锐牙 x3"]}
+{"series_id": "护凶爪龙β", "parts_type": "BODY", "name": "护凶爪龙铠甲β", "materials": ["护凶爪龙的上等鳞 x5", "护凶爪龙的尖爪 x3", "护龙的上等鳞 x3"]}
+{"series_id": "护凶爪龙β", "parts_type": "ARM", "name": "护凶爪龙腕甲β", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的尖爪 x2", "护凶爪龙的上等鳞 x3", "护凶爪龙的宝玉 x1"]}
+{"series_id": "护凶爪龙β", "parts_type": "WAIST", "name": "护凶爪龙腰甲β", "materials": ["护凶爪龙狩猎证 S x2", "护凶爪龙的锐牙 x2", "护凶爪龙的尾巴 x2", "护凶爪龙的逆鳞 x1"]}
+{"series_id": "护凶爪龙β", "parts_type": "LEG", "name": "护凶爪龙护腿β", "materials": ["护凶爪龙狩猎证 S x1", "护凶爪龙的大硬肌 x5", "护凶爪龙的锐牙 x4", "粗壮护骨 x2"]}
+{"series_id": "暗器蛸α", "parts_type": "HELM", "name": "暗器蛸头盔α", "materials": ["暗器蛸狩猎证 S x2", "暗器蛸的上等触手 x4", "暗器蛸的锐牙 x5", "暗器蛸的髓液 x1"]}
+{"series_id": "暗器蛸α", "parts_type": "BODY", "name": "暗器蛸铠甲α", "materials": ["暗器蛸狩猎证 S x1", "暗器蛸的上等皮 x4", "暗器蛸的尖爪 x4", "暗器蛸的暗玉 x1"]}
+{"series_id": "暗器蛸α", "parts_type": "ARM", "name": "暗器蛸腕甲α", "materials": ["暗器蛸的上等皮 x6", "黄金硬角质 x6", "暗器蛸的尖爪 x3", "暗器蛸的锐牙 x3"]}
+{"series_id": "暗器蛸α", "parts_type": "WAIST", "name": "暗器蛸腰甲α", "materials": ["暗器蛸的上等皮 x5", "暗器蛸的尖爪 x3", "护鹭鹰龙的上等羽毛 x2"]}
+{"series_id": "暗器蛸α", "parts_type": "LEG", "name": "暗器蛸护腿α", "materials": ["暗器蛸狩猎证 S x1", "黄金硬角质 x5", "暗器蛸的上等触手 x4", "大水袋 x2"]}
+{"series_id": "暗器蛸β", "parts_type": "HELM", "name": "暗器蛸头盔β", "materials": ["暗器蛸狩猎证 S x2", "暗器蛸的上等触手 x4", "暗器蛸的锐牙 x5", "暗器蛸的髓液 x1"]}
+{"series_id": "暗器蛸β", "parts_type": "BODY", "name": "暗器蛸铠甲β", "materials": ["暗器蛸狩猎证 S x1", "暗器蛸的上等皮 x4", "暗器蛸的尖爪 x4", "暗器蛸的暗玉 x1"]}
+{"series_id": "暗器蛸β", "parts_type": "ARM", "name": "暗器蛸腕甲β", "materials": ["暗器蛸的上等皮 x6", "黄金硬角质 x6", "暗器蛸的尖爪 x3", "暗器蛸的锐牙 x3"]}
+{"series_id": "暗器蛸β", "parts_type": "WAIST", "name": "暗器蛸腰甲β", "materials": ["暗器蛸的上等皮 x5", "暗器蛸的尖爪 x3", "护鹭鹰龙的上等羽毛 x2"]}
+{"series_id": "暗器蛸β", "parts_type": "LEG", "name": "暗器蛸护腿β", "materials": ["暗器蛸狩猎证 S x1", "黄金硬角质 x5", "暗器蛸的上等触手 x4", "大水袋 x2"]}
+{"series_id": "火龙α", "parts_type": "HELM", "name": "火龙头盔α", "materials": ["火龙的上等鳞 x5", "火龙的翼 x3", "尖龙骨 x3"]}
+{"series_id": "火龙α", "parts_type": "BODY", "name": "火龙铠甲α", "materials": ["火龙的上等鳞 x6", "火龙的坚壳 x6", "火龙的尾巴 x2", "古老龙骨 x1"]}
+{"series_id": "火龙α", "parts_type": "ARM", "name": "火龙腕甲α", "materials": ["火龙狩猎证 S x1", "火龙的上等鳞 x4", "火龙的红玉 x1", "爆炎袋 x3"]}
+{"series_id": "火龙α", "parts_type": "WAIST", "name": "火龙腰甲α", "materials": ["火龙狩猎证 S x2", "火龙的坚壳 x3", "火龙的延髓 x1", "红莲石 x2"]}
+{"series_id": "火龙α", "parts_type": "LEG", "name": "火龙护腿α", "materials": ["火龙狩猎证 S x1", "火龙的坚壳 x5", "火龙的翼 x4", "翼龙的上等皮 x2"]}
+{"series_id": "火龙β", "parts_type": "HELM", "name": "火龙头盔β", "materials": ["火龙的上等鳞 x5", "火龙的翼 x3", "尖龙骨 x3"]}
+{"series_id": "火龙β", "parts_type": "BODY", "name": "火龙铠甲β", "materials": ["火龙的上等鳞 x6", "火龙的坚壳 x6", "火龙的尾巴 x2", "古老龙骨 x1"]}
+{"series_id": "火龙β", "parts_type": "ARM", "name": "火龙腕甲β", "materials": ["火龙狩猎证 S x1", "火龙的上等鳞 x4", "火龙的红玉 x1", "爆炎袋 x3"]}
+{"series_id": "火龙β", "parts_type": "WAIST", "name": "火龙腰甲β", "materials": ["火龙狩猎证 S x2", "火龙的坚壳 x3", "火龙的延髓 x1", "红莲石 x2"]}
+{"series_id": "火龙β", "parts_type": "LEG", "name": "火龙护腿β", "materials": ["火龙狩猎证 S x1", "火龙的坚壳 x5", "火龙的翼 x4", "翼龙的上等皮 x2"]}
+{"series_id": "护火龙α", "parts_type": "HELM", "name": "护火龙头盔α", "materials": ["护火龙狩猎证 S x1", "护火龙的坚壳 x5", "护火龙的翼 x2", "璀璨水晶 x1"]}
+{"series_id": "护火龙α", "parts_type": "BODY", "name": "护火龙铠甲α", "materials": ["护火龙的上等鳞 x5", "护火龙的翼 x2", "护龙的上等鳞 x3"]}
+{"series_id": "护火龙α", "parts_type": "ARM", "name": "护火龙腕甲α", "materials": ["护火龙狩猎证 S x1", "护火龙的上等鳞 x6", "护火龙的坚壳 x5", "护火龙的红玉 x1"]}
+{"series_id": "护火龙α", "parts_type": "WAIST", "name": "护火龙腰甲α", "materials": ["护火龙的上等鳞 x6", "护火龙的坚壳 x6", "护火龙的翼 x2", "护火龙的尾巴 x2"]}
+{"series_id": "护火龙α", "parts_type": "LEG", "name": "护火龙护腿α", "materials": ["护火龙狩猎证 S x2", "护火龙的翼 x2", "护火龙的逆鳞 x1", "爆炎袋 x5"]}
+{"series_id": "护火龙β", "parts_type": "HELM", "name": "护火龙头盔β", "materials": ["护火龙狩猎证 S x1", "护火龙的坚壳 x5", "护火龙的翼 x2", "璀璨水晶 x1"]}
+{"series_id": "护火龙β", "parts_type": "BODY", "name": "护火龙铠甲β", "materials": ["护火龙的上等鳞 x5", "护火龙的翼 x2", "护龙的上等鳞 x3"]}
+{"series_id": "护火龙β", "parts_type": "ARM", "name": "护火龙腕甲β", "materials": ["护火龙狩猎证 S x1", "护火龙的上等鳞 x6", "护火龙的坚壳 x5", "护火龙的红玉 x1"]}
+{"series_id": "护火龙β", "parts_type": "WAIST", "name": "护火龙腰甲β", "materials": ["护火龙的上等鳞 x6", "护火龙的坚壳 x6", "护火龙的翼 x2", "护火龙的尾巴 x2"]}
+{"series_id": "护火龙β", "parts_type": "LEG", "name": "护火龙护腿β", "materials": ["护火龙狩猎证 S x2", "护火龙的翼 x2", "护火龙的逆鳞 x1", "爆炎袋 x5"]}
+{"series_id": "铠龙α", "parts_type": "HELM", "name": "铠龙头盔α", "materials": ["铠龙的坚壳 x5", "铠龙的坚胸壳 x3", "尖龙骨 x3"]}
+{"series_id": "铠龙α", "parts_type": "BODY", "name": "铠龙铠甲α", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x3", "龙玉 x1", "红莲石 x2"]}
+{"series_id": "铠龙α", "parts_type": "ARM", "name": "铠龙腕甲α", "materials": ["铠龙狩猎证 S x2", "铠龙的坚壳 x4", "铠龙的延髓 x1", "狱炎石 x1"]}
+{"series_id": "铠龙α", "parts_type": "WAIST", "name": "铠龙腰甲α", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x5", "铠龙的坚胸壳 x4", "盔速龙的坚头壳 x2"]}
+{"series_id": "铠龙α", "parts_type": "LEG", "name": "铠龙护腿α", "materials": ["铠龙的坚壳 x6", "铠龙的翼 x6", "铠龙的头壳 x2", "昏睡袋 x3"]}
+{"series_id": "铠龙β", "parts_type": "HELM", "name": "铠龙头盔β", "materials": ["铠龙的坚壳 x5", "铠龙的坚胸壳 x3", "尖龙骨 x3"]}
+{"series_id": "铠龙β", "parts_type": "BODY", "name": "铠龙铠甲β", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x3", "龙玉 x1", "红莲石 x2"]}
+{"series_id": "铠龙β", "parts_type": "ARM", "name": "铠龙腕甲β", "materials": ["铠龙狩猎证 S x2", "铠龙的坚壳 x4", "铠龙的延髓 x1", "狱炎石 x1"]}
+{"series_id": "铠龙β", "parts_type": "WAIST", "name": "铠龙腰甲β", "materials": ["铠龙狩猎证 S x1", "铠龙的翼 x5", "铠龙的坚胸壳 x4", "盔速龙的坚头壳 x2"]}
+{"series_id": "铠龙β", "parts_type": "LEG", "name": "铠龙护腿β", "materials": ["铠龙的坚壳 x6", "铠龙的翼 x6", "铠龙的头壳 x2", "昏睡袋 x3"]}
+{"series_id": "雪狮子王α", "parts_type": "HELM", "name": "雪狮子王头盔α", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的锐牙 x4", "雪狮子王的尾巴 x2", "粗兽骨 x2"]}
+{"series_id": "雪狮子王α", "parts_type": "BODY", "name": "雪狮子王铠甲α", "materials": ["雪狮子王狩猎证 S x2", "雪狮子王的胡须 x3", "雪狮子的刚毛 x2"]}
+{"series_id": "雪狮子王α", "parts_type": "ARM", "name": "雪狮子王腕甲α", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的刚毛 x5", "雪狮子王的尾巴 x3", "兽玉 x1"]}
+{"series_id": "雪狮子王α", "parts_type": "WAIST", "name": "雪狮子王腰甲α", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的锐牙 x5", "雪狮子王的胡须 x2", "冻结袋 x3"]}
+{"series_id": "雪狮子王α", "parts_type": "LEG", "name": "雪狮子王护腿α", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的尾巴 x2", "雪狮子王的胡须 x2", "坚固的巨骨 x3"]}
+{"series_id": "雪狮子王β", "parts_type": "HELM", "name": "雪狮子王头盔β", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的锐牙 x4", "雪狮子王的尾巴 x2", "粗兽骨 x2"]}
+{"series_id": "雪狮子王β", "parts_type": "BODY", "name": "雪狮子王铠甲β", "materials": ["雪狮子王狩猎证 S x2", "雪狮子王的胡须 x3", "雪狮子的刚毛 x2"]}
+{"series_id": "雪狮子王β", "parts_type": "ARM", "name": "雪狮子王腕甲β", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的刚毛 x5", "雪狮子王的尾巴 x3", "兽玉 x1"]}
+{"series_id": "雪狮子王β", "parts_type": "WAIST", "name": "雪狮子王腰甲β", "materials": ["雪狮子王狩猎证 S x1", "雪狮子王的锐牙 x5", "雪狮子王的胡须 x2", "冻结袋 x3"]}
+{"series_id": "雪狮子王β", "parts_type": "LEG", "name": "雪狮子王护腿β", "materials": ["雪狮子王的刚毛 x3", "雪狮子王的尾巴 x2", "雪狮子王的胡须 x2", "坚固的巨骨 x3"]}
+{"series_id": "库纳法α", "parts_type": "HELM", "name": "库纳法头饰α", "materials": ["盾突龙的毛织品 x1", "钳速龙的上等鳞 x2"]}
+{"series_id": "库纳法α", "parts_type": "BODY", "name": "库纳法披肩α", "materials": ["盾突龙的毛织品 x1", "锐利的牙 x1"]}
+{"series_id": "库纳法α", "parts_type": "WAIST", "name": "库纳法腰带α", "materials": ["盾突龙的毛织品 x1", "锐利的牙 x1"]}
+{"series_id": "库纳法α", "parts_type": "LEG", "name": "库纳法套裤α", "materials": ["盾突龙的毛织品 x1", "钳速龙的上等鳞 x2"]}
+{"series_id": "阿孜兹α", "parts_type": "HELM", "name": "阿孜兹头饰α", "materials": ["阿孜兹的鞣制皮革 x1", "漆黑的油骨 x2"]}
+{"series_id": "阿孜兹α", "parts_type": "BODY", "name": "阿孜兹围裙α", "materials": ["阿孜兹的鞣制皮革 x1", "狱炎石 x1"]}
+{"series_id": "阿孜兹α", "parts_type": "LEG", "name": "阿孜兹长裤α", "materials": ["阿孜兹的鞣制皮革 x1", "红莲石 x2"]}
+{"series_id": "酥加α", "parts_type": "WAIST", "name": "酥加腰带α", "materials": ["酥加的布料 x3", "白鸠石 x5"]}
+{"series_id": "西尔德α", "parts_type": "HELM", "name": "西尔德头巾α", "materials": ["西尔德棉布 x2", "护鹭鹰龙的上等羽毛 x3"]}
+{"series_id": "西尔德α", "parts_type": "BODY", "name": "西尔德大衣α", "materials": ["西尔德棉布 x2", "护鹭鹰龙的上等羽毛 x3"]}
+{"series_id": "死神α", "parts_type": "HELM", "name": "死神首脑α", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
+{"series_id": "死神α", "parts_type": "BODY", "name": "死神肌肉α", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
+{"series_id": "死神α", "parts_type": "ARM", "name": "死神双手α", "materials": ["不祥的布 x1", "翼龙的上等皮 x1", "良质硬骨 x1"]}
+{"series_id": "死神α", "parts_type": "WAIST", "name": "死神脐带α", "materials": ["不祥的布 x1", "草食种的坚壳 x1", "粗兽骨 x1"]}
+{"series_id": "死神α", "parts_type": "LEG", "name": "死神脚跟α", "materials": ["不祥的布 x1", "草食种的坚壳 x1", "粗兽骨 x1"]}
+{"series_id": "燕尾蝶α", "parts_type": "HELM", "name": "燕尾蝶护头α", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
+{"series_id": "燕尾蝶α", "parts_type": "BODY", "name": "燕尾蝶上身α", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
+{"series_id": "燕尾蝶α", "parts_type": "ARM", "name": "燕尾蝶护袖α", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
+{"series_id": "燕尾蝶α", "parts_type": "WAIST", "name": "燕尾蝶护腰具α", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
+{"series_id": "燕尾蝶α", "parts_type": "LEG", "name": "燕尾蝶脚α", "materials": ["大角凤蝶 x1", "巨蜂的薄羽 x1", "怪物浓液 x1"]}
+{"series_id": "独角仙α", "parts_type": "HELM", "name": "独角仙护头α", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
+{"series_id": "独角仙α", "parts_type": "BODY", "name": "独角仙上身α", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
+{"series_id": "独角仙α", "parts_type": "ARM", "name": "独角仙护袖α", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
+{"series_id": "独角仙α", "parts_type": "WAIST", "name": "独角仙护腰具α", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
+{"series_id": "独角仙α", "parts_type": "LEG", "name": "独角仙脚α", "materials": ["大角凤蝶 x1", "巨蜂的坚壳 x1", "怪物浓液 x1"]}
+{"series_id": "矿石α", "parts_type": "HELM", "name": "矿石头盔α", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
+{"series_id": "矿石α", "parts_type": "BODY", "name": "矿石铠甲α", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
+{"series_id": "矿石α", "parts_type": "ARM", "name": "矿石腕甲α", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "漆黑的油骨 x1"]}
+{"series_id": "矿石α", "parts_type": "WAIST", "name": "矿石腰甲α", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "漆黑的油骨 x1"]}
+{"series_id": "矿石α", "parts_type": "LEG", "name": "矿石护腿α", "materials": ["黯灰金碎屑 x1", "灵鹤石 x1", "盔速龙的坚头壳 x1"]}
+{"series_id": "战斗α", "parts_type": "HELM", "name": "战斗头盔α", "materials": ["带战伤的鳞 x1", "雪狮子的刚毛 x1", "结冻冰骨 x1"]}
+{"series_id": "战斗α", "parts_type": "BODY", "name": "战斗铠甲α", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "结冻冰骨 x1"]}
+{"series_id": "战斗α", "parts_type": "ARM", "name": "战斗腕甲α", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "结冻冰骨 x1"]}
+{"series_id": "战斗α", "parts_type": "WAIST", "name": "战斗腰甲α", "materials": ["带战伤的鳞 x1", "粗兽骨 x1", "古老龙骨 x1"]}
+{"series_id": "战斗α", "parts_type": "LEG", "name": "战斗护腿α", "materials": ["带战伤的鳞 x1", "雪狮子的刚毛 x1", "结冻冰骨 x1"]}
+{"series_id": "花瓣α", "parts_type": "HELM", "name": "花瓣绽放α", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
+{"series_id": "花瓣α", "parts_type": "BODY", "name": "花瓣枝干α", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
+{"series_id": "花瓣α", "parts_type": "ARM", "name": "花瓣枝叶α", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
+{"series_id": "花瓣α", "parts_type": "WAIST", "name": "花瓣叶片α", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "光水晶 x1"]}
+{"series_id": "花瓣α", "parts_type": "LEG", "name": "花瓣扎根α", "materials": ["大王扶桑花 x1", "护鹭鹰龙的上等羽毛 x1", "璀璨水晶 x1"]}
+{"series_id": "机械α", "parts_type": "HELM", "name": "机械头盔α", "materials": ["雪光金属 x5", "狂龙结晶 x1", "璀璨水晶 x1"]}
+{"series_id": "机械α", "parts_type": "BODY", "name": "机械铠甲α", "materials": ["雪光金属 x5", "狂龙结晶碎片 x2", "大地结晶 x10"]}
+{"series_id": "机械α", "parts_type": "ARM", "name": "机械腕甲α", "materials": ["雪光金属 x5", "狂龙结晶 x1", "古老龙骨 x1"]}
+{"series_id": "机械α", "parts_type": "WAIST", "name": "机械腰甲α", "materials": ["雪光金属 x5", "狂龙结晶碎片 x2", "狱炎石 x1"]}
+{"series_id": "机械α", "parts_type": "LEG", "name": "机械护腿α", "materials": ["雪光金属 x5", "狂龙结晶 x1", "护龙的净血 x3"]}
+{"series_id": "杜宾α", "parts_type": "HELM", "name": "杜宾头盔α", "materials": ["坚龙骨 x3", "粗兽骨 x4", "漆黑的油骨 x3"]}
+{"series_id": "杜宾α", "parts_type": "BODY", "name": "杜宾铠甲α", "materials": ["坚龙骨 x3", "粗兽骨 x4", "古老龙骨 x1"]}
+{"series_id": "杜宾α", "parts_type": "ARM", "name": "杜宾腕甲α", "materials": ["坚龙骨 x4", "坚固的骨 x4", "粗壮护骨 x3", "火龙的延髓 x1"]}
+{"series_id": "杜宾α", "parts_type": "WAIST", "name": "杜宾腰甲α", "materials": ["坚龙骨 x4", "尖龙骨 x4", "结冻冰骨 x3", "赫猿兽的延髓 x1"]}
+{"series_id": "杜宾α", "parts_type": "LEG", "name": "杜宾护腿α", "materials": ["坚龙骨 x5", "坚固的巨骨 x4", "良质硬骨 x3", "铠龙的延髓 x1"]}
+{"series_id": "花纹钢α", "parts_type": "HELM", "name": "花纹钢头盔α", "materials": ["白鸠石 x4", "护龙的上等毛皮 x3", "狂龙结晶碎片 x3", "鸟龙玉 x1"]}
+{"series_id": "花纹钢α", "parts_type": "BODY", "name": "花纹钢铠甲α", "materials": ["白鸠石 x5", "护龙的净血 x2", "灵鹤石 x5", "龙玉 x1"]}
+{"series_id": "花纹钢α", "parts_type": "ARM", "name": "花纹钢腕甲α", "materials": ["白鸠石 x4", "护龙的上等毛皮 x4", "雪光金属 x4", "兽玉 x1"]}
+{"series_id": "花纹钢α", "parts_type": "WAIST", "name": "花纹钢腰甲α", "materials": ["白鸠石 x3", "护龙的上等鳞 x4", "璀璨水晶 x1"]}
+{"series_id": "花纹钢α", "parts_type": "LEG", "name": "花纹钢护腿α", "materials": ["白鸠石 x3", "护龙的上等鳞 x3", "狱炎石 x1"]}
+{"series_id": "冻峰龙α", "parts_type": "HELM", "name": "冻峰龙头盔α", "materials": ["冻峰龙狩猎证 S x2", "冻峰龙的上等鳞 x3", "冻峰龙的尖爪 x4", "龙玉 x1"]}
+{"series_id": "冻峰龙α", "parts_type": "BODY", "name": "冻峰龙铠甲α", "materials": ["冻峰龙的上等鳞 x5", "冻峰龙的坚壳 x6", "冻峰龙的冻凝壳 x3", "坚龙骨 x3"]}
+{"series_id": "冻峰龙α", "parts_type": "ARM", "name": "冻峰龙腕甲α", "materials": ["冻峰龙狩猎证 S x1", "冻峰龙的坚壳 x5", "冻峰龙的尖爪 x4", "雪光金属 x3"]}
+{"series_id": "冻峰龙α", "parts_type": "WAIST", "name": "冻峰龙腰甲α", "materials": ["冻峰龙的冻凝壳 x2", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1", "冻结袋 x3"]}
+{"series_id": "冻峰龙α", "parts_type": "LEG", "name": "冻峰龙护腿α", "materials": ["冻峰龙的上等鳞 x6", "冻峰龙的冻凝壳 x4", "冻峰龙的层角 x2", "血眠虫的坚壳 x2"]}
+{"series_id": "冻峰龙β", "parts_type": "HELM", "name": "冻峰龙头盔β", "materials": ["冻峰龙狩猎证 S x2", "冻峰龙的上等鳞 x3", "冻峰龙的尖爪 x4", "龙玉 x1"]}
+{"series_id": "冻峰龙β", "parts_type": "BODY", "name": "冻峰龙铠甲β", "materials": ["冻峰龙的上等鳞 x5", "冻峰龙的坚壳 x6", "冻峰龙的冻凝壳 x3", "坚龙骨 x3"]}
+{"series_id": "冻峰龙β", "parts_type": "ARM", "name": "冻峰龙腕甲β", "materials": ["冻峰龙狩猎证 S x1", "冻峰龙的坚壳 x5", "冻峰龙的尖爪 x4", "雪光金属 x3"]}
+{"series_id": "冻峰龙β", "parts_type": "WAIST", "name": "冻峰龙腰甲β", "materials": ["冻峰龙的冻凝壳 x2", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1", "冻结袋 x3"]}
+{"series_id": "冻峰龙β", "parts_type": "LEG", "name": "冻峰龙护腿β", "materials": ["冻峰龙的上等鳞 x6", "冻峰龙的冻凝壳 x4", "冻峰龙的层角 x2", "血眠虫的坚壳 x2"]}
+{"series_id": "波衣龙α", "parts_type": "HELM", "name": "波衣龙头盔α", "materials": ["波衣龙狩猎证 S x1", "波衣龙的上等鳞 x4", "波衣龙的上等纤毛 x4", "波衣龙的水玉 x1"]}
+{"series_id": "波衣龙α", "parts_type": "BODY", "name": "波衣龙铠甲α", "materials": ["波衣龙的上等鳞 x6", "波衣龙的上等皮 x6", "波衣龙的上等纤毛 x3", "大水袋 x3"]}
+{"series_id": "波衣龙α", "parts_type": "ARM", "name": "波衣龙腕甲α", "materials": ["波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "波衣龙的锐爪 x3", "坚龙骨 x2"]}
+{"series_id": "波衣龙α", "parts_type": "WAIST", "name": "波衣龙腰甲α", "materials": ["波衣龙狩猎证 S x2", "波衣龙的艳触手 x4", "波衣龙的锐爪 x5", "波衣龙的逆鳞 x1"]}
+{"series_id": "波衣龙α", "parts_type": "LEG", "name": "波衣龙护腿α", "materials": ["波衣龙狩猎证 S x2", "波衣龙的上等皮 x5", "波衣龙的艳触手 x4", "锯带龙的上等鳍 x2"]}
+{"series_id": "波衣龙β", "parts_type": "HELM", "name": "波衣龙头盔β", "materials": ["波衣龙狩猎证 S x1", "波衣龙的上等鳞 x4", "波衣龙的上等纤毛 x4", "波衣龙的水玉 x1"]}
+{"series_id": "波衣龙β", "parts_type": "BODY", "name": "波衣龙铠甲β", "materials": ["波衣龙的上等鳞 x6", "波衣龙的上等皮 x6", "波衣龙的上等纤毛 x3", "大水袋 x3"]}
+{"series_id": "波衣龙β", "parts_type": "ARM", "name": "波衣龙腕甲β", "materials": ["波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "波衣龙的锐爪 x3", "坚龙骨 x2"]}
+{"series_id": "波衣龙β", "parts_type": "WAIST", "name": "波衣龙腰甲β", "materials": ["波衣龙狩猎证 S x2", "波衣龙的艳触手 x4", "波衣龙的锐爪 x5", "波衣龙的逆鳞 x1"]}
+{"series_id": "波衣龙β", "parts_type": "LEG", "name": "波衣龙护腿β", "materials": ["波衣龙狩猎证 S x2", "波衣龙的上等皮 x5", "波衣龙的艳触手 x4", "锯带龙的上等鳍 x2"]}
+{"series_id": "煌雷龙α", "parts_type": "HELM", "name": "煌雷龙头盔α", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的坚壳 x5", "煌雷龙的雷电角 x4", "血盗虫的坚壳 x2"]}
+{"series_id": "煌雷龙α", "parts_type": "BODY", "name": "煌雷龙铠甲α", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "煌雷龙的逆鳞 x1"]}
+{"series_id": "煌雷龙α", "parts_type": "ARM", "name": "煌雷龙腕甲α", "materials": ["煌雷龙狩猎证 S x1", "煌雷龙的苍雷晶爪 x2", "煌雷龙的上等鳞 x3", "煌雷龙的雷玉 x1"]}
+{"series_id": "煌雷龙α", "parts_type": "WAIST", "name": "煌雷龙腰甲α", "materials": ["煌雷龙的上等鳞 x5", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "坚龙骨 x3"]}
+{"series_id": "煌雷龙α", "parts_type": "LEG", "name": "煌雷龙护腿α", "materials": ["煌雷龙的上等鳞 x6", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷电角 x3", "光水晶 x3"]}
+{"series_id": "煌雷龙β", "parts_type": "HELM", "name": "煌雷龙头盔β", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的坚壳 x5", "煌雷龙的雷电角 x4", "血盗虫的坚壳 x2"]}
+{"series_id": "煌雷龙β", "parts_type": "BODY", "name": "煌雷龙铠甲β", "materials": ["煌雷龙狩猎证 S x2", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "煌雷龙的逆鳞 x1"]}
+{"series_id": "煌雷龙β", "parts_type": "ARM", "name": "煌雷龙腕甲β", "materials": ["煌雷龙狩猎证 S x1", "煌雷龙的苍雷晶爪 x2", "煌雷龙的上等鳞 x3", "煌雷龙的雷玉 x1"]}
+{"series_id": "煌雷龙β", "parts_type": "WAIST", "name": "煌雷龙腰甲β", "materials": ["煌雷龙的上等鳞 x5", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "坚龙骨 x3"]}
+{"series_id": "煌雷龙β", "parts_type": "LEG", "name": "煌雷龙护腿β", "materials": ["煌雷龙的上等鳞 x6", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷电角 x3", "光水晶 x3"]}
+{"series_id": "狱焰蛸α", "parts_type": "HELM", "name": "狱焰蛸头盔α", "materials": ["狱焰蛸的上等皮 x6", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x3", "古老龙骨 x1"]}
+{"series_id": "狱焰蛸α", "parts_type": "BODY", "name": "狱焰蛸铠甲α", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的暴触手 x4", "狱焰蛸的尖角 x5", "狱焰蛸的髓液 x1"]}
+{"series_id": "狱焰蛸α", "parts_type": "ARM", "name": "狱焰蛸腕甲α", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的上等棘 x5", "狱焰蛸的暴触手 x4", "盔速龙的坚头壳 x2"]}
+{"series_id": "狱焰蛸α", "parts_type": "WAIST", "name": "狱焰蛸腰甲α", "materials": ["狱焰蛸的上等皮 x5", "狱焰蛸的浓油膜 x3", "狱焰蛸的尖角 x3", "爆炎袋 x2"]}
+{"series_id": "狱焰蛸α", "parts_type": "LEG", "name": "狱焰蛸护腿α", "materials": ["狱焰蛸狩猎证 S x1", "狱焰蛸的上等皮 x4", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
+{"series_id": "狱焰蛸β", "parts_type": "HELM", "name": "狱焰蛸头盔β", "materials": ["狱焰蛸的上等皮 x6", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x3", "古老龙骨 x1"]}
+{"series_id": "狱焰蛸β", "parts_type": "BODY", "name": "狱焰蛸铠甲β", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的暴触手 x4", "狱焰蛸的尖角 x5", "狱焰蛸的髓液 x1"]}
+{"series_id": "狱焰蛸β", "parts_type": "ARM", "name": "狱焰蛸腕甲β", "materials": ["狱焰蛸狩猎证 S x2", "狱焰蛸的上等棘 x5", "狱焰蛸的暴触手 x4", "盔速龙的坚头壳 x2"]}
+{"series_id": "狱焰蛸β", "parts_type": "WAIST", "name": "狱焰蛸腰甲β", "materials": ["狱焰蛸的上等皮 x5", "狱焰蛸的浓油膜 x3", "狱焰蛸的尖角 x3", "爆炎袋 x2"]}
+{"series_id": "狱焰蛸β", "parts_type": "LEG", "name": "狱焰蛸护腿β", "materials": ["狱焰蛸狩猎证 S x1", "狱焰蛸的上等皮 x4", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
+{"series_id": "黑蚀龙α", "parts_type": "HELM", "name": "黑蚀龙头盔α", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的尖触角 x2", "黑蚀龙的上等暗翼 x4", "龙玉 x1"]}
+{"series_id": "黑蚀龙α", "parts_type": "BODY", "name": "黑蚀龙铠甲α", "materials": ["黑蚀龙的上等鳞 x6", "黑蚀龙的坚壳 x6", "黑蚀龙的锐惨爪 x2", "黑蚀龙的尾巴 x2"]}
+{"series_id": "黑蚀龙α", "parts_type": "ARM", "name": "黑蚀龙腕甲α", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的坚壳 x5", "黑蚀龙的尖触角 x2", "狂龙结晶 x2"]}
+{"series_id": "黑蚀龙α", "parts_type": "WAIST", "name": "黑蚀龙腰甲α", "materials": ["黑蚀龙的上等鳞 x5", "黑蚀龙的锐惨爪 x3", "黑蚀龙的上等暗翼 x3", "狂龙结晶碎片 x2"]}
+{"series_id": "黑蚀龙α", "parts_type": "LEG", "name": "黑蚀龙护腿α", "materials": ["黑蚀龙狩猎证 S x1", "黑蚀龙的上等鳞 x3", "黑蚀龙的上等暗翼 x4", "黑蚀龙的暗玉 x1"]}
+{"series_id": "黑蚀龙β", "parts_type": "HELM", "name": "黑蚀龙头盔β", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的尖触角 x2", "黑蚀龙的上等暗翼 x4", "龙玉 x1"]}
+{"series_id": "黑蚀龙β", "parts_type": "BODY", "name": "黑蚀龙铠甲β", "materials": ["黑蚀龙的上等鳞 x6", "黑蚀龙的坚壳 x6", "黑蚀龙的锐惨爪 x2", "黑蚀龙的尾巴 x2"]}
+{"series_id": "黑蚀龙β", "parts_type": "ARM", "name": "黑蚀龙腕甲β", "materials": ["黑蚀龙狩猎证 S x2", "黑蚀龙的坚壳 x5", "黑蚀龙的尖触角 x2", "狂龙结晶 x2"]}
+{"series_id": "黑蚀龙β", "parts_type": "WAIST", "name": "黑蚀龙腰甲β", "materials": ["黑蚀龙的上等鳞 x5", "黑蚀龙的锐惨爪 x3", "黑蚀龙的上等暗翼 x3", "狂龙结晶碎片 x2"]}
+{"series_id": "黑蚀龙β", "parts_type": "LEG", "name": "黑蚀龙护腿β", "materials": ["黑蚀龙狩猎证 S x1", "黑蚀龙的上等鳞 x3", "黑蚀龙的上等暗翼 x4", "黑蚀龙的暗玉 x1"]}
+{"series_id": "锁刃龙α", "parts_type": "HELM", "name": "锁刃龙头盔α", "materials": ["锁刃龙的上等鳞 x5", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x2", "锁刃龙的尖角 x3"]}
+{"series_id": "锁刃龙α", "parts_type": "BODY", "name": "锁刃龙铠甲α", "materials": ["锁刃龙狩猎证 S x2", "锁刃龙的上等鳞 x3", "锁刃龙的坚铠壳 x4", "无情锁刃甲 x4"]}
+{"series_id": "锁刃龙α", "parts_type": "ARM", "name": "锁刃龙腕甲α", "materials": ["锁刃龙狩猎证 S x2", "无情锁刃甲 x3", "锁刃龙的尖角 x2", "龙玉 x1"]}
+{"series_id": "锁刃龙α", "parts_type": "WAIST", "name": "锁刃龙腰甲α", "materials": ["锁刃龙狩猎证 S x1", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1"]}
+{"series_id": "锁刃龙α", "parts_type": "LEG", "name": "锁刃龙护腿α", "materials": ["锁刃龙的上等鳞 x6", "锁刃龙的坚铠壳 x5", "无情锁刃甲 x2", "锁刃龙的尾巴 x2"]}
+{"series_id": "锁刃龙β", "parts_type": "HELM", "name": "锁刃龙头盔β", "materials": ["锁刃龙的上等鳞 x5", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x2", "锁刃龙的尖角 x3"]}
+{"series_id": "锁刃龙β", "parts_type": "BODY", "name": "锁刃龙铠甲β", "materials": ["锁刃龙狩猎证 S x2", "锁刃龙的上等鳞 x3", "锁刃龙的坚铠壳 x4", "无情锁刃甲 x4"]}
+{"series_id": "锁刃龙β", "parts_type": "ARM", "name": "锁刃龙腕甲β", "materials": ["锁刃龙狩猎证 S x2", "无情锁刃甲 x3", "锁刃龙的尖角 x2", "龙玉 x1"]}
+{"series_id": "锁刃龙β", "parts_type": "WAIST", "name": "锁刃龙腰甲β", "materials": ["锁刃龙狩猎证 S x1", "锁刃龙的坚铠壳 x3", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1"]}
+{"series_id": "锁刃龙β", "parts_type": "LEG", "name": "锁刃龙护腿β", "materials": ["锁刃龙的上等鳞 x6", "锁刃龙的坚铠壳 x5", "无情锁刃甲 x2", "锁刃龙的尾巴 x2"]}
+{"series_id": "护锁刃龙α", "parts_type": "HELM", "name": "护锁刃龙头盔α", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x6", "护龙的上等毛皮 x5", "波衣龙的水玉 x1"]}
+{"series_id": "护锁刃龙α", "parts_type": "BODY", "name": "护锁刃龙铠甲α", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1", "护龙的净血 x3"]}
+{"series_id": "护锁刃龙α", "parts_type": "ARM", "name": "护锁刃龙腕甲α", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x6", "锁刃龙的白毛 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "护锁刃龙α", "parts_type": "WAIST", "name": "护锁刃龙腰甲α", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x4", "无情锁刃甲 x4", "煌雷龙的雷玉 x1"]}
+{"series_id": "护锁刃龙α", "parts_type": "LEG", "name": "护锁刃龙护腿α", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x4", "护龙的上等鳞 x5", "狱焰蛸的炎玉 x1"]}
+{"series_id": "护锁刃龙β", "parts_type": "HELM", "name": "护锁刃龙头盔β", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x6", "护龙的上等毛皮 x5", "波衣龙的水玉 x1"]}
+{"series_id": "护锁刃龙β", "parts_type": "BODY", "name": "护锁刃龙铠甲β", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的白毛 x3", "锁刃龙的宝玉 x1", "护龙的净血 x3"]}
+{"series_id": "护锁刃龙β", "parts_type": "ARM", "name": "护锁刃龙腕甲β", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x6", "锁刃龙的白毛 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "护锁刃龙β", "parts_type": "WAIST", "name": "护锁刃龙腰甲β", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的上等鳞 x4", "无情锁刃甲 x4", "煌雷龙的雷玉 x1"]}
+{"series_id": "护锁刃龙β", "parts_type": "LEG", "name": "护锁刃龙护腿β", "materials": ["历战狩猎之证Ⅲ x1", "锁刃龙的坚铠壳 x4", "护龙的上等鳞 x5", "狱焰蛸的炎玉 x1"]}
+{"series_id": "公会王牌α", "parts_type": "HELM", "name": "公会王牌耳环α", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的上等毛皮 x3"]}
+{"series_id": "公会王牌α", "parts_type": "BODY", "name": "公会王牌铠甲α", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的上等鳞 x3"]}
+{"series_id": "公会王牌α", "parts_type": "ARM", "name": "公会王牌腕甲α", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "灵鹤石 x5"]}
+{"series_id": "公会王牌α", "parts_type": "WAIST", "name": "公会王牌腰甲α", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "良质硬骨 x5"]}
+{"series_id": "公会王牌α", "parts_type": "LEG", "name": "公会王牌靴α", "materials": ["历战狩猎之证Ⅲ x1", "白鸠石 x2", "护龙的净血 x3"]}
+{"series_id": "调查团α", "parts_type": "HELM", "name": "调查团头盔α", "materials": ["调查团票 x1", "灵鹤石 x2", "缠蛙的上等鳞 x5"]}
+{"series_id": "调查团α", "parts_type": "BODY", "name": "调查团铠甲α", "materials": ["调查团票 x1", "雪光金属 x2", "刺花蜘蛛的上等绒毛 x5"]}
+{"series_id": "调查团α", "parts_type": "ARM", "name": "调查团腕甲α", "materials": ["调查团票 x1", "尖龙骨 x2", "沙海龙的上等鳞 x5"]}
+{"series_id": "调查团α", "parts_type": "WAIST", "name": "调查团腰甲α", "materials": ["调查团票 x1", "坚固的骨 x2", "辟兽的刚毛 x5"]}
+{"series_id": "调查团α", "parts_type": "LEG", "name": "调查团护腿α", "materials": ["调查团票 x1", "良质硬骨 x2", "炎尾龙的上等鳞 x5"]}
+{"series_id": "龙王的独眼α", "parts_type": "HELM", "name": "龙王的独眼α", "materials": ["历战狩猎之证Ⅲ x3", "护龙的净血 x3", "龙玉 x1"]}
+{"series_id": "花妖猩α", "parts_type": "HELM", "name": "花妖猩α", "materials": ["花妖猩票 x2", "怪鸟的上等鳞 x4", "桃毛兽王的刚毛 x2"]}
+{"series_id": "调查队耳饰α", "parts_type": "HELM", "name": "调查队耳饰α", "materials": ["调查队耳饰票 x3", "雌火龙的上等鳞 x4", "尖龙骨 x2", "璀璨水晶 x1"]}
+{"series_id": "公会十字α", "parts_type": "HELM", "name": "公会十字头饰α", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "影蜘蛛的坚壳 x2"]}
+{"series_id": "公会十字α", "parts_type": "BODY", "name": "公会十字战衣α", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "桃毛兽王的刚毛 x2"]}
+{"series_id": "公会十字α", "parts_type": "ARM", "name": "公会十字腕甲α", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "橡胶质的上等皮 x2"]}
+{"series_id": "公会十字α", "parts_type": "WAIST", "name": "公会十字腰甲α", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "雌火龙的上等鳞 x2"]}
+{"series_id": "公会十字α", "parts_type": "LEG", "name": "公会十字靴α", "materials": ["缠蛙硬币 x3", "斗技王硬币 x1", "怪鸟的上等鳞 x2"]}
+{"series_id": "职员α", "parts_type": "HELM", "name": "职员遮阳帽α", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "辟兽的上等皮 x2"]}
+{"series_id": "职员α", "parts_type": "BODY", "name": "职员服装α", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "铠龙的坚壳 x2"]}
+{"series_id": "职员α", "parts_type": "ARM", "name": "职员腕甲α", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "雪狮子王的刚毛 x2"]}
+{"series_id": "职员α", "parts_type": "WAIST", "name": "职员腰带α", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "护雷颚龙的上等毛皮 x2"]}
+{"series_id": "职员α", "parts_type": "LEG", "name": "职员鞋α", "materials": ["雌火龙硬币 x2", "缠蛙硬币 x1", "斗技王硬币 x1", "火龙的上等鳞 x2"]}
+{"series_id": "大胃王耳饰α", "parts_type": "HELM", "name": "大胃王耳饰α", "materials": ["缠蛙硬币 x5", "斗技王硬币 x3", "灵鹤石 x4", "红莲石 x2"]}
+{"series_id": "奉献耳饰α", "parts_type": "HELM", "name": "奉献耳饰α", "materials": ["雌火龙硬币 x5", "斗技王硬币 x3", "雪光金属 x3", "白鸠石 x3"]}
+{"series_id": "泡狐龙α", "parts_type": "HELM", "name": "泡狐龙头盔α", "materials": ["泡狐龙的上等鳞 x5", "上等起泡滑液 x3", "锯带龙的上等鳍 x2"]}
+{"series_id": "泡狐龙α", "parts_type": "BODY", "name": "泡狐龙铠甲α", "materials": ["泡狐龙狩猎证 S x2", "泡狐龙的尖爪 x3", "泡狐龙的上等锦鳍 x5", "龙玉 x1"]}
+{"series_id": "泡狐龙α", "parts_type": "ARM", "name": "泡狐龙腕甲α", "materials": ["泡狐龙的上等鳞 x6", "泡狐龙的上等紫毛 x6", "上等起泡滑液 x3", "泡狐龙的上等锦鳍 x3"]}
+{"series_id": "泡狐龙α", "parts_type": "WAIST", "name": "泡狐龙腰甲α", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等紫毛 x5", "泡狐龙的尖爪 x3", "大水袋 x2"]}
+{"series_id": "泡狐龙α", "parts_type": "LEG", "name": "泡狐龙护腿α", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等鳞 x4", "上等起泡滑液 x4", "泡狐龙的水玉 x1"]}
+{"series_id": "泡狐龙β", "parts_type": "HELM", "name": "泡狐龙头盔β", "materials": ["泡狐龙的上等鳞 x5", "上等起泡滑液 x3", "锯带龙的上等鳍 x2"]}
+{"series_id": "泡狐龙β", "parts_type": "BODY", "name": "泡狐龙铠甲β", "materials": ["泡狐龙狩猎证 S x2", "泡狐龙的尖爪 x3", "泡狐龙的上等锦鳍 x5", "龙玉 x1"]}
+{"series_id": "泡狐龙β", "parts_type": "ARM", "name": "泡狐龙腕甲β", "materials": ["泡狐龙的上等鳞 x6", "泡狐龙的上等紫毛 x6", "上等起泡滑液 x3", "泡狐龙的上等锦鳍 x3"]}
+{"series_id": "泡狐龙β", "parts_type": "WAIST", "name": "泡狐龙腰甲β", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等紫毛 x5", "泡狐龙的尖爪 x3", "大水袋 x2"]}
+{"series_id": "泡狐龙β", "parts_type": "LEG", "name": "泡狐龙护腿β", "materials": ["泡狐龙狩猎证 S x1", "泡狐龙的上等鳞 x4", "上等起泡滑液 x4", "泡狐龙的水玉 x1"]}
+{"series_id": "纯洁龙α", "parts_type": "HELM", "name": "纯洁龙冠α", "materials": ["白炽龙的结晶鳞 x6", "白炽龙的栅状爪 x2", "白炽龙的晶角 x2", "粗壮护骨 x5"]}
+{"series_id": "纯洁龙α", "parts_type": "BODY", "name": "纯洁龙铠α", "materials": ["白炽龙狩猎证 S x1", "白炽龙的多层壳 x5", "黑炽瘤块 x3", "护龙的净血 x3"]}
+{"series_id": "纯洁龙α", "parts_type": "ARM", "name": "纯洁龙臂甲α", "materials": ["白炽龙狩猎证 S x2", "白炽龙的结晶鳞 x5", "白炽龙的栅状爪 x3", "锁刃龙的宝玉 x1"]}
+{"series_id": "纯洁龙α", "parts_type": "WAIST", "name": "纯洁龙腰甲α", "materials": ["白炽龙的多层壳 x6", "黑炽瘤块 x3", "白炽龙的晶角 x3", "白耀的造龙玉 x1"]}
+{"series_id": "纯洁龙α", "parts_type": "LEG", "name": "纯洁龙靴α", "materials": ["白炽龙的结晶鳞 x3", "白炽龙的栅状爪 x4", "白炽龙的晶尾 x1", "黑蚀龙的暗玉 x1"]}
+{"series_id": "纯洁龙β", "parts_type": "HELM", "name": "纯洁龙冠β", "materials": ["白炽龙的结晶鳞 x6", "白炽龙的栅状爪 x2", "白炽龙的晶角 x2", "粗壮护骨 x5"]}
+{"series_id": "纯洁龙β", "parts_type": "BODY", "name": "纯洁龙铠β", "materials": ["白炽龙狩猎证 S x1", "白炽龙的多层壳 x5", "黑炽瘤块 x3", "护龙的净血 x3"]}
+{"series_id": "纯洁龙β", "parts_type": "ARM", "name": "纯洁龙臂甲β", "materials": ["白炽龙狩猎证 S x2", "白炽龙的结晶鳞 x5", "白炽龙的栅状爪 x3", "锁刃龙的宝玉 x1"]}
+{"series_id": "纯洁龙β", "parts_type": "WAIST", "name": "纯洁龙腰甲β", "materials": ["白炽龙的多层壳 x6", "黑炽瘤块 x3", "白炽龙的晶角 x3", "白耀的造龙玉 x1"]}
+{"series_id": "纯洁龙β", "parts_type": "LEG", "name": "纯洁龙靴β", "materials": ["白炽龙的结晶鳞 x3", "白炽龙的栅状爪 x4", "白炽龙的晶尾 x1", "黑蚀龙的暗玉 x1"]}
+{"series_id": "海龙α", "parts_type": "HELM", "name": "海龙头盔α", "materials": ["海龙的上等皮 x5", "海龙的背电壳 x3", "海龙的尖角 x2", "光水晶 x2"]}
+{"series_id": "海龙α", "parts_type": "BODY", "name": "海龙铠甲α", "materials": ["海龙的上等皮 x6", "海龙的上等鳞 x6", "海龙的背电壳 x3", "海龙的尾巴 x1"]}
+{"series_id": "海龙α", "parts_type": "ARM", "name": "海龙腕甲α", "materials": ["海龙狩猎证 S x1", "海龙的上等鳞 x5", "海龙的锐爪 x3", "海龙的苍玉 x1"]}
+{"series_id": "海龙α", "parts_type": "WAIST", "name": "海龙腰甲α", "materials": ["海龙狩猎证 S x2", "海龙的锐爪 x4", "海龙的尖角 x3", "海龙的苍玉 x1"]}
+{"series_id": "海龙α", "parts_type": "LEG", "name": "海龙护腿α", "materials": ["海龙狩猎证 S x1", "海龙的上等皮 x4", "海龙的背电壳 x4", "海龙的苍玉 x1"]}
+{"series_id": "海龙β", "parts_type": "HELM", "name": "海龙头盔β", "materials": ["海龙的上等皮 x5", "海龙的背电壳 x3", "海龙的尖角 x2", "光水晶 x2"]}
+{"series_id": "海龙β", "parts_type": "BODY", "name": "海龙铠甲β", "materials": ["海龙的上等皮 x6", "海龙的上等鳞 x6", "海龙的背电壳 x3", "海龙的尾巴 x1"]}
+{"series_id": "海龙β", "parts_type": "ARM", "name": "海龙腕甲β", "materials": ["海龙狩猎证 S x1", "海龙的上等鳞 x5", "海龙的锐爪 x3", "海龙的苍玉 x1"]}
+{"series_id": "海龙β", "parts_type": "WAIST", "name": "海龙腰甲β", "materials": ["海龙狩猎证 S x2", "海龙的锐爪 x4", "海龙的尖角 x3", "海龙的苍玉 x1"]}
+{"series_id": "海龙β", "parts_type": "LEG", "name": "海龙护腿β", "materials": ["海龙狩猎证 S x1", "海龙的上等皮 x4", "海龙的背电壳 x4", "海龙的苍玉 x1"]}
+{"series_id": "千刃龙α", "parts_type": "HELM", "name": "千刃龙头盔α", "materials": ["千刃龙狩猎证 S x1", "千刃龙的飞刃 x5", "千刃龙的尖翼爪 x3", "古老龙骨 x1"]}
+{"series_id": "千刃龙α", "parts_type": "BODY", "name": "千刃龙铠甲α", "materials": ["千刃龙的锐刃鳞 x5", "千刃龙的刻爪 x3", "千刃龙的伐刀角 x2", "千刃龙的反逆鳞 x1"]}
+{"series_id": "千刃龙α", "parts_type": "ARM", "name": "千刃龙腕甲α", "materials": ["千刃龙狩猎证 S x2", "千刃龙的尖翼爪 x3", "千刃龙的伐刀角 x3", "千刃龙的反逆鳞 x1"]}
+{"series_id": "千刃龙α", "parts_type": "WAIST", "name": "千刃龙腰甲α", "materials": ["千刃龙的锐刃鳞 x6", "千刃龙的飞刃 x6", "千刃龙的刻爪 x3", "千刃龙的枪尾 x1"]}
+{"series_id": "千刃龙α", "parts_type": "LEG", "name": "千刃龙护腿α", "materials": ["千刃龙狩猎证 S x1", "千刃龙的锐刃鳞 x4", "千刃龙的刻爪 x4", "千刃龙的反逆鳞 x1"]}
+{"series_id": "千刃龙β", "parts_type": "HELM", "name": "千刃龙头盔β", "materials": ["千刃龙狩猎证 S x1", "千刃龙的飞刃 x5", "千刃龙的尖翼爪 x3", "古老龙骨 x1"]}
+{"series_id": "千刃龙β", "parts_type": "BODY", "name": "千刃龙铠甲β", "materials": ["千刃龙的锐刃鳞 x5", "千刃龙的刻爪 x3", "千刃龙的伐刀角 x2", "千刃龙的反逆鳞 x1"]}
+{"series_id": "千刃龙β", "parts_type": "ARM", "name": "千刃龙腕甲β", "materials": ["千刃龙狩猎证 S x2", "千刃龙的尖翼爪 x3", "千刃龙的伐刀角 x3", "千刃龙的反逆鳞 x1"]}
+{"series_id": "千刃龙β", "parts_type": "WAIST", "name": "千刃龙腰甲β", "materials": ["千刃龙的锐刃鳞 x6", "千刃龙的飞刃 x6", "千刃龙的刻爪 x3", "千刃龙的枪尾 x1"]}
+{"series_id": "千刃龙β", "parts_type": "LEG", "name": "千刃龙护腿β", "materials": ["千刃龙狩猎证 S x1", "千刃龙的锐刃鳞 x4", "千刃龙的刻爪 x4", "千刃龙的反逆鳞 x1"]}
+{"series_id": "巨戟龙α", "parts_type": "HELM", "name": "巨戟龙头盔α", "materials": [" x1", " x7", " x3", " x1"]}
+{"series_id": "巨戟龙α", "parts_type": "BODY", "name": "巨戟龙铠甲α", "materials": [" x1", " x6", " x4", " x5"]}
+{"series_id": "巨戟龙α", "parts_type": "ARM", "name": "巨戟龙腕甲α", "materials": [" x1", " x2", " x2", " x1"]}
+{"series_id": "巨戟龙α", "parts_type": "WAIST", "name": "巨戟龙腰甲α", "materials": [" x1", " x6", " x5", " x2"]}
+{"series_id": "巨戟龙α", "parts_type": "LEG", "name": "巨戟龙护腿α", "materials": [" x1", " x5", " x4", " x3"]}
+{"series_id": "巨戟龙β", "parts_type": "HELM", "name": "巨戟龙头盔β", "materials": [" x1", " x7", " x3", " x1"]}
+{"series_id": "巨戟龙β", "parts_type": "BODY", "name": "巨戟龙铠甲β", "materials": [" x1", " x6", " x4", " x5"]}
+{"series_id": "巨戟龙β", "parts_type": "ARM", "name": "巨戟龙腕甲β", "materials": [" x1", " x2", " x2", " x1"]}
+{"series_id": "巨戟龙β", "parts_type": "WAIST", "name": "巨戟龙腰甲β", "materials": [" x1", " x6", " x5", " x2"]}
+{"series_id": "巨戟龙β", "parts_type": "LEG", "name": "巨戟龙护腿β", "materials": [" x1", " x5", " x4", " x3"]}
+{"series_id": "煌雷龙γ", "parts_type": "HELM", "name": "煌雷龙头盔γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x5", "煌雷龙的雷电角 x3", "龙玉 x2"]}
+{"series_id": "煌雷龙γ", "parts_type": "BODY", "name": "煌雷龙铠甲γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "煌雷龙的逆鳞 x2"]}
+{"series_id": "煌雷龙γ", "parts_type": "ARM", "name": "煌雷龙腕甲γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x3", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷玉 x1"]}
+{"series_id": "煌雷龙γ", "parts_type": "WAIST", "name": "煌雷龙腰甲γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x6", "煌雷龙的坚壳 x5", "煌雷龙的苍雷晶爪 x2"]}
+{"series_id": "煌雷龙γ", "parts_type": "LEG", "name": "煌雷龙护腿γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的雷电角 x2", "煌雷龙的尾巴 x2", "璀璨水晶 x2"]}
+{"series_id": "波衣龙γ", "parts_type": "HELM", "name": "波衣龙头盔γ", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x5", "波衣龙的上等纤毛 x3", "龙玉 x2"]}
+{"series_id": "波衣龙γ", "parts_type": "BODY", "name": "波衣龙铠甲γ", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等皮 x6", "波衣龙的锐爪 x3", "波衣龙的逆鳞 x2"]}
+{"series_id": "波衣龙γ", "parts_type": "ARM", "name": "波衣龙腕甲γ", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x6", "波衣龙的上等皮 x5", "波衣龙的锐爪 x2"]}
+{"series_id": "波衣龙γ", "parts_type": "WAIST", "name": "波衣龙腰甲γ", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等鳞 x3", "波衣龙的锐爪 x4", "波衣龙的水玉 x1"]}
+{"series_id": "波衣龙γ", "parts_type": "LEG", "name": "波衣龙护腿γ", "materials": ["波衣龙狩猎证γ x1", "波衣龙的上等纤毛 x2", "波衣龙的艳触手 x2", "古老龙骨 x2"]}
+{"series_id": "狱焰蛸γ", "parts_type": "HELM", "name": "狱焰蛸头盔γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的暴触手 x2", "狱焰蛸的尖角 x2", "狱炎石 x2"]}
+{"series_id": "狱焰蛸γ", "parts_type": "BODY", "name": "狱焰蛸铠甲γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x5", "狱焰蛸的上等棘 x3", "兽玉 x2"]}
+{"series_id": "狱焰蛸γ", "parts_type": "ARM", "name": "狱焰蛸腕甲γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x3", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
+{"series_id": "狱焰蛸γ", "parts_type": "WAIST", "name": "狱焰蛸腰甲γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x5", "狱焰蛸的暴触手 x3", "狱焰蛸的炎玉 x1"]}
+{"series_id": "狱焰蛸γ", "parts_type": "LEG", "name": "狱焰蛸护腿γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x4", "狱焰蛸的髓液 x2"]}
+{"series_id": "冻峰龙γ", "parts_type": "HELM", "name": "冻峰龙头盔γ", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "冻峰龙γ", "parts_type": "BODY", "name": "冻峰龙铠甲γ", "materials": [" x1", "冻峰龙的坚壳 x6", "冻峰龙的尖爪 x3", "冻峰龙的尾巴 x2"]}
+{"series_id": "冻峰龙γ", "parts_type": "ARM", "name": "冻峰龙腕甲γ", "materials": [" x1", "冻峰龙的层角 x3", "冻峰龙的尾巴 x3", "雪光金属 x3"]}
+{"series_id": "冻峰龙γ", "parts_type": "WAIST", "name": "冻峰龙腰甲γ", "materials": [" x1", "冻峰龙的尖爪 x4", "冻峰龙的冻凝壳 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "冻峰龙γ", "parts_type": "LEG", "name": "冻峰龙护腿γ", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的坚壳 x4", "龙玉 x2"]}
+{"series_id": "落樱缤纷α", "parts_type": "HELM", "name": "落樱缤纷【武士头部】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x3"]}
+{"series_id": "落樱缤纷α", "parts_type": "BODY", "name": "落樱缤纷【武士礼服】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x1"]}
+{"series_id": "落樱缤纷α", "parts_type": "ARM", "name": "落樱缤纷【武士臂甲】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x2"]}
+{"series_id": "落樱缤纷α", "parts_type": "WAIST", "name": "落樱缤纷【武士腰带】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x1"]}
+{"series_id": "落樱缤纷α", "parts_type": "LEG", "name": "落樱缤纷【武士长袴】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x2"]}
+{"series_id": "盛开α", "parts_type": "HELM", "name": "盛开头饰α", "materials": ["盛开票券 x1", "刺花蜘蛛的浓粘液 x3", "血盗虫的坚壳 x4", "怪物浓液 x1"]}
+{"series_id": "盛开α", "parts_type": "BODY", "name": "盛开服饰α", "materials": ["盛开票券 x1", "刺花蜘蛛的锐爪 x2", "巨蜂的薄羽 x3", "怪物浓液 x1"]}
+{"series_id": "盛开α", "parts_type": "ARM", "name": "盛开手套α", "materials": ["盛开票券 x1", "刺花蜘蛛的坚壳 x3", "巨蜂的坚壳 x4", "怪物浓液 x1"]}
+{"series_id": "盛开α", "parts_type": "WAIST", "name": "盛开护腰α", "materials": ["盛开票券 x1", "刺花蜘蛛的上等尾棘 x2", "大角凤蝶 x3", "怪物浓液 x1"]}
+{"series_id": "盛开α", "parts_type": "LEG", "name": "盛开靴α", "materials": ["盛开票券 x1", "刺花蜘蛛的上等绒毛 x3", "血眠虫的坚壳 x4", "怪物浓液 x1"]}
+{"series_id": "踊火α", "parts_type": "HELM", "name": "踊火头饰α", "materials": ["祭典票券【踊火】 x1", "红莲石 x1"]}
+{"series_id": "踊火α", "parts_type": "BODY", "name": "踊火上衣α", "materials": ["祭典票券【踊火】 x1", "辉龙石 x4"]}
+{"series_id": "踊火α", "parts_type": "ARM", "name": "踊火护腕α", "materials": ["祭典票券【踊火】 x1", "狱炎石 x1"]}
+{"series_id": "踊火α", "parts_type": "WAIST", "name": "踊火护腰α", "materials": ["祭典票券【踊火】 x1", "辉龙石 x4"]}
+{"series_id": "踊火α", "parts_type": "LEG", "name": "踊火护腿α", "materials": ["祭典票券【踊火】 x1", "红莲石 x1"]}
+{"series_id": "潜水员α", "parts_type": "HELM", "name": "潜水员面罩α", "materials": ["潜水员票 x1", "毒怪鸟的头 x1", "沼喷龙的大喙 x3", "光水晶 x2"]}
+{"series_id": "潜水员α", "parts_type": "BODY", "name": "潜水员服装α", "materials": ["潜水员票 x1", "橡胶质的上等皮 x3", "毒怪鸟的尾巴 x2", "沼喷龙的锐爪 x2"]}
+{"series_id": "潜水员α", "parts_type": "ARM", "name": "潜水员腕甲α", "materials": ["潜水员票 x1", "毒怪鸟的翼 x3", "沼喷龙的锐爪 x2", "斑斓的猛毒皮 x2"]}
+{"series_id": "潜水员α", "parts_type": "WAIST", "name": "潜水员腰带α", "materials": ["潜水员票 x1", "橡胶质的上等皮 x2", "毒怪鸟的尾巴 x2", "沼喷龙的上等皮 x4"]}
+{"series_id": "潜水员α", "parts_type": "LEG", "name": "潜水员靴α", "materials": ["潜水员票 x1", "橡胶质的上等皮 x3", "沼喷龙的上等皮 x4", "斑斓的猛毒皮 x1"]}
+{"series_id": "哥特幽魂α", "parts_type": "HELM", "name": "哥特幽魂头盔α", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
+{"series_id": "哥特幽魂α", "parts_type": "BODY", "name": "哥特幽魂铠甲α", "materials": ["祭典票券【梦灯】 x1", "结冻冰骨 x2"]}
+{"series_id": "哥特幽魂α", "parts_type": "ARM", "name": "哥特幽魂腕甲α", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
+{"series_id": "哥特幽魂α", "parts_type": "WAIST", "name": "哥特幽魂腰甲α", "materials": ["祭典票券【梦灯】 x1", "结冻冰骨 x2"]}
+{"series_id": "哥特幽魂α", "parts_type": "LEG", "name": "哥特幽魂护腿α", "materials": ["祭典票券【梦灯】 x1", "雪光金属 x1"]}
+{"series_id": "收获α", "parts_type": "HELM", "name": "收获头饰α", "materials": ["收获票 x1", "风铗龙的上等鳞 x4", "风铗龙的上等尾爪 x2", "尖龙骨 x1"]}
+{"series_id": "收获α", "parts_type": "BODY", "name": "收获装甲α", "materials": ["收获票 x1", "风铗龙的上等皮 x4", "风铗龙的上等飞膜 x2", "结冻冰骨 x1"]}
+{"series_id": "收获α", "parts_type": "ARM", "name": "收获手套α", "materials": ["收获票 x1", "风铗龙的上等飞膜 x3", "怪物浓液 x2", "漆黑的油骨 x1"]}
+{"series_id": "收获α", "parts_type": "WAIST", "name": "收获护裙α", "materials": ["收获票 x1", "风铗龙的上等鳞 x5", "风铗龙的上等皮 x5", "尖龙骨 x1"]}
+{"series_id": "收获α", "parts_type": "LEG", "name": "收获护腿α", "materials": ["收获票 x1", "风铗龙的上等尾爪 x3", "大地结晶 x5", "古老龙骨 x1"]}
+{"series_id": "祭典α", "parts_type": "HELM", "name": "祭典头盔α", "materials": [" x1", "璀璨水晶 x1"]}
+{"series_id": "祭典α", "parts_type": "BODY", "name": "祭典铠甲α", "materials": [" x1", "白鸠石 x3"]}
+{"series_id": "祭典α", "parts_type": "ARM", "name": "祭典腕甲α", "materials": [" x1", "光水晶 x1"]}
+{"series_id": "祭典α", "parts_type": "WAIST", "name": "祭典腰甲α", "materials": [" x1", "白鸠石 x3"]}
+{"series_id": "祭典α", "parts_type": "LEG", "name": "祭典护腿α", "materials": [" x1", "光水晶 x1"]}
+{"series_id": "猎户星α", "parts_type": "HELM", "name": "猎户星头饰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x6", "兽玉 x1"]}
+{"series_id": "猎户星α", "parts_type": "BODY", "name": "猎户星服饰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x9", "雪狮子王的锐牙 x4"]}
+{"series_id": "猎户星α", "parts_type": "ARM", "name": "猎户星腕甲α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x5", "兽玉 x1"]}
+{"series_id": "猎户星α", "parts_type": "WAIST", "name": "猎户星护腰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x7", "雪狮子王的尾巴 x3"]}
+{"series_id": "猎户星α", "parts_type": "LEG", "name": "猎户星靴α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x8", "雪狮子王的胡须 x5"]}
+{"series_id": "豪鬼α", "parts_type": "HELM", "name": "鬼之念珠α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
+{"series_id": "豪鬼α", "parts_type": "BODY", "name": "鬼之外衣α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
+{"series_id": "豪鬼α", "parts_type": "ARM", "name": "鬼之草绳α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
+{"series_id": "豪鬼α", "parts_type": "WAIST", "name": "鬼之腰带α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
+{"series_id": "豪鬼α", "parts_type": "LEG", "name": "鬼之下装α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
+{"series_id": "凶恶套装α", "parts_type": "HELM", "name": "凶恶轻盔α", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x6", "欧米茄的弹簧 x3", "欧米茄的机械腿 x3"]}
+{"series_id": "凶恶套装α", "parts_type": "BODY", "name": "凶恶胸甲α", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x5", "欧米茄的机械腿 x3", "璀璨水晶 x2"]}
+{"series_id": "凶恶套装α", "parts_type": "ARM", "name": "凶恶手铠α", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x4", "欧米茄的透镜 x3", "欧米茄的炽热核 x1"]}
+{"series_id": "凶恶套装α", "parts_type": "WAIST", "name": "凶恶重足铠α", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x4", "欧米茄的转轴 x3", "欧米茄的炽热核 x1"]}
+{"series_id": "凶恶套装α", "parts_type": "LEG", "name": "凶恶锁甲靴α", "materials": ["欧米茄数据1.0 x1", "欧米茄的螺丝 x5", "欧米茄的透镜 x2", "欧米茄的转轴 x2"]}
+{"series_id": "欧米茄服装α", "parts_type": "HELM", "name": "欧米茄耳夹α", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的机械腿 x3", "海龙的苍玉 x1"]}
+{"series_id": "欧米茄服装α", "parts_type": "BODY", "name": "欧米茄服α", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x7", "欧米茄的炽热核 x1", "锁刃龙的宝玉 x1"]}
+{"series_id": "欧米茄服装α", "parts_type": "ARM", "name": "欧米茄护臂α", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的透镜 x3", "白耀的造龙玉 x1"]}
+{"series_id": "欧米茄服装α", "parts_type": "WAIST", "name": "欧米茄饰品α", "materials": ["欧米茄数据2.0 x1", "欧米茄的螺丝 x6", "欧米茄的转轴 x3", "泡狐龙的水玉 x1"]}
+{"series_id": "欧米茄服装α", "parts_type": "LEG", "name": "欧米茄腿α", "materials": ["欧米茄数据1.0 x1", "欧米茄的弹簧 x7", "欧米茄的炽热核 x1", "千刃龙的反逆鳞 x1"]}
+{"series_id": "泡歌鸮α", "parts_type": "HELM", "name": "泡歌鸮α", "materials": ["泡歌券 x3", "炎尾龙的大头冠 x3", "尖龙骨 x5"]}
+{"series_id": "封印的龙骸布α", "parts_type": "HELM", "name": "封印的龙骸布α", "materials": ["封印的龙骸布 x3", "护雷颚龙的上等鼻骨 x3", "护龙的净血 x2", "粗壮护骨 x5"]}
+{"series_id": "知性眼镜α", "parts_type": "HELM", "name": "知性眼镜α", "materials": ["璀璨水晶 x1", "光水晶 x2", "狱炎石 x1", "红莲石 x2"]}
+{"series_id": "方形眼镜α", "parts_type": "HELM", "name": "方形眼镜α", "materials": ["璀璨水晶 x1", "光水晶 x2", "雪光金属 x2", "结冰金属 x4"]}
+{"series_id": "封印的眼罩α", "parts_type": "HELM", "name": "封印的眼罩α", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "暗器蛸的上等皮 x5", "不祥的布 x2"]}
+{"series_id": "墨镜α", "parts_type": "HELM", "name": "墨镜α", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "黄金硬角质 x4", "白鸠石 x4"]}
+{"series_id": "圆框眼镜α", "parts_type": "HELM", "name": "圆框眼镜α", "materials": ["花舞样册 x2", "历战狩猎之证Ⅱ x2", "暗器蛸的尖爪 x3", "白鸠石 x4"]}
+{"series_id": "艾露猫头套α", "parts_type": "HELM", "name": "艾露猫头套α", "materials": ["艾露猫票 x3", "炎尾龙的上等皮 x6", "炎尾龙的浓引火液 x4", "尖龙骨 x5"]}
+{"series_id": "单羽项链α", "parts_type": "BODY", "name": "单羽项链α", "materials": ["首饰票券 x3", "狱焰蛸的上等皮 x5", "狱焰蛸的暴触手 x2", "狱焰蛸的浓油膜 x3"]}
+{"series_id": "启程的鹰之心α", "parts_type": "BODY", "name": "启程的鹰之心α", "materials": ["血盗虫的坚壳 x1", "雌火龙硬币 x1", "缠蛙的上等鳞 x1", "锯带龙的上等鳍 x1"]}
+{"series_id": "下半框眼镜α", "parts_type": "HELM", "name": "下半框眼镜α", "materials": ["踊火样册 x2", "历战狩猎之证Ⅰ x2", "雌火龙的坚壳 x4", "灵鹤石 x4"]}
+{"series_id": "心形眼镜α", "parts_type": "HELM", "name": "心形眼镜α", "materials": ["踊火样册 x2", "历战狩猎之证Ⅰ x2", "桃毛兽王的刚毛 x4", "灵鹤石 x4"]}
+{"series_id": "辟兽头套α", "parts_type": "HELM", "name": "辟兽头套α", "materials": ["辟兽素描 x3", "辟兽的刚毛 x5", "辟兽的上等皮 x5", "辟兽的锐牙 x4"]}
+{"series_id": "肉垫手套α", "parts_type": "ARM", "name": "肉垫手套α", "materials": ["肉垫票券 x3", "历战狩猎之证Ⅱ x3", "护凶爪龙的尖爪 x3", "护龙的上等毛皮 x4"]}
+{"series_id": "胶鲵α", "parts_type": "HELM", "name": "胶鲵头套α", "materials": ["梦灯样册 x1", "历战狩猎之证Ⅲ x1", "橡胶质的上等皮 x5", "尖龙骨 x3"]}
+{"series_id": "胶鲵α", "parts_type": "BODY", "name": "胶鲵背包α", "materials": ["梦灯样册 x1", "历战狩猎之证Ⅲ x1", "毒怪鸟的尾巴 x3", "尖龙骨 x3"]}
+{"series_id": "泪滴墨镜α", "parts_type": "HELM", "name": "泪滴墨镜α", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的头 x2", "璀璨水晶 x1"]}
+{"series_id": "猫眼眼镜α", "parts_type": "HELM", "name": "猫眼眼镜α", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的翼 x4", "鸟龙玉 x1"]}
+{"series_id": "骷髅面罩α", "parts_type": "HELM", "name": "骷髅面罩α", "materials": ["骷髅票 x3", "毒怪鸟的头 x2", "影蜘蛛的坚壳 x5", "狂龙结晶碎片 x5"]}
+{"series_id": "祝福腰饰α", "parts_type": "WAIST", "name": "祝福腰饰α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的翼 x3", "火龙的翼 x3"]}
+{"series_id": "分析之眼α", "parts_type": "HELM", "name": "分析之眼α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的上等鳞 x5", "护火龙的红玉 x1"]}
+{"series_id": "炫光护目镜α", "parts_type": "HELM", "name": "炫光护目镜α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "火龙的上等鳞 x5", "火龙的红玉 x1"]}
+{"series_id": "精力充沛森狸人α", "parts_type": "HELM", "name": "精力充沛森狸人α", "materials": [" x3", "历战狩猎之证Ⅲ x3", "泡狐龙的水玉 x1", "沙海龙的黑珍珠 x2"]}

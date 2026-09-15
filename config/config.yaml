@@ -1,6 +1,19 @@
 llm:
-  model: deepseek-v4-flash
-  temperature: 0.0
+  # 主模型
+  primary:
+    model: "deepseek-flash"
+    base_url: "https://api.deepseek.com/v1"
+    api_key_env: "DEEPSEEK_API_KEY"   # ← 从 .env 读哪个变量当密钥
+    temperature: 0.7
+    max_retries: 3        # ← 第1层：自动重试次数
+
+  # 备用模型列表（按优先级排序）
+  fallbacks:
+    - model: "qwen3.8-flash"   # 跨厂商容灾
+      base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+      api_key_env: "DASHSCOPE_API_KEY"
+      temperature: 0.7
+      max_retries: 2
 
 embedding:
   model: C:/Users/Yeh Hu/.cache/huggingface/hub/models--BAAI--bge-small-zh-v1.5/snapshots/7999e1d3359715c523056ef9478215996d62a620
@@ -9,23 +22,37 @@ embedding:
 
 retrieval:
   equipment:
-    bm25_k: 8
+    bm25_k: 3
     vector_k: 8
+    vector_score_threshold: 0.4   # ← 新增，值待标定，先随便填
     bm25_weight: 0.5
     vector_weight: 0.5
-    ensemble_n_results: 60
-  item:
-    bm25_k: 8
-    vector_k: 8
+    rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
+    ensemble_top_n: 6    # 融合后真正保留的条数
+  weapon:
+    bm25_k: 4
+    vector_k: 10
     bm25_weight: 0.5
     vector_weight: 0.5
-    ensemble_n_results: 60
+    vector_score_threshold: 0.4
+    rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
+    ensemble_top_n: 10    # 融合后真正保留的条数
   monster:
-    bm25_k: 8
+    bm25_k: 3
     vector_k: 8
     bm25_weight: 0.5
     vector_weight: 0.5
-    ensemble_n_results: 60
+    vector_score_threshold: 0.4
+    rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
+    ensemble_top_n: 6    # 融合后真正保留的条数
+  material:
+    bm25_k: 3
+    vector_k: 8
+    bm25_weight: 0.5
+    vector_weight: 0.5
+    vector_score_threshold: 0.4
+    rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
+    ensemble_top_n: 6    # 融合后真正保留的条数
 
 paths:
   equipment_data: data/Equipment_Crafting_Table.jsonl
@@ -37,6 +64,7 @@ paths:
   monster_persist: storage/mh_monster_chroma_db
   weapon_persist: storage/mh_weapon_chroma_db
 
+
 graph:
   max_iterations: 5
 
@@ -44,3 +72,7 @@ logging:
   level: INFO
   format: json
   file: logs/agent.log
+
+
+        
+
