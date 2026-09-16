@@ -97,25 +97,70 @@ class WeaponCraftingRAG(BaseRAG):
 class MonsterInfoRAG(BaseRAG):
     _DB_NAME = "monster"
     RAG_PROMPT_TEMPLATE = MONSTERRAG_PROMPT
+
+    # 常规字段的中文标签
+    FIELD_LABELS = {
+        "EnemyName": "怪物名称",
+        "Species": "种类",
+        "MonsterSize": "体型",
+        "EnemyExp": "怪物描述",
+        "EnemyFeatures": "生态特征",
+        "EnemyTips": "狩猎提示",
+        "EnemyLegendaryName": "历战个体",
+    }
+
+    SIZE_LABELS = {
+        "大型": "大型怪物（正式狩猎目标）",
+        "小型": "小型怪物（成群出没的杂兵，非正式狩猎目标）",
+    }
+
+    RARE_FIELD_GLOSSARY = {
+        "EnemyLegendaryKingName": ("历战王名", "同一只怪物的最强强化版，比历战个体更强，本作只有少数怪物有"),
+        "EnemyFrenzyName":        ("狂龙化名", "被狂龙病毒强化后的形态名，攻击更狂暴，不是新怪物"),
+        "EnemyExtraName":         ("特殊个体别名", "非标准形态的称呼，如首领个体、克隆体、家畜种"),
+        "EnemyBossExp":           ("首领／幼体说明", "对上面这类特殊形态的补充描述，不是另一只怪物的简介"),
+    }
+
     def _load_data(self):
         """加载怪物 JSON，转为 Document 列表。"""
         logger.info("加载怪物数据", extra={"path": self._data_path})
         documents = []
-        FIELD_LABELS={
-            "Species": "怪物种类",
-            "EnemyName": "怪物名称",
-            "Type": "怪物类型",
-            "materials": "制作材料",
-        }
-        data_list=BaseRAG.load_jsonl(self._data_path)
+        data_list = BaseRAG.load_jsonl(self._data_path)
         for data in data_list:
+            row = dict(data)
+            size_text = self.SIZE_LABELS.get(str(row.get("MonsterSize", "")).strip())
+            if size_text:
+                row["MonsterSize"] = size_text
+
             # 所有字段拼成一段描述
             parts = []
-            for k, v in data.items():
-                label = FIELD_LABELS.get(k, k)
+            notes = []   # 只收集本条记录真正出现的稀有字段
+            for k, v in row.items():
+                if not str(v).strip():
+                    # 值为空就不渲染这个字段，免得留下"生态特征："这种悬空标签
+                    continue
+
+                if k in self.RARE_FIELD_GLOSSARY:
+                    label, gloss = self.RARE_FIELD_GLOSSARY[k]
+                    notes.append(f"{label} = {gloss}")
+                else:
+                    label = self.FIELD_LABELS.get(k, k)
                 parts.append(f"{label}：{v}")
+
             content = "，".join(parts)
-            metadata = data
+            if notes:
+                # 说明文字也会进 BM25／向量索引，所以只给带字段的记录加，
+                # 不让其余记录平白多出这些词
+                content += "\n【本条额外字段说明】" + "；".join(notes)
+
+            # 将处理完的 content、原始字段封装成 Document 对象
+            documents.append(Document(
+                page_content=content,
+                metadata=data,
+            ))
+
+        self._docs = documents
+        logger.info("怪物数据加载完成", extra={"count": len(documents)})
 
 class MaterialInfoRAG(BaseRAG):
     _DB_NAME = "material"
@@ -147,3 +192,15 @@ if __name__ == "__main__":
     print(f"共检索到 {len(docs)} 条结果")
     print(rag2("刺花蜘蛛大剑怎么做"))
     """
+
+
+    rag3 = MonsterInfoRAG()
+    rag3.setup()
+    docs = rag3.retrieve("护锁刃龙")
+    for i, doc in enumerate(docs, 1):
+        print(f"{'─'*50}")
+        print(f"  [{i}] {doc.page_content}")
+    print(f"{'─'*50}")
+    print(f"共检索到 {len(docs)} 条结果")
+    print(rag3("锁刃龙"))
+
