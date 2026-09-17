@@ -46,13 +46,13 @@ retrieval:
     rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
     ensemble_top_n: 6    # 融合后真正保留的条数
   material:
-    bm25_k: 3
-    vector_k: 8
+    bm25_k: 4
+    vector_k: 12
     bm25_weight: 0.5
     vector_weight: 0.5
     vector_score_threshold: 0.4
     rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
-    ensemble_top_n: 6    # 融合后真正保留的条数
+    ensemble_top_n: 12    # 融合后真正保留的条数
 
 paths:
   equipment_data: data/Equipment_Crafting_Table.jsonl

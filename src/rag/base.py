@@ -12,7 +12,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 import os as _os  #这里什么要这样命名？
-import json
 
 logger = get_logger("rag.base")  #暂时还不清楚日志创建
 
@@ -40,7 +39,6 @@ class BaseRAG(ABC):
         self._normalize = cfg["embedding"].get("normalize", True)
         self._vector_score_threshold = r["vector_score_threshold"]
 
-
         self.is_ready = False
         self._llm = None
         self._docs = []   
@@ -64,17 +62,6 @@ class BaseRAG(ABC):
         self._init_chain()         # ← 基类写好
         self.is_ready = True
         return self
-
-
-    def load_jsonl(file_path: str) -> list:
-        """读取 JSON Lines 文件，返回解析后的数据列表。"""
-        data_list = []
-        with open(file_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    data_list.append(json.loads(line))
-        return data_list
 
     @abstractmethod
     def _load_data(self):

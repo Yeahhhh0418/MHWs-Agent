@@ -583,16 +583,16 @@
 {"series_id": "千刃龙β", "parts_type": "ARM", "name": "千刃龙腕甲β", "materials": ["千刃龙狩猎证 S x2", "千刃龙的尖翼爪 x3", "千刃龙的伐刀角 x3", "千刃龙的反逆鳞 x1"]}
 {"series_id": "千刃龙β", "parts_type": "WAIST", "name": "千刃龙腰甲β", "materials": ["千刃龙的锐刃鳞 x6", "千刃龙的飞刃 x6", "千刃龙的刻爪 x3", "千刃龙的枪尾 x1"]}
 {"series_id": "千刃龙β", "parts_type": "LEG", "name": "千刃龙护腿β", "materials": ["千刃龙狩猎证 S x1", "千刃龙的锐刃鳞 x4", "千刃龙的刻爪 x4", "千刃龙的反逆鳞 x1"]}
-{"series_id": "巨戟龙α", "parts_type": "HELM", "name": "巨戟龙头盔α", "materials": [" x1", " x7", " x3", " x1"]}
-{"series_id": "巨戟龙α", "parts_type": "BODY", "name": "巨戟龙铠甲α", "materials": [" x1", " x6", " x4", " x5"]}
-{"series_id": "巨戟龙α", "parts_type": "ARM", "name": "巨戟龙腕甲α", "materials": [" x1", " x2", " x2", " x1"]}
-{"series_id": "巨戟龙α", "parts_type": "WAIST", "name": "巨戟龙腰甲α", "materials": [" x1", " x6", " x5", " x2"]}
-{"series_id": "巨戟龙α", "parts_type": "LEG", "name": "巨戟龙护腿α", "materials": [" x1", " x5", " x4", " x3"]}
-{"series_id": "巨戟龙β", "parts_type": "HELM", "name": "巨戟龙头盔β", "materials": [" x1", " x7", " x3", " x1"]}
-{"series_id": "巨戟龙β", "parts_type": "BODY", "name": "巨戟龙铠甲β", "materials": [" x1", " x6", " x4", " x5"]}
-{"series_id": "巨戟龙β", "parts_type": "ARM", "name": "巨戟龙腕甲β", "materials": [" x1", " x2", " x2", " x1"]}
-{"series_id": "巨戟龙β", "parts_type": "WAIST", "name": "巨戟龙腰甲β", "materials": [" x1", " x6", " x5", " x2"]}
-{"series_id": "巨戟龙β", "parts_type": "LEG", "name": "巨戟龙护腿β", "materials": [" x1", " x5", " x4", " x3"]}
+{"series_id": "巨戟龙α", "parts_type": "HELM", "name": "巨戟龙头盔α", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的垒鳞 x7", "巨戟龙的砦壳 x3", "战火的龙玉 x1"]}
+{"series_id": "巨戟龙α", "parts_type": "BODY", "name": "巨戟龙铠甲α", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的筋纤翼 x6", "超重质龙骨油 x4", "巨戟龙的巨刃 x5"]}
+{"series_id": "巨戟龙α", "parts_type": "ARM", "name": "巨戟龙腕甲α", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的刺钉尾 x2", "巨戟龙的巨爪 x2", "战火的龙玉 x1"]}
+{"series_id": "巨戟龙α", "parts_type": "WAIST", "name": "巨戟龙腰甲α", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的垒鳞 x6", "超重质龙骨油 x5", "巨戟龙的刺钉尾 x2"]}
+{"series_id": "巨戟龙α", "parts_type": "LEG", "name": "巨戟龙护腿α", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的筋纤翼 x5", "巨戟龙的砦壳 x4", "巨戟龙的巨爪 x3"]}
+{"series_id": "巨戟龙β", "parts_type": "HELM", "name": "巨戟龙头盔β", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的垒鳞 x7", "巨戟龙的砦壳 x3", "战火的龙玉 x1"]}
+{"series_id": "巨戟龙β", "parts_type": "BODY", "name": "巨戟龙铠甲β", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的筋纤翼 x6", "超重质龙骨油 x4", "巨戟龙的巨刃 x5"]}
+{"series_id": "巨戟龙β", "parts_type": "ARM", "name": "巨戟龙腕甲β", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的刺钉尾 x2", "巨戟龙的巨爪 x2", "战火的龙玉 x1"]}
+{"series_id": "巨戟龙β", "parts_type": "WAIST", "name": "巨戟龙腰甲β", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的垒鳞 x6", "超重质龙骨油 x5", "巨戟龙的刺钉尾 x2"]}
+{"series_id": "巨戟龙β", "parts_type": "LEG", "name": "巨戟龙护腿β", "materials": ["巨戟龙狩猎证 S x1", "巨戟龙的筋纤翼 x5", "巨戟龙的砦壳 x4", "巨戟龙的巨爪 x3"]}
 {"series_id": "煌雷龙γ", "parts_type": "HELM", "name": "煌雷龙头盔γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x5", "煌雷龙的雷电角 x3", "龙玉 x2"]}
 {"series_id": "煌雷龙γ", "parts_type": "BODY", "name": "煌雷龙铠甲γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的坚壳 x6", "煌雷龙的苍雷晶爪 x3", "煌雷龙的逆鳞 x2"]}
 {"series_id": "煌雷龙γ", "parts_type": "ARM", "name": "煌雷龙腕甲γ", "materials": ["煌雷龙狩猎证 γ x1", "煌雷龙的上等鳞 x3", "煌雷龙的苍雷晶爪 x4", "煌雷龙的雷玉 x1"]}
@@ -608,11 +608,11 @@
 {"series_id": "狱焰蛸γ", "parts_type": "ARM", "name": "狱焰蛸腕甲γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x3", "狱焰蛸的浓油膜 x4", "狱焰蛸的炎玉 x1"]}
 {"series_id": "狱焰蛸γ", "parts_type": "WAIST", "name": "狱焰蛸腰甲γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等皮 x5", "狱焰蛸的暴触手 x3", "狱焰蛸的炎玉 x1"]}
 {"series_id": "狱焰蛸γ", "parts_type": "LEG", "name": "狱焰蛸护腿γ", "materials": ["狱焰蛸狩猎证γ x1", "狱焰蛸的上等棘 x6", "狱焰蛸的浓油膜 x4", "狱焰蛸的髓液 x2"]}
-{"series_id": "冻峰龙γ", "parts_type": "HELM", "name": "冻峰龙头盔γ", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "冻峰龙γ", "parts_type": "BODY", "name": "冻峰龙铠甲γ", "materials": [" x1", "冻峰龙的坚壳 x6", "冻峰龙的尖爪 x3", "冻峰龙的尾巴 x2"]}
-{"series_id": "冻峰龙γ", "parts_type": "ARM", "name": "冻峰龙腕甲γ", "materials": [" x1", "冻峰龙的层角 x3", "冻峰龙的尾巴 x3", "雪光金属 x3"]}
-{"series_id": "冻峰龙γ", "parts_type": "WAIST", "name": "冻峰龙腰甲γ", "materials": [" x1", "冻峰龙的尖爪 x4", "冻峰龙的冻凝壳 x3", "冻峰龙的冰玉 x1"]}
-{"series_id": "冻峰龙γ", "parts_type": "LEG", "name": "冻峰龙护腿γ", "materials": [" x1", "冻峰龙的上等鳞 x6", "冻峰龙的坚壳 x4", "龙玉 x2"]}
+{"series_id": "冻峰龙γ", "parts_type": "HELM", "name": "冻峰龙头盔γ", "materials": ["冻峰龙狩猎证γ x1", "冻峰龙的上等鳞 x6", "冻峰龙的层角 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "冻峰龙γ", "parts_type": "BODY", "name": "冻峰龙铠甲γ", "materials": ["冻峰龙狩猎证γ x1", "冻峰龙的坚壳 x6", "冻峰龙的尖爪 x3", "冻峰龙的尾巴 x2"]}
+{"series_id": "冻峰龙γ", "parts_type": "ARM", "name": "冻峰龙腕甲γ", "materials": ["冻峰龙狩猎证γ x1", "冻峰龙的层角 x3", "冻峰龙的尾巴 x3", "雪光金属 x3"]}
+{"series_id": "冻峰龙γ", "parts_type": "WAIST", "name": "冻峰龙腰甲γ", "materials": ["冻峰龙狩猎证γ x1", "冻峰龙的尖爪 x4", "冻峰龙的冻凝壳 x3", "冻峰龙的冰玉 x1"]}
+{"series_id": "冻峰龙γ", "parts_type": "LEG", "name": "冻峰龙护腿γ", "materials": ["冻峰龙狩猎证γ x1", "冻峰龙的上等鳞 x6", "冻峰龙的坚壳 x4", "龙玉 x2"]}
 {"series_id": "落樱缤纷α", "parts_type": "HELM", "name": "落樱缤纷【武士头部】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x3"]}
 {"series_id": "落樱缤纷α", "parts_type": "BODY", "name": "落樱缤纷【武士礼服】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x1"]}
 {"series_id": "落樱缤纷α", "parts_type": "ARM", "name": "落樱缤纷【武士臂甲】α", "materials": ["祭典票券【花舞】 x1", "灵鹤石 x2"]}
@@ -643,16 +643,16 @@
 {"series_id": "收获α", "parts_type": "ARM", "name": "收获手套α", "materials": ["收获票 x1", "风铗龙的上等飞膜 x3", "怪物浓液 x2", "漆黑的油骨 x1"]}
 {"series_id": "收获α", "parts_type": "WAIST", "name": "收获护裙α", "materials": ["收获票 x1", "风铗龙的上等鳞 x5", "风铗龙的上等皮 x5", "尖龙骨 x1"]}
 {"series_id": "收获α", "parts_type": "LEG", "name": "收获护腿α", "materials": ["收获票 x1", "风铗龙的上等尾爪 x3", "大地结晶 x5", "古老龙骨 x1"]}
-{"series_id": "祭典α", "parts_type": "HELM", "name": "祭典头盔α", "materials": [" x1", "璀璨水晶 x1"]}
-{"series_id": "祭典α", "parts_type": "BODY", "name": "祭典铠甲α", "materials": [" x1", "白鸠石 x3"]}
-{"series_id": "祭典α", "parts_type": "ARM", "name": "祭典腕甲α", "materials": [" x1", "光水晶 x1"]}
-{"series_id": "祭典α", "parts_type": "WAIST", "name": "祭典腰甲α", "materials": [" x1", "白鸠石 x3"]}
-{"series_id": "祭典α", "parts_type": "LEG", "name": "祭典护腿α", "materials": [" x1", "光水晶 x1"]}
-{"series_id": "猎户星α", "parts_type": "HELM", "name": "猎户星头饰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x6", "兽玉 x1"]}
-{"series_id": "猎户星α", "parts_type": "BODY", "name": "猎户星服饰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x9", "雪狮子王的锐牙 x4"]}
-{"series_id": "猎户星α", "parts_type": "ARM", "name": "猎户星腕甲α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x5", "兽玉 x1"]}
-{"series_id": "猎户星α", "parts_type": "WAIST", "name": "猎户星护腰α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x7", "雪狮子王的尾巴 x3"]}
-{"series_id": "猎户星α", "parts_type": "LEG", "name": "猎户星靴α", "materials": [" x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x8", "雪狮子王的胡须 x5"]}
+{"series_id": "祭典α", "parts_type": "HELM", "name": "祭典头盔α", "materials": ["祭典票券【祝谣】 x1", "璀璨水晶 x1"]}
+{"series_id": "祭典α", "parts_type": "BODY", "name": "祭典铠甲α", "materials": ["祭典票券【祝谣】 x1", "白鸠石 x3"]}
+{"series_id": "祭典α", "parts_type": "ARM", "name": "祭典腕甲α", "materials": ["祭典票券【祝谣】 x1", "光水晶 x1"]}
+{"series_id": "祭典α", "parts_type": "WAIST", "name": "祭典腰甲α", "materials": ["祭典票券【祝谣】 x1", "白鸠石 x3"]}
+{"series_id": "祭典α", "parts_type": "LEG", "name": "祭典护腿α", "materials": ["祭典票券【祝谣】 x1", "光水晶 x1"]}
+{"series_id": "猎户星α", "parts_type": "HELM", "name": "猎户星头饰α", "materials": ["猎户星票 x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x6", "兽玉 x1"]}
+{"series_id": "猎户星α", "parts_type": "BODY", "name": "猎户星服饰α", "materials": ["猎户星票 x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x9", "雪狮子王的锐牙 x4"]}
+{"series_id": "猎户星α", "parts_type": "ARM", "name": "猎户星腕甲α", "materials": ["猎户星票 x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x5", "兽玉 x1"]}
+{"series_id": "猎户星α", "parts_type": "WAIST", "name": "猎户星护腰α", "materials": ["猎户星票 x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x7", "雪狮子王的尾巴 x3"]}
+{"series_id": "猎户星α", "parts_type": "LEG", "name": "猎户星靴α", "materials": ["猎户星票 x1", "历战狩猎之证Ⅲ x1", "雪狮子王的刚毛 x8", "雪狮子王的胡须 x5"]}
 {"series_id": "豪鬼α", "parts_type": "HELM", "name": "鬼之念珠α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
 {"series_id": "豪鬼α", "parts_type": "BODY", "name": "鬼之外衣α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
 {"series_id": "豪鬼α", "parts_type": "ARM", "name": "鬼之草绳α", "materials": ["该装备为套装装备，只需SF6 票 x5, 赫猿兽的上等鳞 x3, 大赫炎结晶 x1即可获得整套装备"]}
@@ -687,7 +687,7 @@
 {"series_id": "泪滴墨镜α", "parts_type": "HELM", "name": "泪滴墨镜α", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的头 x2", "璀璨水晶 x1"]}
 {"series_id": "猫眼眼镜α", "parts_type": "HELM", "name": "猫眼眼镜α", "materials": ["梦灯样册 x2", "历战狩猎之证Ⅲ x2", "毒怪鸟的翼 x4", "鸟龙玉 x1"]}
 {"series_id": "骷髅面罩α", "parts_type": "HELM", "name": "骷髅面罩α", "materials": ["骷髅票 x3", "毒怪鸟的头 x2", "影蜘蛛的坚壳 x5", "狂龙结晶碎片 x5"]}
-{"series_id": "祝福腰饰α", "parts_type": "WAIST", "name": "祝福腰饰α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的翼 x3", "火龙的翼 x3"]}
-{"series_id": "分析之眼α", "parts_type": "HELM", "name": "分析之眼α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "护火龙的上等鳞 x5", "护火龙的红玉 x1"]}
-{"series_id": "炫光护目镜α", "parts_type": "HELM", "name": "炫光护目镜α", "materials": [" x2", "历战狩猎之证Ⅲ x2", "火龙的上等鳞 x5", "火龙的红玉 x1"]}
-{"series_id": "精力充沛森狸人α", "parts_type": "HELM", "name": "精力充沛森狸人α", "materials": [" x3", "历战狩猎之证Ⅲ x3", "泡狐龙的水玉 x1", "沙海龙的黑珍珠 x2"]}
+{"series_id": "祝福腰饰α", "parts_type": "WAIST", "name": "祝福腰饰α", "materials": ["祝谣样册 x2", "历战狩猎之证Ⅲ x2", "护火龙的翼 x3", "火龙的翼 x3"]}
+{"series_id": "分析之眼α", "parts_type": "HELM", "name": "分析之眼α", "materials": ["祝谣样册 x2", "历战狩猎之证Ⅲ x2", "护火龙的上等鳞 x5", "护火龙的红玉 x1"]}
+{"series_id": "炫光护目镜α", "parts_type": "HELM", "name": "炫光护目镜α", "materials": ["祝谣样册 x2", "历战狩猎之证Ⅲ x2", "火龙的上等鳞 x5", "火龙的红玉 x1"]}
+{"series_id": "精力充沛森狸人α", "parts_type": "HELM", "name": "精力充沛森狸人α", "materials": ["森狸人的珍藏 x3", "历战狩猎之证Ⅲ x3", "泡狐龙的水玉 x1", "沙海龙的黑珍珠 x2"]}
