@@ -1,11 +1,11 @@
-from langgraph.graph import StateGraph, START, END
-from langchain_core.messages import HumanMessage
-
-from agent.nodes import route_node, retrieve_node, analyze_node, generate_node, should_continue
+"""
+agent/graph.py —— 入口，节点与建图实现在 agent/nodes1.py（加固版）
+"""
 from agent.state import AgentState
-from agent.tracker import AgentTracker, set_tracker
+from langgraph.graph import StateGraph,START,END
+from langchain_core.messages import HumanMessage
+from agent.nodes import route_node, retrieve_node, analyze_node, generate_node,should_continue
 
-# 构建图
 builder = StateGraph(AgentState)
 
 builder.add_node("route", route_node)
@@ -23,29 +23,17 @@ builder.add_conditional_edges(
     {
         "continue": "retrieve",
         "finish": "generate",
-    }
+    },
 )
 
 builder.add_edge("generate", END)
 
 graph = builder.compile()
 
-
-def run_with_tracking(user_question: str) -> dict:
-    """带追踪地跑一次完整查询。即使崩溃也会把 trace 写进日志。"""
-    tracker = AgentTracker()
-    set_tracker(tracker)
-    try:
-        return graph.invoke({
-            "user_question": user_question,
-            "messages": [HumanMessage(content=user_question)],
-        })
-    finally:
-        tracker.flush_to_log()  # 无论成功失败，都记录
-        print(tracker.summarize())  # 人类可读摘要，一眼看出几轮/最慢节点
-
-
 if __name__ == "__main__":
-    user_question = "巨戟龙的头要怎么做，需要什么素材，怎么获得需要的素材？"
-    final_state = run_with_tracking(user_question)
-    print(final_state["final_answer"])
+    while(1):
+        a=input("请输入你的回答:  （exit退出）",) or "锁刃龙太刀怎么做？素材怎么获得？怎么打？"
+        if a== "exit":
+            break
+        state = graph.invoke({"messages": [HumanMessage(content=a)]})
+        print(state["final_answer"])

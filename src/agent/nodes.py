@@ -1,52 +1,54 @@
 """
-agent/nodes.py —— LangGraph 的四个节点 + 条件边函数（加固 + 追踪版）
+agent/nodes.py —— 干净版节点：路由 / 检索 / 分析 / 生成（无追踪、无重试、无评估）
 """
 
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+import json
 
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from agent.state import AgentState, RAGResult
-from agent.chatllm import llm
-from agent.prompts.prompt import ROUTE_PROMPT, ANALYZE_PROMPT, GENERATE_PROMPT
-from agent.config import get_config
-from agent.logger import get_logger
-from agent.retry import safe_json_parse, retry_call
-from agent.tracker import track_node
-from agent.evaluator import check_empty_answer, check_named_entity_overlap
-from agent.rag import EquipmentCraftingRAG, ItemDataRAG, MonsterDataRAG
+from models.chatllm import get_llm
+from prompts.prompt import ROUTE_PROMPT, ANALYZE_PROMPT, GENERATE_PROMPT
+from mhwi_agent.config import get_config
+from mhwi_agent.logger import get_logger
+from rag import mainrag
 
 logger = get_logger("nodes")
 
 
+def _invoke(system_prompt: str, user_content: str) -> str:
+    """单次 LLM 调用，返回文本。"""
+    llm = get_llm()
+    return llm.invoke([
+        SystemMessage(content=system_prompt),
+        HumanMessage(content=user_content),
+    ]).content
+
+
+def _parse_json(text: str, fallback: dict) -> dict:
+    try:
+        result = json.loads(text)
+        return result if isinstance(result, dict) else fallback
+    except (json.JSONDecodeError, TypeError):
+        return fallback
+
+
 # ── 路由节点 ──────────────────────────────────────────────
 def route_node(state: AgentState) -> dict:
-    return track_node("route", _route_impl, state)
-
-
-def _route_impl(state: AgentState) -> dict:
-    user_msg = state["messages"][-1].content
+    user_msg = state["messages"][-1].content  #这里起步的时候是个什么值？
     logger.info("开始路由", extra={"question": user_msg[:100]})
 
-    def _call_llm():
-        return llm.invoke([
-            SystemMessage(content=ROUTE_PROMPT),
-            HumanMessage(content=user_msg),
-        ])
-
     try:
-        response = retry_call(_call_llm, max_retries=2)
-        result = safe_json_parse(
-            response.content,
-            required_keys=["first_db", "first_keyword"],
-            fallback={"first_db": "equipment", "first_keyword": user_msg},
-        )
+        result = _parse_json(_invoke(ROUTE_PROMPT, user_msg), {})
+        first_db = result["first_db"]
+        first_keyword = result["first_keyword"]
     except Exception as e:
-        logger.error("路由 LLM 彻底失败，使用默认路由", extra={"error": str(e)})
-        result = {"first_db": "equipment", "first_keyword": user_msg}
+        logger.error("路由失败，使用默认路由", extra={"error": str(e)})
+        first_db, first_keyword = "equipment", user_msg
 
     return {
         "user_question": user_msg,
-        "current_db": result["first_db"],
-        "query_keyword": result["first_keyword"],
+        "current_db": first_db,
+        "query_keyword": first_keyword,
         "iteration_count": 0,
         "collected_info": [],
     }
@@ -61,11 +63,13 @@ def _get_rag(db: str):
         return _rag_cache[db]
     logger.info("首次加载数据库", extra={"db": db})
     if db == "equipment":
-        rag = EquipmentCraftingRAG()
-    elif db == "item":
-        rag = ItemDataRAG()
+        rag = mainrag.EquipmentCraftingRAG()
+    elif db == "weapon":
+        rag = mainrag.WeaponCraftingRAG()
+    elif db == "material":
+        rag = mainrag.MaterialInfoRAG()
     elif db == "monster":
-        rag = MonsterDataRAG()
+        rag = mainrag.MonsterInfoRAG()
     else:
         raise ValueError(f"未知数据库: {db}")
     rag.setup()
@@ -75,10 +79,6 @@ def _get_rag(db: str):
 
 # ── 检索节点 ──────────────────────────────────────────────
 def retrieve_node(state: AgentState) -> dict:
-    return track_node("retrieve", _retrieve_impl, state)
-
-
-def _retrieve_impl(state: AgentState) -> dict:
     db = state["current_db"]
     keyword = state["query_keyword"]
     iteration = state.get("iteration_count", 0)
@@ -110,40 +110,26 @@ def format_collected_info(collected_info: list) -> str:
 
 # ── 分析节点 ──────────────────────────────────────────────
 def analyze_node(state) -> dict:
-    return track_node("analyze", _analyze_impl, state)
-
-
-def _analyze_impl(state) -> dict:
     collected_text = format_collected_info(state["collected_info"])
 
-    def _call_llm():
-        return llm.invoke([
-            SystemMessage(content=ANALYZE_PROMPT),
-            HumanMessage(content=f"""
+    try:
+        result = _parse_json(_invoke(ANALYZE_PROMPT, f"""
 原始问题：{state["user_question"]}
 已检索轮次：{state["iteration_count"]}
 已收集信息：
 {collected_text}
 
 请判断是否需要继续检索，输出 JSON。
-"""),
-        ])
-
-    try:
-        response = retry_call(_call_llm, max_retries=2)
-        result = safe_json_parse(
-            response.content,
-            required_keys=["next_action"],
-            fallback={"next_action": "finish"},
-        )
+"""), {})
+        next_action = result["next_action"]
     except Exception as e:
-        logger.error("分析 LLM 失败，强制 finish", extra={"error": str(e)})
-        result = {"next_action": "finish"}
+        logger.error("分析失败，强制 finish", extra={"error": str(e)})
+        next_action = "finish"
 
-    if result["next_action"] == "continue":
+    if next_action == "continue":
         return {
             "next_action": "continue",
-            "current_db": result.get("next_db", "item"),
+            "current_db": result.get("next_db", "material"), # material为默认值
             "query_keyword": result.get("next_keyword", state["user_question"]),
         }
     else:
@@ -152,39 +138,20 @@ def _analyze_impl(state) -> dict:
 
 # ── 生成节点 ──────────────────────────────────────────────
 def generate_node(state: AgentState) -> dict:
-    return track_node("generate", _generate_impl, state)
-
-
-def _generate_impl(state: AgentState) -> dict:
     collected_text = format_collected_info(state["collected_info"])
 
-    def _call_llm():
-        return llm.invoke([
-            SystemMessage(content=GENERATE_PROMPT),
-            HumanMessage(content=f"""
+    try:
+        answer = _invoke(GENERATE_PROMPT, f"""
 玩家问题：{state["user_question"]}
 
 以下是从数据库检索到的相关信息：
 {collected_text}
 
 请根据以上信息，用自然、友好的语气回答玩家的问题。
-"""),
-        ])
-
-    try:
-        response = retry_call(_call_llm, max_retries=2)
-        answer = response.content
+""")
     except Exception as e:
-        logger.error("生成 LLM 失败，返回原始检索内容", extra={"error": str(e)})
+        logger.error("生成失败，返回原始检索内容", extra={"error": str(e)})
         answer = collected_text
-
-    # grounding guard：回答里的【实体】能否在检索内容中找到
-    if not check_empty_answer(answer):
-        retrieved_texts = [r["content"] for r in state["collected_info"]]
-        coverage = check_named_entity_overlap(answer, retrieved_texts)
-        logger.info("回答实体覆盖率", extra={"coverage": round(coverage, 2)})
-        if coverage < 0.5:
-            answer += "\n\n（提示：以上部分信息可能未在资料库中核实，请以游戏内实际为准。）"
 
     return {
         "final_answer": answer,

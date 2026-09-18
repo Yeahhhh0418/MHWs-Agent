@@ -206,7 +206,7 @@ class MaterialInfoRAG(BaseRAG):
 
 if __name__ == "__main__":
     # 测试加载装备数据
-    """
+    #"""
     rag = EquipmentCraftingRAG()
     rag.setup()
     docs = rag.retrieve("巨戟龙套怎么制作")
@@ -216,7 +216,7 @@ if __name__ == "__main__":
     print(f"{'─'*50}")
     print(f"共检索到 {len(docs)} 条结果")
     print(rag("巨戟龙套怎么制作"))
-    """
+    #"""
 
     """
     rag2 = WeaponCraftingRAG()
@@ -231,7 +231,7 @@ if __name__ == "__main__":
     """
 
 
-    #"""
+    """
     rag3 = MonsterInfoRAG()
     rag3.setup()
     docs = rag3.retrieve("护锁刃龙")
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     print(f"{'─'*50}")
     print(f"共检索到 {len(docs)} 条结果")
     print(rag3("护锁刃龙"))
-    #"""
+    """
 
     """
     rag4 = MaterialInfoRAG()

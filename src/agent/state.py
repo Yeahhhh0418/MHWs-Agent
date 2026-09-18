@@ -4,7 +4,7 @@ import operator
 
 class RAGResult(TypedDict):
     """单次 RAG 检索的结果"""
-    db: str              # "equipment" | "item" | "monster"
+    db: str              
     keyword: str         # 本次检索的关键词
     content: str         # 检索到的内容（RAG 返回的文本）
 

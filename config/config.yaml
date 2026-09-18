@@ -22,13 +22,13 @@ embedding:
 
 retrieval:
   equipment:
-    bm25_k: 3
-    vector_k: 8
+    bm25_k: 4
+    vector_k: 12
     vector_score_threshold: 0.4   # ← 新增，值待标定，先随便填
     bm25_weight: 0.5
     vector_weight: 0.5
     rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
-    ensemble_top_n: 6    # 融合后真正保留的条数
+    ensemble_top_n: 12    # 融合后真正保留的条数
   weapon:
     bm25_k: 4
     vector_k: 10
