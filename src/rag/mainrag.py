@@ -22,6 +22,7 @@ def load_jsonl(file_path: str) -> list:
 
 class EquipmentCraftingRAG(BaseRAG):
     _DB_NAME = "equipment"
+    _ID_FIELDS = ("series_id","parts_type")
     RAG_PROMPT_TEMPLATE = EQUIPMENTRAG_PROMPT
         # 字段含义映射：key → 中文描述
     FIELD_LABELS = {
@@ -74,6 +75,7 @@ class EquipmentCraftingRAG(BaseRAG):
 
 class WeaponCraftingRAG(BaseRAG):
     _DB_NAME = "weapon"
+    _ID_FIELDS = ("WeaponType","Name")
     RAG_PROMPT_TEMPLATE = WEAPONRAG_PROMPT
     FIELD_LABELS = {
         "Name": "武器名称",
@@ -110,6 +112,7 @@ class WeaponCraftingRAG(BaseRAG):
 
 class MonsterInfoRAG(BaseRAG):
     _DB_NAME = "monster"
+    _ID_FIELDS = ("EnemyName",)
     RAG_PROMPT_TEMPLATE = MONSTERRAG_PROMPT
 
     # 常规字段的中文标签
@@ -171,6 +174,7 @@ class MonsterInfoRAG(BaseRAG):
 
 class MaterialInfoRAG(BaseRAG):
     _DB_NAME = "material"
+    _ID_FIELDS = ("RawName",)
     RAG_PROMPT_TEMPLATE = MATERIALRAG_PROMPT
     FIELD_LABELS = {
         "RawName": "素材名称",

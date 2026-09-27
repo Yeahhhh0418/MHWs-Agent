@@ -22,30 +22,35 @@ class BaseRAG(ABC):
 
     # 内部主键名（去重用的货号）
     _ID_KEY = "_doc_id"
-
+    _ID_FIELDS = ()  #子类声明用哪几个字段拼编号
     def __init__(self):
         cfg = get_config()
-        r = cfg["retrieval"][self._DB_NAME]  #这一行是什么意思呢?
+        r = cfg["retrieval"][self._DB_NAME]   
+
+        self._data_path = cfg["paths"][f"{self._DB_NAME}_data"]
+        self._persist_dir = cfg["paths"][f"{self._DB_NAME}_persist"]
+
+        self._embedding_model = cfg["embedding"]["model"]
+        self._device = cfg["embedding"].get("device", "cpu")
+        self._normalize = cfg["embedding"].get("normalize", True)
+
         self._bm25_k = r["bm25_k"]
         self._vector_k = r["vector_k"]
         self._bm25_weight = r["bm25_weight"]
         self._vector_weight = r["vector_weight"]
         self._rrf_c = r["rrf_c"]                      # RRF 平滑常数（不是返回条数）
         self._ensemble_top_n = r["ensemble_top_n"]    # 融合后真正保留的条数
-        self._data_path = cfg["paths"][f"{self._DB_NAME}_data"]
-        self._persist_dir = cfg["paths"][f"{self._DB_NAME}_persist"]
-        self._embedding_model = cfg["embedding"]["model"]
-        self._device = cfg["embedding"].get("device", "cpu")
-        self._normalize = cfg["embedding"].get("normalize", True)
         self._vector_score_threshold = r["vector_score_threshold"]
 
         self.is_ready = False
+
         self._llm = None
-        self._docs = []   
-        self._vectorstore = None
-        self._chain = None
-        self._retriever = None
         self._embeddings = None
+
+        self._docs = []
+        self._vectorstore = None
+        self._retriever = None
+        self._chain = None
 
     def setup(self) -> "BaseRAG":
         load_dotenv()
@@ -69,20 +74,10 @@ class BaseRAG(ABC):
         pass
 
     def _assign_doc_ids(self) -> None:
-        """给每条 Document 编一个货号 _doc_id，用行号。
-
-        为什么需要货号：混合检索的两路（BM25 现场建的索引 / 持久化的向量库）
-        会把同一条数据各捞一次，得靠货号认出「这俩是同一件」才能去掉重复。
-        没有货号时它只能比对正文文字，文字一变（比如 HELM → 头盔）就认不出来。
-
-        用行号是因为：货号只在入库时算一次并写进库里、之后不再重算，所以它
-        只要「不重复」就够了，不需要有含义。行号天然不重复，也就不存在挑错
-        字段把多条数据错并成一条的风险。
-
-        前提：_load_data 每次读数据都得到同样的顺序（逐行读文件满足这点）。
-        """
-        for i, doc in enumerate(self._docs):
-            doc.metadata[self._ID_KEY] = f"{self._DB_NAME}-{i}"
+        """给每条 Document 编一个货号 _doc_id。"""
+        for doc in self._docs:
+            parts = [str(doc.metadata[f]) for f in self._ID_FIELDS]
+            doc.metadata[self._ID_KEY] = f"{self._DB_NAME}|" + "|".join(parts)
 
     def _init_vectorstore(self):
         """构建或加载 Chroma 向量库。

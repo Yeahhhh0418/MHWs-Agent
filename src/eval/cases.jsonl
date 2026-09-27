@@ -1,0 +1,8 @@
+{"question": "赤翼Ⅰ需要什么素材？", "required_doc_ids": ["weapon|大剑|赤翼Ⅰ"], "required_units": ["武器:赤翼Ⅰ→素材4种"], "key_facts": ["火龙的坚壳×5", "火龙的翼×4", "火龙的延髓×1", "火龙狩猎证S×2"], "difficulty": "single-hop", "tags": ["weapon"]}
+{"question": "煌雷剑Ⅰ需要什么素材？", "required_doc_ids": ["weapon|单手剑|煌雷剑Ⅰ"], "required_units": ["武器:煌雷剑Ⅰ→素材3种"], "key_facts": ["煌雷龙的鳞×3", "煌雷龙的雷晶爪×2", "煌雷龙的电角×1"], "difficulty": "single-hop", "tags": ["weapon"]}
+{"question": "想做火龙大剑，得去打什么怪？", "required_doc_ids": ["weapon|大剑|火龙大剑"], "required_units": ["武器:火龙大剑→主题:火龙衍生→怪物:火龙"], "key_facts": ["火龙"], "difficulty": "two-hop", "tags": ["weapon"]}
+{"question": "波涛双棍Ⅰ要打什么怪才能做？", "required_doc_ids": ["weapon|双剑|波涛双棍Ⅰ"], "required_units": ["武器:波涛双棍Ⅰ→主题:波衣龙衍生→怪物:波衣龙"], "key_facts": ["波衣龙"], "difficulty": "two-hop", "tags": ["weapon"]}
+{"question": "火龙头盔α需要什么素材？", "required_doc_ids": ["equipment|火龙α|HELM"], "required_units": ["防具:火龙头盔α→素材3种"], "key_facts": ["火龙的上等鳞×5", "火龙的翼×3", "尖龙骨×3"], "difficulty": "single-hop", "tags": ["equipment"]}
+{"question": "火龙的坚壳是什么？", "required_doc_ids": ["material|火龙的坚壳"], "required_units": ["素材:火龙的坚壳→说明"], "key_facts": ["火龙的坚固甲壳"], "difficulty": "single-hop", "tags": ["material"]}
+{"question": "雌火龙是什么种类的怪物？", "required_doc_ids": ["monster|雌火龙"], "required_units": ["怪物:雌火龙→种类"], "key_facts": ["飞龙种"], "difficulty": "single-hop", "tags": ["monster"]}
+{"question": "火龙这个怪要怎么打？", "required_doc_ids": ["monster|火龙"], "required_units": ["怪物:火龙→攻略提示"], "key_facts": ["用闪光使其目眩", "雌火龙可能赶来支援"], "difficulty": "single-hop", "tags": ["monster"]}

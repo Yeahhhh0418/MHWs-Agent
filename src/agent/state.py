@@ -7,6 +7,7 @@ class RAGResult(TypedDict):
     db: str              
     keyword: str         # 本次检索的关键词
     content: str         # 检索到的内容（RAG 返回的文本）
+    doc_ids: list[str]   # 这一轮命中的文档编号
 
 class AgentState(TypedDict):
     # ── 对话 ──

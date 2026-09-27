@@ -85,12 +85,21 @@ def retrieve_node(state: AgentState) -> dict:
 
     try:
         rag = _get_rag(db)
-        content = rag.query(keyword)
+        docs = rag.retrieve(keyword)
+
+        parts = []
+        doc_ids = []
+        for doc in docs:
+            parts.append(doc.page_content)
+            doc_ids.append(doc.metadata["_doc_id"])
+
+        content = "\n\n".join(parts)
     except Exception as e:
         logger.error("检索失败，使用占位内容", extra={"db": db, "error": str(e)})
         content = f"（数据库 {db} 检索失败，暂时跳过）"
+        doc_ids = []
 
-    new_result = RAGResult(db=db, keyword=keyword, content=content)
+    new_result = RAGResult(db=db, keyword=keyword, content=content,doc_ids=doc_ids)
     return {
         "collected_info": [new_result],
         "iteration_count": iteration + 1,
