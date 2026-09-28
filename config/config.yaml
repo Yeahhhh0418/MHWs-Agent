@@ -40,8 +40,8 @@ retrieval:
   monster:
     bm25_k: 3
     vector_k: 8
-    bm25_weight: 0.5
-    vector_weight: 0.5
+    bm25_weight: 0
+    vector_weight: 1
     vector_score_threshold: 0.4
     rrf_c: 60            # RRF 平滑常数，越大越弱化排名差异
     ensemble_top_n: 6    # 融合后真正保留的条数
@@ -57,7 +57,7 @@ retrieval:
 paths:
   equipment_data: data/Equipment_Crafting_Table.jsonl
   material_data: data/Material_info_Table.jsonl
-  monster_data: data/Monster_info_Table.jsonl
+  monster_data: data/monster.md
   weapon_data: data/Weapon_Crafting_Table.jsonl
   equipment_persist: storage/mh_equipment_chroma_db
   material_persist: storage/mh_material_chroma_db

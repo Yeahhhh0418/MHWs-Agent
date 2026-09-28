@@ -3,6 +3,16 @@
 {"question": "想做火龙大剑，得去打什么怪？", "required_doc_ids": ["weapon|大剑|火龙大剑"], "required_units": ["武器:火龙大剑→主题:火龙衍生→怪物:火龙"], "key_facts": ["火龙"], "difficulty": "two-hop", "tags": ["weapon"]}
 {"question": "波涛双棍Ⅰ要打什么怪才能做？", "required_doc_ids": ["weapon|双剑|波涛双棍Ⅰ"], "required_units": ["武器:波涛双棍Ⅰ→主题:波衣龙衍生→怪物:波衣龙"], "key_facts": ["波衣龙"], "difficulty": "two-hop", "tags": ["weapon"]}
 {"question": "火龙头盔α需要什么素材？", "required_doc_ids": ["equipment|火龙α|HELM"], "required_units": ["防具:火龙头盔α→素材3种"], "key_facts": ["火龙的上等鳞×5", "火龙的翼×3", "尖龙骨×3"], "difficulty": "single-hop", "tags": ["equipment"]}
+{"question": "火龙腰甲α需要什么素材？", "required_doc_ids": ["equipment|火龙α|WAIST"], "required_units": ["防具:火龙腰甲α→素材4种"], "key_facts": ["火龙的坚壳×3", "火龙的延髓×1", "红莲石×2", "火龙狩猎证S×2"], "difficulty": "single-hop", "tags": ["equipment"]}
 {"question": "火龙的坚壳是什么？", "required_doc_ids": ["material|火龙的坚壳"], "required_units": ["素材:火龙的坚壳→说明"], "key_facts": ["火龙的坚固甲壳"], "difficulty": "single-hop", "tags": ["material"]}
-{"question": "雌火龙是什么种类的怪物？", "required_doc_ids": ["monster|雌火龙"], "required_units": ["怪物:雌火龙→种类"], "key_facts": ["飞龙种"], "difficulty": "single-hop", "tags": ["monster"]}
-{"question": "火龙这个怪要怎么打？", "required_doc_ids": ["monster|火龙"], "required_units": ["怪物:火龙→攻略提示"], "key_facts": ["用闪光使其目眩", "雌火龙可能赶来支援"], "difficulty": "single-hop", "tags": ["monster"]}
+{"question": "煌雷龙的雷晶爪是什么？", "required_doc_ids": ["material|煌雷龙的雷晶爪"], "required_units": ["素材:煌雷龙的雷晶爪→说明"], "key_facts": ["煌雷龙翼上的爪状发电器官", "苍雷晶刃"], "difficulty": "single-hop", "tags": ["material"]}
+{"question": "雌火龙是什么种类的怪物？", "required_doc_ids": ["monster|雌火龙|基本信息"], "required_units": ["怪物:雌火龙→种类"], "key_facts": ["飞龙种"], "difficulty": "single-hop", "tags": ["monster"]}
+{"question": "火龙这个怪要怎么打？", "required_doc_ids": ["monster|火龙|狩猎提示"], "required_units": ["怪物:火龙→攻略提示"], "key_facts": ["用闪光使其目眩", "雌火龙可能赶来支援"], "difficulty": "single-hop", "tags": ["monster"]}
+{"question": "护火龙的生态是怎样的？", "required_doc_ids": ["monster|护火龙|生态特征"], "required_units": ["怪物:护火龙→生态特征"], "key_facts": ["古代文明创造出的造龙种", "没有生殖能力，靠摄取龙乳", "飞行能力与原种同等优秀"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "雌火龙这个怪要怎么打？", "required_doc_ids": ["monster|雌火龙|狩猎提示"], "required_units": ["怪物:雌火龙→狩猎提示"], "key_facts": ["尾巴上的棘有致命毒素", "切断尾巴能限制攻击范围", "喷火后口内变软成为弱点"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "护火龙这个怪要怎么打？", "required_doc_ids": ["monster|护火龙|狩猎提示"], "required_units": ["怪物:护火龙→狩猎提示"], "key_facts": ["利爪攻击带护龙能量、会引发爆炸", "能量接触龙乳会形成结晶", "属性投射器弹药有效"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "微型欧米茄是什么怪物？", "required_doc_ids": ["monster|微型欧米茄|怪物描述"], "required_units": ["怪物:微型欧米茄→怪物描述"], "key_facts": ["游星欧米茄生成的小型机体", "通过自爆进行攻击", "对声音极为敏感"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "游星欧米茄是什么怪物？", "required_doc_ids": ["monster|游星欧米茄|怪物描述"], "required_units": ["怪物:游星欧米茄→怪物描述"], "key_facts": ["通过时空狭缝来到封禁之地", "一台欧米茄框架", "为寻求更强大的生命"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "雷甲龙♀是什么种类的怪物？", "required_doc_ids": ["monster|雷甲龙♀|基本信息"], "required_units": ["怪物:雷甲龙♀→种类"], "key_facts": ["草食种", "小型怪物"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "盾突龙（家畜种）是什么怪物？", "required_doc_ids": ["monster|盾突龙（家畜种）|怪物描述"], "required_units": ["怪物:盾突龙（家畜种）→怪物描述"], "key_facts": ["作为家畜饲养的草食种怪物", "除了产毛产乳，也能用于拉货"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
+{"question": "天空王者是谁？", "required_doc_ids": ["monster|火龙|怪物描述"], "required_units": ["怪物:火龙→别称"], "key_facts": ["火龙", "别称天空王者"], "difficulty": "single-hop", "tags": ["monster", "混淆回归"]}
