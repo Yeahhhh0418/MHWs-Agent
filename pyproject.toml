@@ -1,16 +1,42 @@
 [project]
 name = "mhwi-agent"
 version = "0.1.0"
-description = "Add your description here"
+description = "《怪物猎人：荒野》攻略问答 Agent：LangGraph 编排 + 四个知识库的混合检索"
 readme = "README.md"
 authors = [
     { name = "huye", email = "1569703607@qq.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    # LLM 与编排
+    "langchain>=1.3",
+    "langchain-core>=1.5",
+    "langchain-openai>=1.4",      # 主模型和备用模型都走 OpenAI 兼容协议，见 config 的 base_url
+    "langgraph>=1.2",
+
+    # 检索
+    "langchain-community>=0.4",   # BM25Retriever
+    "langchain-classic>=1.0",     # EnsembleRetriever（RRF 融合）
+    "langchain-chroma>=1.1",
+    "langchain-huggingface>=1.2",
+    "sentence-transformers>=5.6", # 本地 BGE 向量；langchain-huggingface 不会自动带它
+    "langchain-text-splitters>=1.1",
+    "rank-bm25>=0.2",             # BM25Retriever 把它当可选依赖，不显式列会缺
+
+    # 基础设施
+    "python-dotenv>=1.2",         # 包名是这个，不是 PyPI 上那个 dotenv
+    "pyyaml>=6.0",
+    "colorlog>=6.12",
+]
 
 [project.scripts]
-mhwi-agent = "mhwi_agent:main"
+# 必须写到函数一层：写成 "mhwi_agent:main" 会拿到 mhwi_agent.main 这个模块，不是函数
+mhwi-agent = "mhwi_agent.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.0,<0.13.0"]
