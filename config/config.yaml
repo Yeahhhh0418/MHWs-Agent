@@ -68,10 +68,6 @@ paths:
 graph:
   max_iterations: 5
 
-logging:
-  level: INFO
-  format: json
-  file: logs/agent.log
 
 
         

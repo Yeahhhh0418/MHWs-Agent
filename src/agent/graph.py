@@ -1,6 +1,3 @@
-"""
-agent/graph.py —— 入口，节点与建图实现在 agent/nodes1.py（加固版）
-"""
 from agent.state import AgentState
 from langgraph.graph import StateGraph,START,END
 from langchain_core.messages import HumanMessage

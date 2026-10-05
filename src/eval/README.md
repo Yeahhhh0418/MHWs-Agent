@@ -12,7 +12,7 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 1. `cases.jsonl` 是你手写的题库
 2. `run_eval.py` 逐条把 `question` 丢给 Agent
 3. Agent 正常跑一遍，脚本从过程中抓出答案、命中的编号、路由、轮数
-4. 拿命中的编号和题库要求的编号对比，算覆盖率
+4. 拿命中的编号和题库要求的编号对比，算召回率
 5. 结果存进 `results/时间戳.jsonl`，跑一次存一个
 
 ## 题库字段（cases.jsonl，一行一条题）
@@ -23,7 +23,7 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 
 ### required_doc_ids
 这道题**必须命中**哪几条数据，写程序里的真编号（形如 `weapon|大剑|赤翼Ⅰ`）。
-**这是算覆盖率的唯一依据。** 编号必须和数据里一字不差——手打很容易出错，比如把罗马数字 `Ⅰ` 打成英文 `I`，看着一样，程序眼里毫不相干。
+**这是算召回率的唯一依据。** 编号必须和数据里一字不差——手打很容易出错，比如把罗马数字 `Ⅰ` 打成英文 `I`，看着一样，程序眼里毫不相干。
 **系统读：是。**
 
 ### required_units
@@ -53,7 +53,7 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 
 ### retrieved_doc_ids
 这次跑下来，所有轮次里实际命中的编号，拉平成一个列表。
-拿它和 `required_doc_ids` 求交集，就是覆盖率。
+拿它和 `required_doc_ids` 求交集，就是召回率。
 
 ### routed_dbs
 它去查了哪几个库，按顺序去重。用来判断路由对不对。
@@ -61,13 +61,13 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 ### iterations
 一共检索了几轮。轮数明显多，说明它在反复查，可能是在绕圈。
 
-### coverage
-覆盖率 = 命中的编号数 ÷ `required_doc_ids` 的条数。0 到 1 之间的小数。
+### recall
+召回率 = 命中的编号数 ÷ `required_doc_ids` 的条数。0 到 1 之间的小数。
 程序自动算。
 
 ### missing_doc_ids
 `required_doc_ids` 里没被命中的那些编号。
-**这个字段比覆盖率本身有用**——覆盖率只告诉你「丢了多少分」，它直接告诉你「丢的是哪一条」。
+**这个字段比召回率本身有用**——召回率只告诉你「丢了多少分」，它直接告诉你「丢的是哪一条」。
 
 ### human_score
 你自己填的分数。现在都是 `null`，等你填。
@@ -75,7 +75,7 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 ### fail_category
 你自己填的失败原因，五选一：
 
-- `coverage` —— 该找到的资料没找到
+- `recall` —— 该找到的资料没找到
 - `premature_stop` —— 该继续搜，它停了
 - `routing` —— 库选错了
 - `iteration` —— 绕太多圈
@@ -83,7 +83,7 @@ PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
 
 ## 三个指标
 
-1. **覆盖率**（程序自动算）—— 该拿的数据，拿到了没有
+1. **召回率**（程序自动算）—— 该拿的数据，拿到了没有
 2. **答案对不对**（人工，对着 `key_facts` 读）—— 还没开始填
 3. **该停的时候停没停**（人工，看 `iterations` 和 `fail_category`）—— 还没开始填
 

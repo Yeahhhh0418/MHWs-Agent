@@ -1,16 +1,21 @@
 """
-agent/logger.py —— 结构化日志模块
-用法：
-    from agent.logger import setup_logging, get_logger
-    setup_logging(level="INFO", fmt="json", log_file="logs/agent.log")
-    logger = get_logger(__name__)
-    logger.info("路由完成", extra={"first_db": "equipment", "keyword": "炎尾龙"})
+src/mhwi_agent/logger.py —— 结构化日志。
+
+控制台打带颜色的文本，同时往 log_file 里写一行一条的 JSON。
+初始化只在 models/chatllm.py 里做一次（级别和路径都写死在那儿），其余地方直接用：
+
+    from mhwi_agent.logger import get_logger
+
+    logger = get_logger("nodes.route")     # 名字随意，会挂在 mhwi. 命名空间下
+    logger.info("开始路由", extra={"question": "火龙怎么打"})
+
+extra 里的字段会并进 JSON 日志，控制台不显示。
 """
 
 import logging
 import sys
 import json
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Optional
 import colorlog
 
@@ -46,7 +51,6 @@ class _StructuredAdapter(logging.LoggerAdapter):
 
 def setup_logging(
     level: str = "INFO",
-    fmt: str = "json",
     log_file: Optional[str] = None,
 ) -> None:
     """初始化根 logger。全局调用一次即可（我们在 chatllm.py 里调用）。"""
@@ -55,30 +59,23 @@ def setup_logging(
     root.handlers.clear()
 
     console_handler = logging.StreamHandler(sys.stderr)
-    if colorlog:
-        # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
-        log_colors = {
-            'DEBUG': 'cyan',
-            'INFO': 'green',
-            'WARNING': 'yellow',
-            'ERROR': 'red',
-            'CRITICAL': 'bold_red',
-        }
-        formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s: %(message)s"
-        console_handler.setFormatter(colorlog.ColoredFormatter(
-            formatter_str,
-            datefmt="%H:%M:%S",
-            log_colors=log_colors,
-            reset=True,
-            style='%'
-        ))
-    else:
-        # 没装 colorlog 就用普通的
-        console_handler.setFormatter(logging.Formatter(
-            "[%(asctime)s] %(levelname)-8s %(name)s: %(message)s",
-            datefmt="%H:%M:%S",
-        ))
     
+    # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
+    log_colors = {
+        'DEBUG': 'cyan',
+        'INFO': 'green',
+        'WARNING': 'yellow',
+        'ERROR': 'red',
+        'CRITICAL': 'bold_red',
+    }
+    formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s: %(message)s"
+    console_handler.setFormatter(colorlog.ColoredFormatter(
+        formatter_str,
+        datefmt="%H:%M:%S",
+        log_colors=log_colors,
+        reset=True,
+        style='%'
+    ))
     root.addHandler(console_handler)
 
     if log_file:

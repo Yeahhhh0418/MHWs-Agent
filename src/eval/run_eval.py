@@ -9,8 +9,8 @@ EVAL_DIR = Path(__file__).parent
 # 字段说明见同目录 README.md
 
 
-def calc_coverage(required_ids: list, retrieved_ids: list) -> tuple:
-    """算覆盖率：该命中的编号里，实际命中了几个。返回（覆盖率, 没命中的编号）。"""
+def calc_recall(required_ids: list, retrieved_ids: list) -> tuple:
+    """算召回率：该命中的编号里，实际命中了几个。返回（召回率, 没命中的编号）。"""
     hit = []
     missing = []
     for one_id in required_ids:
@@ -20,11 +20,11 @@ def calc_coverage(required_ids: list, retrieved_ids: list) -> tuple:
             missing.append(one_id)
 
     if len(required_ids) == 0:
-        coverage = 0.0
+        recall = 0.0
     else:
-        coverage = len(hit) / len(required_ids)
+        recall = len(hit) / len(required_ids)
 
-    return coverage, missing
+    return recall, missing
 
 
 # TODO: 替换成你真实的 Agent 调用函数
@@ -56,7 +56,10 @@ def call_agent(question: str) -> dict:
         "retrieved_doc_ids": doc_id_list,
         "routed_dbs": routed_dbs,
         "iterations": st.get("iteration_count", 0),
-} 
+        # analyze 每轮由谁定的、定了什么、为什么 + 有没有降级（项目完善清单 §2.4 §2.8）
+        "decision_trace": st.get("decision_trace", []),
+        "degraded": st.get("degraded", False),
+    }
 
 def run_eval():
     # 1. 加载题库
@@ -75,8 +78,8 @@ def run_eval():
 
         required_ids = case.get("required_doc_ids", [])
         retrieved_ids = agent_output.get("retrieved_doc_ids", [])
-        coverage, missing = calc_coverage(required_ids, retrieved_ids)
-        print(f"   覆盖率: {coverage * 100:.0f}%   没找到的编号: {missing}")
+        recall, missing = calc_recall(required_ids, retrieved_ids)
+        print(f"   召回率: {recall * 100:.0f}%   没找到的编号: {missing}")
         
         record = {
             **case,  # 保留原始题目信息
@@ -84,11 +87,13 @@ def run_eval():
             "retrieved_doc_ids": retrieved_ids,
             "routed_dbs": agent_output.get("routed_dbs", []),
             "iterations": agent_output.get("iterations", 0),
-            "coverage": coverage,
+            "recall": recall,
             "missing_doc_ids": missing,
+            "decision_trace": agent_output.get("decision_trace", []),
+            "degraded": agent_output.get("degraded", False),
             # 人工判分预留字段
-            "human_score": None, 
-            "fail_category": None  # 可选: coverage/premature_stop/routing/iteration/fact
+            "human_score": None,
+            "fail_category": None  # 可选: recall/premature_stop/routing/iteration/degrade/fact
         }
         results.append(record)
     
@@ -101,15 +106,15 @@ def run_eval():
         for r in results:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
             
-    total_coverage = 0.0
+    total_recall = 0.0
     for r in results:
-        total_coverage += r["coverage"]
+        total_recall += r["recall"]
     if len(results) > 0:
-        avg_coverage = total_coverage / len(results)
+        avg_recall = total_recall / len(results)
     else:
-        avg_coverage = 0.0
+        avg_recall = 0.0
 
-    print(f"平均覆盖率: {avg_coverage * 100:.0f}%")
+    print(f"平均召回率: {avg_recall * 100:.0f}%")
     print(f"✅ 评测完成，结果已保存至: {output_path}")
 
 if __name__ == "__main__":

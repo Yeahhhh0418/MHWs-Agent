@@ -65,7 +65,7 @@ monster|火龙|生态特征
 .venv/Scripts/python.exe src/eval/run_eval.py
 ```
 
-题库 `src/eval/cases.jsonl` 现有 18 道，覆盖四个库，其中 8 道是防「名字相近的怪串味」的回归题。程序自动算**覆盖率**（该命中的编号捞回来没有），答案对不对靠人工对着 `key_facts` 核对。字段含义与出题规矩见 `src/eval/README.md`。
+题库 `src/eval/cases.jsonl` 现有 18 道，覆盖四个库，其中 8 道是防「名字相近的怪串味」的回归题。程序自动算**召回率**（该命中的编号捞回来没有），答案对不对靠人工对着 `key_facts` 核对。字段含义与出题规矩见 `src/eval/README.md`。
 
 ## 快速开始
 
@@ -124,5 +124,5 @@ CLAUDE.md           给 AI 的项目约定
 ## 注意
 
 - **改了数据或 `_load_data` 之后，必须删掉 `storage/` 下对应的库目录再跑。** 向量库只看「目录里有没有文件」，不会检测数据是否变化；不删就会出现 BM25 用新数据、向量路用旧数据的新旧混检。
-- **编号是数据指纹。** 改了 `_ID_FIELDS` 或 `data/monster.md` 里的 `#` / `##` 标题，`src/eval/cases.jsonl` 里的编号必须同步改 —— 不会报错，只会覆盖率悄悄变 0。
+- **编号是数据指纹。** 改了 `_ID_FIELDS` 或 `data/monster.md` 里的 `#` / `##` 标题，`src/eval/cases.jsonl` 里的编号必须同步改 —— 不会报错，只会召回率悄悄变 0。
 - 首次运行要建库 + 加载 BGE 模型，比较慢。

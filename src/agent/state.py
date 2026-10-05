@@ -33,4 +33,11 @@ class AgentState(TypedDict):
     # ── 最终输出 ──
     final_answer: str                     # generate_node 写入
 
+    # ── 降级留痕（项目完善清单 §2.1） ──
+    degraded: bool          # analyze 重试后仍失败、被迫降级时为 True
+    degrade_reason: str     # 降级的具体原因
 
+    # ── 决策轨迹：每一轮 analyze 由谁定的、定了什么、为什么（§2.4 §2.8） ──
+    # 每条形如 {"iteration": 1, "source": "llm", "action": "continue",
+    #          "db": "monster", "keyword": "火龙", "reason": "..."}
+    decision_trace: Annotated[list[dict], operator.add]

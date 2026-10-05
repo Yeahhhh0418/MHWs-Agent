@@ -1,5 +1,5 @@
 """
-agent/chatllm.py —— 全局 LLM 实例
+src/models/chatllm.py —— 全局 LLM 实例
 模型名从 config.yaml 读取，不再硬编码。
 """
 
