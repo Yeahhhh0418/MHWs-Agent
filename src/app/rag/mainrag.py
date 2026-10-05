@@ -70,7 +70,7 @@ class MonsterInfoRAG(BaseRAG):
     """
     _DB_NAME = "monster"
     _ID_FIELDS = ("EnemyName", "_section")
-    def _load_data(self):
+    def _load_data(self) -> None:
         """读 monster.md 并按 # / ## 切节；每节补上「怪物名称·小节」抬头，正文没提自己是谁也能被找到。"""
         logger.info("加载怪物数据", extra={"path": self._data_path})
         text = Path(self._data_path).read_text(encoding="utf-8")

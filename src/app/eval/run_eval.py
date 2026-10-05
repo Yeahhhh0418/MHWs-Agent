@@ -63,7 +63,7 @@ def call_agent(question: str) -> dict:
         "degraded": st.get("degraded", False),
     }
 
-def run_eval():
+def run_eval() -> None:
     # 1. 加载题库
     cases = []
     with open(EVAL_DIR / "cases.jsonl", "r", encoding="utf-8") as f:

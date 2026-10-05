@@ -131,7 +131,7 @@ class BaseRAG(ABC):
                 parts.append(str(doc.metadata[field]))
             doc.metadata[self._ID_KEY] = f"{self._DB_NAME}|" + "|".join(parts)
 
-    def _init_vectorstore(self):
+    def _init_vectorstore(self) -> None:
         """
         [WHY] 判断「建过库没有」只看目录里有没有文件，不看数据变没变 —— 改了数据不删库，
               就会出现 BM25 用新数据、向量路用旧数据的混装结果（曾见一半「头盔」一半「HELM」）。
@@ -153,7 +153,7 @@ class BaseRAG(ABC):
                 collection_configuration={"hnsw": {"space": "cosine"}}
             )
 
-    def _init_retriever(self):
+    def _init_retriever(self) -> None:
         """
         [WHY] 单靠向量对专有名词不敏感，单靠 BM25 在中文上又不可靠（默认按空格分词）。
         [REF] ⚠️ 字符级分词分不开「火龙/雌火龙/护火龙」，

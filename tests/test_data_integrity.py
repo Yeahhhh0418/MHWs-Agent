@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from app.rag import mainrag
+from app.rag.base import BaseRAG
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -19,7 +20,7 @@ LIBRARIES = [
 ]
 
 
-def load_rag(cls):
+def load_rag(cls) -> BaseRAG:
     """只跑数据加载和编号，不碰向量库和模型 —— 这几条测试能 4 秒跑完就靠它。"""
     rag = cls()
     rag._load_data()
@@ -27,7 +28,7 @@ def load_rag(cls):
     return rag
 
 
-def load_cases():
+def load_cases() -> list:
     """读题库，返回 list[dict]。"""
     cases = []
     with open(ROOT / "src" / "app" / "eval" / "cases.jsonl", encoding="utf-8") as f:
@@ -37,7 +38,7 @@ def load_cases():
     return cases
 
 
-def test_library_counts():
+def test_library_counts() -> None:
     """防：数据文件被改坏，或 _load_data 出问题，入库条数悄悄变了却没人发现。"""
     for cls, expected in LIBRARIES:
         rag = cls()
@@ -47,7 +48,7 @@ def test_library_counts():
         )
 
 
-def test_every_doc_id_is_unique():
+def test_every_doc_id_is_unique() -> None:
     """防：编号重复 —— 检索去重靠 _doc_id，重复了会认错条目。"""
     for cls, _ in LIBRARIES:
         rag = load_rag(cls)
@@ -65,7 +66,7 @@ def test_every_doc_id_is_unique():
         assert duplicated == [], f"{cls.__name__} 有重复编号：{duplicated[:5]}"
 
 
-def test_case_doc_ids_exist():
+def test_case_doc_ids_exist() -> None:
     """防：题库和数据脱节 —— 改了标题或 _ID_FIELDS 之后，召回率会静默变 0。"""
     all_ids = set()
     for cls, _ in LIBRARIES:
@@ -82,7 +83,7 @@ def test_case_doc_ids_exist():
     assert missing == [], f"题库里有 {len(missing)} 个编号对不上：{missing}"
 
 
-def test_case_doc_prefix_matches_tags():
+def test_case_doc_prefix_matches_tags() -> None:
     """防：题库标注写错库，比如把 monster 的题标成了 weapon。"""
     for case in load_cases():
         for one_id in case["required_doc_ids"]:

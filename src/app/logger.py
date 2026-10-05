@@ -42,7 +42,7 @@ class JSONFormatter(logging.Formatter):
 class _StructuredAdapter(logging.LoggerAdapter):
     """让 logger.info("msg", extra={...}) 里的 extra 字段能进到 JSON 里。"""
 
-    def process(self, msg, kwargs):
+    def process(self, msg: str, kwargs: dict) -> tuple:
         extra = kwargs.get("extra", {})
         if extra:
             kwargs["extra"] = {"extra_fields": extra}
@@ -87,7 +87,7 @@ def setup_logging(
         root.addHandler(file_handler)
 
 
-def get_logger(name: str):
+def get_logger(name: str) -> _StructuredAdapter:
     """获取 mhwi 命名空间下的 logger，替代 print() 使用。"""
     raw_logger = logging.getLogger(f"mhwi.{name}")
     return _StructuredAdapter(raw_logger, {})

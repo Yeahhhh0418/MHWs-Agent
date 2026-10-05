@@ -4,6 +4,7 @@ src/app/agent/nodes/retrieve.py —— 检索节点：按当前库和关键词�
 from app.agent.state import AgentState, RAGResult
 from app.logger import get_logger
 from app.rag import mainrag
+from app.rag.base import BaseRAG
 
 logger = get_logger("nodes.retrieve")
 
@@ -12,7 +13,7 @@ logger = get_logger("nodes.retrieve")
 _rag_cache = {}
 
 
-def _get_rag(db: str):
+def _get_rag(db: str) -> BaseRAG:
     """按库名取 RAG 实例（BaseRAG）；首次会 setup() 并缓存，之后直接复用。"""
     if db in _rag_cache:
         return _rag_cache[db]

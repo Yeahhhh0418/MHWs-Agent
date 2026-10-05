@@ -8,6 +8,7 @@ from typing import Literal
 
 from langchain_core.exceptions import OutputParserException
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.runnables import Runnable
 from pydantic import BaseModel, Field, ValidationError
 
 from app.agent.nodes.common import format_collected_info
@@ -45,7 +46,7 @@ class AnalyzeDecision(BaseModel):
 
 
 @lru_cache(maxsize=1)
-def _decision_llm():
+def _decision_llm() -> Runnable:
     """绑了 AnalyzeDecision 的模型（只绑一次）；单独拎出来是为了测试时能整个换掉。"""
     return get_llm().with_structured_output(AnalyzeDecision)
 
@@ -97,7 +98,8 @@ def _count_searched(state: AgentState, db: str, keyword: str) -> int:
     return n
 
 
-def _decide(state, source: str, action: str, db, keyword, reason: str, degraded: bool = False) -> dict:
+def _decide(state: AgentState, source: str, action: str, db: str | None, keyword: str | None,
+            reason: str, degraded: bool = False) -> dict:
     """把一次决策打包成节点返回值；同时写日志和 decision_trace（§2.4 §2.8）。"""
     entry = {
         "iteration": state["iteration_count"],
@@ -121,7 +123,7 @@ def _decide(state, source: str, action: str, db, keyword, reason: str, degraded:
     return result
 
 
-def analyze_node(state) -> dict:
+def analyze_node(state: AgentState) -> dict:
     collected_text = format_collected_info(state["collected_info"])
     user_content = f"""
 原始问题：{state["user_question"]}
