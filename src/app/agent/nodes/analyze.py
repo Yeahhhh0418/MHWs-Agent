@@ -139,8 +139,7 @@ def analyze_node(state) -> dict:
         except AnalyzeError as e:
             last_error = str(e)
             logger.warning("analyze 输出不合格", extra={"attempt": attempt + 1, "error": last_error})
-        except Exception as e:
-            # 网络/未知故障：重问一遍没用，直接降级（但要留痕，不能装作答完了）
+        except Exception as e: # noqa: BLE001 —— 网络/未知故障：重问一遍没用，直接降级（但要留痕，不能装作答完了）
             last_error = f"调用失败（不重试）：{type(e).__name__}: {e}"
             logger.error("analyze 调用失败", extra={"error": last_error})
             break

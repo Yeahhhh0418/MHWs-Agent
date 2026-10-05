@@ -23,6 +23,7 @@ def _parse_json(text: str, fallback: dict) -> dict:
     except (json.JSONDecodeError, TypeError):
         return fallback
 
+db_list=["equipment", "weapon", "material", "monster"]
 
 def route_node(state: AgentState) -> dict:
     user_msg = state["messages"][-1].content  #这里起步的时候是个什么值？
@@ -31,8 +32,10 @@ def route_node(state: AgentState) -> dict:
     try:
         result = _parse_json(invoke(ROUTE_PROMPT, user_msg), {})
         first_db = result["first_db"]
+        if first_db not in db_list:
+            first_db = DEFAULT_DB
         first_keyword = result["first_keyword"]
-    except Exception as e:
+    except Exception as e: # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
         logger.error("路由失败，使用默认路由", extra={"error": str(e)})
         first_db, first_keyword = DEFAULT_DB, user_msg
 

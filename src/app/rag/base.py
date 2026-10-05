@@ -1,6 +1,7 @@
 import json
 import os
 from abc import ABC
+from typing import ClassVar
 
 from dotenv import load_dotenv
 from langchain_chroma import Chroma
@@ -37,8 +38,8 @@ class BaseRAG(ABC):
     # 内部主键名（去重用的货号）
     _ID_KEY = "_doc_id"
     _ID_FIELDS = ()  #子类声明用哪几个字段拼编号
-    FIELD_LABELS = {}   # 子类声明：字段名 -> 中文标签，拼正文时用
-    VALUE_LABELS = {}   # 子类可选：{字段名: {原值: 中文}}，如 parts_type 的 HELM -> 头盔
+    FIELD_LABELS: ClassVar[dict] = {}   # 子类声明：字段名 -> 中文标签，拼正文时用
+    VALUE_LABELS: ClassVar[dict] = {}   # 子类可选：{字段名: {原值: 中文}}，如 parts_type 的 HELM -> 头盔
 
     def __init__(self):
         """从配置读路径与检索参数；子类靠 _DB_NAME 拿到自己那一套。"""
@@ -68,7 +69,7 @@ class BaseRAG(ABC):
         self._vectorstore = None
         self._retriever = None
 
-    def setup(self) -> BaseRAG:
+    def setup(self) -> "BaseRAG":
         """首次使用前调用一次；顺序不能换：先有数据才能编号，先有库才能建检索器。"""
         load_dotenv()
         self._embeddings = HuggingFaceEmbeddings(

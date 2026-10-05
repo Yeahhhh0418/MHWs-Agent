@@ -37,8 +37,11 @@ def retrieve_node(state: AgentState) -> dict:
     keyword = state["query_keyword"]
     iteration = state.get("iteration_count", 0)
 
+    rag = _get_rag(db)
+    degraded = False                       # ← 加这两行
+    degrade_reason = ""
     try:
-        rag = _get_rag(db)
+        
         docs = rag.retrieve(keyword)
 
         parts = []
@@ -48,13 +51,20 @@ def retrieve_node(state: AgentState) -> dict:
             doc_ids.append(doc.metadata["_doc_id"])
 
         content = "\n\n".join(parts)
-    except Exception as e:
+        if not content:
+            content = f"（数据库 {db} 没有找到与关键词 {keyword} 相关的资料）"
+
+    except Exception as e:  # noqa: BLE001 —— 降级但写进 state.degraded，评测看得见，不是静默吞掉
         logger.error("检索失败，使用占位内容", extra={"db": db, "error": str(e)})
-        content = f"（数据库 {db} 检索失败，暂时跳过）"
+        content = f"（数据库 {db} 这次没能取到资料）"
         doc_ids = []
+        degraded = True
+        degrade_reason = f"检索 {db} 失败：{type(e).__name__}"
 
     new_result = RAGResult(db=db, keyword=keyword, content=content,doc_ids=doc_ids)
     return {
         "collected_info": [new_result],
         "iteration_count": iteration + 1,
+        "degraded": degraded,
+        "degrade_reason": degrade_reason
     }

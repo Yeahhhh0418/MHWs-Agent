@@ -3,6 +3,7 @@
 共同流程都在 rag.base.BaseRAG 里，这里只解决「各自的数据怎么读成 Document」。
 """
 from pathlib import Path
+from typing import ClassVar
 
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
@@ -20,13 +21,13 @@ class EquipmentCraftingRAG(BaseRAG):
     """
     _DB_NAME = "equipment"
     _ID_FIELDS = ("series_id","parts_type")
-    FIELD_LABELS = {
+    FIELD_LABELS: ClassVar[dict] = {
         "series_id": "装备系列",
         "parts_type": "装备部位",
         "name": "装备名称",
         "materials": "制作材料",
     }
-    VALUE_LABELS = {
+    VALUE_LABELS: ClassVar[dict] = {
         "parts_type": {
             "HELM": "头盔",
             "BODY": "胸甲",
@@ -44,7 +45,7 @@ class WeaponCraftingRAG(BaseRAG):
     """
     _DB_NAME = "weapon"
     _ID_FIELDS = ("WeaponType","Name")
-    FIELD_LABELS = {
+    FIELD_LABELS: ClassVar[dict] = {
         "Name": "武器名称",
         "WeaponType": "武器类型",
         "materials": "制作材料",
@@ -55,7 +56,7 @@ class MaterialInfoRAG(BaseRAG):
     """读素材表；素材名唯一，正文只有名字 / 说明 / 稀有度，没有长叙述，单字段编号就够。"""
     _DB_NAME = "material"
     _ID_FIELDS = ("RawName",)
-    FIELD_LABELS = {
+    FIELD_LABELS: ClassVar[dict] = {
         "RawName": "素材名称",
         "RawExplain": "素材描述",
         "Rare": "稀有度",
