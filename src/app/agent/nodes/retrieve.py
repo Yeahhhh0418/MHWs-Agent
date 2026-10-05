@@ -2,8 +2,8 @@
 src/app/agent/nodes/retrieve.py —— 检索节点：按当前库和关键词做混合检索。
 """
 from app.agent.state import AgentState, RAGResult
-from app.rag import mainrag
 from app.logger import get_logger
+from app.rag import mainrag
 
 logger = get_logger("nodes.retrieve")
 

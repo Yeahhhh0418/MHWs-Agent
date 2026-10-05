@@ -4,18 +4,18 @@ src/app/agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不
 结构化输出卡住字段和库名；决策过程记进 state.decision_trace；模型输出不合格会回喂重试一次。
 """
 from functools import lru_cache
-from typing import Literal, Optional
+from typing import Literal
 
 from langchain_core.exceptions import OutputParserException
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field, ValidationError
 
-from app.agent.state import AgentState
-from app.prompts import ANALYZE_PROMPT
 from app.agent.nodes.common import format_collected_info
-from app.llm import get_llm
+from app.agent.state import AgentState
 from app.config import get_config
+from app.llm import get_llm
 from app.logger import get_logger
+from app.prompts import ANALYZE_PROMPT
 
 logger = get_logger("nodes.analyze")
 
@@ -40,8 +40,8 @@ class AnalyzeDecision(BaseModel):
     """
     next_action: Literal["continue", "finish"]
     reason: str = Field(description="一句话说清：为什么继续，或为什么可以停了")
-    next_db: Optional[DB] = Field(default=None, description="next_action 是 continue 时必填")
-    next_keyword: Optional[str] = Field(default=None, description="next_action 是 continue 时必填")
+    next_db: DB | None = Field(default=None, description="next_action 是 continue 时必填")
+    next_keyword: str | None = Field(default=None, description="next_action 是 continue 时必填")
 
 
 @lru_cache(maxsize=1)

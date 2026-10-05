@@ -4,12 +4,14 @@ src/app/llm.py —— 全局 LLM 实例
 """
 
 import os as _os
-from dotenv import load_dotenv
 from functools import lru_cache
+
+from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from langchain_core.language_models import BaseChatModel
+
 from app.config import get_config
-from app.logger import setup_logging, get_logger
+from app.logger import get_logger, setup_logging
 
 load_dotenv()
 

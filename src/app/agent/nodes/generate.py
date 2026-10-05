@@ -2,10 +2,11 @@
 src/app/agent/nodes/generate.py —— 生成节点：把收集到的资料组织成人话。
 """
 from langchain_core.messages import AIMessage
+
+from app.agent.nodes.common import format_collected_info, invoke
 from app.agent.state import AgentState
-from app.prompts import GENERATE_PROMPT,LIBRARY_GUIDES
-from app.agent.nodes.common import invoke, format_collected_info
 from app.logger import get_logger
+from app.prompts import GENERATE_PROMPT, LIBRARY_GUIDES
 
 logger = get_logger("nodes.generate")
 

@@ -1,7 +1,8 @@
 """
 src/app/agent/nodes/common.py —— 多个节点共用的 LLM 调用与文本拼装。
 """
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
+
 from app.llm import get_llm
 
 

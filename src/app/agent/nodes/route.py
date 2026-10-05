@@ -3,10 +3,10 @@ src/app/agent/nodes/route.py —— 路由节点：判断问题核心实体，�
 """
 import json
 
-from app.agent.state import AgentState
-from app.prompts import ROUTE_PROMPT
 from app.agent.nodes.common import invoke
+from app.agent.state import AgentState
 from app.logger import get_logger
+from app.prompts import ROUTE_PROMPT
 
 logger = get_logger("nodes.route")
 

@@ -1,15 +1,17 @@
-from abc import ABC
-from app.config import get_config
-from app.logger import get_logger
-from dotenv import load_dotenv
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
-from langchain_community.retrievers import BM25Retriever
-from langchain_core.documents import Document
-from app.rag.tokenizer import chinese_char_tokenizer
-from langchain_classic.retrievers import EnsembleRetriever
 import json
 import os
+from abc import ABC
+
+from dotenv import load_dotenv
+from langchain_chroma import Chroma
+from langchain_classic.retrievers import EnsembleRetriever
+from langchain_community.retrievers import BM25Retriever
+from langchain_core.documents import Document
+from langchain_huggingface import HuggingFaceEmbeddings
+
+from app.config import get_config
+from app.logger import get_logger
+from app.rag.tokenizer import chinese_char_tokenizer
 
 logger = get_logger("rag.base")  # [TODO-TECHDEBT] 日志初始化方式待确认
 
@@ -66,7 +68,7 @@ class BaseRAG(ABC):
         self._vectorstore = None
         self._retriever = None
 
-    def setup(self) -> "BaseRAG":
+    def setup(self) -> BaseRAG:
         """首次使用前调用一次；顺序不能换：先有数据才能编号，先有库才能建检索器。"""
         load_dotenv()
         self._embeddings = HuggingFaceEmbeddings(
@@ -151,32 +153,32 @@ class BaseRAG(ABC):
             )
 
     def _init_retriever(self):
-            """
-            [WHY] 单靠向量对专有名词不敏感，单靠 BM25 在中文上又不可靠（默认按空格分词）。
-            [REF] rag/tokenizer.py。⚠️ 字符级分词分不开「火龙/雌火龙/护火龙」，
-                  monster 库已把 bm25_weight 降为 0（config.yaml）
-            """
-            bm25_retriever = BM25Retriever.from_documents(
-                self._docs, preprocess_func=chinese_char_tokenizer
-            )
-            bm25_retriever.k = self._bm25_k
+        """
+        [WHY] 单靠向量对专有名词不敏感，单靠 BM25 在中文上又不可靠（默认按空格分词）。
+        [REF] ⚠️ 字符级分词分不开「火龙/雌火龙/护火龙」，
+              monster 库已把 bm25_weight 降为 0（config.yaml）
+        """
+        bm25_retriever = BM25Retriever.from_documents(
+            self._docs, preprocess_func=chinese_char_tokenizer
+        )
+        bm25_retriever.k = self._bm25_k
 
-            vector_retriever = self._vectorstore.as_retriever(
-                search_type="similarity_score_threshold",
-                search_kwargs={
-                    "k": self._vector_k,
-                    "score_threshold": self._vector_score_threshold,
-                }
-            )
+        vector_retriever = self._vectorstore.as_retriever(
+            search_type="similarity_score_threshold",
+            search_kwargs={
+                "k": self._vector_k,
+                "score_threshold": self._vector_score_threshold,
+            }
+        )
 
-            self._retriever = EnsembleRetriever(
-                retrievers=[bm25_retriever, vector_retriever],
-                weights=[self._bm25_weight, self._vector_weight],
-                c=self._rrf_c,
-                # 按货号 _doc_id 去重：两路捞到同一条时合并成一条，
-                # 并把两边的排名分数叠加起来（这会让「两路都命中」的条目排更前）
-                id_key=self._ID_KEY,
-            )
+        self._retriever = EnsembleRetriever(
+            retrievers=[bm25_retriever, vector_retriever],
+            weights=[self._bm25_weight, self._vector_weight],
+            c=self._rrf_c,
+            # 按货号 _doc_id 去重：两路捞到同一条时合并成一条，
+            # 并把两边的排名分数叠加起来（这会让「两路都命中」的条目排更前）
+            id_key=self._ID_KEY,
+        )
 
     def _top_n(self, docs: list) -> list:
         """

@@ -36,6 +36,7 @@ mhwi-agent = "app.cli:main"
 [dependency-groups]
 dev = [
     "pytest>=9.1",
+    "ruff>=0.16.10",
 ]
 
 [build-system]
@@ -47,3 +48,14 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "app"
 module-root = "src"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"      # 跟 requires-python 保持一致
+
+[tool.ruff.lint]
+ignore = [
+    "FURB122",   # for 里 f.write —— 项目要求显式循环，不用推导式
+    "PERF402",   # 同上
+    "DTZ005",    # 结果文件命名用本地时间正好
+]

@@ -3,9 +3,11 @@
 共同流程都在 rag.base.BaseRAG 里，这里只解决「各自的数据怎么读成 Document」。
 """
 from pathlib import Path
+
 from langchain_text_splitters import MarkdownHeaderTextSplitter
-from app.rag.base import BaseRAG
+
 from app.logger import get_logger
+from app.rag.base import BaseRAG
 
 logger = get_logger("rag.main")
 

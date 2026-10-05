@@ -2,8 +2,10 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-from app.agent.graph import graph
+
 from langchain_core.messages import HumanMessage
+
+from app.agent.graph import graph
 
 EVAL_DIR = Path(__file__).parent
 # 字段说明见同目录 README.md

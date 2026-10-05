@@ -1,6 +1,8 @@
-from typing import Annotated, TypedDict
-from langgraph.graph.message import add_messages
 import operator
+from typing import Annotated, TypedDict
+
+from langgraph.graph.message import add_messages
+
 
 class RAGResult(TypedDict):
     """单次 RAG 检索的结果"""

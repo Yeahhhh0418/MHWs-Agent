@@ -12,11 +12,11 @@ src/app/logger.py —— 结构化日志。
 extra 里的字段会并进 JSON 日志，控制台不显示。
 """
 
+import json
 import logging
 import sys
-import json
 from datetime import datetime
-from typing import Optional
+
 import colorlog
 
 
@@ -51,7 +51,7 @@ class _StructuredAdapter(logging.LoggerAdapter):
 
 def setup_logging(
     level: str = "INFO",
-    log_file: Optional[str] = None,
+    log_file: str | None = None,
 ) -> None:
     """初始化根 logger。全局调用一次即可（我们在 chatllm.py 里调用）。"""
     root = logging.getLogger("mhwi")
