@@ -4,18 +4,17 @@ src/app/agent/nodes/common.py —— 多个节点共用的 LLM 调用与文本�
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from app.llm import get_llm
+from app.llm import invoke_with_fallback
 
 
 def invoke(system_prompt: str, user_content: str) -> str:
-    """单次 LLM 调用，返回文本（str）。"""
-    llm = get_llm()
-    return llm.invoke(
-        [
-            SystemMessage(content=system_prompt),
-            HumanMessage(content=user_content),
-        ]
-    ).content
+    """单次 LLM 调用，返回文本（str）；主模型挂了自动换备用，切换会记日志。"""
+    messages = [
+        SystemMessage(content=system_prompt),
+        HumanMessage(content=user_content),
+    ]
+    text, _used = invoke_with_fallback(lambda llm: llm.invoke(messages).content)
+    return text
 
 
 def format_collected_info(collected_info: list) -> str:
