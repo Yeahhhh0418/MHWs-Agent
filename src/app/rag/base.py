@@ -37,9 +37,11 @@ class BaseRAG(ABC):
     _DB_NAME = ""
     # 内部主键名（去重用的货号）
     _ID_KEY = "_doc_id"
-    _ID_FIELDS = ()  #子类声明用哪几个字段拼编号
-    FIELD_LABELS: ClassVar[dict] = {}   # 子类声明：字段名 -> 中文标签，拼正文时用
-    VALUE_LABELS: ClassVar[dict] = {}   # 子类可选：{字段名: {原值: 中文}}，如 parts_type 的 HELM -> 头盔
+    _ID_FIELDS = ()  # 子类声明用哪几个字段拼编号
+    FIELD_LABELS: ClassVar[dict] = {}  # 子类声明：字段名 -> 中文标签，拼正文时用
+    VALUE_LABELS: ClassVar[
+        dict
+    ] = {}  # 子类可选：{字段名: {原值: 中文}}，如 parts_type 的 HELM -> 头盔
 
     def __init__(self):
         """从配置读路径与检索参数；子类靠 _DB_NAME 拿到自己那一套。"""
@@ -57,8 +59,8 @@ class BaseRAG(ABC):
         self._vector_k = r["vector_k"]
         self._bm25_weight = r["bm25_weight"]
         self._vector_weight = r["vector_weight"]
-        self._rrf_c = r["rrf_c"]                      # RRF 平滑常数（不是返回条数）
-        self._ensemble_top_n = r["ensemble_top_n"]    # 融合后真正保留的条数
+        self._rrf_c = r["rrf_c"]  # RRF 平滑常数（不是返回条数）
+        self._ensemble_top_n = r["ensemble_top_n"]  # 融合后真正保留的条数
         self._vector_score_threshold = r["vector_score_threshold"]
 
         self.is_ready = False
@@ -77,10 +79,10 @@ class BaseRAG(ABC):
             model_kwargs={"device": self._device},
             encode_kwargs={"normalize_embeddings": self._normalize},
         )
-        self._load_data()      # ← 基类默认读 jsonl；怪物走 md，自己覆写
-        self._assign_doc_ids()     # ← 给每条 Document 编个货号
-        self._init_vectorstore()   # ← 基类写好
-        self._init_retriever()     # ← 基类写好（混合检索）
+        self._load_data()  # ← 基类默认读 jsonl；怪物走 md，自己覆写
+        self._assign_doc_ids()  # ← 给每条 Document 编个货号
+        self._init_vectorstore()  # ← 基类写好
+        self._init_retriever()  # ← 基类写好（混合检索）
         self.is_ready = True
         return self
 
@@ -111,10 +113,12 @@ class BaseRAG(ABC):
                     value_str = str(v)
                 parts.append(f"{label}：{value_str}")
 
-            documents.append(Document(
-                page_content="，".join(parts),
-                metadata=data,
-            ))
+            documents.append(
+                Document(
+                    page_content="，".join(parts),
+                    metadata=data,
+                )
+            )
 
         self._docs = documents
         logger.info("数据加载完成", extra={"db": self._DB_NAME, "count": len(documents)})
@@ -150,7 +154,7 @@ class BaseRAG(ABC):
                 documents=self._docs,
                 embedding=self._embeddings,
                 persist_directory=self._persist_dir,
-                collection_configuration={"hnsw": {"space": "cosine"}}
+                collection_configuration={"hnsw": {"space": "cosine"}},
             )
 
     def _init_retriever(self) -> None:
@@ -169,7 +173,7 @@ class BaseRAG(ABC):
             search_kwargs={
                 "k": self._vector_k,
                 "score_threshold": self._vector_score_threshold,
-            }
+            },
         )
 
         self._retriever = EnsembleRetriever(
@@ -197,4 +201,3 @@ class BaseRAG(ABC):
         if not self.is_ready:
             raise RuntimeError(f"{self.__class__.__name__} 尚未初始化，请先调用 .setup()")
         return self._top_n(self._retriever.invoke(question))
-

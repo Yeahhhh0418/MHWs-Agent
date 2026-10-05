@@ -3,6 +3,7 @@
 
 测的是「编号」这套东西有没有坏 —— 它一坏就是静默的：召回率悄悄变成 0，却不报错。
 """
+
 import json
 from pathlib import Path
 

@@ -59,31 +59,30 @@ def setup_logging(
     root.handlers.clear()
 
     console_handler = logging.StreamHandler(sys.stderr)
-    
+
     # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
     log_colors = {
-        'DEBUG': 'cyan',
-        'INFO': 'green',
-        'WARNING': 'yellow',
-        'ERROR': 'red',
-        'CRITICAL': 'bold_red',
+        "DEBUG": "cyan",
+        "INFO": "green",
+        "WARNING": "yellow",
+        "ERROR": "red",
+        "CRITICAL": "bold_red",
     }
     formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s: %(message)s"
-    console_handler.setFormatter(colorlog.ColoredFormatter(
-        formatter_str,
-        datefmt="%H:%M:%S",
-        log_colors=log_colors,
-        reset=True,
-        style='%'
-    ))
+    console_handler.setFormatter(
+        colorlog.ColoredFormatter(
+            formatter_str, datefmt="%H:%M:%S", log_colors=log_colors, reset=True, style="%"
+        )
+    )
     root.addHandler(console_handler)
 
     if log_file:
         from pathlib import Path
+
         Path(log_file).parent.mkdir(parents=True, exist_ok=True)
         file_handler = logging.FileHandler(log_file, encoding="utf-8")
         # 文件里依然保持 JSON 格式，方便以后机器读取
-        file_handler.setFormatter(JSONFormatter()) 
+        file_handler.setFormatter(JSONFormatter())
         root.addHandler(file_handler)
 
 

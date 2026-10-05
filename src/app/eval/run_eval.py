@@ -63,6 +63,7 @@ def call_agent(question: str) -> dict:
         "degraded": st.get("degraded", False),
     }
 
+
 def run_eval() -> None:
     # 1. 加载题库
     cases = []
@@ -70,19 +71,19 @@ def run_eval() -> None:
         for line in f:
             if line.strip():
                 cases.append(json.loads(line))
-    
+
     # 2. 逐条跑，记录过程
     results = []
     for i, case in enumerate(cases):
-        print(f"[{i+1}/{len(cases)}] 正在测试: {case['question']}")
-        
+        print(f"[{i + 1}/{len(cases)}] 正在测试: {case['question']}")
+
         agent_output = call_agent(case["question"])
 
         required_ids = case.get("required_doc_ids", [])
         retrieved_ids = agent_output.get("retrieved_doc_ids", [])
         recall, missing = calc_recall(required_ids, retrieved_ids)
         print(f"   召回率: {recall * 100:.0f}%   没找到的编号: {missing}")
-        
+
         record = {
             **case,  # 保留原始题目信息
             "agent_answer": agent_output.get("answer", ""),
@@ -95,19 +96,19 @@ def run_eval() -> None:
             "degraded": agent_output.get("degraded", False),
             # 人工判分预留字段
             "human_score": None,
-            "fail_category": None  # 可选: recall/premature_stop/routing/iteration/degrade/fact
+            "fail_category": None,  # 可选: recall/premature_stop/routing/iteration/degrade/fact
         }
         results.append(record)
-    
+
     # 3. 按时间戳存结果
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs(EVAL_DIR / "results", exist_ok=True)
     output_path = EVAL_DIR / "results" / f"{timestamp}.jsonl"
-    
+
     with open(output_path, "w", encoding="utf-8") as f:
         for r in results:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
-            
+
     total_recall = 0.0
     for r in results:
         total_recall += r["recall"]
@@ -118,6 +119,7 @@ def run_eval() -> None:
 
     print(f"平均召回率: {avg_recall * 100:.0f}%")
     print(f"✅ 评测完成，结果已保存至: {output_path}")
+
 
 if __name__ == "__main__":
     run_eval()

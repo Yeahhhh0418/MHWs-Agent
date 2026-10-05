@@ -1,6 +1,7 @@
 """
 src/app/agent/nodes/retrieve.py —— 检索节点：按当前库和关键词做混合检索。
 """
+
 from app.agent.state import AgentState, RAGResult
 from app.logger import get_logger
 from app.rag import mainrag
@@ -39,10 +40,9 @@ def retrieve_node(state: AgentState) -> dict:
     iteration = state.get("iteration_count", 0)
 
     rag = _get_rag(db)
-    degraded = False                       # ← 加这两行
+    degraded = False  # ← 加这两行
     degrade_reason = ""
     try:
-        
         docs = rag.retrieve(keyword)
 
         parts = []
@@ -62,10 +62,10 @@ def retrieve_node(state: AgentState) -> dict:
         degraded = True
         degrade_reason = f"检索 {db} 失败：{type(e).__name__}"
 
-    new_result = RAGResult(db=db, keyword=keyword, content=content,doc_ids=doc_ids)
+    new_result = RAGResult(db=db, keyword=keyword, content=content, doc_ids=doc_ids)
     return {
         "collected_info": [new_result],
         "iteration_count": iteration + 1,
         "degraded": degraded,
-        "degrade_reason": degrade_reason
+        "degrade_reason": degrade_reason,
     }

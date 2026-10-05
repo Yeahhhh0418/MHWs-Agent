@@ -21,7 +21,7 @@ def main() -> None:
 
     try:
         state = graph.invoke({"messages": [HumanMessage(content=question)]})
-    except Exception as e:# noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
+    except Exception as e:  # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
         # 失败要吼出来，不能装作答完了（比如 .env 里缺 API Key）
         print(f"运行失败：{type(e).__name__}: {e}", file=sys.stderr)
         sys.exit(1)

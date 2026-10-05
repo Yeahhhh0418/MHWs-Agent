@@ -29,9 +29,14 @@ builder.add_edge("generate", END)
 graph = builder.compile()
 
 if __name__ == "__main__":
-    while(1):
-        a=input("请输入你的回答:  （exit退出）",) or "锁刃龙太刀和锁刃龙套怎么做？素材怎么获得？怎么打？"
-        if a== "exit":
+    while 1:
+        a = (
+            input(
+                "请输入你的回答:  （exit退出）",
+            )
+            or "锁刃龙太刀和锁刃龙套怎么做？素材怎么获得？怎么打？"
+        )
+        if a == "exit":
             break
         state = graph.invoke({"messages": [HumanMessage(content=a)]})
         print(state["final_answer"])

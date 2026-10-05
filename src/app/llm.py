@@ -22,6 +22,7 @@ logger = get_logger("chatllm")
 
 # 从 config.yaml 读取模型名，初始化大模型
 
+
 def _build_single_llm(cfg: dict) -> BaseChatModel:
     """根据单个模型配置构建 LLM 实例（含重试）"""
     kwargs = {
@@ -45,6 +46,7 @@ def _build_single_llm(cfg: dict) -> BaseChatModel:
 
     return init_chat_model(**kwargs)
 
+
 @lru_cache(maxsize=1)
 def get_llm() -> BaseChatModel:
     """
@@ -52,11 +54,11 @@ def get_llm() -> BaseChatModel:
     主模型 → 备用模型1 → 备用模型2 → 全部失败时由调用方捕获异常
     """
     llm_cfg = get_config()["llm"]
-    
+
     # 构建主模型
     primary = _build_single_llm(llm_cfg["primary"])
     logger.info("主模型加载完成", extra={"model": llm_cfg["primary"]["model"]})
-    
+
     # 构建备用模型链（第2层）
     fallback_configs = llm_cfg.get("fallbacks", [])
     if fallback_configs:
@@ -66,11 +68,12 @@ def get_llm() -> BaseChatModel:
         primary = primary.with_fallbacks(fallback_llms)
 
         logger.info(
-            "已配置 %d 个备用模型", 
+            "已配置 %d 个备用模型",
             len(fallback_llms),
-            extra={"models": [c["model"] for c in fallback_configs]}
+            extra={"models": [c["model"] for c in fallback_configs]},
         )
-    return primary  
+    return primary
+
 
 logger.info("LLM 加载完成", extra={"model": get_config()["llm"]["primary"]["model"]})
 

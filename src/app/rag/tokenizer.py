@@ -4,6 +4,8 @@ src/app/rag/tokenizer.py —— 中文字符级分词器
 这个函数把每个汉字拆成独立 token，英文/数字保持连续，
 确保"锁刃龙"这类关键词检索不会漏。
 """
+
+
 def chinese_char_tokenizer(text: str) -> list[str]:
     tokens = []
     buf = ""

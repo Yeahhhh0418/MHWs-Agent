@@ -1,6 +1,7 @@
 """
 src/app/agent/nodes/route.py —— 路由节点：判断问题核心实体，决定第一个查哪个库。
 """
+
 import json
 
 from app.agent.nodes.common import invoke
@@ -20,13 +21,15 @@ def _parse_json(text: str, fallback: dict) -> dict:
     try:
         result = json.loads(text)
         return result if isinstance(result, dict) else fallback
-    except (json.JSONDecodeError, TypeError):
+    except json.JSONDecodeError, TypeError:
         return fallback
 
-db_list=["equipment", "weapon", "material", "monster"]
+
+db_list = ["equipment", "weapon", "material", "monster"]
+
 
 def route_node(state: AgentState) -> dict:
-    user_msg = state["messages"][-1].content  #这里起步的时候是个什么值？
+    user_msg = state["messages"][-1].content  # 这里起步的时候是个什么值？
     logger.info("开始路由", extra={"question": user_msg[:100]})
 
     try:
@@ -35,7 +38,7 @@ def route_node(state: AgentState) -> dict:
         if first_db not in db_list:
             first_db = DEFAULT_DB
         first_keyword = result["first_keyword"]
-    except Exception as e: # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
+    except Exception as e:  # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
         logger.error("路由失败，使用默认路由", extra={"error": str(e)})
         first_db, first_keyword = DEFAULT_DB, user_msg
 

@@ -3,6 +3,7 @@ src/app/agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不
 
 结构化输出卡住字段和库名；决策过程记进 state.decision_trace；模型输出不合格会回喂重试一次。
 """
+
 from functools import lru_cache
 from typing import Literal
 
@@ -21,7 +22,7 @@ from app.prompts import ANALYZE_PROMPT
 logger = get_logger("nodes.analyze")
 
 ANALYZE_MAX_ATTEMPTS = 2
-MAX_SAME_QUERY_REPEAT = 2   # 同一组 (库, 关键词) 最多允许查几次，见 _count_searched
+MAX_SAME_QUERY_REPEAT = 2  # 同一组 (库, 关键词) 最多允许查几次，见 _count_searched
 DB = Literal["equipment", "weapon", "material", "monster"]
 
 
@@ -39,6 +40,7 @@ class AnalyzeDecision(BaseModel):
           字段缺了只能等 KeyError。
     [FIX] 不合格当场报错，由 analyze_node 回喂给模型重试。
     """
+
     next_action: Literal["continue", "finish"]
     reason: str = Field(description="一句话说清：为什么继续，或为什么可以停了")
     next_db: DB | None = Field(default=None, description="next_action 是 continue 时必填")
@@ -67,16 +69,15 @@ def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> Analyz
     """调一次模型并校验（AnalyzeDecision）；不合格抛 AnalyzeError，消息供上层回喂重试。"""
     content = user_content
     if retry_hint:
-        content += (
-            f"\n\n你上一次的输出无法使用，原因：{retry_hint}\n"
-            "请按约定的字段重新输出。"
-        )
+        content += f"\n\n你上一次的输出无法使用，原因：{retry_hint}\n请按约定的字段重新输出。"
 
     try:
-        decision = _decision_llm().invoke([
-            SystemMessage(content=ANALYZE_PROMPT),
-            HumanMessage(content=content),
-        ])
+        decision = _decision_llm().invoke(
+            [
+                SystemMessage(content=ANALYZE_PROMPT),
+                HumanMessage(content=content),
+            ]
+        )
     except (ValidationError, OutputParserException) as e:
         raise AnalyzeError(f"模型输出不符合约定字段：{e}") from e
 
@@ -98,12 +99,19 @@ def _count_searched(state: AgentState, db: str, keyword: str) -> int:
     return n
 
 
-def _decide(state: AgentState, source: str, action: str, db: str | None, keyword: str | None,
-            reason: str, degraded: bool = False) -> dict:
+def _decide(
+    state: AgentState,
+    source: str,
+    action: str,
+    db: str | None,
+    keyword: str | None,
+    reason: str,
+    degraded: bool = False,
+) -> dict:
     """把一次决策打包成节点返回值；同时写日志和 decision_trace（§2.4 §2.8）。"""
     entry = {
         "iteration": state["iteration_count"],
-        "source": source,          # llm / code / degrade —— 这个决定是谁下的
+        "source": source,  # llm / code / degrade —— 这个决定是谁下的
         "action": action,
         "db": db,
         "keyword": keyword,
@@ -140,8 +148,10 @@ def analyze_node(state: AgentState) -> dict:
             break
         except AnalyzeError as e:
             last_error = str(e)
-            logger.warning("analyze 输出不合格", extra={"attempt": attempt + 1, "error": last_error})
-        except Exception as e: # noqa: BLE001 —— 网络/未知故障：重问一遍没用，直接降级（但要留痕，不能装作答完了）
+            logger.warning(
+                "analyze 输出不合格", extra={"attempt": attempt + 1, "error": last_error}
+            )
+        except Exception as e:  # noqa: BLE001 —— 网络/未知故障：重问一遍没用，直接降级（但要留痕，不能装作答完了）
             last_error = f"调用失败（不重试）：{type(e).__name__}: {e}"
             logger.error("analyze 调用失败", extra={"error": last_error})
             break
@@ -152,11 +162,18 @@ def analyze_node(state: AgentState) -> dict:
     if decision.next_action == "continue":
         times = _count_searched(state, decision.next_db, decision.next_keyword)
         if times >= MAX_SAME_QUERY_REPEAT:
-            return _decide(state, "code", "finish", None, None,
-                           f"「{decision.next_db} / {decision.next_keyword}」已经查过 {times} 次，再来一遍不会多出信息")
+            return _decide(
+                state,
+                "code",
+                "finish",
+                None,
+                None,
+                f"「{decision.next_db} / {decision.next_keyword}」已经查过 {times} 次，再来一遍不会多出信息",
+            )
 
-    return _decide(state, "llm", decision.next_action, decision.next_db,
-                   decision.next_keyword, decision.reason)
+    return _decide(
+        state, "llm", decision.next_action, decision.next_db, decision.next_keyword, decision.reason
+    )
 
 
 # ── 条件边函数 ────────────────────────────────────────────
