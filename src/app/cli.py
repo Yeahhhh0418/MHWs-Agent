@@ -1,13 +1,13 @@
 """
 命令行入口，对应 pyproject 里的 mhwi-agent 命令。
-用 `python -m mhwi_agent` 走的是同一条路（见 __main__.py）。
+用 `python -m app` 走的是同一条路（见 __main__.py）。
 """
 
 import sys
 
 from langchain_core.messages import HumanMessage
 
-from agent.graph import graph
+from app.agent.graph import graph
 
 
 def main() -> None:

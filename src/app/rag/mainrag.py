@@ -4,8 +4,8 @@
 """
 from pathlib import Path
 from langchain_text_splitters import MarkdownHeaderTextSplitter
-from rag.base import BaseRAG
-from mhwi_agent.logger import get_logger
+from app.rag.base import BaseRAG
+from app.logger import get_logger
 
 logger = get_logger("rag.main")
 

@@ -1,12 +1,12 @@
 from abc import ABC
-from mhwi_agent.config import get_config
-from mhwi_agent.logger import get_logger
+from app.config import get_config
+from app.logger import get_logger
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
-from rag.tokenizer import chinese_char_tokenizer
+from app.rag.tokenizer import chinese_char_tokenizer
 from langchain_classic.retrievers import EnsembleRetriever
 import json
 import os
@@ -189,7 +189,7 @@ class BaseRAG(ABC):
         """
         [WHY] 检索节点只要文档和编号、不要生成（生成放在图的最后一步），
               评测也靠这个入口单独核对命中。
-        [REF] src/eval/run_eval.py
+        [REF] src/app/eval/run_eval.py
         """
         if not self.is_ready:
             raise RuntimeError(f"{self.__class__.__name__} 尚未初始化，请先调用 .setup()")

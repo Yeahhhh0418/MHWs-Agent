@@ -1,12 +1,12 @@
 """
-agent/nodes/route.py —— 路由节点：判断问题核心实体，决定第一个查哪个库。
+src/app/agent/nodes/route.py —— 路由节点：判断问题核心实体，决定第一个查哪个库。
 """
 import json
 
-from agent.state import AgentState
-from prompts.prompt import ROUTE_PROMPT
-from agent.nodes.common import invoke
-from mhwi_agent.logger import get_logger
+from app.agent.state import AgentState
+from app.prompts import ROUTE_PROMPT
+from app.agent.nodes.common import invoke
+from app.logger import get_logger
 
 logger = get_logger("nodes.route")
 

@@ -1,8 +1,7 @@
 """
-agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不要继续查，以及它的条件边。
+src/app/agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不要继续查，以及它的条件边。
 
-【2026-10-03】按 项目完善清单 §二 改造：结构化输出卡字段（2.3/2.6）、代码承担可计算的判断
-（2.5）、决策留痕（2.4/2.8）。来龙去脉见 advise/analyze重试与降级方案.md
+结构化输出卡住字段和库名；决策过程记进 state.decision_trace；模型输出不合格会回喂重试一次。
 """
 from functools import lru_cache
 from typing import Literal, Optional
@@ -11,12 +10,12 @@ from langchain_core.exceptions import OutputParserException
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field, ValidationError
 
-from agent.state import AgentState
-from prompts.prompt import ANALYZE_PROMPT
-from agent.nodes.common import format_collected_info
-from models.chatllm import get_llm
-from mhwi_agent.config import get_config
-from mhwi_agent.logger import get_logger
+from app.agent.state import AgentState
+from app.prompts import ANALYZE_PROMPT
+from app.agent.nodes.common import format_collected_info
+from app.llm import get_llm
+from app.config import get_config
+from app.logger import get_logger
 
 logger = get_logger("nodes.analyze")
 

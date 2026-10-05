@@ -30,8 +30,8 @@ dependencies = [
 ]
 
 [project.scripts]
-# 必须写到函数一层：写成 "mhwi_agent:main" 会拿到 mhwi_agent.main 这个模块，不是函数
-mhwi-agent = "mhwi_agent.main:main"
+# 必须写到函数一层：只写 "app.cli" 会拿到模块，不是函数
+mhwi-agent = "app.cli:main"
 
 [dependency-groups]
 dev = [
@@ -41,3 +41,9 @@ dev = [
 [build-system]
 requires = ["uv_build>=0.12.0,<0.13.0"]
 build-backend = "uv_build"
+
+# uv_build 默认按项目名（mhwi-agent → mhwi_agent）找 src/mhwi_agent/，
+# 但我们的代码全在 src/app/ 下，所以得显式指定。
+[tool.uv.build-backend]
+module-name = "app"
+module-root = "src"

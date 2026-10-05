@@ -1,13 +1,11 @@
 """
-agent/nodes/generate.py —— 生成节点：把收集到的资料组织成人话。
-
-【2026-10-03】从原来的 agent/nodes.py 拆出来，内容一字未改。
+src/app/agent/nodes/generate.py —— 生成节点：把收集到的资料组织成人话。
 """
 from langchain_core.messages import AIMessage
-from agent.state import AgentState
-from prompts.prompt import GENERATE_PROMPT,LIBRARY_GUIDES
-from agent.nodes.common import invoke, format_collected_info
-from mhwi_agent.logger import get_logger
+from app.agent.state import AgentState
+from app.prompts import GENERATE_PROMPT,LIBRARY_GUIDES
+from app.agent.nodes.common import invoke, format_collected_info
+from app.logger import get_logger
 
 logger = get_logger("nodes.generate")
 

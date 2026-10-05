@@ -6,7 +6,7 @@
 import json
 from pathlib import Path
 
-from rag import mainrag
+from app.rag import mainrag
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -30,7 +30,7 @@ def load_rag(cls):
 def load_cases():
     """读题库，返回 list[dict]。"""
     cases = []
-    with open(ROOT / "src" / "eval" / "cases.jsonl", encoding="utf-8") as f:
+    with open(ROOT / "src" / "app" / "eval" / "cases.jsonl", encoding="utf-8") as f:
         for line in f:
             if line.strip():
                 cases.append(json.loads(line))

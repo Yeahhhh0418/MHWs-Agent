@@ -1,10 +1,10 @@
 """
-src/mhwi_agent/logger.py —— 结构化日志。
+src/app/logger.py —— 结构化日志。
 
 控制台打带颜色的文本，同时往 log_file 里写一行一条的 JSON。
-初始化只在 models/chatllm.py 里做一次（级别和路径都写死在那儿），其余地方直接用：
+初始化只在 src/app/llm.py 里做一次（级别和路径都写死在那儿），其余地方直接用：
 
-    from mhwi_agent.logger import get_logger
+    from app.logger import get_logger
 
     logger = get_logger("nodes.route")     # 名字随意，会挂在 mhwi. 命名空间下
     logger.info("开始路由", extra={"question": "火龙怎么打"})

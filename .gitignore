@@ -29,7 +29,8 @@ logs/
 *.log
 
 # ===== 评测跑出来的结果（每次跑都会生成，不用进 git）=====
-src/eval/results/
+# 不写死路径：写成 src/eval/results/ 的话，目录一搬就又漏进来了
+**/eval/results/
 
 # ===== 本地编辑器/工具配置 =====
 .claude/

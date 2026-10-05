@@ -1,8 +1,8 @@
 """
-agent/nodes/common.py —— 多个节点共用的 LLM 调用与文本拼装。
+src/app/agent/nodes/common.py —— 多个节点共用的 LLM 调用与文本拼装。
 """
 from langchain_core.messages import SystemMessage, HumanMessage
-from models.chatllm import get_llm
+from app.llm import get_llm
 
 
 def invoke(system_prompt: str, user_content: str) -> str:

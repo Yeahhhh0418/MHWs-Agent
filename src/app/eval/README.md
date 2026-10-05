@@ -4,7 +4,7 @@
 
 ```bash
 cd /c/code/MHWI_agent
-PYTHONPATH=src .venv/Scripts/python.exe src/eval/run_eval.py
+.venv/Scripts/python.exe src/app/eval/run_eval.py
 ```
 
 ## 整体流程
