@@ -9,7 +9,7 @@ src/app/logger.py —— 结构化日志。
     logger = get_logger("nodes.route")     # 名字随意，会挂在 mhwi. 命名空间下
     logger.info("开始路由", extra={"question": "火龙怎么打"})
 
-extra 里的字段会并进 JSON 日志，控制台不显示。
+extra 里的字段会并进 JSON，也会追在控制台那行消息后面（长值截到 40 字符）。
 """
 
 import json
@@ -37,6 +37,38 @@ class JSONFormatter(logging.Formatter):
         if hasattr(record, "extra_fields") and record.extra_fields:
             log_entry.update(record.extra_fields)
         return json.dumps(log_entry, ensure_ascii=False)
+
+
+class ConsoleFormatter(colorlog.ColoredFormatter):
+    """
+    [WHY] 原来控制台只打 message，extra 里的东西（查了哪个库、命中几条、为什么降级）
+          一个都看不到 —— 想排查得去翻 JSON 文件，等于白打。
+    [FIX] 把 extra 按 key=value 追在消息后面，长值截断；顺手去掉 mhwi. 前缀，
+          模块名短一半。
+    """
+
+    MAX_VALUE_LEN = 40
+
+    def format(self, record: logging.LogRecord) -> str:
+        # 同一条 record 会被多个 handler 共用（先控制台、后文件），
+        # 所以名字改完必须还原，否则 JSON 那边的 logger 字段会跟着变短
+        original_name = record.name
+        record.name = original_name.removeprefix("mhwi.")
+        try:
+            line = super().format(record)
+        finally:
+            record.name = original_name
+
+        extra = getattr(record, "extra_fields", None)
+        if extra:
+            parts = []
+            for key, value in extra.items():
+                text = str(value)
+                if len(text) > self.MAX_VALUE_LEN:
+                    text = text[: self.MAX_VALUE_LEN] + "…"
+                parts.append(f"{key}={text}")
+            line += "  " + " ".join(parts)
+        return line
 
 
 class _StructuredAdapter(logging.LoggerAdapter):
@@ -68,9 +100,9 @@ def setup_logging(
         "ERROR": "red",
         "CRITICAL": "bold_red",
     }
-    formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s: %(message)s"
+    formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s  %(message)s"
     console_handler.setFormatter(
-        colorlog.ColoredFormatter(
+        ConsoleFormatter(
             formatter_str, datefmt="%H:%M:%S", log_colors=log_colors, reset=True, style="%"
         )
     )

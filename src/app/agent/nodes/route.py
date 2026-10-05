@@ -21,7 +21,7 @@ def _parse_json(text: str, fallback: dict) -> dict:
     try:
         result = json.loads(text)
         return result if isinstance(result, dict) else fallback
-    except json.JSONDecodeError, TypeError:
+    except (json.JSONDecodeError, TypeError):
         return fallback
 
 
@@ -36,9 +36,14 @@ def route_node(state: AgentState) -> dict:
         result = _parse_json(invoke(ROUTE_PROMPT, user_msg), {})
         first_db = result["first_db"]
         if first_db not in db_list:
+            logger.warning(
+                "路由给出了不存在的库，回退默认",
+                extra={"first_db": first_db, "fallback": DEFAULT_DB},
+            )
             first_db = DEFAULT_DB
         first_keyword = result["first_keyword"]
-    except Exception as e:  # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
+        logger.info("路由完成", extra={"db": first_db, "keyword": first_keyword})
+    except Exception as e:  # noqa: BLE001 —— 路由失败就回退默认库，流程继续往下走。
         logger.error("路由失败，使用默认路由", extra={"error": str(e)})
         first_db, first_keyword = DEFAULT_DB, user_msg
 

@@ -40,7 +40,7 @@ def retrieve_node(state: AgentState) -> dict:
     iteration = state.get("iteration_count", 0)
 
     rag = _get_rag(db)
-    degraded = False  # ← 加这两行
+    degraded = False
     degrade_reason = ""
     try:
         docs = rag.retrieve(keyword)
@@ -54,6 +54,9 @@ def retrieve_node(state: AgentState) -> dict:
         content = "\n\n".join(parts)
         if not content:
             content = f"（数据库 {db} 没有找到与关键词 {keyword} 相关的资料）"
+
+        # 成功也打一条：不然多轮检索在控制台完全看不出走了几轮、每轮查了什么
+        logger.info("检索完成", extra={"db": db, "keyword": keyword, "hits": len(docs)})
 
     except Exception as e:  # noqa: BLE001 —— 降级但写进 state.degraded，评测看得见，不是静默吞掉
         logger.error("检索失败，使用占位内容", extra={"db": db, "error": str(e)})

@@ -41,6 +41,7 @@ def generate_node(state: AgentState) -> dict:
 以下是从数据库检索到的相关信息：{collected_text}
 """,
         )
+        logger.info("生成完成")
     except Exception as e:  # noqa: BLE001 —— 生成失败就退回检索原文，至少用户还能看到资料
         logger.error("生成失败，返回原始检索内容", extra={"error": str(e)})
         answer = collected_text
