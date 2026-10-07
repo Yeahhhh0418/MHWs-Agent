@@ -7,6 +7,7 @@ src/app/agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不
 from typing import Literal
 
 from langchain_core.exceptions import OutputParserException
+from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field, ValidationError
 
@@ -14,7 +15,7 @@ from app.agent.nodes.common import format_collected_info
 from app.agent.state import AgentState
 from app.config import get_config
 from app.llm import invoke_with_fallback
-from app.logger import get_logger
+from app.logger import bind_request_id, get_logger
 from app.prompts import ANALYZE_PROMPT
 
 logger = get_logger("nodes.analyze")
@@ -64,7 +65,7 @@ def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> Analyz
 
     messages = [SystemMessage(content=ANALYZE_PROMPT), HumanMessage(content=content)]
 
-    def call(llm):
+    def call(llm: BaseChatModel) -> AnalyzeDecision:
         """
         [WHY] 必须显式写 method="json_mode"：DeepSeek 的思考模式模型（deepseek-flash）
               不支持 tool calling，报 "Thinking mode does not support this tool_choice"，
@@ -120,6 +121,7 @@ def _decide(
 
 
 def analyze_node(state: AgentState) -> dict:
+    bind_request_id(state.get("request_id", ""))
     collected_text = format_collected_info(state["collected_info"])
     user_content = f"""
 原始问题：{state["user_question"]}

@@ -6,7 +6,7 @@ from langchain_core.messages import AIMessage
 
 from app.agent.nodes.common import format_collected_info, invoke
 from app.agent.state import AgentState
-from app.logger import get_logger
+from app.logger import bind_request_id, get_logger
 from app.prompts import GENERATE_PROMPT, LIBRARY_GUIDES
 
 logger = get_logger("nodes.generate")
@@ -28,6 +28,7 @@ def _library_guides(collected_info: list) -> str:
 
 
 def generate_node(state: AgentState) -> dict:
+    bind_request_id(state.get("request_id", ""))
     collected_text = format_collected_info(state["collected_info"])
     guides = _library_guides(state["collected_info"])
     system_prompt = GENERATE_PROMPT

@@ -6,7 +6,7 @@ import json
 
 from app.agent.nodes.common import invoke
 from app.agent.state import AgentState
-from app.logger import get_logger
+from app.logger import get_logger, new_request_id
 from app.prompts import ROUTE_PROMPT
 
 logger = get_logger("nodes.route")
@@ -30,6 +30,7 @@ db_list = ["equipment", "weapon", "material", "monster"]
 
 def route_node(state: AgentState) -> dict:
     user_msg = state["messages"][-1].content  # 这里起步的时候是个什么值？
+    rid = new_request_id()
     logger.info("开始路由", extra={"question": user_msg[:100]})
 
     try:
@@ -48,6 +49,7 @@ def route_node(state: AgentState) -> dict:
         first_db, first_keyword = DEFAULT_DB, user_msg
 
     return {
+        "request_id": rid,
         "user_question": user_msg,
         "current_db": first_db,
         "query_keyword": first_keyword,

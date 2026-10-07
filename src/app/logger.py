@@ -12,12 +12,37 @@ src/app/logger.py —— 结构化日志。
 extra 里的字段会并进 JSON，也会追在控制台那行消息后面（长值截到 40 字符）。
 """
 
+import contextvars
 import json
 import logging
 import sys
+import uuid
 from datetime import datetime
 
 import colorlog
+
+# 当前正在处理的那次问答的编号。用 contextvars 而不是普通全局变量 ——
+# 它按"执行上下文"隔离，以后上 Web（多请求并发）时每个请求各一份，不会串。
+_request_id: contextvars.ContextVar[str] = contextvars.ContextVar("request_id", default="")
+
+
+def new_request_id() -> str:
+    """开一次问答时调用（str）：生成编号并写进当前执行上下文。"""
+    rid = uuid.uuid4().hex[:8]
+    _request_id.set(rid)
+    return rid
+
+
+def bind_request_id(rid: str) -> None:
+    """
+    [WHY] 不能只在起点设一次 —— LangGraph 给每个节点发独立的上下文副本
+          （同一线程，但各节点是"兄弟"关系）。在 route 里 set 的值，
+          retrieve / analyze / generate 一律读不到（实测过：同一线程 id，
+          但下一个节点读出来是空）。
+    [FIX] 所以每个图节点入口重新 set 一次，覆盖这个节点的整条调用栈
+          —— 节点自己、以及它调用的 rag / common 那些日志就都带上了。
+    """
+    _request_id.set(rid or "")
 
 
 class JSONFormatter(logging.Formatter):
@@ -72,10 +97,20 @@ class ConsoleFormatter(colorlog.ColoredFormatter):
 
 
 class _StructuredAdapter(logging.LoggerAdapter):
-    """让 logger.info("msg", extra={...}) 里的 extra 字段能进到 JSON 里。"""
+    """
+    [WHY] logging 只认自己那套 extra（还得避开 LogRecord 已有的字段名），
+          而我们想传的是任意业务字段。而且每处 logger.info 都手写一遍
+          request_id 太啰嗦、容易漏。
+    [FIX] 把调用方给的 extra 收进 extra_fields（JSONFormatter 认得它）；
+          顺手把当前上下文的 request_id 也塞进去 —— 所以 route 那边设一次，
+          之后所有节点的日志自动都带编号，不用逐个改。
+    """
 
     def process(self, msg: str, kwargs: dict) -> tuple:
-        extra = kwargs.get("extra", {})
+        extra = dict(kwargs.get("extra") or {})
+        rid = _request_id.get()
+        if rid:
+            extra["request_id"] = rid
         if extra:
             kwargs["extra"] = {"extra_fields": extra}
         return msg, kwargs

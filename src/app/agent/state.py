@@ -45,3 +45,6 @@ class AgentState(TypedDict):
     # 每条形如 {"iteration": 1, "source": "llm", "action": "continue",
     #          "db": "monster", "keyword": "火龙", "reason": "..."}
     decision_trace: Annotated[list[dict], operator.add]
+
+    # ── 本次问答的编号：串日志用，出问题时按它捞整条链路 ──
+    request_id: str

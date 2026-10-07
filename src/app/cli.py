@@ -27,3 +27,4 @@ def main() -> None:
         sys.exit(1)
 
     print(state.get("final_answer", "（没有拿到答案）"))
+    print(f"\n[本次会话编号：{state.get('request_id', '-')}]", file=sys.stderr)

@@ -3,7 +3,7 @@ src/app/agent/nodes/retrieve.py —— 检索节点：按当前库和关键词�
 """
 
 from app.agent.state import AgentState, RAGResult
-from app.logger import get_logger
+from app.logger import bind_request_id, get_logger
 from app.rag import mainrag
 from app.rag.base import BaseRAG
 
@@ -35,6 +35,7 @@ def _get_rag(db: str) -> BaseRAG:
 
 
 def retrieve_node(state: AgentState) -> dict:
+    bind_request_id(state.get("request_id", ""))
     db = state["current_db"]
     keyword = state["query_keyword"]
     iteration = state.get("iteration_count", 0)
