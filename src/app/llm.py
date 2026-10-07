@@ -3,8 +3,10 @@ src/app/llm.py —— 全局 LLM 实例
 模型名从 config.yaml 读取，不再硬编码。
 """
 
-import os as _os
+import os
+from collections.abc import Callable
 from functools import lru_cache
+from typing import Any
 
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
@@ -39,7 +41,7 @@ def _build_single_llm(cfg: dict) -> BaseChatModel:
         api_key_env = cfg.get("api_key_env")
         if not api_key_env:
             raise ValueError(f"模型 {cfg['model']} 配了 base_url 但没配 api_key_env")
-        if not (api_key := _os.getenv(api_key_env)):
+        if not (api_key := os.getenv(api_key_env)):
             raise RuntimeError(f"环境变量 {api_key_env} 未设置，请检查 .env")
         kwargs["api_key"] = api_key
     else:
@@ -77,7 +79,9 @@ def model_name(llm: BaseChatModel) -> str:
     return getattr(llm, "model_name", type(llm).__name__)
 
 
-def invoke_with_fallback(call, no_fallback_on: tuple = ()) -> tuple:
+def invoke_with_fallback(
+    call: Callable[[BaseChatModel], Any], no_fallback_on: tuple = ()
+) -> tuple[Any, str]:
     """
     [WHY] with_fallbacks 换模型时一声不吭 —— 你拿到一个备用模型答的答案，
           还以为主模型好好的。
