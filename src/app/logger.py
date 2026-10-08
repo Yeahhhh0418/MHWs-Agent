@@ -28,7 +28,9 @@ _request_id: contextvars.ContextVar[str] = contextvars.ContextVar("request_id", 
 
 def new_request_id() -> str:
     """开一次问答时调用（str）：生成编号并写进当前执行上下文。"""
+    # 8 位够用，短一点才好口述和 grep
     rid = uuid.uuid4().hex[:8]
+    # 写进当前执行上下文，之后这个上下文里的日志自动都带上它
     _request_id.set(rid)
     return rid
 
@@ -42,6 +44,7 @@ def bind_request_id(rid: str) -> None:
     [FIX] 所以每个图节点入口重新 set 一次，覆盖这个节点的整条调用栈
           —— 节点自己、以及它调用的 rag / common 那些日志就都带上了。
     """
+    # 传空也要 set —— 不然会把上一个请求的编号漏进来
     _request_id.set(rid or "")
 
 
@@ -49,6 +52,7 @@ class JSONFormatter(logging.Formatter):
     """把每条日志格式化成一行 JSON，方便机器解析和以后排查。"""
 
     def format(self, record: logging.LogRecord) -> str:
+        # 固定这几项打底
         log_entry = {
             "timestamp": datetime.now().astimezone().isoformat(),
             "level": record.levelname,
@@ -61,6 +65,7 @@ class JSONFormatter(logging.Formatter):
         # extra={...} 里塞的字段，原样并进 JSON
         if hasattr(record, "extra_fields") and record.extra_fields:
             log_entry.update(record.extra_fields)
+        # ensure_ascii=False：中文原样写进去，不转成 \uXXXX
         return json.dumps(log_entry, ensure_ascii=False)
 
 
@@ -84,11 +89,13 @@ class ConsoleFormatter(colorlog.ColoredFormatter):
         finally:
             record.name = original_name
 
+        # 把 extra 拼成 key=value 追在消息后面
         extra = getattr(record, "extra_fields", None)
         if extra:
             parts = []
             for key, value in extra.items():
                 text = str(value)
+                # 长值截断 —— 一串制作材料能把整行撑爆
                 if len(text) > self.MAX_VALUE_LEN:
                     text = text[: self.MAX_VALUE_LEN] + "…"
                 parts.append(f"{key}={text}")
@@ -107,10 +114,13 @@ class _StructuredAdapter(logging.LoggerAdapter):
     """
 
     def process(self, msg: str, kwargs: dict) -> tuple:
+        # 拷一份，别动调用方传进来的那个字典
         extra = dict(kwargs.get("extra") or {})
+        # 当前上下文有编号就自动带上，不用每处 logger.info 手写
         rid = _request_id.get()
         if rid:
             extra["request_id"] = rid
+        # 包成 extra_fields：logging 只放行 LogRecord 上已存在的字段名
         if extra:
             kwargs["extra"] = {"extra_fields": extra}
         return msg, kwargs
@@ -121,10 +131,14 @@ def setup_logging(
     log_file: str | None = None,
 ) -> None:
     """初始化根 logger。全局调用一次即可（我们在 chatllm.py 里调用）。"""
+    # 所有 logger 都挂在 mhwi 这个命名空间下
     root = logging.getLogger("mhwi")
+    # 级别认不出来就退回 INFO，不崩
     root.setLevel(getattr(logging, level.upper(), logging.INFO))
+    # 先清干净：重复调用也不会把 handler 越挂越多
     root.handlers.clear()
 
+    # 日志走 stderr —— stdout 留给答案，别混在一起
     console_handler = logging.StreamHandler(sys.stderr)
 
     # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
@@ -146,6 +160,7 @@ def setup_logging(
     if log_file:
         from pathlib import Path
 
+        # 目录不存在就先建出来
         Path(log_file).parent.mkdir(parents=True, exist_ok=True)
         file_handler = logging.FileHandler(log_file, encoding="utf-8")
         # 文件里依然保持 JSON 格式，方便以后机器读取
@@ -155,5 +170,7 @@ def setup_logging(
 
 def get_logger(name: str) -> _StructuredAdapter:
     """获取 mhwi 命名空间下的 logger，替代 print() 使用。"""
+    # 统一挂在 mhwi. 下面，控制台显示时再去掉这个前缀
     raw_logger = logging.getLogger(f"mhwi.{name}")
+    # 包一层适配器：extra 和 request_id 都在它里面处理
     return _StructuredAdapter(raw_logger, {})

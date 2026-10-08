@@ -27,12 +27,14 @@ logger = get_logger("chatllm")
 
 def _build_single_llm(cfg: dict) -> BaseChatModel:
     """根据单个模型配置构建 LLM 实例（含重试）"""
+    # 先铺基础参数：模型名、温度、重试次数、超时
     kwargs = {
         "model": cfg["model"],
         "temperature": cfg.get("temperature", 0.7),
         "max_retries": cfg.get("max_retries", 3),  # ← 第1层
         "timeout": cfg.get("timeout", 30),
     }
+    # 配了 base_url 说明走 OpenAI 兼容协议（第三方网关）
     if base_url := cfg.get("base_url"):
         kwargs["model_provider"] = "openai"
         kwargs["base_url"] = base_url
@@ -41,10 +43,12 @@ def _build_single_llm(cfg: dict) -> BaseChatModel:
         api_key_env = cfg.get("api_key_env")
         if not api_key_env:
             raise ValueError(f"模型 {cfg['model']} 配了 base_url 但没配 api_key_env")
+        # 取不到密钥就早点报，别等真去调模型时才失败
         if not (api_key := os.getenv(api_key_env)):
             raise RuntimeError(f"环境变量 {api_key_env} 未设置，请检查 .env")
         kwargs["api_key"] = api_key
     else:
+        # 没配 base_url 就走官方 provider
         kwargs["model_provider"] = cfg.get("provider", "openai")
 
     return init_chat_model(**kwargs)
@@ -58,13 +62,17 @@ def get_llms() -> tuple[BaseChatModel, ...]:
     [FIX] 干脆返回 [主模型, 备用…] 的列表，由 invoke_with_fallback 去遍历，
           每次切换都能记日志。
     """
+    # 读 llm 那一段配置
     llm_cfg = get_config()["llm"]
 
+    # 主模型排第一个 —— 兜底顺序就是靠这个列表顺序
     models = [_build_single_llm(llm_cfg["primary"])]
     logger.info("主模型加载完成", extra={"model": llm_cfg["primary"]["model"]})
 
+    # 备用模型依次接在后面
     for cfg in llm_cfg.get("fallbacks", []):
         models.append(_build_single_llm(cfg))
+    # 有备用才报一句，省得每次启动都吵
     if len(models) > 1:
         logger.info(
             "已配置 %d 个备用模型",
@@ -90,10 +98,13 @@ def invoke_with_fallback(
           no_fallback_on 里的异常直接抛、不换模型 —— 换模型救不了那类错
           （比如输出格式不合格，换个模型一样不合格，该走回喂重试）。
     """
+    # 记住第一个错，全挂了的时候抛它
     first_error = None
+    # 按 [主, 备用…] 的顺序挨个试
     for index, llm in enumerate(get_llms()):
         try:
             result = call(llm)
+        # 这类错换模型也救不了，直接往外抛
         except no_fallback_on:
             raise
         except Exception as e:  # noqa: BLE001 —— 抓全是对的：这个函数的职责就是"谁挂都换下一个"
@@ -109,6 +120,7 @@ def invoke_with_fallback(
             logger.warning(f"这次是备用模型{model_name(llm)}答的", extra={"model": model_name(llm)})
         return result, model_name(llm)
 
+    # 全试完了还是不行 —— `first_error or e` 保住的是第一个错，不是最后一个
     raise first_error
 
 
