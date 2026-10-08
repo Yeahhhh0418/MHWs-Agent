@@ -20,7 +20,9 @@ from app.prompts import ANALYZE_PROMPT
 
 logger = get_logger("nodes.analyze")
 
+# 输出不合格、或偶发故障时，最多再给一次机会
 ANALYZE_MAX_ATTEMPTS = 2
+# 库名卡死在字面量里 —— 模型编不出第五个库
 DB = Literal["equipment", "weapon", "material", "monster"]
 
 
@@ -40,7 +42,9 @@ class AnalyzeDecision(BaseModel):
     """
 
     next_action: Literal["continue", "finish"]
+    # reason 每次都要 —— 不管停还是继续，都得说得出来为什么
     reason: str = Field(description="一句话说清：为什么继续，或为什么可以停了")
+    # 后两个只在 continue 时有意义。"continue 就必须给值"这条 schema 管不了，见 _check_decision
     next_db: DB | None = Field(default=None, description="next_action 是 continue 时必填")
     next_keyword: str | None = Field(default=None, description="next_action 是 continue 时必填")
 
@@ -50,6 +54,7 @@ def _check_decision(decision: AnalyzeDecision) -> None:
     [WHY] 「说 continue 就必须给出去哪查、查什么」这条规则，Pydantic 的 schema 表达不了 ——
           Optional 字段在两种 next_action 下都合法。
     """
+    # 说了要继续，就必须交代"去哪查、查什么"
     if decision.next_action == "continue":
         if not decision.next_db:
             raise AnalyzeError("next_action 是 continue，但没有给出 next_db")
@@ -60,9 +65,11 @@ def _check_decision(decision: AnalyzeDecision) -> None:
 def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> AnalyzeDecision:
     """调一次模型并校验（AnalyzeDecision）；不合格抛 AnalyzeError，消息供上层回喂重试。"""
     content = user_content
+    # 重试时把上次为什么不合格一并喂回去，不然模型会原样再错一遍
     if retry_hint:
         content += f"\n\n你上一次的输出无法使用，原因：{retry_hint}\n请按约定的字段重新输出。"
 
+    # 系统提示词固定；用户内容 = 当前资料 +（重试时）上次的失败原因
     messages = [SystemMessage(content=ANALYZE_PROMPT), HumanMessage(content=content)]
 
     def call(llm: BaseChatModel) -> AnalyzeDecision:
@@ -75,6 +82,7 @@ def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> Analyz
                         ② DeepSeek 要求提示词里出现 "json" 字样，所以 ANALYZE_PROMPT
                           里保留了「输出 JSON 格式」那句，别删。
         """
+        # 绑一次，之后 invoke 出来直接就是 AnalyzeDecision 对象，不用自己 json.loads
         bound = llm.with_structured_output(AnalyzeDecision, method="json_mode")
         try:
             return bound.invoke(messages)
@@ -83,7 +91,9 @@ def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> Analyz
             # 所以包成 AnalyzeError 并告诉 invoke_with_fallback 别换模型
             raise AnalyzeError(f"模型输出不符合约定字段：{e}") from e
 
+    # AnalyzeError 不换模型：输出格式的问题换谁都一样，该走上层的回喂重试
     decision, _used = invoke_with_fallback(call, no_fallback_on=(AnalyzeError,))
+    # schema 表达不了的那条规则（continue 必须给去向），这里补一刀
     _check_decision(decision)
     return decision
 
@@ -98,6 +108,7 @@ def _decide(
     degraded: bool = False,
 ) -> dict:
     """把一次决策打包成节点返回值；同时写日志和 decision_trace（§2.4 §2.8）。"""
+    # 一条决策的完整记录：日志和 decision_trace 用的是同一份
     entry = {
         "iteration": state["iteration_count"],
         "source": source,  # llm / code / degrade —— 这个决定是谁下的
@@ -108,12 +119,14 @@ def _decide(
     }
     logger.info("analyze 决策", extra=entry)
 
+    # 节点返回值：告诉图停还是继续
     result = {
         "next_action": action,
         "degraded": degraded,
         "degrade_reason": reason if degraded else "",
         "decision_trace": [entry],
     }
+    # 只有要继续才带下一站去哪儿；finish 时是 None
     if action == "continue":
         result["current_db"] = db
         result["query_keyword"] = keyword
@@ -121,7 +134,9 @@ def _decide(
 
 
 def analyze_node(state: AgentState) -> dict:
+    # 节点入口重绑编号：LangGraph 给每个节点的上下文各是一份，不会自动传过来
     bind_request_id(state.get("request_id", ""))
+    # 给模型看三样：原始问题、已经查了几轮、手上有哪些资料
     collected_text = format_collected_info(state["collected_info"])
     user_content = f"""
 原始问题：{state["user_question"]}
@@ -130,13 +145,16 @@ def analyze_node(state: AgentState) -> dict:
 {collected_text}
 """
 
+    # 重试状态：记着上一次为什么没成
     decision = None
     last_error = ""
     for attempt in range(ANALYZE_MAX_ATTEMPTS):
         try:
             decision = _invoke_and_parse_analyze(user_content, retry_hint=last_error)
+            # 成了就跳出，不再试第二次
             break
         except AnalyzeError as e:
+            # 格式类失败：记下原因，下一轮拼进提示词回喂
             last_error = str(e)
             logger.warning(
                 "analyze 输出不合格", extra={"attempt": attempt + 1, "error": last_error}
@@ -149,9 +167,11 @@ def analyze_node(state: AgentState) -> dict:
             last_error = f"调用失败：{type(e).__name__}: {e}"
             logger.warning("analyze 调用失败", extra={"attempt": attempt + 1, "error": last_error})
 
+    # 两次都没成 —— 降级成 finish，但原因留在 trace 里，评测看得见
     if decision is None:
         return _decide(state, "degrade", "finish", None, None, last_error, degraded=True)
 
+    # 正常路径：把模型的决策原样交给 _decide 打包
     return _decide(
         state, "llm", decision.next_action, decision.next_db, decision.next_keyword, decision.reason
     )
@@ -160,10 +180,13 @@ def analyze_node(state: AgentState) -> dict:
 # ── 条件边函数 ────────────────────────────────────────────
 def should_continue(state: AgentState) -> str:
     """analyze 之后走哪条边（str）：轮次到顶或决定停就走 finish，否则 continue。"""
+    # 轮次上限从配置读；读不到当 5，总之得有个顶，防死循环
     max_iterations = get_config().get("graph", {}).get("max_iterations", 5)
+    # 先看轮次到没到顶
     if state["iteration_count"] >= max_iterations:
         logger.info("analyze 轮次到顶，强制 finish", extra={"iteration": state["iteration_count"]})
         return "finish"
+    # 再看模型自己的意见
     if state["next_action"] == "finish":
         return "finish"
     return "continue"

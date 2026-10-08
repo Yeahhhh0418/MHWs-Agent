@@ -16,9 +16,11 @@ _rag_cache = {}
 
 def _get_rag(db: str) -> BaseRAG:
     """按库名取 RAG 实例（BaseRAG）；首次会 setup() 并缓存，之后直接复用。"""
+    # 建过一次就一直复用 —— setup() 要加载向量模型，很贵
     if db in _rag_cache:
         return _rag_cache[db]
     logger.info("首次加载数据库", extra={"db": db})
+    # 按库名挑实现
     if db == "equipment":
         rag = mainrag.EquipmentCraftingRAG()
     elif db == "weapon":
@@ -29,23 +31,28 @@ def _get_rag(db: str) -> BaseRAG:
         rag = mainrag.MonsterInfoRAG()
     else:
         raise ValueError(f"未知数据库: {db}")
+    # setup 里干三件事：读数据、编编号、建检索器
     rag.setup()
     _rag_cache[db] = rag
     return rag
 
 
 def retrieve_node(state: AgentState) -> dict:
+    # 节点入口重绑编号：LangGraph 给每个节点的上下文各是一份，不会自动传过来
     bind_request_id(state.get("request_id", ""))
+    # 这一轮查哪个库、用什么词，都是 route / analyze 事先定好的
     db = state["current_db"]
     keyword = state["query_keyword"]
     iteration = state.get("iteration_count", 0)
 
     rag = _get_rag(db)
+    # 默认没降级，下面出错时改写
     degraded = False
     degrade_reason = ""
     try:
         docs = rag.retrieve(keyword)
 
+        # 拆成两份：正文给模型读，编号给评测核对命中
         parts = []
         doc_ids = []
         for doc in docs:
@@ -53,6 +60,7 @@ def retrieve_node(state: AgentState) -> dict:
             doc_ids.append(doc.metadata["_doc_id"])
 
         content = "\n\n".join(parts)
+        # 一条都没查到也得给句话 —— 不然模型分不清"这个词没找到"和"资料本来就是空的"
         if not content:
             content = f"（数据库 {db} 没有找到与关键词 {keyword} 相关的资料）"
 
@@ -66,6 +74,7 @@ def retrieve_node(state: AgentState) -> dict:
         degraded = True
         degrade_reason = f"检索 {db} 失败：{type(e).__name__}"
 
+    # 打包成一条检索结果，会被追加进 collected_info
     new_result = RAGResult(db=db, keyword=keyword, content=content, doc_ids=doc_ids)
     return {
         "collected_info": [new_result],

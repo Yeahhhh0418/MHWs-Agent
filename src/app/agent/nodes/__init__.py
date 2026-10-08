@@ -5,6 +5,7 @@ src/app/agent/nodes/ —— 四个节点各占一份文件，共用的小工具�
     from app.agent.nodes import route_node, retrieve_node, analyze_node, generate_node, should_continue
 """
 
+# 各节点定义在自己那份文件里，这里统一转出去 —— graph.py 只认这一个入口
 from app.agent.nodes.analyze import AnalyzeError, analyze_node, should_continue
 from app.agent.nodes.generate import generate_node
 from app.agent.nodes.retrieve import retrieve_node
