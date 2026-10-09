@@ -84,7 +84,13 @@ ANALYZE_PROMPT = f"""你是一个游戏信息分析助手。你的核心任务�
 
 - **next_action**：还要接着查就填 continue，全答上了就填 finish
 - **reason**：一句话说清为什么继续、或为什么可以停了
-- **next_db / next_keyword**：next_action 是 continue 时必填，写清下一轮查哪个库、用什么关键词
+- **next_db / next_keyword**：next_action 是 continue 时必填，写清下一轮查哪个库、用什么关键词。
+  **next_action 是 finish 时，这两个字段一律填 null —— 不要填空字符串。**
+
+例如：
+
+- 还要接着查：{{"next_action": "continue", "reason": "还缺火龙怎么打", "next_db": "monster", "next_keyword": "火龙"}}
+- 可以停了：{{"next_action": "finish", "reason": "两个问题都答上了", "next_db": null, "next_keyword": null}}
 """
 
 GENERATE_PROMPT = """
