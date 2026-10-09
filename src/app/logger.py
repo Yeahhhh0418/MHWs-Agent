@@ -20,6 +20,7 @@ import uuid
 from datetime import datetime
 
 import colorlog
+from colorlog.escape_codes import escape_codes
 
 # 当前正在处理的那次问答的编号。用 contextvars 而不是普通全局变量 ——
 # 它按"执行上下文"隔离，以后上 Web（多请求并发）时每个请求各一份，不会串。
@@ -69,21 +70,46 @@ class JSONFormatter(logging.Formatter):
         return json.dumps(log_entry, ensure_ascii=False)
 
 
+# 每个模块配一个颜色。原来所有模块名都是同一个紫色，route / retrieve / analyze /
+# generate 在终端里混成一片，看不出哪一步到哪一步。
+# 只影响控制台；JSON 落盘那份是纯文本，不带转义码。
+_NAME_COLORS = {
+    "nodes.route": "blue",
+    "nodes.retrieve": "cyan",
+    "nodes.analyze": "purple",
+    "nodes.generate": "green",
+    "chatllm": "yellow",
+    # rag 那两层是噪音（只在首次加载时打），压成灰色退到背景
+    "rag.base": "light_black",
+    "rag.main": "light_black",
+}
+
+
+def _color_for(name: str) -> str:
+    """按模块名取 ANSI 颜色码（str）；没配上的返回空串 = 终端默认色。"""
+    color = _NAME_COLORS.get(name)
+    if color is None:
+        return ""
+    return escape_codes[color]
+
+
 class ConsoleFormatter(colorlog.ColoredFormatter):
     """
     [WHY] 原来控制台只打 message，extra 里的东西（查了哪个库、命中几条、为什么降级）
           一个都看不到 —— 想排查得去翻 JSON 文件，等于白打。
     [FIX] 把 extra 按 key=value 追在消息后面，长值截断；顺手去掉 mhwi. 前缀，
-          模块名短一半。
+          模块名短一半；再按模块上色，让节点之间的边界一眼可见。
     """
 
     MAX_VALUE_LEN = 40
 
     def format(self, record: logging.LogRecord) -> str:
         # 同一条 record 会被多个 handler 共用（先控制台、后文件），
-        # 所以名字改完必须还原，否则 JSON 那边的 logger 字段会跟着变短
+        # 所以名字改完必须还原 —— 否则 JSON 那边的 logger 字段会带上转义码
         original_name = record.name
-        record.name = original_name.removeprefix("mhwi.")
+        short_name = original_name.removeprefix("mhwi.")
+        # 颜色只能加在名字里：colorlog 只按「级别」配色，配不了「模块」
+        record.name = f"{_color_for(short_name)}{short_name}{escape_codes['reset']}"
         try:
             line = super().format(record)
         finally:
@@ -141,7 +167,8 @@ def setup_logging(
     # 日志走 stderr —— stdout 留给答案，别混在一起
     console_handler = logging.StreamHandler(sys.stderr)
 
-    # 定义彩色格式：时间(蓝) 等级(颜色) 模块名(紫) - 消息
+    # 定义彩色格式：时间(蓝) 等级(按级别配色) 模块名(按模块配色) 消息
+    # 模块名那里不写死颜色 —— 由 ConsoleFormatter 按 _NAME_COLORS 自己往里塞
     log_colors = {
         "DEBUG": "cyan",
         "INFO": "green",
@@ -149,7 +176,7 @@ def setup_logging(
         "ERROR": "red",
         "CRITICAL": "bold_red",
     }
-    formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(purple)s%(name)s%(reset)s  %(message)s"
+    formatter_str = "%(log_color)s[%(asctime)s] %(levelname)-8s%(reset)s %(name)s  %(message)s"
     console_handler.setFormatter(
         ConsoleFormatter(
             formatter_str, datefmt="%H:%M:%S", log_colors=log_colors, reset=True, style="%"
