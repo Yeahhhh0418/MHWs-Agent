@@ -1,4 +1,5 @@
 import json
+import time
 import os
 import subprocess
 from datetime import datetime
@@ -8,6 +9,7 @@ from langchain_core.messages import HumanMessage
 
 from app.agent.graph import graph
 from app.config import get_config
+from app.metrics import summary
 
 EVAL_DIR = Path(__file__).parent
 # 字段说明见同目录 README.md
@@ -133,8 +135,12 @@ def call_agent(question: str) -> dict:
     - routed_dbs: 路由到的知识库名称列表
     - iterations: 迭代轮数
     """
+    #记录时间
+    started = time.perf_counter()
     # 跑一遍 Agent，拿回完整状态
     st = graph.invoke({"messages": [HumanMessage(content=question)]})
+    #计算结束时间
+    elapsed = time.perf_counter() - started
     # 取出每一轮的检索记录
     info = st.get("collected_info", [])
 
@@ -158,6 +164,8 @@ def call_agent(question: str) -> dict:
     for one_round in rounds:
         round_counts.append(len(one_round))
 
+    usage = summary(st.get("request_id", ""))
+
     # 整理成评测脚本要的字段
     return {
         "answer": st.get("final_answer", ""),
@@ -169,6 +177,8 @@ def call_agent(question: str) -> dict:
         "degraded": st.get("degraded", False),
         "rounds": rounds,
         "round_counts": round_counts,
+        "elapsed_seconds": elapsed,  # 端到端耗时：进图到出答案
+        "token_usage": usage,  # 这次问答的 token 用量，含 by_model 明细
     }
 
 
@@ -202,6 +212,8 @@ def _run_one(case: dict, snapshot: dict) -> dict:
         "retrieved_doc_ids": retrieved_ids,
         "rounds": rounds,  # MRR 要用：每条编号在第几轮的第几位
         "round_counts": agent_output.get("round_counts", []),  # 每轮返回几条，如 [10, 12, 4]
+        "elapsed_seconds": agent_output.get("elapsed_seconds", 0.0),  # 端到端耗时（秒）
+        "token_usage": agent_output.get("token_usage", {}),  # token 用量，含 by_model 明细
         "routed_dbs": routed_dbs,
         "iterations": agent_output.get("iterations", 0),
         "recall": recall,
@@ -246,10 +258,17 @@ def run_eval() -> None:
             try:
                 # 正常跑完：拿到记录，顺手打印这题的指标
                 record = _run_one(case, snapshot)
+                # 成本压成一个短串（耗时秒 / token 千），免得这行太长
+                one_usage = record.get("token_usage") or {}
+                cost = (
+                    f"{record.get('elapsed_seconds', 0.0):.0f}s/"
+                    f"{one_usage.get('total_tokens', 0) / 1000:.1f}k"
+                )
                 print(
                     f"   召回率: {record['recall'] * 100:.0f}%   "
                     f"返回条数: {record.get('round_counts', [])}   "
                     f"倒数排名: {record.get('reciprocal_rank', 0.0):.2f}   "
+                    f"成本 {cost}   "
                     f"没找到的编号: {record['missing_doc_ids']}"
                 )
             except Exception as e:  # noqa: BLE001 —— 就是要抓全：任何一道题崩了都不能拖垮整轮评测
@@ -304,6 +323,26 @@ def run_eval() -> None:
         if one_round is not None:
             round_dist[one_round] = round_dist.get(one_round, 0) + 1
 
+    # 成本：整轮一共花了多少 token、多少时间
+    total_tokens = 0
+    total_reasoning = 0
+    total_seconds = 0.0
+    for r in results:
+        one_usage = r.get("token_usage") or {}
+        total_tokens += one_usage.get("total_tokens", 0)
+        total_reasoning += one_usage.get("reasoning_tokens", 0)
+        total_seconds += r.get("elapsed_seconds", 0.0)
+
+    # 防除零：一条用量都没记上时，比例没意义
+    if total_tokens > 0:
+        reasoning_ratio = total_reasoning / total_tokens
+    else:
+        reasoning_ratio = 0.0
+    if len(results) > 0:
+        avg_seconds = total_seconds / len(results)
+    else:
+        avg_seconds = 0.0
+
     # 挑出崩掉的题，单独提醒一句
     crashed = []
     for r in results:
@@ -318,6 +357,9 @@ def run_eval() -> None:
     print(f"路由准确率: {route_accuracy * 100:.0f}%   （该查的库都查了的题占几成）")
     print(f"降级率: {degraded_count}/{len(results)}   （降级过的答案不能信）")
     print(f"首次命中的轮次分布: {round_dist}   # 如 {{1: 12, 2: 3}} = 12 题第一轮就捞到")
+    # 成本两行：token 顺带报 reasoning 占比（思考模式的大头），耗时标清是各题相加
+    print(f"总 token: {total_tokens}   （reasoning {total_reasoning}，占 {reasoning_ratio:.0%}）")
+    print(f"耗时: 各题相加 {total_seconds / 60:.1f} 分钟   （平均每题 {avg_seconds:.0f} 秒）")
     print(f"✅ 评测完成，结果已保存至: {output_path}")
 
 

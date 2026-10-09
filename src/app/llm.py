@@ -14,6 +14,7 @@ from langchain_core.language_models import BaseChatModel
 
 from app.config import get_config
 from app.logger import get_logger, setup_logging
+from app.metrics import UsageCollector
 
 load_dotenv()
 
@@ -50,6 +51,9 @@ def _build_single_llm(cfg: dict) -> BaseChatModel:
     else:
         # 没配 base_url 就走官方 provider
         kwargs["model_provider"] = cfg.get("provider", "openai")
+
+        # 挂用量收集器：所有模型调用自动被记账，调用点不用改
+    kwargs["callbacks"] = [UsageCollector(cfg["model"])]
 
     return init_chat_model(**kwargs)
 
