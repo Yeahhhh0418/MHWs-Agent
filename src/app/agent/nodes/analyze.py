@@ -62,6 +62,21 @@ def _check_decision(decision: AnalyzeDecision) -> None:
             raise AnalyzeError("next_action 是 continue，但没有给出 next_keyword")
 
 
+def _already_queried(state: AgentState, db: str | None, keyword: str | None) -> bool:
+    """
+    [WHY] 同一组 (库, 关键词) 再查一次必然拿到一样的资料 —— 检索是确定性的（BM25 + 向量，
+          没有随机）。实测踩过：问「灭尽龙」（数据里没这只怪），模型第一轮就看出捞回来的
+          是别的怪，却还是说 continue 去查同一个 (monster, 灭尽龙)，白烧一轮检索 + 一次 analyze。
+    [FIX] 拿已经查过的组合比一比，比中就拦。这是纯字符串比较，不该交给模型"记得"
+          （项目完善清单 §2.5）。关键词去首尾空格 —— 「灭尽龙」和「灭尽龙 」是同一个词。
+    """
+    wanted = (keyword or "").strip()
+    for item in state["collected_info"]:
+        if item["db"] == db and item["keyword"].strip() == wanted:
+            return True
+    return False
+
+
 def _invoke_and_parse_analyze(user_content: str, retry_hint: str = "") -> AnalyzeDecision:
     """调一次模型并校验（AnalyzeDecision）；不合格抛 AnalyzeError，消息供上层回喂重试。"""
     content = user_content
@@ -170,6 +185,21 @@ def analyze_node(state: AgentState) -> dict:
     # 两次都没成 —— 降级成 finish，但原因留在 trace 里，评测看得见
     if decision is None:
         return _decide(state, "degrade", "finish", None, None, last_error, degraded=True)
+
+    # 代码兜底：这一组查过了就别再查 —— 同样的输入必然同样的结果，重复一轮纯属白跑。
+    # 只拦"一模一样"的；换个词、换个库照走，那些是真能拿到新资料的。
+    if decision.next_action == "continue" and _already_queried(
+        state, decision.next_db, decision.next_keyword
+    ):
+        return _decide(
+            state,
+            "code",  # 这个决定是代码下的，不是模型下的 —— 事后能一眼分辨
+            "finish",
+            None,
+            None,
+            f"模型想接着查（{decision.next_db}, {decision.next_keyword}），"
+            f"但这组已经查过了，重复查不会拿到新资料",
+        )
 
     # 正常路径：把模型的决策原样交给 _decide 打包
     return _decide(
