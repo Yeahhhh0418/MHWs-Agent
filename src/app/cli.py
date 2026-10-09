@@ -4,10 +4,12 @@
 """
 
 import sys
+import time
 
 from langchain_core.messages import HumanMessage
 
 from app.agent.graph import graph
+from app.metrics import format_cost_line, summary
 
 
 def main() -> None:
@@ -20,11 +22,17 @@ def main() -> None:
     question = " ".join(sys.argv[1:])
 
     try:
+        # 掐表：从进图到出答案
+        started = time.perf_counter()
         state = graph.invoke({"messages": [HumanMessage(content=question)]})
+        elapsed = time.perf_counter() - started
     except Exception as e:  # noqa: BLE001 —— 顶层兜底：不让异常裸奔给用户，必须抓全
         # 失败要吼出来，不能装作答完了（比如 .env 里缺 API Key）
         print(f"运行失败：{type(e).__name__}: {e}", file=sys.stderr)
         sys.exit(1)
 
     print(state.get("final_answer", "（没有拿到答案）"))
-    print(f"\n[本次会话编号：{state.get('request_id', '-')}]", file=sys.stderr)
+    # 成本走 stderr：stdout 只留答案，用户可能把它重定向去用
+    usage = summary(state.get("request_id", ""))
+    print(f"[{format_cost_line(usage, elapsed)}]", file=sys.stderr)
+    print(f"[本次会话编号：{state.get('request_id', '-')}]", file=sys.stderr)

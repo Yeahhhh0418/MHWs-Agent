@@ -1,8 +1,11 @@
+import time
+
 from langchain_core.messages import HumanMessage
 from langgraph.graph import END, START, StateGraph
 
 from app.agent.nodes import analyze_node, generate_node, retrieve_node, route_node, should_continue
 from app.agent.state import AgentState
+from app.metrics import format_cost_line, summary
 
 builder = StateGraph(AgentState)
 
@@ -38,5 +41,9 @@ if __name__ == "__main__":
         )
         if a == "exit":
             break
+        started = time.perf_counter()
         state = graph.invoke({"messages": [HumanMessage(content=a)]})
         print(state["final_answer"])
+        # 调试入口：成本直接跟着答案打，不分到 stderr
+        usage = summary(state.get("request_id", ""))
+        print(f"[{format_cost_line(usage, time.perf_counter() - started)}]")
