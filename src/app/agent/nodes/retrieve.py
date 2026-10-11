@@ -76,9 +76,13 @@ def retrieve_node(state: AgentState) -> dict:
 
     # 打包成一条检索结果，会被追加进 collected_info
     new_result = RAGResult(db=db, keyword=keyword, content=content, doc_ids=doc_ids)
-    return {
+    result = {
         "collected_info": [new_result],
         "iteration_count": iteration + 1,
         "degraded": degraded,
-        "degrade_reason": degrade_reason,
     }
+    # 只在真降级时才写原因 —— degrade_reason 没有 reducer，不降级也写个空串
+    # 会把前一个节点留下的原因冲掉（见 state.py 的说明）
+    if degraded:
+        result["degrade_reason"] = degrade_reason
+    return result

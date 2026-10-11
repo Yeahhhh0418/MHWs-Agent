@@ -12,7 +12,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field, ValidationError
 
 from app.agent.nodes.common import format_collected_info
-from app.agent.state import AgentState
+from app.agent.state import DB, AgentState
 from app.config import get_config
 from app.llm import invoke_with_fallback
 from app.logger import bind_request_id, get_logger
@@ -22,8 +22,6 @@ logger = get_logger("nodes.analyze")
 
 # 输出不合格、或偶发故障时，最多再给一次机会
 ANALYZE_MAX_ATTEMPTS = 2
-# 库名卡死在字面量里 —— 模型编不出第五个库
-DB = Literal["equipment", "weapon", "material", "monster"]
 
 
 class AnalyzeError(Exception):
@@ -138,9 +136,12 @@ def _decide(
     result = {
         "next_action": action,
         "degraded": degraded,
-        "degrade_reason": reason if degraded else "",
         "decision_trace": [entry],
     }
+    # 只在真降级时才写原因 —— degrade_reason 没有 reducer，不降级也写个空串
+    # 会把前一个节点留下的原因冲掉（见 state.py 的说明）
+    if degraded:
+        result["degrade_reason"] = reason
     # 只有要继续才带下一站去哪儿；finish 时是 None
     if action == "continue":
         result["current_db"] = db

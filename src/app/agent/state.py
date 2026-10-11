@@ -1,7 +1,11 @@
 import operator
-from typing import Annotated, TypedDict
+from typing import Annotated, Literal, TypeAlias, TypedDict
 
 from langgraph.graph.message import add_messages
+
+# 四个库的名字。route 和 analyze 都拿它约束模型的输出（非法库名当场打回），
+# 所以放在这里一份 —— 两处各写一遍的话，加库时漏掉一处就是静默漂开。
+DB: TypeAlias = Literal["equipment", "weapon", "material", "monster"]
 
 
 class RAGResult(TypedDict):
@@ -38,8 +42,13 @@ class AgentState(TypedDict):
     final_answer: str  # generate_node 写入
 
     # ── 降级留痕（项目完善清单 §2.1） ──
-    degraded: bool  # analyze 重试后仍失败、被迫降级时为 True
-    degrade_reason: str  # 降级的具体原因
+    # ⚠️ 必须用 or_ 合并：普通字段是"后写的冲掉先写的"，而每个节点都会写这个字段，
+    #    所以 route 降级了、后面 retrieve 写个 False，降级就被吞掉了（实测过）。
+    #    用 or_ 之后语义是"这次问答有没有任何一步降级过" —— 正是降级率要的。
+    degraded: Annotated[bool, operator.or_]
+    # ⚠️ 配套的约定：这个字段**只在真降级时才写**。它没有 reducer，谁写谁覆盖，
+    #    所以要是不降级也写个空串，会把前一个节点的原因冲掉。
+    degrade_reason: str
 
     # ── 决策轨迹：每一轮 analyze 由谁定的、定了什么、为什么（§2.4 §2.8） ──
     # 每条形如 {"iteration": 1, "source": "llm", "action": "continue",
