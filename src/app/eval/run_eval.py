@@ -2,6 +2,7 @@ import json
 import time
 import os
 import subprocess
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -107,7 +108,7 @@ def _git_commit() -> str:
     return f"{commit}*" if dirty else commit
 
 
-def _config_snapshot() -> dict:
+def _config_snapshot(only_tags: list = None) -> dict:
     """
     [WHY] 结果文件不记当次配置 —— 过十天你就不知道那个数字是哪套参数跑出来的，
           所有"变好了"都证明不了（项目完善清单 §1.3）。
@@ -122,6 +123,8 @@ def _config_snapshot() -> dict:
         "model": cfg["llm"]["primary"]["model"],
         "max_iterations": cfg["graph"]["max_iterations"],
         "retrieval": cfg["retrieval"],  # 各库的 k / 权重 / 阈值 / top_n
+        # ⚠️ 只跑子集时必须记下来 —— 不然这份结果会被当成全量（题数对不上、指标也没法比）
+        "only_tags": list(only_tags) if only_tags else [],
     }
 
 
@@ -232,7 +235,8 @@ def _run_one(case: dict, snapshot: dict) -> dict:
     }
 
 
-def run_eval() -> None:
+def run_eval(only_tags: list = None) -> None:
+    """跑评测。only_tags 给了就只跑 tags 命中其中任意一个的题（调参/消融时省时间）。"""
     # 1. 加载题库
     # 一行一道题，读成 dict 列表，空行跳过
     cases = []
@@ -241,6 +245,20 @@ def run_eval() -> None:
             if line.strip():
                 cases.append(json.loads(line))
 
+    # 只想跑某个场景的子集时（调参、消融），按 tags 筛 ——
+    # 全量 31 道要 7 分钟，而一次消融往往只关心其中几道
+    if only_tags:
+        kept = []
+        for one_case in cases:
+            hit = False
+            for one_tag in one_case.get("tags", []):
+                if one_tag in only_tags:
+                    hit = True
+            if hit:
+                kept.append(one_case)
+        cases = kept
+        print(f"只跑 tags 含 {only_tags} 的题：{len(cases)} 道")
+
     # 2. 先建好结果文件，然后**边跑边写**
     #    原来是攒在内存里、最后一次性写盘 —— 第 10 题崩了，前 9 条也白跑
     # 用时间戳当文件名，一次跑出一个新文件
@@ -248,7 +266,7 @@ def run_eval() -> None:
     os.makedirs(EVAL_DIR / "results", exist_ok=True)
     output_path = EVAL_DIR / "results" / f"{timestamp}.jsonl"
     # 先记下这次的配置，随每条结果一起存
-    snapshot = _config_snapshot()
+    snapshot = _config_snapshot(only_tags)
 
     results = []
     with open(output_path, "w", encoding="utf-8") as out:
@@ -364,4 +382,8 @@ def run_eval() -> None:
 
 
 if __name__ == "__main__":
-    run_eval()
+    # 用法：
+    #   run_eval.py                  跑全部（31 道，约 7 分钟）
+    #   run_eval.py 查族名,俗称        只跑 tags 命中其中任意一个的题
+    tags = sys.argv[1].split(",") if len(sys.argv) > 1 else None
+    run_eval(tags)
