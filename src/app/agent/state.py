@@ -37,6 +37,9 @@ class AgentState(TypedDict):
 
     # ── 安全阀 ──
     iteration_count: int  # 已执行的检索次数，防止无限循环
+    # 这次问答的起点（time.monotonic()，route 时记）。analyze 拿它算已经跑了多久 ——
+    # iteration_count 管"转几轮"，这个管"总共花多久"；每轮都慢的时候只有它能兜住。
+    started_at: float
 
     # ── 最终输出 ──
     final_answer: str  # generate_node 写入

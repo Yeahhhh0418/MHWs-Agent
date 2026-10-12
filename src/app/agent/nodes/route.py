@@ -2,6 +2,8 @@
 src/app/agent/nodes/route.py —— 路由节点：判断问题核心实体，决定第一个查哪个库。
 """
 
+import time
+
 from langchain_core.exceptions import OutputParserException
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -43,7 +45,10 @@ class RouteDecision(BaseModel):
     """
 
     first_db: DB = Field(description="第一个要查的库")
-    first_keyword: str = Field(description="最核心的检索关键词，会原样拿去检索")
+    # ⚠️ min_length=1 是必须的：str 允许空串，而空串拿去检索毫无意义（实测捞回 10 条随机东西）
+    first_keyword: str = Field(
+        min_length=1, description="最核心的检索关键词，会原样拿去检索"
+    )
 
 
 def _invoke_and_parse_route(user_msg: str, retry_hint: str = "") -> RouteDecision:
@@ -103,6 +108,8 @@ def route_node(state: AgentState) -> dict:
         "user_question": user_msg,
         "iteration_count": 0,
         "collected_info": [],
+        # route 是第一个节点，这里记下就约等于"整个问答的起点"
+        "started_at": time.monotonic(),
     }
 
     if decision is None:

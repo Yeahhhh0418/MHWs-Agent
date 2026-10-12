@@ -4,6 +4,7 @@ src/app/agent/nodes/analyze.py —— 分析节点：判断还缺什么、要不
 结构化输出卡住字段和库名；决策过程记进 state.decision_trace；模型输出不合格会回喂重试一次。
 """
 
+import time
 from typing import Literal
 
 from langchain_core.exceptions import OutputParserException
@@ -149,9 +150,34 @@ def _decide(
     return result
 
 
+def _elapsed_seconds(state: AgentState) -> float:
+    """从 route 记下的起点算这次问答已经跑了多久（秒）；没有起点就当 0。"""
+    started_at = state.get("started_at")
+    if started_at is None:
+        return 0.0
+    return time.monotonic() - started_at
+
+
 def analyze_node(state: AgentState) -> dict:
     # 节点入口重绑编号：LangGraph 给每个节点的上下文各是一份，不会自动传过来
     bind_request_id(state.get("request_id", ""))
+
+    # 整轮预算：max_iterations 拦的是"转太多次"，这个拦的是"每轮都慢、累起来太久"。
+    # 放在调模型之前 —— 已经超了就别再花这一次调用了。
+    # ⚠️ 必须留痕（degraded）：不留的话评测里看不见这次是被超时掐掉的
+    elapsed = _elapsed_seconds(state)
+    budget = get_config().get("graph", {}).get("time_budget_seconds", 600)
+    if elapsed > budget:
+        return _decide(
+            state,
+            "code",  # 这个决定是代码下的，不是模型下的
+            "finish",
+            None,
+            None,
+            f"整轮超预算（已跑 {elapsed:.0f} 秒 > {budget} 秒），不再往下查，直接收尾",
+            degraded=True,
+        )
+
     # 给模型看三样：原始问题、已经查了几轮、手上有哪些资料
     collected_text = format_collected_info(state["collected_info"])
     user_content = f"""
