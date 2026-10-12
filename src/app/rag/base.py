@@ -1,6 +1,9 @@
+import hashlib
 import json
 import os
+import shutil
 from abc import ABC
+from pathlib import Path
 from typing import ClassVar
 
 from dotenv import load_dotenv
@@ -15,6 +18,11 @@ from app.logger import get_logger
 from app.rag.tokenizer import chinese_char_tokenizer
 
 logger = get_logger("rag.base")
+
+# 数据指纹存在库目录里，文件名固定。
+# ⚠️ 算「建过库没有」时要把它排除掉 —— 不然一个只有指纹、没有别的文件的空目录，
+#    会被当成"库已经建好了"。
+_FINGERPRINT_FILE = "_data_fingerprint.txt"
 
 
 def load_jsonl(file_path: str) -> list:
@@ -154,30 +162,82 @@ class BaseRAG(ABC):
             # 冠上库名，四个库的编号不会撞
             doc.metadata[self._ID_KEY] = f"{self._DB_NAME}|" + "|".join(parts)
 
+    def _data_fingerprint(self) -> str:
+        """
+        [WHY] 判断"库还能不能用"要看**要入库的内容**变没变 —— 只看数据文件不够，
+              改了 _load_data（拼正文的规则）也一样会让库作废。
+        [FIX] 把每条文档的「编号 + 正文」序列化后算 sha256，取前 16 位。
+              顺序也进指纹：宁可敏感（多重建一次），也别漏判（旧数据静默生效）。
+        """
+        payload = []
+        for doc in self._docs:
+            payload.append({"id": doc.metadata[self._ID_KEY], "content": doc.page_content})
+        blob = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+        return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
+
     def _init_vectorstore(self) -> None:
         """
-        [WHY] 判断「建过库没有」只看目录里有没有文件，不看数据变没变 —— 改了数据不删库，
-              就会出现 BM25 用新数据、向量路用旧数据的混装结果（曾见一半「头盔」一半「HELM」）。
-        [FIX] 这里只管加载或首次构建；改了 _load_data 或数据文件后，必须手动删掉
-              storage/ 下对应目录再跑。
+        [WHY] 判断「建过库没有」原来只看目录里有没有文件 —— 改了数据不删库，就会出现
+              BM25 用新数据、向量路用旧数据的混装结果（曾见一半「头盔」一半「HELM」）。
+        [FIX] 把要入库的内容算个指纹存进库目录，加载前比一比：对得上就加载，
+              对不上就删掉重建。不用再让人记着手动删。
         """
-        # 目录里有文件就直接加载 —— 内容对不对一概不管，所以改了数据必须手动删目录
-        if os.path.exists(self._persist_dir) and os.listdir(self._persist_dir):
-            logger.info(f"检测到已有{self._DB_NAME}向量库，直接加载", extra={"db": self._DB_NAME})
+        fp_path = Path(self._persist_dir) / _FINGERPRINT_FILE
+        current = self._data_fingerprint()
+
+        # 「建过库没有」= 目录里有东西，而且不只有那个指纹文件
+        has_store = os.path.exists(self._persist_dir) and any(
+            name != _FINGERPRINT_FILE for name in os.listdir(self._persist_dir)
+        )
+        stored = fp_path.read_text(encoding="utf-8").strip() if fp_path.exists() else None
+
+        if has_store and stored == current:
+            logger.info(
+                f"检测到已有{self._DB_NAME}向量库，数据指纹一致，直接加载",
+                extra={"db": self._DB_NAME, "fingerprint": current},
+            )
             self._vectorstore = Chroma(
                 embedding_function=self._embeddings,
                 persist_directory=self._persist_dir,
             )
+            return
+
+        if has_store:
+            # ⚠️ 重建前必须先删干净：Chroma 的 from_documents 是**追加**不是覆盖，
+            #    不删的话旧的还留在库里，结果比不重建更糟（实测 3 条 + 5 条 = 8 条）
+            logger.warning(
+                f"{self._DB_NAME}向量库跟当前数据对不上，重建",
+                extra={"db": self._DB_NAME, "stored": stored, "current": current},
+            )
+            try:
+                shutil.rmtree(self._persist_dir)
+            except OSError as e:
+                # Windows 上如果**同一个进程里已经打开过**这个库，chroma.sqlite3 还占着，
+                # 删不掉。正常用法碰不到（每个库在进程里只建一次），脚本/notebook 里可能。
+                # 这里宁可响亮地报错，也别退回"不删直接建" —— 实测那样会追加成两倍条数。
+                raise RuntimeError(
+                    f"{self._DB_NAME} 向量库要重建，但删不掉旧目录 {self._persist_dir} —— "
+                    f"它还被占着（Windows 上同一个进程里二次打开就会这样）。"
+                    f"换个新进程跑，或者手动删掉这个目录再跑。"
+                ) from e
         else:
             # 没有就现建，首次要等一会儿
             logger.info(f"正在构建{self._DB_NAME}向量库（首次较慢）", extra={"db": self._DB_NAME})
-            # space=cosine 要跟 embeddings 那边的 normalize 配套
-            self._vectorstore = Chroma.from_documents(
-                documents=self._docs,
-                embedding=self._embeddings,
-                persist_directory=self._persist_dir,
-                collection_configuration={"hnsw": {"space": "cosine"}},
-            )
+
+        # space=cosine 要跟 embeddings 那边的 normalize 配套
+        self._vectorstore = Chroma.from_documents(
+            documents=self._docs,
+            embedding=self._embeddings,
+            persist_directory=self._persist_dir,
+            collection_configuration={"hnsw": {"space": "cosine"}},
+        )
+        # 建完把这次的指纹记下来，下次加载前拿它比
+        fp_path.parent.mkdir(parents=True, exist_ok=True)
+        fp_path.write_text(current, encoding="utf-8")
+        logger.info(
+            f"{self._DB_NAME}向量库构建完成",
+            extra={"db": self._DB_NAME, "fingerprint": current},
+        )
 
     def _init_retriever(self) -> None:
         """
