@@ -1,8 +1,8 @@
 import json
-import time
 import os
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -108,7 +108,7 @@ def _git_commit() -> str:
     return f"{commit}*" if dirty else commit
 
 
-def _config_snapshot(only_tags: list = None) -> dict:
+def _config_snapshot(only_tags: list | None = None) -> dict:
     """
     [WHY] 结果文件不记当次配置 —— 过十天你就不知道那个数字是哪套参数跑出来的，
           所有"变好了"都证明不了（项目完善清单 §1.3）。
@@ -138,11 +138,11 @@ def call_agent(question: str) -> dict:
     - routed_dbs: 路由到的知识库名称列表
     - iterations: 迭代轮数
     """
-    #记录时间
+    # 记录时间
     started = time.perf_counter()
     # 跑一遍 Agent，拿回完整状态
     st = graph.invoke({"messages": [HumanMessage(content=question)]})
-    #计算结束时间
+    # 计算结束时间
     elapsed = time.perf_counter() - started
     # 取出每一轮的检索记录
     info = st.get("collected_info", [])
@@ -235,7 +235,7 @@ def _run_one(case: dict, snapshot: dict) -> dict:
     }
 
 
-def run_eval(only_tags: list = None) -> None:
+def run_eval(only_tags: list | None = None) -> None:
     """跑评测。only_tags 给了就只跑 tags 命中其中任意一个的题（调参/消融时省时间）。"""
     # 1. 加载题库
     # 一行一道题，读成 dict 列表，空行跳过

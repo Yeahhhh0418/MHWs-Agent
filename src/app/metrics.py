@@ -90,9 +90,12 @@ def format_cost_line(usage: dict, elapsed_seconds: float) -> str:
 
     parts = [
         f"耗时 {elapsed_seconds:.0f} 秒",
-        f"token {usage['total_tokens']}"
-        f"（输入 {usage['input_tokens']} / 输出 {usage['output_tokens']}，"
-        f"其中 reasoning {usage['reasoning_tokens']}）",
+        # 三段拼一句：括号写出来，省得看起来像三个独立的列表项
+        (
+            f"token {usage['total_tokens']}"
+            f"（输入 {usage['input_tokens']} / 输出 {usage['output_tokens']}，"
+            f"其中 reasoning {usage['reasoning_tokens']}）"
+        ),
         f"{usage['llm_calls']} 次模型调用",
     ]
     # 把用过的模型都列出来：出现两个就说明走了备用，那又慢又贵，得看得见

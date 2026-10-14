@@ -57,7 +57,9 @@ def _warn_if_wrong_python() -> None:
         return
     if Path(sys.executable).resolve() != venv_python.resolve():
         print(f"⚠️ 现在用的是 {sys.executable}", file=sys.stderr)
-        print(f"   项目的依赖装在 .venv 里，改用：{venv_python} scripts/dev.py ...", file=sys.stderr)
+        print(
+            f"   项目的依赖装在 .venv 里，改用：{venv_python} scripts/dev.py ...", file=sys.stderr
+        )
 
 
 def run_command(name: str, extra_args: list[str]) -> int:

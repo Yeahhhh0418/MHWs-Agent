@@ -46,9 +46,7 @@ class RouteDecision(BaseModel):
 
     first_db: DB = Field(description="第一个要查的库")
     # ⚠️ min_length=1 是必须的：str 允许空串，而空串拿去检索毫无意义（实测捞回 10 条随机东西）
-    first_keyword: str = Field(
-        min_length=1, description="最核心的检索关键词，会原样拿去检索"
-    )
+    first_keyword: str = Field(min_length=1, description="最核心的检索关键词，会原样拿去检索")
 
 
 def _invoke_and_parse_route(user_msg: str, retry_hint: str = "") -> RouteDecision:
@@ -126,8 +124,6 @@ def route_node(state: AgentState) -> dict:
         result["current_db"] = decision.first_db
         result["query_keyword"] = decision.first_keyword
         result["degraded"] = False
-        logger.info(
-            "路由完成", extra={"db": decision.first_db, "keyword": decision.first_keyword}
-        )
+        logger.info("路由完成", extra={"db": decision.first_db, "keyword": decision.first_keyword})
 
     return result

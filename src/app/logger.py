@@ -202,6 +202,7 @@ def get_logger(name: str) -> _StructuredAdapter:
     # 包一层适配器：extra 和 request_id 都在它里面处理
     return _StructuredAdapter(raw_logger, {})
 
+
 def current_request_id() -> str:
     """取当前执行上下文里的问答编号（str）；没有就返回空串。"""
     return _request_id.get()
