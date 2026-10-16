@@ -6,7 +6,7 @@ src/app/core/logger.py —— 结构化日志。
 
     from app.core.logger import get_logger
 
-    logger = get_logger("nodes.route")     # 名字随意，会挂在 mhwi. 命名空间下
+    logger = get_logger("nodes.route")     # 名字随意，会挂在 mhws. 命名空间下
     logger.info("开始路由", extra={"question": "火龙怎么打"})
 
 extra 里的字段会并进 JSON，也会追在控制台那行消息后面（长值截到 40 字符）。
@@ -97,7 +97,7 @@ class ConsoleFormatter(colorlog.ColoredFormatter):
     """
     [WHY] 原来控制台只打 message，extra 里的东西（查了哪个库、命中几条、为什么降级）
           一个都看不到 —— 想排查得去翻 JSON 文件，等于白打。
-    [FIX] 把 extra 按 key=value 追在消息后面，长值截断；顺手去掉 mhwi. 前缀，
+    [FIX] 把 extra 按 key=value 追在消息后面，长值截断；顺手去掉 mhws. 前缀，
           模块名短一半；再按模块上色，让节点之间的边界一眼可见。
     """
 
@@ -107,7 +107,7 @@ class ConsoleFormatter(colorlog.ColoredFormatter):
         # 同一条 record 会被多个 handler 共用（先控制台、后文件），
         # 所以名字改完必须还原 —— 否则 JSON 那边的 logger 字段会带上转义码
         original_name = record.name
-        short_name = original_name.removeprefix("mhwi.")
+        short_name = original_name.removeprefix("mhws.")
         # 颜色只能加在名字里：colorlog 只按「级别」配色，配不了「模块」
         record.name = f"{_color_for(short_name)}{short_name}{escape_codes['reset']}"
         try:
@@ -157,8 +157,8 @@ def setup_logging(
     log_file: str | None = None,
 ) -> None:
     """初始化根 logger。全局调用一次即可（我们在 chatllm.py 里调用）。"""
-    # 所有 logger 都挂在 mhwi 这个命名空间下
-    root = logging.getLogger("mhwi")
+    # 所有 logger 都挂在 mhws 这个命名空间下
+    root = logging.getLogger("mhws")
     # 级别认不出来就退回 INFO，不崩
     root.setLevel(getattr(logging, level.upper(), logging.INFO))
     # 先清干净：重复调用也不会把 handler 越挂越多
@@ -196,9 +196,9 @@ def setup_logging(
 
 
 def get_logger(name: str) -> _StructuredAdapter:
-    """获取 mhwi 命名空间下的 logger，替代 print() 使用。"""
-    # 统一挂在 mhwi. 下面，控制台显示时再去掉这个前缀
-    raw_logger = logging.getLogger(f"mhwi.{name}")
+    """获取 mhws 命名空间下的 logger，替代 print() 使用。"""
+    # 统一挂在 mhws. 下面，控制台显示时再去掉这个前缀
+    raw_logger = logging.getLogger(f"mhws.{name}")
     # 包一层适配器：extra 和 request_id 都在它里面处理
     return _StructuredAdapter(raw_logger, {})
 

@@ -1,5 +1,5 @@
 """
-命令行入口，对应 pyproject 里的 mhwi-agent 命令。
+命令行入口，对应 pyproject 里的 mhws-agent 命令。
 用 `python -m app` 走的是同一条路（见 __main__.py）。
 """
 
@@ -15,8 +15,8 @@ from app.core.metrics import format_cost_line, summary
 def main() -> None:
     """把命令行里的一句话丢给 Agent，打印最终答案；不带参数时只打印用法。"""
     if len(sys.argv) < 2:
-        print('用法: mhwi-agent "你的问题"')
-        print('例子: mhwi-agent "火龙这个怪要怎么打？"')
+        print('用法: mhws-agent "你的问题"')
+        print('例子: mhws-agent "火龙这个怪要怎么打？"')
         return
 
     question = " ".join(sys.argv[1:])

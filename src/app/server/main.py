@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="MHWI 攻略问答", lifespan=lifespan)
+app = FastAPI(title="MHWs 攻略问答", lifespan=lifespan)
 
 # 静态资源挂在 /static 下；首页另开一个显式路由，**不**把 StaticFiles 挂到 "/" ——
 # 挂 "/" 能自动送 index.html，但它要求"必须在所有接口都注册完之后挂"，

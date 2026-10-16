@@ -1,4 +1,4 @@
-"""让 `python -m app` 和 `mhwi-agent` 命令等价。"""
+"""让 `python -m app` 和 `mhws-agent` 命令等价。"""
 
 from app.cli import main
 
