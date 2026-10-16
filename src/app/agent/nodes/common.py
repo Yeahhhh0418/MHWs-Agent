@@ -4,7 +4,7 @@ src/app/agent/nodes/common.py —— 多个节点共用的 LLM 调用与文本�
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from app.llm import invoke_with_fallback
+from app.core.llm import invoke_with_fallback
 
 
 def invoke(system_prompt: str, user_content: str) -> str:

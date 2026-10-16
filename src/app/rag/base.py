@@ -13,8 +13,8 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from app.config import get_config
-from app.logger import get_logger
+from app.core.config import get_config
+from app.core.logger import get_logger
 from app.rag.tokenizer import chinese_char_tokenizer
 
 logger = get_logger("rag.base")

@@ -3,7 +3,7 @@ src/app/agent/nodes/retrieve.py —— 检索节点：按当前库和关键词�
 """
 
 from app.agent.state import AgentState, RAGResult
-from app.logger import bind_request_id, get_logger
+from app.core.logger import bind_request_id, get_logger
 from app.rag import mainrag
 from app.rag.base import BaseRAG
 

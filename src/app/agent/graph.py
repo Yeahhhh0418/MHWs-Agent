@@ -5,7 +5,7 @@ from langgraph.graph import END, START, StateGraph
 
 from app.agent.nodes import analyze_node, generate_node, retrieve_node, route_node, should_continue
 from app.agent.state import AgentState
-from app.metrics import format_cost_line, summary
+from app.core.metrics import format_cost_line, summary
 
 builder = StateGraph(AgentState)
 

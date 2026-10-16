@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from langchain_core.language_models import BaseChatModel
 
-from app.config import get_config
-from app.logger import get_logger, setup_logging
-from app.metrics import UsageCollector
+from app.core.config import get_config
+from app.core.logger import get_logger, setup_logging
+from app.core.metrics import UsageCollector
 
 load_dotenv()
 

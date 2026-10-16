@@ -5,7 +5,7 @@ import time
 
 from langchain_core.callbacks import BaseCallbackHandler
 
-from app.logger import current_request_id
+from app.core.logger import current_request_id
 
 # request_id -> 这次问答的账。
 # ⚠️ 必须是模块级 dict，不能用 contextvar —— LangGraph 给每个节点发独立的上下文副本，

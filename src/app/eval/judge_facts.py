@@ -11,7 +11,7 @@ from pathlib import Path
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field
 
-from app.llm import invoke_with_fallback
+from app.core.llm import invoke_with_fallback
 
 EVAL_DIR = Path(__file__).parent
 

@@ -9,7 +9,7 @@ import time
 from langchain_core.messages import HumanMessage
 
 from app.agent.graph import graph
-from app.metrics import format_cost_line, summary
+from app.core.metrics import format_cost_line, summary
 
 
 def main() -> None:

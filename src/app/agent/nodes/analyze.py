@@ -14,9 +14,9 @@ from pydantic import BaseModel, Field, ValidationError
 
 from app.agent.nodes.common import format_collected_info
 from app.agent.state import DB, AgentState
-from app.config import get_config
-from app.llm import invoke_with_fallback
-from app.logger import bind_request_id, get_logger
+from app.core.config import get_config
+from app.core.llm import invoke_with_fallback
+from app.core.logger import bind_request_id, get_logger
 from app.prompts import ANALYZE_PROMPT
 
 logger = get_logger("nodes.analyze")

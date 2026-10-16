@@ -8,7 +8,7 @@ from typing import ClassVar
 
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
-from app.logger import get_logger
+from app.core.logger import get_logger
 from app.rag.base import BaseRAG
 
 logger = get_logger("rag.main")

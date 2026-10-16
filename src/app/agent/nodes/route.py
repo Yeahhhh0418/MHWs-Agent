@@ -10,8 +10,8 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field, ValidationError
 
 from app.agent.state import DB, AgentState
-from app.llm import invoke_with_fallback
-from app.logger import get_logger, new_request_id
+from app.core.llm import invoke_with_fallback
+from app.core.logger import get_logger, new_request_id
 from app.prompts import ROUTE_PROMPT
 
 logger = get_logger("nodes.route")

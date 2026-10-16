@@ -6,7 +6,7 @@ from langchain_core.messages import AIMessage
 
 from app.agent.nodes.common import format_collected_info, invoke
 from app.agent.state import AgentState
-from app.logger import bind_request_id, get_logger
+from app.core.logger import bind_request_id, get_logger
 from app.prompts import GENERATE_PROMPT, LIBRARY_GUIDES
 
 logger = get_logger("nodes.generate")

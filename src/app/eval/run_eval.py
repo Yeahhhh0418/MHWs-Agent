@@ -9,8 +9,8 @@ from pathlib import Path
 from langchain_core.messages import HumanMessage
 
 from app.agent.graph import graph
-from app.config import get_config
-from app.metrics import summary
+from app.core.config import get_config
+from app.core.metrics import summary
 
 EVAL_DIR = Path(__file__).parent
 # 字段说明见同目录 README.md
