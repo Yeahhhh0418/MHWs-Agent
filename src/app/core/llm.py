@@ -1,6 +1,8 @@
 """
-src/app/llm.py —— 全局 LLM 实例
-模型名从 config.yaml 读取，不再硬编码。
+src/app/core/llm.py —— 全局 LLM 实例。
+
+模型名、接口地址、密钥一律从 .env 读；config.yaml 里只记"读哪个环境变量"。
+公开的配置里不放任何服务商信息 —— 使用者接自己的模型就行。
 """
 
 import os
@@ -23,38 +25,41 @@ setup_logging(level="INFO", log_file="logs/agent.log")
 
 logger = get_logger("chatllm")
 
-# 从 config.yaml 读取模型名，初始化大模型
+def _read_env(var_name: str, label: str) -> str:
+    """
+    [WHY] 模型名和接口地址要是写进 config.yaml，那就是公开的 —— 使用者要么照用别人的，
+          要么得改仓库里的文件（改完还容易把自己的配置误提交上去）。
+    [FIX] config 只记"读哪个环境变量"，值都放 .env（不进仓库）。取不到就说清去哪填，
+          别等真去调模型时才报一个看不懂的 401。
+    """
+    value = (os.getenv(var_name) or "").strip()
+    if not value:
+        raise RuntimeError(
+            f"{label}要的环境变量 {var_name} 没设（或为空）。"
+            f"照着 .env.example 在项目根目录建一个 .env，填上你自己的模型信息。"
+        )
+    return value
 
 
-def _build_single_llm(cfg: dict) -> BaseChatModel:
-    """根据单个模型配置构建 LLM 实例（含重试）"""
-    # 先铺基础参数：模型名、温度、重试次数、超时
+def _build_single_llm(cfg: dict, label: str) -> BaseChatModel:
+    """按一份模型配置建 LLM 实例（含重试）；模型名 / 地址 / 密钥都从 .env 读。"""
+    # 三样都从环境变量取 —— config 里只有"读哪个变量"
+    model = _read_env(cfg["model_env"], label)
+    base_url = _read_env(cfg["base_url_env"], label)
+    api_key = _read_env(cfg["api_key_env"], label)
+
+    # 走 OpenAI 兼容协议：换一家服务商只改 .env，代码和配置都不用动
     kwargs = {
-        "model": cfg["model"],
+        "model": model,
+        "model_provider": "openai",
+        "base_url": base_url,
+        "api_key": api_key,
         "temperature": cfg.get("temperature", 0.7),
         "max_retries": cfg.get("max_retries", 3),  # ← 第1层
         "timeout": cfg.get("timeout", 30),
-    }
-    # 配了 base_url 说明走 OpenAI 兼容协议（第三方网关）
-    if base_url := cfg.get("base_url"):
-        kwargs["model_provider"] = "openai"
-        kwargs["base_url"] = base_url
-        # 走了 openai 兼容协议，LangChain 只认 OPENAI_API_KEY；
-        # 各家密钥存在 .env 里的名字不同，所以由 config 指定变量名。
-        api_key_env = cfg.get("api_key_env")
-        if not api_key_env:
-            raise ValueError(f"模型 {cfg['model']} 配了 base_url 但没配 api_key_env")
-        # 取不到密钥就早点报，别等真去调模型时才失败
-        if not (api_key := os.getenv(api_key_env)):
-            raise RuntimeError(f"环境变量 {api_key_env} 未设置，请检查 .env")
-        kwargs["api_key"] = api_key
-    else:
-        # 没配 base_url 就走官方 provider
-        kwargs["model_provider"] = cfg.get("provider", "openai")
-
         # 挂用量收集器：所有模型调用自动被记账，调用点不用改
-    kwargs["callbacks"] = [UsageCollector(cfg["model"])]
-
+        "callbacks": [UsageCollector(model)],
+    }
     return init_chat_model(**kwargs)
 
 
@@ -70,19 +75,20 @@ def get_llms() -> tuple[BaseChatModel, ...]:
     llm_cfg = get_config()["llm"]
 
     # 主模型排第一个 —— 兜底顺序就是靠这个列表顺序
-    models = [_build_single_llm(llm_cfg["primary"])]
-    logger.info("主模型加载完成", extra={"model": llm_cfg["primary"]["model"]})
+    models = [_build_single_llm(llm_cfg["primary"], "主模型")]
+    logger.info("主模型加载完成", extra={"model": model_name(models[0])})
 
-    # 备用模型依次接在后面
-    for cfg in llm_cfg.get("fallbacks", []):
-        models.append(_build_single_llm(cfg))
-    # 有备用才报一句，省得每次启动都吵
-    if len(models) > 1:
+    # 备用是可选的：.env 里没填模型名就等于不用（不做一长串链，有多家需求再扩）
+    fallback_cfg = llm_cfg.get("fallback")
+    if fallback_cfg and (os.getenv(fallback_cfg["model_env"]) or "").strip():
+        models.append(_build_single_llm(fallback_cfg, "备用模型"))
         logger.info(
-            "已配置 %d 个备用模型",
-            len(models) - 1,
+            "已配置 1 个备用模型",
             extra={"models": [model_name(m) for m in models[1:]]},
         )
+    else:
+        logger.info("没配备用模型，只用主模型")
+
     return tuple(models)
 
 
@@ -128,7 +134,10 @@ def invoke_with_fallback(
     raise first_error
 
 
-logger.info("LLM 加载完成", extra={"model": get_config()["llm"]["primary"]["model"]})
+logger.info(
+    "LLM 加载完成",
+    extra={"model": os.getenv(get_config()["llm"]["primary"]["model_env"], "")},
+)
 
 if __name__ == "__main__":
     # 测试 LLM 是否能正常工作（会真的调模型）

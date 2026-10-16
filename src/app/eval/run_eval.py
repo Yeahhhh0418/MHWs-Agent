@@ -116,10 +116,12 @@ def _config_snapshot(only_tags: list | None = None) -> dict:
     """
     # 读当前配置，把会影响结果的几项挑出来
     cfg = get_config()
+    # 模型名现在放在 .env 里（不在 config）—— 快照照样要记下"这次用的是哪个模型"
+    model_env = cfg["llm"]["primary"]["model_env"]
     return {
         "ran_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "git_commit": _git_commit(),
-        "model": cfg["llm"]["primary"]["model"],
+        "model": os.getenv(model_env, ""),
         "max_iterations": cfg["graph"]["max_iterations"],
         "retrieval": cfg["retrieval"],  # 各库的 k / 权重 / 阈值 / top_n
         # ⚠️ 只跑子集时必须记下来 —— 不然这份结果会被当成全量（题数对不上、指标也没法比）

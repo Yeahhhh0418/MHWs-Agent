@@ -39,7 +39,7 @@
 | 检索 | Chroma（向量）+ rank-bm25（关键词），RRF 融合 |
 | 向量模型 | `BAAI/bge-small-zh-v1.5`，本地 CPU 推理 |
 | 接口 | FastAPI + uvicorn |
-| 模型接入 | OpenAI 兼容协议（主模型 DeepSeek，备用通义千问） |
+| 模型接入 | OpenAI 兼容协议 —— 用哪家、哪个模型由使用者在 `.env` 里指定 |
 | 包管理 | uv |
 | 质量 | pytest + ruff |
 
@@ -47,7 +47,7 @@
 
 - Python ≥ 3.11（开发环境用 3.14，见 `.python-version`）
 - [uv](https://docs.astral.sh/uv/)
-- 一个 OpenAI 兼容的模型 API Key（默认接 DeepSeek）
+- 一个 OpenAI 兼容的模型接口：地址、模型名、密钥（填在 `.env` 里）
 - 首次运行需要能访问 HuggingFace 下载向量模型（约 90 MB）。下过之后完全离线，不再联网。
 
 ## 安装
@@ -60,12 +60,26 @@ uv sync
 
 > ⚠️ **别对着已有的 `.venv` 直接跑 `uv sync`** —— 它会按 `uv.lock` 精确同步，把锁文件之外的包（比如你自己装的 jupyter）删掉。要在干净环境验证，用 `UV_PROJECT_ENVIRONMENT=.venv-test uv sync`，验完删掉那个目录。
 
-在项目根目录创建 `.env`（已在 `.gitignore` 中忽略）：
+在项目根目录建 `.env`（已在 `.gitignore` 里，不会被提交）。仓库里带了 `.env.example` 当模板：
 
 ```bash
-DEEPSEEK_API_KEY=sk-...     # 主模型，必填
-DASHSCOPE_API_KEY=...       # 备用模型，可以留空
+cp .env.example .env          # Windows cmd 用：copy .env.example .env
 ```
+
+然后填上你自己的模型 —— **项目不预设任何服务商**，接口是 OpenAI 兼容的就能接：
+
+```bash
+LLM_MODEL=
+LLM_BASE_URL=                 # 一般要带路径，比如结尾的 /v1
+LLM_API_KEY=
+
+# 备用模型可选，留空就是不用
+LLM_FALLBACK_MODEL=
+LLM_FALLBACK_BASE_URL=
+LLM_FALLBACK_API_KEY=
+```
+
+⚠️ 备用模型得扛得住长上下文：本项目单次请求轻松上万 token，实测有些小模型 180 秒都出不来，那种等于没有备用。
 
 ## 配置
 
@@ -73,13 +87,14 @@ DASHSCOPE_API_KEY=...       # 备用模型，可以留空
 
 | 配置项 | 说明 |
 |---|---|
-| `llm.primary` | 主模型：模型名、`base_url`、从哪个环境变量读密钥、超时与重试 |
-| `llm.fallbacks` | 备用模型列表，按优先级排序，建议跨厂商 |
+| `llm.primary` | 主模型：从**哪几个环境变量**读模型名 / 地址 / 密钥，以及温度、超时、重试 |
+| `llm.fallback` | 备用模型，同上。`.env` 里没填模型名就等于不用 |
 | `embedding` | 向量模型。写**模型名**，不要写本机缓存路径 |
 | `retrieval.<库名>` | 每个库的 `bm25_k` / `vector_k` / 权重 / 阈值 / 融合后保留条数 |
 | `graph` | `max_iterations` 管"最多转几轮"，`time_budget_seconds` 管"总共花多久" |
 
-`.env` 里的密钥不会被写进配置，`config.yaml` 只记录"从哪个环境变量读"。
+**服务商信息一律不在 `config.yaml` 里** —— 它只记"读哪个环境变量"，模型名、地址、密钥全在 `.env`。
+换一家服务商只改 `.env`，代码和配置都不用动。
 
 ## 使用
 

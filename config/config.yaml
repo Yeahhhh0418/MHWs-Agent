@@ -1,20 +1,23 @@
 llm:
-  # 主模型
+  # 模型名 / 接口地址 / 密钥一律从 .env 读（模板见 .env.example）。
+  # 这里只记"读哪个环境变量"—— 公开的配置里不放任何具体服务商信息，使用者填自己的。
+  # 只要接口是 OpenAI 兼容的，用哪家都行。
   primary:
-    model: "deepseek-flash"
-    base_url: "https://api.deepseek.com/v1"
-    api_key_env: "DEEPSEEK_API_KEY"   # ← 从 .env 读哪个变量当密钥
+    model_env: "LLM_MODEL"
+    base_url_env: "LLM_BASE_URL"
+    api_key_env: "LLM_API_KEY"
     temperature: 0.7
     max_retries: 1        # ← 第1层：自动重试次数
     timeout: 60
-  # 备用模型列表（按优先级排序）
-  fallbacks:
-    - model: "qwen3.8-flash"   # 跨厂商容灾
-      base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-      api_key_env: "DASHSCOPE_API_KEY"
-      temperature: 0.7
-      max_retries: 1
-      timeout: 60
+  # 备用模型（可选）：主模型调用失败时自动切过去，建议选另一家厂商。
+  # .env 里 LLM_FALLBACK_MODEL 留空就等于不用备用。
+  fallback:
+    model_env: "LLM_FALLBACK_MODEL"
+    base_url_env: "LLM_FALLBACK_BASE_URL"
+    api_key_env: "LLM_FALLBACK_API_KEY"
+    temperature: 0.7
+    max_retries: 1
+    timeout: 60
 embedding:
   # 写模型名，不写本机缓存路径 —— 那个路径是 HF 根据模型名 + 本机缓存目录算出来的，
   # 写死了就把项目绑死在这台机器、这个用户名上（原值里带着 "Yeh Hu"）
