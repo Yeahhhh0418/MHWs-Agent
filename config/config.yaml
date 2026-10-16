@@ -69,7 +69,7 @@ graph:
   max_iterations: 8
   # 整轮时长预算（秒）。max_iterations 拦的是"转太多次"，这个拦的是"每轮都慢、累起来太久" ——
   # 实测最慢那次 5 分钟（主模型挂了走备用）。超了不硬杀，改成去 generate 收尾并记降级。
-  time_budget_seconds: 600
+  time_budget_seconds: 300
 
 
 
