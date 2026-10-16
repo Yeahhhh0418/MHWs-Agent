@@ -5,7 +5,7 @@
 
 ⚠️ monster.md 里的 # / ## 标题就是编号的来源（monster|火龙|狩猎提示）。
    改了下面的字段映射，要同步改子类的 _ID_FIELDS 和 cases.jsonl 的 required_doc_ids，
-   缺一样召回率就悄悄变 0 —— 不报错的那种坏（CLAUDE.md 硬规矩 1）。
+   缺一样召回率就悄悄变 0 —— 不报错的那种坏。
 
 在项目根目录执行：.venv/Scripts/python.exe scripts/build_monster_md.py
 """

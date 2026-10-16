@@ -63,7 +63,7 @@ class BaseRAG(ABC):
     # 内部主键名（去重用的货号）
     _ID_KEY = "_doc_id"
     # 子类声明用哪几个字段拼编号。⚠️ 改了它、或改了数据里的标题，cases.jsonl 的
-    # required_doc_ids 会静默失配 —— 召回率变 0 但不报错（见 CLAUDE.md 硬规矩 1）
+    # required_doc_ids 会静默失配 —— 召回率变 0 但不报错
     _ID_FIELDS = ()
     FIELD_LABELS: ClassVar[dict] = {}  # 子类声明：字段名 -> 中文标签，拼正文时用
     VALUE_LABELS: ClassVar[
