@@ -57,15 +57,17 @@ monster|火龙|生态特征
 
 - **每节正文自带抬头**（`怪物名称：火龙，小节：狩猎提示。`）—— 有些小节的正文里根本不提自己是谁，按名字查它会沉底。
 - **名字精确匹配** —— 先从问句里认出怪物名（长名优先，先认「护火龙」再认「火龙」，免得子串误判），命中就只在该怪的小节里检索；认不出来（比如问「天空王者」这种别名）就退回普通检索。理由：名字是**精确**信息，而「火龙」和「护火龙」在语义上太近，交给相似度去猜必然出错。
-- 因为字符级分词同样分不开这几个名字，monster 库的 `bm25_weight` 设成了 **0**（实际只走向量）；其他三个库仍是 0.5 / 0.5。
+- 因为字符级分词同样分不开这几个名字，monster 库的 `bm25_weight` 设成了 **0**；其他三个库仍是 0.5 / 0.5。
 
 ## 评测
 
 ```bash
-.venv/Scripts/python.exe src/eval/run_eval.py
+.venv/Scripts/python.exe scripts/dev.py eval               # 全量
+.venv/Scripts/python.exe scripts/dev.py eval 查族名,俗称     # 只跑指定 tag
+.venv/Scripts/python.exe scripts/dev.py judge              # 判答案质量，不重跑 Agent
 ```
 
-题库 `src/eval/cases.jsonl` 现有 18 道，覆盖四个库，其中 8 道是防「名字相近的怪串味」的回归题。程序自动算**召回率**（该命中的编号捞回来没有），答案对不对靠人工对着 `key_facts` 核对。字段含义与出题规矩见 `src/eval/README.md`。
+题库 `src/app/eval/cases.jsonl` 现有 **31 道**，覆盖四个库，其中有几道带 `混淆回归` tag（防「名字相近的怪串味」）。脚本自动算**召回率 / MRR / 路由准确率**；答案质量另走 `judge_facts`，拿每题的 `key_facts` 去答案里逐条找。
 
 ## 快速开始
 
@@ -88,33 +90,40 @@ DASHSCOPE_API_KEY=...        # 备用模型，可留空
 .venv/Scripts/mhwi-agent.exe "火龙这个怪要怎么打？"
 ```
 
-`python -m mhwi_agent "…"` 是同一条路。项目是 editable 装的，所以这些命令都**不用加 `PYTHONPATH=src`**。
+`python -m app "…"` 是同一条路。项目是 editable 装的，所以这些命令都**不用加 `PYTHONPATH=src`**。
 
-只想看检索命中了什么、不生成答案：`.venv/Scripts/python.exe scripts/probe_monster_retrieval.py`（问题写在脚本的 `QUERIES` 里）
+起 HTTP 服务（页面和接口在同一个地址）：
 
-只想跑图、不看命令行入口：`.venv/Scripts/python.exe src/agent/graph.py`
+```bash
+.venv/Scripts/python.exe -m uvicorn app.server.main:app --reload
+```
+
+然后浏览器打开 <http://127.0.0.1:8000/>（接口文档在 `/docs`）。
+
+只想跑图、不看命令行入口：`.venv/Scripts/python.exe src/app/agent/graph.py`
 
 ## 配置
 
 改 `config/config.yaml`：
 
 - `llm.primary` / `llm.fallbacks`：主模型 + 跨厂商备用模型链（`api_key_env` 指定从哪个环境变量读密钥）
-- `embedding`：本地 BGE 模型路径，CPU 推理
+- `embedding`：本地 BGE 向量模型，CPU 推理（写**模型名**，不写本机缓存路径）
 - `retrieval.<库名>`：各库的召回条数、阈值、BM25/向量权重、RRF 参数
-- `graph.max_iterations`：最大检索轮次
+- `graph`：`max_iterations` 管"最多转几轮"，`time_budget_seconds` 管"总共花多久"
 
 日志是结构化 JSON：控制台带色，同时写入 `logs/agent.log`。
 
 ## 目录
 
 ```
-src/agent/          LangGraph 图与节点（state / nodes / graph）
-src/rag/            BaseRAG 基类 + 四个子类 + 中文分词器
-src/eval/           评测脚本 + 题库（结果写在 eval/results/，不进 git）
-src/prompts/        路由、分析、生成、四个 RAG 的提示词
-src/models/         LLM 实例（主模型 + fallback）
-src/mhwi_agent/     配置与日志
-scripts/            一次性转换脚本、检索排查脚本
+src/app/agent/      LangGraph 图与节点（state / nodes / graph）
+src/app/rag/        BaseRAG 基类 + 四个子类 + 中文分词器
+src/app/eval/       评测脚本 + 题库（结果写在 eval/results/，不进 git）
+src/app/core/       配置、模型实例、日志、用量统计
+src/app/server/     HTTP 接口 + 前端页面（FastAPI）
+src/app/prompts.py  路由、分析、生成、四个 RAG 的提示词
+src/app/cli.py      命令行入口
+scripts/            dev.py（统一入口）+ 数据转换脚本
 data/               知识数据（三个库的 jsonl + 怪物库的 monster.md）
 storage/            Chroma 持久化目录（首次运行自动构建，不进 git）
 advise/             设计文档与方案讨论
@@ -123,6 +132,6 @@ CLAUDE.md           给 AI 的项目约定
 
 ## 注意
 
-- **改了数据或 `_load_data` 之后，必须删掉 `storage/` 下对应的库目录再跑。** 向量库只看「目录里有没有文件」，不会检测数据是否变化；不删就会出现 BM25 用新数据、向量路用旧数据的新旧混检。
-- **编号是数据指纹。** 改了 `_ID_FIELDS` 或 `data/monster.md` 里的 `#` / `##` 标题，`src/eval/cases.jsonl` 里的编号必须同步改 —— 不会报错，只会召回率悄悄变 0。
-- 首次运行要建库 + 加载 BGE 模型，比较慢。
+- **不用手动删向量库。** 库目录里存着一份「要入库的内容」的指纹，`setup()` 时会重算比对，对不上就自动重建。⚠️ 但重建得在**新进程**里发生 —— 同一进程里已经打开过这个库的话，旧文件还占着删不掉，会直接报错。
+- **编号是数据指纹。** 改了 `_ID_FIELDS` 或 `data/monster.md` 里的 `#` / `##` 标题，`src/app/eval/cases.jsonl` 里的编号必须同步改 —— 不会报错，只会召回率悄悄变 0。
+- 首次运行要建库 + 加载 BGE 模型，比较慢；本机缓存里没有那个模型时还要联网下载一次（之后就完全离线了）。

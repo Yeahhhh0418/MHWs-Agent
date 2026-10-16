@@ -67,7 +67,7 @@ def _already_queried(state: AgentState, db: str | None, keyword: str | None) -> 
           没有随机）。实测踩过：问「灭尽龙」（数据里没这只怪），模型第一轮就看出捞回来的
           是别的怪，却还是说 continue 去查同一个 (monster, 灭尽龙)，白烧一轮检索 + 一次 analyze。
     [FIX] 拿已经查过的组合比一比，比中就拦。这是纯字符串比较，不该交给模型"记得"
-          （项目完善清单 §2.5）。关键词去首尾空格 —— 「灭尽龙」和「灭尽龙 」是同一个词。
+          关键词去首尾空格 —— 「灭尽龙」和「灭尽龙 」是同一个词。
     """
     wanted = (keyword or "").strip()
     for item in state["collected_info"]:
@@ -121,7 +121,7 @@ def _decide(
     reason: str,
     degraded: bool = False,
 ) -> dict:
-    """把一次决策打包成节点返回值；同时写日志和 decision_trace（§2.4 §2.8）。"""
+    """把一次决策打包成节点返回值；同时写日志和 decision_trace。"""
     # 一条决策的完整记录：日志和 decision_trace 用的是同一份
     entry = {
         "iteration": state["iteration_count"],

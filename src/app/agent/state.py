@@ -44,7 +44,7 @@ class AgentState(TypedDict):
     # ── 最终输出 ──
     final_answer: str  # generate_node 写入
 
-    # ── 降级留痕（项目完善清单 §2.1） ──
+    # ── 降级留痕 ──
     # ⚠️ 必须用 or_ 合并：普通字段是"后写的冲掉先写的"，而每个节点都会写这个字段，
     #    所以 route 降级了、后面 retrieve 写个 False，降级就被吞掉了（实测过）。
     #    用 or_ 之后语义是"这次问答有没有任何一步降级过" —— 正是降级率要的。
@@ -53,7 +53,7 @@ class AgentState(TypedDict):
     #    所以要是不降级也写个空串，会把前一个节点的原因冲掉。
     degrade_reason: str
 
-    # ── 决策轨迹：每一轮 analyze 由谁定的、定了什么、为什么（§2.4 §2.8） ──
+    # ── 决策轨迹：每一轮 analyze 由谁定的、定了什么、为什么 ──
     # 每条形如 {"iteration": 1, "source": "llm", "action": "continue",
     #          "db": "monster", "keyword": "火龙", "reason": "..."}
     decision_trace: Annotated[list[dict], operator.add]

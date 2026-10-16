@@ -13,7 +13,6 @@ from app.core.config import get_config
 from app.core.metrics import summary
 
 EVAL_DIR = Path(__file__).parent
-# 字段说明见同目录 README.md
 
 
 def calc_recall(required_ids: list, retrieved_ids: list) -> tuple:
@@ -111,7 +110,7 @@ def _git_commit() -> str:
 def _config_snapshot(only_tags: list | None = None) -> dict:
     """
     [WHY] 结果文件不记当次配置 —— 过十天你就不知道那个数字是哪套参数跑出来的，
-          所有"变好了"都证明不了（项目完善清单 §1.3）。
+          所有"变好了"都证明不了。
     [FIX] 把会影响结果的几样记下来：调过的参数、模型名、代码版本。
           提示词和数据也在影响结果，但它们分别由 git 和 data/ 管着。
     """
@@ -175,7 +174,7 @@ def call_agent(question: str) -> dict:
         "retrieved_doc_ids": doc_id_list,
         "routed_dbs": routed_dbs,
         "iterations": st.get("iteration_count", 0),
-        # analyze 每轮由谁定的、定了什么、为什么 + 有没有降级（项目完善清单 §2.4 §2.8）
+        # analyze 每轮由谁定的、定了什么、为什么 + 有没有降级
         "decision_trace": st.get("decision_trace", []),
         "degraded": st.get("degraded", False),
         "rounds": rounds,

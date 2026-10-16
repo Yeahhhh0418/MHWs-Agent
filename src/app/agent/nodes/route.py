@@ -17,7 +17,7 @@ from app.prompts import ROUTE_PROMPT
 logger = get_logger("nodes.route")
 
 # 路由认不出问题该查哪个库时的兜底库。
-# 原来 route 和 analyze 各写各的（"equipment" / "material"），互相打架（项目完善清单 §2.2）。
+# 原来 route 和 analyze 各写各的（"equipment" / "material"），互相打架。
 DEFAULT_DB = "equipment"
 
 # 拼错格式、或偶发故障时，最多再给一次机会
