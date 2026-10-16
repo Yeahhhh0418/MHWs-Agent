@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import ClassVar
 
 from dotenv import load_dotenv
+from huggingface_hub import snapshot_download
+from huggingface_hub.errors import LocalEntryNotFoundError
 from langchain_chroma import Chroma
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
@@ -35,6 +37,20 @@ def load_jsonl(file_path: str) -> list:
             if line:
                 data_list.append(json.loads(line))
     return data_list
+
+
+def _is_model_cached(model_name: str) -> bool:
+    """
+    [WHY] HF 默认每次构造模型都要去服务器问一遍"有没有新版本"，本地有缓存也照问 ——
+          实测四个库各构造一次要 40 秒（还是挂着梯子的正常网络）。而直接写死
+          local_files_only=True，换台机器第一次又根本跑不起来。
+    [FIX] 先探一下本地缓存（不联网、0 秒返回）：齐全就离线跑，没有才放开网络下这一次。
+    """
+    try:
+        snapshot_download(model_name, local_files_only=True)
+        return True
+    except LocalEntryNotFoundError:
+        return False
 
 
 class BaseRAG(ABC):
@@ -91,10 +107,17 @@ class BaseRAG(ABC):
         """首次使用前调用一次；顺序不能换：先有数据才能编号，先有库才能建检索器。"""
         # 先把 .env 读进来
         load_dotenv()
-        # 建向量模型：首次要下载权重，之后就快了
+        # 本地缓存没有这个模型，才放开网络下这一次（只在换机器后的第一次发生）
+        local_only = _is_model_cached(self._embedding_model)
+        if not local_only:
+            logger.warning(
+                "本地没有这个向量模型，这次要联网下载，会慢一些",
+                extra={"model": self._embedding_model},
+            )
+        # 建向量模型：缓存齐全就完全不碰网络（见 _is_model_cached 的说明）
         self._embeddings = HuggingFaceEmbeddings(
             model_name=self._embedding_model,
-            model_kwargs={"device": self._device},
+            model_kwargs={"device": self._device, "local_files_only": local_only},
             encode_kwargs={"normalize_embeddings": self._normalize},
         )
         self._load_data()  # ← 基类默认读 jsonl；怪物走 md，自己覆写

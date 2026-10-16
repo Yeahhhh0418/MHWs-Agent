@@ -16,7 +16,9 @@ llm:
       max_retries: 1
       timeout: 60
 embedding:
-  model: C:/Users/Yeh Hu/.cache/huggingface/hub/models--BAAI--bge-small-zh-v1.5/snapshots/7999e1d3359715c523056ef9478215996d62a620
+  # 写模型名，不写本机缓存路径 —— 那个路径是 HF 根据模型名 + 本机缓存目录算出来的，
+  # 写死了就把项目绑死在这台机器、这个用户名上（原值里带着 "Yeh Hu"）
+  model: "BAAI/bge-small-zh-v1.5"
   device: cpu
   normalize: true
 
