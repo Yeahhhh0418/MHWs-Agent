@@ -139,10 +139,8 @@ def _decide(
         "degraded": degraded,
         "decision_trace": [entry],
     }
-    # 只在真降级时才写原因 —— degrade_reason 没有 reducer，不降级也写个空串
-    # 会把前一个节点留下的原因冲掉（见 state.py 的说明）
-    if degraded:
-        result["degrade_reason"] = reason
+    # 降级原因照样写：没降级时是空串，会被 merge_degrade_reason 忽略
+    result["degrade_reason"] = reason
     # 只有要继续才带下一站去哪儿；finish 时是 None
     if action == "continue":
         result["current_db"] = db

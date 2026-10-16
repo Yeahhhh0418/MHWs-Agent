@@ -17,6 +17,35 @@ class RAGResult(TypedDict):
     doc_ids: list[str]  # 这一轮命中的文档编号
 
 
+# 单条原因最多留这么长。这段文字会给用户看（网页 / 命令行），不能把异常原文整段塞进去；
+# 完整内容在日志里，按 request_id 捞得到
+_MAX_REASON_CHARS = 60
+# 判"是不是同一个原因"时，比前这么多个字就够 —— 异常类型和错误码都在开头
+_DEDUP_CHARS = 30
+
+
+def merge_degrade_reason(old: str, new: str) -> str:
+    """
+    [WHY] degrade_reason 原来没有 reducer，谁写谁覆盖。实测踩到：一次问答里 route 先降级
+          （密钥不对，退回默认库），接着 analyze、generate 也降级 —— 最后只剩"生成失败"，
+          最早坏在哪一步被冲掉了。两处不同的毛病就会藏掉一个。
+    [FIX] 按发生顺序用 `；` 接起来，最早的在最前面。空串直接忽略 ——
+          各节点不用再纠结"不降级要不要写"。
+    """
+    new = (new or "").strip()
+    # 没说什么就保持原样（不降级的节点会写空串）
+    if not new:
+        return old or ""
+    # 长了就截断 —— 完整异常在日志里，按 request_id 捞得到
+    if len(new) > _MAX_REASON_CHARS:
+        new = new[:_MAX_REASON_CHARS] + "…"
+    # 同一个原因重复报就不再记：一次问答里三个节点常常都因为同一个 401 降级，
+    # 堆三遍又长又没用。比前缀而不是全等 —— route 那条前面还带「路由两次都没成：」
+    if old and new[:_DEDUP_CHARS] in old:
+        return old
+    return f"{old}；{new}" if old else new
+
+
 class AgentState(TypedDict):
     # ── 对话 ──
     messages: Annotated[list, add_messages]
@@ -49,9 +78,8 @@ class AgentState(TypedDict):
     #    所以 route 降级了、后面 retrieve 写个 False，降级就被吞掉了（实测过）。
     #    用 or_ 之后语义是"这次问答有没有任何一步降级过" —— 正是降级率要的。
     degraded: Annotated[bool, operator.or_]
-    # ⚠️ 配套的约定：这个字段**只在真降级时才写**。它没有 reducer，谁写谁覆盖，
-    #    所以要是不降级也写个空串，会把前一个节点的原因冲掉。
-    degrade_reason: str
+    # 每一步降级的原因按顺序接起来（见 merge_degrade_reason）—— 不再是谁后写谁覆盖
+    degrade_reason: Annotated[str, merge_degrade_reason]
 
     # ── 决策轨迹：每一轮 analyze 由谁定的、定了什么、为什么 ──
     # 每条形如 {"iteration": 1, "source": "llm", "action": "continue",

@@ -138,6 +138,7 @@ def call_agent(question: str) -> dict:
     - round_counts: 每轮各返回几条，如 [10, 12, 4]
     - routed_dbs: 路由到的知识库名称列表
     - iterations: 迭代轮数
+    - degraded / degrade_reason: 这次有没有降级、降在哪一步
     """
     # 记录时间
     started = time.perf_counter()
@@ -179,6 +180,8 @@ def call_agent(question: str) -> dict:
         # analyze 每轮由谁定的、定了什么、为什么 + 有没有降级
         "decision_trace": st.get("decision_trace", []),
         "degraded": st.get("degraded", False),
+        # 哪一步降级的（可能不止一步，按发生顺序接起来）—— 只有布尔值说不出为什么
+        "degrade_reason": st.get("degrade_reason", ""),
         "rounds": rounds,
         "round_counts": round_counts,
         "elapsed_seconds": elapsed,  # 端到端耗时：进图到出答案
@@ -230,6 +233,7 @@ def _run_one(case: dict, snapshot: dict) -> dict:
         "route_extra": route_extra,  # 查了但不需要的库
         "decision_trace": agent_output.get("decision_trace", []),
         "degraded": agent_output.get("degraded", False),
+        "degrade_reason": agent_output.get("degrade_reason", ""),
         # 人工判分预留字段
         "human_score": None,
         "fail_category": None,  # 可选: recall/premature_stop/routing/iteration/degrade/fact

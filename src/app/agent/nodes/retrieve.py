@@ -81,8 +81,6 @@ def retrieve_node(state: AgentState) -> dict:
         "iteration_count": iteration + 1,
         "degraded": degraded,
     }
-    # 只在真降级时才写原因 —— degrade_reason 没有 reducer，不降级也写个空串
-    # 会把前一个节点留下的原因冲掉（见 state.py 的说明）
-    if degraded:
-        result["degrade_reason"] = degrade_reason
+    # 降级原因照样写：没降级时是空串，会被 merge_degrade_reason 忽略
+    result["degrade_reason"] = degrade_reason
     return result
