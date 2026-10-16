@@ -204,8 +204,6 @@ src/app/cli.py      命令行入口
 scripts/            dev.py（统一入口）+ 数据转换脚本
 data/               知识数据（三个库的 jsonl + 怪物库的 monster.md）
 storage/            Chroma 持久化目录（首次运行自动构建，不进 git）
-advise/             设计文档与方案讨论
-CLAUDE.md           给 AI 的项目约定（也能当"改哪里会静默坏"的速查）
 ```
 
 ## 常见问题
