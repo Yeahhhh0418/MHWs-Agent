@@ -1555,7 +1555,7 @@ wheels = [
 ]
 
 [[package]]
-name = "mhwi-agent"
+name = "mhws-agent"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

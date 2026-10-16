@@ -42,8 +42,8 @@ dev = [
 requires = ["uv_build>=0.12.0,<0.13.0"]
 build-backend = "uv_build"
 
-# uv_build 默认按项目名（mhws-agent → mhws_agent）找 src/mhws_agent/，
-# 但我们的代码全在 src/app/ 下，所以得显式指定。
+# 代码包名叫 app（都在 src/app/ 下）。uv_build 默认按项目名去推路径，
+# 所以这里显式指定模块名和根目录。
 [tool.uv.build-backend]
 module-name = "app"
 module-root = "src"
