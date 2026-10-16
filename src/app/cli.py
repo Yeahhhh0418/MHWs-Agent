@@ -32,6 +32,9 @@ def main() -> None:
         sys.exit(1)
 
     print(state.get("final_answer", "（没有拿到答案）"))
+    # 降级要吼一声：答案是建立在残缺资料上的，得让用户知道（检索失败 / 生成失败都会走到这儿）
+    if state.get("degraded"):
+        print(f"⚠️ 这次有步骤降级了：{state.get('degrade_reason') or '原因未记录'}", file=sys.stderr)
     # 成本走 stderr：stdout 只留答案，用户可能把它重定向去用
     usage = summary(state.get("request_id", ""))
     print(f"[{format_cost_line(usage, elapsed)}]", file=sys.stderr)

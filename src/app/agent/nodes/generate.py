@@ -39,6 +39,9 @@ def generate_node(state: AgentState) -> dict:
     system_prompt = GENERATE_PROMPT
     if guides:
         system_prompt = f"{GENERATE_PROMPT}\n\n{guides}"
+    # 默认没降级，下面出错时改写
+    degraded = False
+    degrade_reason = ""
     try:
         answer = invoke(
             system_prompt,
@@ -50,11 +53,20 @@ def generate_node(state: AgentState) -> dict:
         logger.info("生成完成")
     except Exception as e:  # noqa: BLE001 —— 生成失败就退回检索原文，至少用户还能看到资料
         logger.error("生成失败，返回原始检索内容", extra={"error": str(e)})
-        # 没润色，但资料是真的 —— 总比给用户一句"出错了"强
+        # 没润色，但资料是真的 —— 总比给用户一句"出错了"强。
+        # ⚠️ 必须置 degraded：不置的话界面一切正常，用户拿到一屏资料原文还以为是答案，
+        #    而真正的原因（比如密钥被拒）只躺在日志里（实测踩过：看着像"模型没接上"）
         answer = collected_text
+        degraded = True
+        degrade_reason = f"生成失败（{type(e).__name__}），下面是没加工过的原始检索资料"
 
     # final_answer 给评测和 CLI 读；messages 是图往下传的
-    return {
+    result = {
         "final_answer": answer,
         "messages": [AIMessage(content=answer)],
+        "degraded": degraded,
     }
+    # 只在真降级时才写原因 —— 它没有 reducer，不降级也写会冲掉前一个节点留下的原因
+    if degraded:
+        result["degrade_reason"] = degrade_reason
+    return result
