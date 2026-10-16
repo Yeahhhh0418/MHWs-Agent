@@ -53,8 +53,8 @@
 ## 安装
 
 ```bash
-git clone <仓库地址>     # 待补充：仓库 URL
-cd mhws-agent
+git clone https://github.com/Yeahhhh0418/MHWs-Agent.git
+cd MHWs-Agent
 uv sync
 ```
 
@@ -246,6 +246,5 @@ storage/            Chroma 持久化目录（首次运行自动构建，不进 g
 
 ## 待补充
 
-- **仓库地址**：上面的 `git clone` 命令需要填真实 URL。
 - **徽章**：项目没有 CI 和发布流程，暂时没有可放的构建状态 / 版本徽章。
 - **界面截图**：HTTP 页面还没有截图放进 README。
