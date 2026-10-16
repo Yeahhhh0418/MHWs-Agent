@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>怪物猎人荒野 · 攻略问答</title>
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-soft: #656d76;
+    --line: #d8dee4;
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --accent: #2f6f4e;
+    --accent-soft: #eaf3ee;
+    --warn: #9a6700;
+    --error: #b42318;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.7 -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  }
+
+  main { max-width: 720px; margin: 0 auto; }
+
+  h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: .5px; }
+  .sub { margin: 0 0 28px; color: var(--ink-soft); font-size: 14px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit;
+    resize: vertical;
+    min-height: 76px;
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .hint { color: var(--ink-soft); font-size: 13px; }
+
+  button {
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover:not(:disabled) { background: #265c41; }
+  button:disabled { background: #9db8ab; cursor: progress; }
+
+  #result { margin-top: 20px; }
+
+  .status { font-size: 14px; margin: 0 0 10px; }
+  .status:empty { display: none; }
+  .status.loading { color: var(--ink-soft); }
+  .status.warn { color: var(--warn); }
+  .status.error { color: var(--error); font-weight: 600; }
+
+  /* pre-wrap 保住答案里的换行；内容经 renderAnswer() 转义过，不怕模型答出 HTML */
+  #answer {
+    margin: 0 0 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  #answer:empty { margin: 0; }
+
+  .meta {
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  .meta:empty { display: none; }
+
+  /* 加载动画：三个跳动的点 */
+  .dots::after {
+    content: "";
+    animation: dots 1.4s steps(4, end) infinite;
+  }
+  @keyframes dots {
+    0% { content: ""; }
+    25% { content: "."; }
+    50% { content: ".."; }
+    75% { content: "..."; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <h1>怪物猎人荒野 · 攻略问答</h1>
+  <p class="sub">装备怎么做、怪怎么打、素材哪来的 —— 资料里没有的会直说没有。</p>
+
+  <form id="ask-form" class="card">
+    <label for="question">你的问题</label>
+    <textarea id="question" maxlength="200" placeholder="例：火龙这个怪要怎么打？"></textarea>
+    <div class="row">
+      <span class="hint">Ctrl + Enter 直接发送 · <span id="counter">0</span>/200</span>
+      <button id="submit" type="submit">问一下</button>
+    </div>
+  </form>
+
+  <section id="result" class="card" hidden>
+    <p id="status" class="status" aria-live="polite"></p>
+    <p id="answer"></p>
+    <p id="meta" class="meta"></p>
+  </section>
+</main>
+
+<script>
+const form = document.getElementById("ask-form");
+const input = document.getElementById("question");
+const counter = document.getElementById("counter");
+const submitBtn = document.getElementById("submit");
+const result = document.getElementById("result");
+const statusEl = document.getElementById("status");
+const answerEl = document.getElementById("answer");
+const metaEl = document.getElementById("meta");
+
+// 字数实时计数：服务端也限了 200，提前让用户看见，别等提交了才被打回
+input.addEventListener("input", () => {
+  counter.textContent = input.value.length;
+});
+
+// Ctrl/Cmd + Enter 直接发送；textarea 里单独按 Enter 是换行，不抢占
+input.addEventListener("keydown", (event) => {
+  if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+    form.requestSubmit();
+  }
+});
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const question = input.value.trim();
+  if (!question) return;
+
+  setLoading(true);
+  try {
+    const resp = await fetch("/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: question }),
+    });
+    const data = await resp.json();
+    // 后端用 HTTPException 报的错，detail 是一条人话；参数校验失败则是 pydantic 的数组
+    if (!resp.ok) {
+      showError(readError(data, resp.status));
+      return;
+    }
+    showAnswer(data);
+  } catch (err) {
+    // fetch 只在连不上时 reject（服务没起来、进程被掐），HTTP 4xx/5xx 不会走到这儿
+    showError("连不上后端服务，确认它还在跑：" + err.message);
+  } finally {
+    setLoading(false);
+  }
+});
+
+// 后端报错时 detail 有两种形状，统一翻成一句人话
+function readError(data, statusCode) {
+  const detail = data && data.detail;
+  if (Array.isArray(detail) && detail.length) return detail[0].msg;
+  if (typeof detail === "string" && detail) return detail;
+  return "请求失败（HTTP " + statusCode + "）";
+}
+
+// 进/出加载态：这轮问答要 10 秒上下，不吭声用户会以为页面死了
+function setLoading(loading) {
+  submitBtn.disabled = loading;
+  submitBtn.textContent = loading ? "查询中…" : "问一下";
+  if (!loading) return;
+
+  result.hidden = false;
+  statusEl.className = "status loading";
+  statusEl.textContent = "正在查资料、翻数据库";
+  statusEl.classList.add("dots");
+  answerEl.textContent = "";
+  metaEl.textContent = "";
+}
+
+// 渲染答案。
+// [WHY] 模型答的是 Markdown，当纯文本直接显示会把 **加粗** 和行首的 - 原样漏给用户
+//       （实测截图里满屏星号）。
+// [FIX] 只做最小的两条：**xx** → <strong>，行首的 - 换成圆点。先转义 HTML 再替换 ——
+//       顺序反了就等于让模型往页面上写标签。
+function renderAnswer(text) {
+  const escaped = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return escaped
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/^[ \t]*[-*][ \t]+/gm, "• ");
+}
+
+function showAnswer(data) {
+  statusEl.classList.remove("dots");
+  if (data.degraded) {
+    statusEl.className = "status warn";
+    statusEl.textContent = "⚠️ 这次有步骤降级了：" + (data.degrade_reason || "原因未记录");
+  } else {
+    statusEl.className = "status";
+    statusEl.textContent = "";
+  }
+  answerEl.innerHTML = renderAnswer(data.answer);
+  metaEl.textContent = data.cost + " · 编号 " + data.request_id;
+}
+
+function showError(message) {
+  statusEl.classList.remove("dots");
+  statusEl.className = "status error";
+  statusEl.textContent = message;
+  answerEl.textContent = "";
+  metaEl.textContent = "";
+}
+</script>
+
+</body>
+</html>

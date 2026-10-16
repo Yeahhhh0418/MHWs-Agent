@@ -5,8 +5,11 @@ HTTP 入口：把 Agent 包成接口给外部调。
 
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from langchain_core.messages import HumanMessage
 
 from app.agent.graph import graph
@@ -19,6 +22,9 @@ logger = get_logger("server")
 
 # 四个库的名字：启动预热时全建一遍
 _DBS = ("equipment", "weapon", "material", "monster")
+
+# 前端页面就在本包的 static/ 下 —— 跟接口同源，浏览器用一个地址既看页面又调接口，不用碰 CORS
+_STATIC_DIR = Path(__file__).parent / "static"
 
 
 @asynccontextmanager
@@ -38,6 +44,17 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="MHWI 攻略问答", lifespan=lifespan)
+
+# 静态资源挂在 /static 下；首页另开一个显式路由，**不**把 StaticFiles 挂到 "/" ——
+# 挂 "/" 能自动送 index.html，但它要求"必须在所有接口都注册完之后挂"，
+# 后来的人往上一挪就把 /health /ask 全遮住，而且不报错。
+app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
+
+
+@app.get("/")
+def index():
+    """首页：把前端页面发回去。"""
+    return FileResponse(_STATIC_DIR / "index.html")
 
 
 @app.get("/health")
